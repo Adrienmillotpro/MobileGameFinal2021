@@ -4,7 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "SO_Heroes", menuName = "Hero")]
 
-public class SO_Heroes : ScriptableObject
+public class SO_Hero : ScriptableObject
 {
     [Header ("Hero Visuals")]
     public Sprite heroSprite;
