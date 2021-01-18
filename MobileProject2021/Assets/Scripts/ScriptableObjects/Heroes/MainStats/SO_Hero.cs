@@ -19,8 +19,6 @@ public class SO_Hero : ScriptableObject
     public float heroAffinityMultiplier;
     public float currencyMultiplier;
 
-    [Header("Hero Type")]
-    public ElementType[] heroTypes;
     public enum ElementType
     {
         Fire,
@@ -28,6 +26,7 @@ public class SO_Hero : ScriptableObject
         Air,
         Thunder
     }
+    public ElementType[] heroTypes;
 
     [Header("Hero Perks")]
     public SO_HeroPassivePerk passivePerk;
