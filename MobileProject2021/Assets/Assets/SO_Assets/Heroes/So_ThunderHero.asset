@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2978f23866e0bae419e7e7e87e1c237d, type: 3}
-  m_Name: SO_FireHero
+  m_Name: So_ThunderHero
   m_EditorClassIdentifier: 
   heroSprite: {fileID: 0}
   heroAnimator: {fileID: 0}
-  heroDamage: 0
-  heroAttackRate: 0
+  heroDamage: 20
+  heroAttackRate: 19
   heroElementalReactionMultiplier: 0
   heroCritRate: 0
   heroCritDamage: 0
   heroAffinityMultiplier: 0
   currencyMultiplier: 0
-  heroTypes: 0000000002000000
+  heroTypes: 03000000
   passivePerk: {fileID: 0}
-  activePerk: {fileID: 11400000, guid: 9d02de0b642f56842a1cb036b85fc1c4, type: 2}
+  activePerk: {fileID: 0}
