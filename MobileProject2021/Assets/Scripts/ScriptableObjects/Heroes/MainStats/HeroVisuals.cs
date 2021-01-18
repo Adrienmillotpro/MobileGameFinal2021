@@ -5,8 +5,8 @@ using UnityEngine;
 public class HeroVisuals : MonoBehaviour
 {
     [SerializeField] private SO_Hero SO_Hero;
-    [SerializeField] private Animator heroAnimator;
-    [SerializeField] private SpriteRenderer heroRenderer;
+    private Animator heroAnimator;
+    private SpriteRenderer heroRenderer;
 
     private void Start()
     {
