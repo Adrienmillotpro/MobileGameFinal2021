@@ -1,5 +1,4 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="height: 63.2px; top: 50px; left: 29px; width: 309px;">
-        <ui:Label text="Coucou&#10;" display-tooltip-when-elided="true" style="font-size: 53px;" />
-    </ui:VisualElement>
+    <ui:VisualElement style="flex-grow: 1; flex-direction: column; height: 459.6px;" />
+    <ui:Label text="Label" display-tooltip-when-elided="true" style="top: -543px; right: -40px; color: rgb(255, 255, 255);" />
 </ui:UXML>
