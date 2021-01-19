@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="USS_boostButton.uss" />
+    <ui:VisualElement name="screen" style="flex-grow: 1; flex-direction: row; align-items: flex-end; justify-content: center; width: 100%; height: 100%; background-color: rgb(82, 82, 82);">
+        <ui:VisualElement name="container-bottom" style="align-items: stretch; justify-content: flex-start; flex-direction: row; background-color: rgb(147, 147, 147); height: 25%; width: 100%;">
+            <ui:VisualElement name="container-boost" style="width: 60%; background-color: rgb(111, 209, 105); height: 100%; flex-direction: column; align-items: center; justify-content: center;">
+                <ui:Button text="Button" display-tooltip-when-elided="true" name="attack-speed-boost" class="button-boost" />
+                <ui:Button text="Button" display-tooltip-when-elided="true" name="damage-boost" class="button-boost" />
+                <ui:Button text="Button" display-tooltip-when-elided="true" name="elemental-react-boost" class="button-boost" />
+                <ui:Button text="Button" display-tooltip-when-elided="true" name="CC-frequence" class="button-boost" />
+                <ui:Button text="Button" display-tooltip-when-elided="true" name="CC-damage" class="button-boost" />
+            </ui:VisualElement>
+            <ui:VisualElement name="container-cross" style="background-color: rgb(255, 64, 64); width: 40%; height: 100%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
