@@ -6,13 +6,13 @@ public class HeroStats : MonoBehaviour
 {
     [SerializeField] private SO_Hero hero;
 
-    private float heroDamage;
-    private float heroAttackRate;
-    private float heroElementalReactionMultiplier;
-    private float heroCritRate;
-    private float heroCritDamage;
-    private float heroAffinityMultiplier;
-    private float herocurrencyMultiplier;
+    [HideInInspector] public float heroDamage;
+    [HideInInspector] public float heroAttackRate;
+    [HideInInspector] public float heroElementalReactionMultiplier;
+    [HideInInspector] public float heroCritRate;
+    [HideInInspector] public float heroCritDamage;
+    [HideInInspector] public float heroAffinityMultiplier;
+    [HideInInspector] public float herocurrencyMultiplier;
 
     private void Start()
     {

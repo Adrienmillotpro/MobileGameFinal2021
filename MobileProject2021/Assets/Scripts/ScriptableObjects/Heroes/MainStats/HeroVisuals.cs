@@ -10,11 +10,11 @@ public class HeroVisuals : MonoBehaviour
 
     private void Start()
     {
-        heroRenderer = GetComponent<SpriteRenderer>();
-        heroAnimator = GetComponent<Animator>();
+        this.heroRenderer = GetComponent<SpriteRenderer>();
+        this.heroAnimator = GetComponent<Animator>();
 
         // Update Prefab Info with SO Info
-        heroRenderer.sprite = SO_Hero.heroSprite;
-        heroAnimator = SO_Hero.heroAnimator;
+        this.heroRenderer.sprite = SO_Hero.heroSprite;
+        this.heroAnimator = SO_Hero.heroAnimator;
     }
 }
