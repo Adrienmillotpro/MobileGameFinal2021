@@ -5,11 +5,21 @@ using UnityEngine;
 public class SO_Enemy : MonoBehaviour
 {
     [Header ("Enemy Visuals")]
-    public Sprite enemySprite;
-    public Animator enemyAnimator;
+    [SerializeField] private Sprite enemySprite;
+    [SerializeField] private Animator enemyAnimator;
+    #region Getters
+    public Sprite EnemySprite { get { return enemySprite; } }
+    public Animator EnemyAnimator { get { return enemyAnimator; } }
+    #endregion
 
     [Header ("Enemy Stats")]
-    public float enemyHealth;
+    [SerializeField] private float enemyHealth;
+    #region Getters
+    public float EnemyHealth { get { return enemyHealth; } }
+    #endregion
 
-    public ElementalTypes[] enemyTypes;
+    [SerializeField] private ElementalTypes[] enemyTypes;
+    #region Getters
+    public ElementalTypes[] EnemyTypes { get { return enemyTypes; } }
+    #endregion
 }

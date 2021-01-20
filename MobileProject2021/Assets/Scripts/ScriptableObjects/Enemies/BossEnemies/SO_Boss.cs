@@ -5,11 +5,23 @@ using UnityEngine;
 public class SO_Boss : MonoBehaviour
 {
     [Header("Enemy Visuals")]
-    public Sprite bossSprite;
-    public Animator bossAnimator;
+    [SerializeField] private Sprite bossSprite;
+    [SerializeField] private Animator bossAnimator;
+    #region Getters
+    public Sprite BossSprite { get { return bossSprite; } }
+    public Animator BossAnimator { get { return bossAnimator; } }
+    #endregion
 
     [Header("Enemy Stats")]
-    public float bossHealth;
+    [SerializeField] private float bossHealth;
+    [SerializeField] private float bossTimer;
+    #region Getters
+    public float BossHealth { get { return bossHealth; } }
+    public float BossTimer { get { return bossTimer; } }
+    #endregion
 
-    public ElementalTypes[] bossTypes;
+    [SerializeField] private ElementalTypes[] bossTypes;
+    #region Getters
+    public ElementalTypes[] BossTypes { get { return bossTypes; } }
+    #endregion
 }
