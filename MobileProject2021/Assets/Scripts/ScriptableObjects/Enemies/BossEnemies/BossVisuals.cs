@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class BossVisuals : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private SO_Boss boss;
+    private Animator bossAnimator;
+    private SpriteRenderer bossRenderer;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        this.bossRenderer = GetComponent<SpriteRenderer>();
+        this.bossAnimator = GetComponent<Animator>();
+
+        // Update Prefab Info with SO Info
+        this.bossRenderer.sprite = boss.BossSprite;
+        this.bossAnimator = boss.BossAnimator;
     }
 }

@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SO_Enemy : MonoBehaviour
+[CreateAssetMenu(fileName = "SO_Enemy", menuName = "Enemies/Enemy")]
+
+public class SO_Enemy : ScriptableObject
 {
     [Header ("Enemy Visuals")]
     public Sprite enemySprite;
