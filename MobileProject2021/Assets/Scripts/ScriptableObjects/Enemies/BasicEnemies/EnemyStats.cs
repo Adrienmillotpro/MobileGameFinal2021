@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private SO_Enemy enemy;
+    [HideInInspector] public float enemyHealth;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        this.enemyHealth = enemy.EnemyHealth;
     }
 }

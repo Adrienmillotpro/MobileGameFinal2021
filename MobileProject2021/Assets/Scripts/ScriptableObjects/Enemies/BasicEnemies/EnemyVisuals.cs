@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class EnemyVisuals : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private SO_Enemy enemy;
+    private Animator enemyAnimator;
+    private SpriteRenderer enemyRenderer;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        this.enemyRenderer = GetComponent<SpriteRenderer>();
+        this.enemyAnimator = GetComponent<Animator>();
+
+        // Update Prefab Info with SO Info
+        this.enemyRenderer.sprite = enemy.EnemySprite;
+        this.enemyAnimator = enemy.EnemyAnimator;
     }
 }

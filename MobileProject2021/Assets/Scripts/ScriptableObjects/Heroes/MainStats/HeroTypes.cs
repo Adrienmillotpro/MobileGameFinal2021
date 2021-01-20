@@ -10,6 +10,6 @@ public class HeroTypes : MonoBehaviour
 
     private void Start()
     {
-        this.heroTypes = hero.heroTypes;
+        this.heroTypes = hero.HeroTypes;
     }
 }

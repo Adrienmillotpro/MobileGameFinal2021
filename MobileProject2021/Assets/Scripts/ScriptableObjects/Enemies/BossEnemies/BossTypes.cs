@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class BossTypes : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private SO_Boss boss;
+    [HideInInspector] public ElementalTypes[] bossTypes;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        bossTypes = boss.BossTypes;
     }
 }
