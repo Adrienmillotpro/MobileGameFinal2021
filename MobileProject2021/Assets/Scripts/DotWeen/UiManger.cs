@@ -8,12 +8,13 @@ using DG.Tweening;
 public class UiManger : MonoBehaviour
 {
     public RectTransform mainMenu, secondMenu, thirdMenu;
+    public float speed = 0.30f;
     
     
     // Start is called before the first frame update
     void Start()
     {
-        mainMenu.DOAnchorPos(Vector2.zero, 0.50f);
+        mainMenu.DOAnchorPos(Vector2.zero, speed);
     }
 
     // Update is called once per frame
@@ -22,15 +23,15 @@ public class UiManger : MonoBehaviour
         if (SwipeManager.swipeRight)
         {
             Debug.Log("Swipe Right");
-            mainMenu.DOAnchorPos(new Vector2(0, 0), 0.50f);
-            secondMenu.DOAnchorPos(new Vector2(1080, 0), 0.50f);
+            mainMenu.DOAnchorPos(new Vector2(0, 0), speed);
+            secondMenu.DOAnchorPos(new Vector2(1080, 0), speed);
         }
 
         if (SwipeManager.swipeLeft)
         {
             Debug.Log("Swipe Left");
-            mainMenu.DOAnchorPos(new Vector2(-1080, 0), 0.50f);
-            secondMenu.DOAnchorPos(new Vector2(0, 0), 0.50f);
+            mainMenu.DOAnchorPos(new Vector2(-1080, 0), speed);
+            secondMenu.DOAnchorPos(new Vector2(0, 0), speed);
         }
 
 
