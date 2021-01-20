@@ -16,12 +16,12 @@ public class HeroStats : MonoBehaviour
 
     private void Start()
     {
-        this.heroDamage = hero.heroDamage;
-        this.heroAttackRate = hero.heroAttackRate;
-        this.heroElementalReactionMultiplier = hero.heroElementalReactionMultiplier;
-        this.heroCritRate = hero.heroCritRate;
-        this.heroCritDamage = hero.heroCritDamage;
-        this.heroAffinityMultiplier = hero.heroAffinityMultiplier;
-        this.herocurrencyMultiplier = hero.currencyMultiplier;
+        this.heroDamage = hero.HeroDamage;
+        this.heroAttackRate = hero.HeroAttackRate;
+        this.heroElementalReactionMultiplier = hero.HeroElementalReactionMultiplier;
+        this.heroCritRate = hero.HeroCritRate;
+        this.heroCritDamage = hero.HeroCritDamage;
+        this.heroAffinityMultiplier = hero.HeroAffinityMultiplier;
+        this.herocurrencyMultiplier = hero.HeroCurrencyMultiplier;
     }
 }
