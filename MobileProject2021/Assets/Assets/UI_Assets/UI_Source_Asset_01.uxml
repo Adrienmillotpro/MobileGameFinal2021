@@ -1,6 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="StyleSheet.uss" />
-    <ui:VisualElement name="screen" style="flex-grow: 1; align-items: center; justify-content: center;">
-        <ui:Button text="Play" display-tooltip-when-elided="true" name="changeScene" style="align-items: center; justify-content: center; width: 50%; height: 8%; font-size: 34px;" />
-    </ui:VisualElement>
-</ui:UXML>
