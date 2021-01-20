@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class BossStats : MonoBehaviour
 {
-    [SerializeField] private SO_Boss boss;
-    [HideInInspector] public float bossHealth;
-    [HideInInspector] public float bossTimer;
-
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
-        this.bossHealth = boss.BossHealth;
-        this.bossTimer = boss.BossTimer;
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }

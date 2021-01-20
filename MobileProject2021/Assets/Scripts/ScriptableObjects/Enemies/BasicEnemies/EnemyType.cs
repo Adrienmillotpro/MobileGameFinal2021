@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class EnemyType : MonoBehaviour
 {
-    [SerializeField] private SO_Enemy enemy;
-    [HideInInspector] public ElementalTypes[] enemyTypes;
-
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
-        this.enemyTypes = enemy.EnemyTypes;
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }

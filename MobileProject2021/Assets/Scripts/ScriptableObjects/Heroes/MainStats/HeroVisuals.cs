@@ -5,8 +5,8 @@ using UnityEngine;
 public class HeroVisuals : MonoBehaviour
 {
     [SerializeField] private SO_Hero SO_Hero;
-    private Animator heroAnimator;
-    private SpriteRenderer heroRenderer;
+    [SerializeField] private Animator heroAnimator;
+    [SerializeField] private SpriteRenderer heroRenderer;
 
     private void Start()
     {
@@ -14,7 +14,7 @@ public class HeroVisuals : MonoBehaviour
         this.heroAnimator = GetComponent<Animator>();
 
         // Update Prefab Info with SO Info
-        this.heroRenderer.sprite = SO_Hero.HeroSprite;
-        this.heroAnimator = SO_Hero.HeroAnimator;
+        this.heroRenderer.sprite = SO_Hero.heroSprite;
+        this.heroAnimator = SO_Hero.heroAnimator;
     }
 }
