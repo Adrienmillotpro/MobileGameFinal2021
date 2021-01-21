@@ -34,7 +34,7 @@ public class EnemyStats : MonoBehaviour
         {
             for (int j = 0; j < args.damageTypes.Length; j++)
             {
-                float newElementalReaction = TypeChart.DefineElementalReaction(enemy.EnemyTypes[i], args.damageTypes[j]);
+                float newElementalReaction = TypeChart.DefineElementalReaction(args.damageTypes[j], enemy.EnemyTypes[i]);
                 if (newElementalReaction > bestElementalReaction)
                 {
                     bestElementalReaction = newElementalReaction;

@@ -27,8 +27,6 @@ public static class TypeChart
         int row = (int)heroType;
         int column = (int)enemyType;
 
-        float elementalReaction = chart[row][column];
-
-        return elementalReaction;
+        return chart[row][column];
     }
 }
