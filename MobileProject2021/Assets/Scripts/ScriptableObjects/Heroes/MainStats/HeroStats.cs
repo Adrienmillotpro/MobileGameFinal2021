@@ -24,4 +24,5 @@ public class HeroStats : MonoBehaviour
         this.heroAffinityMultiplier = hero.HeroAffinityMultiplier;
         this.herocurrencyMultiplier = hero.HeroCurrencyMultiplier;
     }
+
 }

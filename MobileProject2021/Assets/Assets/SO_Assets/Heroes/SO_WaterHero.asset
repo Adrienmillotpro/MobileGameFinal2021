@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroSprite: {fileID: 0}
   heroAnimator: {fileID: 0}
-  heroDamage: 0
+  heroDamage: 20
   heroAttackRate: 0
   heroElementalReactionMultiplier: 0
   heroCritRate: 0
   heroCritDamage: 0
   heroAffinityMultiplier: 0
-  currencyMultiplier: 0
-  heroTypes: 
+  heroCurrencyMultiplier: 0
+  heroTypes: 01000000
   passivePerk: {fileID: 0}
   activePerk: {fileID: 0}
