@@ -9,12 +9,12 @@ public class UiManger : MonoBehaviour
 {
     public RectTransform mainMenu, secondMenu, thirdMenu;
     public float speed = 0.30f;
-    
-    
+
+
     // Start is called before the first frame update
     void Start()
     {
-        mainMenu.DOAnchorPos(Vector2.zero, speed);
+       mainMenu.DOAnchorPos(Vector2.zero, speed);
     }
 
     // Update is called once per frame
