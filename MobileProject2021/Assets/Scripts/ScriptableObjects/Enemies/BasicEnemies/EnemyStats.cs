@@ -5,36 +5,33 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
-    [SerializeField] private SO_Enemy enemy;
+    [SerializeField] private SO_Enemy SOenemy;
     [HideInInspector] public float enemyHealth;
     [HideInInspector] public float elementalDamageReceived;
 
-    //private DamageEvent damageEvent;
+    public event EventHandler<OnKilledEventArgs> OnKilled;
+    private OnKilledEventArgs onKilledArgs;
 
-    private void OnEnable()
+    private void Awake()
     {
         DamageEvent.OnClick += ReceiveDamage;
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         DamageEvent.OnClick -= ReceiveDamage;
+        OnKilled?.Invoke(this, onKilledArgs);
     }
 
-    private void Start()
-    {
-        this.enemyHealth = enemy.EnemyHealth;
-    }
-
-    private void ReceiveDamage(object sender, OnDamageEventArgs args)
+    private void ReceiveDamage(object sender, OnDamageEventArgs damageArgs)
     {
         float bestElementalReaction = new float();
 
-        for (int i = 0; i < enemy.EnemyTypes.Length; i++)
+        for (int i = 0; i < SOenemy.EnemyTypes.Length; i++)
         {
-            for (int j = 0; j < args.damageTypes.Length; j++)
+            for (int j = 0; j < damageArgs.damageTypes.Length; j++)
             {
-                float newElementalReaction = TypeChart.DefineElementalReaction(args.damageTypes[j], enemy.EnemyTypes[i]);
+                float newElementalReaction = TypeChart.DefineElementalReaction(damageArgs.damageTypes[j], SOenemy.EnemyTypes[i]);
                 if (newElementalReaction > bestElementalReaction)
                 {
                     bestElementalReaction = newElementalReaction;
@@ -42,11 +39,11 @@ public class EnemyStats : MonoBehaviour
             }
         }
         Debug.Log(this.name + bestElementalReaction);
-        enemyHealth -= args.damage * bestElementalReaction;
+        enemyHealth -= damageArgs.damage * bestElementalReaction;
 
         if (bestElementalReaction == 2f)
         {
-            elementalDamageReceived += args.damage * bestElementalReaction;
+            elementalDamageReceived += damageArgs.damage * bestElementalReaction;
         }
 
         //Debug.Log(this.name + enemyHealth);

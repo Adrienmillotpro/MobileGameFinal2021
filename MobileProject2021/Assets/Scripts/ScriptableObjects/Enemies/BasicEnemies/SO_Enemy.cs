@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,4 +25,6 @@ public class SO_Enemy : ScriptableObject
     #region Getters
     public ElementalTypes[] EnemyTypes { get { return enemyTypes; } }
     #endregion
+
+
 }
