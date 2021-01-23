@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3c3c12a87054294693034e064571684, type: 3}
-  m_Name: SO_Boss_Tier1
+  m_Script: {fileID: 11500000, guid: ac05b6495c973bb408bb54d4e7f364f5, type: 3}
+  m_Name: SO_AirEnemy_Tier3
   m_EditorClassIdentifier: 
-  bossSprite: {fileID: 21300028, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
-  bossAnimator: {fileID: 0}
-  bossHealth: 500
-  bossTimer: 10
-  bossTypes: 03000000
+  enemySprite: {fileID: 0}
+  enemyAnimator: {fileID: 0}
+  enemyHealth: 200
+  enemyTypes: 02000000
