@@ -7,7 +7,7 @@ using DG.Tweening;
 
 public class UiManger : MonoBehaviour
 {
-    public RectTransform mainMenu, secondMenu, thirdMenu;
+    public RectTransform mainMenu, secondMenu;
     public float speed = 0.30f;
 
 
