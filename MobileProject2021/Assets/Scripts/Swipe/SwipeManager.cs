@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 
+
 public class SwipeManager : MonoBehaviour
 {
     public static bool tap, swipeLeft, swipeRight, swipeUp, swipeDown;
     private bool isDraging = false;
     private Vector2 startTouch, swipeDelta;
+   
 
     private void Update()
     {
+           
         tap = swipeDown = swipeUp = swipeLeft = swipeRight = false;
         #region Standalone Inputs
         if (Input.GetMouseButtonDown(0))
@@ -15,6 +18,7 @@ public class SwipeManager : MonoBehaviour
             tap = true;
             isDraging = true;
             startTouch = Input.mousePosition;
+           
         }
         else if (Input.GetMouseButtonUp(0))
         {
@@ -30,7 +34,20 @@ public class SwipeManager : MonoBehaviour
             {
                 tap = true;
                 isDraging = true;
+
                 startTouch = Input.touches[0].position;
+
+                RaycastHit2D hitInfo = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.touches[0].position), Vector2.zero);
+                // RaycastHit2D can be either true or null, but has an implicit conversion to bool, so we can use it like this
+                if (hitInfo.transform.gameObject.name == "Panel2DCollider")
+                {
+                    
+                    Reset();
+                    // Here you can check hitInfo to see which collider has been hit, and act appropriately.
+                }
+                
+               
+
             }
             else if (Input.touches[0].phase == TouchPhase.Ended || Input.touches[0].phase == TouchPhase.Canceled)
             {
