@@ -20,14 +20,14 @@ public class EnemyManager : MonoBehaviour
 
 
     private GameObject currentEnemy;
+    private SO_Enemy currentSoEnemy;
     private EnemyStats currentEnemyStats;
     private EnemyVisuals currentEnemyVisuals;
-    private EnemyType currentEnemyType;
 
     private GameObject currentBoss;
+    private SO_Boss currentSoBoss;
     private BossStats currentBossStats;
     private BossVisuals currentBossVisuals;
-    private BossTypes currentBossTypes;
 
     public static event EventHandler<OnSpawnEventArgs> OnSpawn;
     private OnSpawnEventArgs spawnArgs;
@@ -44,19 +44,16 @@ public class EnemyManager : MonoBehaviour
     private void SpawnEnemy()
     {
         currentEnemy = Instantiate(enemyPrefab);
+        currentEnemyStats = currentEnemy.GetComponent<EnemyStats>();
+        currentEnemyVisuals = currentEnemy.GetComponent<EnemyVisuals>();
         currentEnemyStats.OnKilled += EnemyKilled;
-        
-        currentEnemyStats = enemyPrefab.GetComponent<EnemyStats>();
-        currentEnemyVisuals = enemyPrefab.GetComponent<EnemyVisuals>();
-        currentEnemyType = enemyPrefab.GetComponent<EnemyType>();
 
         System.Random randomEnemy = new System.Random();
         int indexEnemy = randomEnemy.Next(0, currentWave.PotentialEnemies.Count);
 
-        currentEnemyStats.enemyHealth = currentWave.PotentialEnemies[indexEnemy].EnemyHealth;
-        currentEnemyVisuals.enemyRenderer.sprite = currentWave.PotentialEnemies[indexEnemy].EnemySprite;
-        currentEnemyVisuals.enemyAnimator = currentWave.PotentialEnemies[indexEnemy].EnemyAnimator;
-        currentEnemyType.enemyTypes = currentWave.PotentialEnemies[indexEnemy].EnemyTypes;
+        currentSoEnemy = currentWave.PotentialEnemies[indexEnemy];
+        currentEnemyStats.soEnemy = currentSoEnemy;
+        currentEnemyVisuals.soEnemy = currentSoEnemy;
 
         OnSpawn?.Invoke(this, spawnArgs);
     }
@@ -65,8 +62,8 @@ public class EnemyManager : MonoBehaviour
         currentBoss = Instantiate(bossPrefab);
         currentBossStats = bossPrefab.GetComponent<BossStats>();
         currentBossVisuals = bossPrefab.GetComponent<BossVisuals>();
-        currentBossTypes = bossPrefab.GetComponent<BossTypes>();
 
+        currentSoBoss = currentWave.PotentialBoss;
         OnSpawn?.Invoke(this, spawnArgs);
     }
 
@@ -110,8 +107,8 @@ public class EnemyManager : MonoBehaviour
 
     private void EnemyKilled(object sender, OnKilledEventArgs killedArgs)
     {
+        Debug.Log("OnKilledEvent received");
         currentEnemyStats.OnKilled -= EnemyKilled;
-        Destroy(currentEnemy);
         UpdateRoom();
     }
 }

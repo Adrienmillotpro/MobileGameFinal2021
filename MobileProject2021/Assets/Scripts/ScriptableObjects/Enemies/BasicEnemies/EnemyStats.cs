@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
-    [SerializeField] private SO_Enemy SOenemy;
-    [HideInInspector] public float enemyHealth;
-    [HideInInspector] public float elementalDamageReceived;
+    [HideInInspector] public SO_Enemy soEnemy;
+    private ElementalTypes[] enemyTypes;
+    private float enemyHealth;
+    private float elementalDamageReceived;
 
     public event EventHandler<OnKilledEventArgs> OnKilled;
     private OnKilledEventArgs onKilledArgs;
@@ -15,23 +16,25 @@ public class EnemyStats : MonoBehaviour
     private void Awake()
     {
         DamageEvent.OnClick += ReceiveDamage;
+        this.enemyHealth = soEnemy.EnemyHealth;
+        this.enemyTypes = soEnemy.EnemyTypes;
     }
 
     private void OnDestroy()
     {
+        Debug.Log("I'm being destroyed");
         DamageEvent.OnClick -= ReceiveDamage;
-        OnKilled?.Invoke(this, onKilledArgs);
     }
 
     private void ReceiveDamage(object sender, OnDamageEventArgs damageArgs)
     {
         float bestElementalReaction = new float();
 
-        for (int i = 0; i < SOenemy.EnemyTypes.Length; i++)
+        for (int i = 0; i < this.enemyTypes.Length; i++)
         {
             for (int j = 0; j < damageArgs.damageTypes.Length; j++)
             {
-                float newElementalReaction = TypeChart.DefineElementalReaction(damageArgs.damageTypes[j], SOenemy.EnemyTypes[i]);
+                float newElementalReaction = TypeChart.DefineElementalReaction(damageArgs.damageTypes[j], enemyTypes[i]);
                 if (newElementalReaction > bestElementalReaction)
                 {
                     bestElementalReaction = newElementalReaction;
@@ -39,18 +42,21 @@ public class EnemyStats : MonoBehaviour
             }
         }
         Debug.Log(this.name + bestElementalReaction);
-        enemyHealth -= damageArgs.damage * bestElementalReaction;
+        this.enemyHealth -= damageArgs.damage * bestElementalReaction;
 
         if (bestElementalReaction == 2f)
         {
-            elementalDamageReceived += damageArgs.damage * bestElementalReaction;
+            this.elementalDamageReceived += damageArgs.damage * bestElementalReaction;
         }
 
-        if (enemyHealth <= 0)
+        if (this.enemyHealth <= 0)
         {
-            Destroy(this);
+            Debug.Log("I'm dead");
+            OnKilled?.Invoke(this, onKilledArgs);
+            Destroy(this.gameObject);
         }
 
-        //Debug.Log(this.name + enemyHealth);
+        Debug.Log(this.enemyHealth);
+
     }
 }

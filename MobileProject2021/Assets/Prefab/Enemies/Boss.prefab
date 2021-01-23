@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 916203593546322905}
   - component: {fileID: 7469260122691451093}
   - component: {fileID: 5229383437612638039}
-  - component: {fileID: 1665463097453199098}
   - component: {fileID: 3094551298549035244}
   m_Layer: 0
   m_Name: Boss
@@ -100,19 +99,6 @@ MonoBehaviour:
   boss: {fileID: 0}
   bossHealth: 0
   bossTimer: 0
---- !u!114 &1665463097453199098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6118861514044913809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3cdc89033081c44ca105c4348b53f06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boss: {fileID: 0}
   bossTypes: 
 --- !u!114 &3094551298549035244
 MonoBehaviour:
@@ -126,3 +112,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309e651c01f92724daac27e951acd0f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossAnimator: {fileID: 0}
+  bossRenderer: {fileID: 0}

@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class BossVisuals : MonoBehaviour
 {
-    [SerializeField] private SO_Boss boss;
-    private Animator bossAnimator;
-    private SpriteRenderer bossRenderer;
+    //[HideInInspector] public Animator bossAnimator;
+    [HideInInspector] public SpriteRenderer bossRenderer;
 
-    private void Start()
+    private void Awake()
     {
         this.bossRenderer = GetComponent<SpriteRenderer>();
-        this.bossAnimator = GetComponent<Animator>();
-
-        // Update Prefab Info with SO Info
-        this.bossRenderer.sprite = boss.BossSprite;
-        this.bossAnimator = boss.BossAnimator;
+        //this.bossAnimator = GetComponent<Animator>();
     }
 }

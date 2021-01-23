@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8628196801051197673}
   - component: {fileID: 8628196801051197672}
   - component: {fileID: 8628196801051197675}
-  - component: {fileID: 8628196801051197674}
   - component: {fileID: 8628196801051197677}
   m_Layer: 0
   m_Name: Enemy
@@ -97,22 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ce60580ca770043a0110614e4e0bad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  enemyHealth: 0
---- !u!114 &8628196801051197674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8628196801051197676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6edb0833917b3a441b3301a1cf92f228, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
   enemyTypes: 
+  enemyHealth: 0
+  elementalDamageReceived: 0
 --- !u!114 &8628196801051197677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,4 +111,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050b9f043975db349b020e1092721701, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  enemyAnimator: {fileID: 0}
+  enemyRenderer: {fileID: 0}

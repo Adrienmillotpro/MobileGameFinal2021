@@ -1,16 +1,57 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class BossStats : MonoBehaviour
 {
-    [SerializeField] private SO_Boss boss;
     [HideInInspector] public float bossHealth;
     [HideInInspector] public float bossTimer;
+    [HideInInspector] public ElementalTypes[] bossTypes;
+    [HideInInspector] public float elementalDamageReceived;
 
-    private void Start()
+    public event EventHandler<OnKilledEventArgs> OnKilled;
+    private OnKilledEventArgs onKilledArgs;
+
+    private void Awake()
     {
-        this.bossHealth = boss.BossHealth;
-        this.bossTimer = boss.BossTimer;
+        DamageEvent.OnClick += ReceiveDamage;
+    }
+
+    private void OnDestroy()
+    {
+        DamageEvent.OnClick -= ReceiveDamage;
+        OnKilled?.Invoke(this, onKilledArgs);
+    }
+
+    private void ReceiveDamage(object sender, OnDamageEventArgs damageArgs)
+    {
+        float bestElementalReaction = new float();
+
+        for (int i = 0; i < this.bossTypes.Length; i++)
+        {
+            for (int j = 0; j < damageArgs.damageTypes.Length; j++)
+            {
+                float newElementalReaction = TypeChart.DefineElementalReaction(damageArgs.damageTypes[j], bossTypes[i]);
+                if (newElementalReaction > bestElementalReaction)
+                {
+                    bestElementalReaction = newElementalReaction;
+                }
+            }
+        }
+        Debug.Log(this.name + bestElementalReaction);
+        this.bossHealth -= damageArgs.damage * bestElementalReaction;
+
+        if (bestElementalReaction == 2f)
+        {
+            this.elementalDamageReceived += damageArgs.damage * bestElementalReaction;
+        }
+
+        if (this.bossHealth <= 0)
+        {
+            Destroy(this);
+        }
+
+        //Debug.Log(this.name + enemyHealth);
     }
 }
