@@ -628,7 +628,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cdae96e4d141fb44af398d1930cbada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySelector: {fileID: 11400000, guid: 3327fb54cfa6aff42b99386667e46e98, type: 2}
+  enemyBiomes: []
+  enemyPrefab: {fileID: 8628196801051197676, guid: da1fa52e53e8c954dae0898d8d8c6b13, type: 3}
+  bossPrefab: {fileID: 6118861514044913809, guid: 66cfa9c86808e33438ddfa63d6fa16b2, type: 3}
+  roomsPerFloor: 10
+  floorsPerBiome: 0
 --- !u!4 &1398076411
 Transform:
   m_ObjectHideFlags: 0

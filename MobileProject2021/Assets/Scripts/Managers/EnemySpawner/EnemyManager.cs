@@ -2,14 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
 public class EnemyManager : MonoBehaviour
 {
-    [SerializeField] private SO_EnemySelector[] enemySelectors;
+    [SerializeField] private SO_Biome[] enemyBiomes;
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private GameObject bossPrefab;
 
-    private SO_EnemySelector currentSelector;
+    private SO_Biome currentBiome;
+    private int indexBiome;
+
+    private WaveOfEnemies currentWave;
+
+    [SerializeField] private int roomsPerWave;
+    private int indexRoom;
+
+    [SerializeField] private int wavesPerBiome;
+    private int indexWave;
 
     private GameObject currentEnemy;
     private EnemyStats currentEnemyStats;
@@ -21,26 +29,36 @@ public class EnemyManager : MonoBehaviour
     private BossVisuals currentBossVisuals;
     private BossTypes currentBossTypes;
 
-    private int indexSelector;
-
-    [SerializeField] private int roomsPerFloor;
-    private int currentRoom;
-
+    public static event EventHandler<OnSpawnEventArgs> OnSpawn;
+    private OnSpawnEventArgs spawnArgs;
     private void Start()
     {
-        indexSelector = 0;
-        UpdateSelector();
-        SelectNextEnemy();
+        indexBiome = 0;
+        indexWave = 0;
+        indexRoom = 0;
+        UpdateBiome();
+        UpdateWave();
+        UpdateRoom();
     }
 
     private void SpawnEnemy()
     {
         currentEnemy = Instantiate(enemyPrefab);
+        currentEnemyStats.OnKilled += EnemyKilled;
+        
         currentEnemyStats = enemyPrefab.GetComponent<EnemyStats>();
         currentEnemyVisuals = enemyPrefab.GetComponent<EnemyVisuals>();
         currentEnemyType = enemyPrefab.GetComponent<EnemyType>();
 
-        currentEnemyStats.OnKilled += EnemyKilled;
+        System.Random randomEnemy = new System.Random();
+        int indexEnemy = randomEnemy.Next(0, currentWave.PotentialEnemies.Count);
+
+        currentEnemyStats.enemyHealth = currentWave.PotentialEnemies[indexEnemy].EnemyHealth;
+        currentEnemyVisuals.enemyRenderer.sprite = currentWave.PotentialEnemies[indexEnemy].EnemySprite;
+        currentEnemyVisuals.enemyAnimator = currentWave.PotentialEnemies[indexEnemy].EnemyAnimator;
+        currentEnemyType.enemyTypes = currentWave.PotentialEnemies[indexEnemy].EnemyTypes;
+
+        OnSpawn?.Invoke(this, spawnArgs);
     }
     private void SpawnBoss()
     {
@@ -49,38 +67,51 @@ public class EnemyManager : MonoBehaviour
         currentBossVisuals = bossPrefab.GetComponent<BossVisuals>();
         currentBossTypes = bossPrefab.GetComponent<BossTypes>();
 
-    }
-    private void EnemyKilled(object sender, OnKilledEventArgs killedArgs)
-    {
-        currentEnemyStats.OnKilled -= EnemyKilled;
-        Destroy(currentEnemy);
-        SelectNextEnemy();
+        OnSpawn?.Invoke(this, spawnArgs);
     }
 
-    private void SelectNextEnemy()
+    private void UpdateRoom()
     {
-        currentRoom ++;
-        if (currentRoom == roomsPerFloor)
+        if (indexRoom == roomsPerWave)
         {
             SpawnBoss();
         }
-        else if (currentRoom == roomsPerFloor + 1)
+        else if (indexRoom == roomsPerWave + 1)
         {
-            currentRoom = 0;
-            UpdateSelector();
+            indexRoom = 0;
+            UpdateWave();
+            SpawnEnemy();
         }
         else
         {
             SpawnEnemy();
         }
+        indexRoom++;
     }
-    private void UpdateSelector()
+    private void UpdateWave()
     {
-        indexSelector++;
-        if (indexSelector >= enemySelectors.Length)
+        if (indexWave >= currentBiome.Waves.Length)
         {
-            indexSelector = 0;
+            indexWave = 0;
+            UpdateBiome();
         }
-        currentSelector = enemySelectors[indexSelector];
+        currentWave = currentBiome.Waves[indexWave];
+        indexWave++;
+    }
+    private void UpdateBiome()
+    {
+        if (indexBiome >= enemyBiomes.Length)
+        {
+            indexBiome = 0;
+        }
+        currentBiome = enemyBiomes[indexBiome];
+        indexBiome++;
+    }
+
+    private void EnemyKilled(object sender, OnKilledEventArgs killedArgs)
+    {
+        currentEnemyStats.OnKilled -= EnemyKilled;
+        Destroy(currentEnemy);
+        UpdateRoom();
     }
 }

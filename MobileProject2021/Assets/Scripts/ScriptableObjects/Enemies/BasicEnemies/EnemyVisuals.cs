@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class EnemyVisuals : MonoBehaviour
 {
-    [SerializeField] private SO_Enemy enemy;
-    private Animator enemyAnimator;
-    private SpriteRenderer enemyRenderer;
+    [HideInInspector] public Animator enemyAnimator;
+    [HideInInspector] public SpriteRenderer enemyRenderer;
 
-    private void Start()
+    private void Awake()
     {
         this.enemyRenderer = GetComponent<SpriteRenderer>();
         this.enemyAnimator = GetComponent<Animator>();
-
-        // Update Prefab Info with SO Info
-        this.enemyRenderer.sprite = enemy.EnemySprite;
-        this.enemyAnimator = enemy.EnemyAnimator;
     }
 }

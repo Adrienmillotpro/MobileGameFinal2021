@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SO_EnemySelector", menuName = "WaveOfEnemies")]
+[CreateAssetMenu(fileName = "SO_Biome", menuName = "Biome")]
 
-public class SO_EnemySelector : ScriptableObject
+public class SO_Biome : ScriptableObject
 {
-
     [SerializeField] private WaveOfEnemies[] waveOfEnemies;
     #region Getters
     public WaveOfEnemies[] Waves { get { return waveOfEnemies; } }
     #endregion
+}
 
     [System.Serializable]
     public class WaveOfEnemies
@@ -24,5 +24,3 @@ public class SO_EnemySelector : ScriptableObject
         public SO_Boss PotentialBoss { get { return potentialBoss; } }
         #endregion
     }
-
-}

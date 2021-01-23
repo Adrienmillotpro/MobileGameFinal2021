@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class DamageEvent : MonoBehaviour
 {
-    private OnDamageEventArgs args = new OnDamageEventArgs();
+    private OnDamageEventArgs damageArgs = new OnDamageEventArgs();
 
     public HeroStats heroStats;
     public HeroTypes heroTypes;
@@ -17,9 +17,9 @@ public class DamageEvent : MonoBehaviour
     {
         if (OnClick != null)
         {
-            this.args.damage = heroStats.heroDamage;
-            this.args.damageTypes = heroTypes.heroTypes;
-            OnClick?.Invoke(this, args);
+            this.damageArgs.damage = heroStats.heroDamage;
+            this.damageArgs.damageTypes = heroTypes.heroTypes;
+            OnClick?.Invoke(this, damageArgs);
         }
 
     }

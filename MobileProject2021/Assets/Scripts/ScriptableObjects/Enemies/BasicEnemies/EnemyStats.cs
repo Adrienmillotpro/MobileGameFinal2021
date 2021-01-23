@@ -46,6 +46,11 @@ public class EnemyStats : MonoBehaviour
             elementalDamageReceived += damageArgs.damage * bestElementalReaction;
         }
 
+        if (enemyHealth <= 0)
+        {
+            Destroy(this);
+        }
+
         //Debug.Log(this.name + enemyHealth);
     }
 }
