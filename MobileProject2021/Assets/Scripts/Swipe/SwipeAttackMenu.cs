@@ -1,17 +1,17 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 
-public class SwipeManager : MonoBehaviour
+public class SwipeAttackMenu : MonoBehaviour
 {
-    public static bool tap, swipeLeft, swipeRight;
+    public static bool tap, swipeLeft, swipeRight, swipeUp, swipeDown;
     private bool isDraging = false;
     private Vector2 startTouch, swipeDelta;
-   
+
 
     private void Update()
     {
-           
-        tap = swipeLeft = swipeRight = false;
+
+        tap = swipeDown = swipeUp = swipeLeft = swipeRight = false;
         #region Standalone Inputs
         if (Input.GetMouseButtonDown(0))
         {
@@ -21,7 +21,7 @@ public class SwipeManager : MonoBehaviour
 
             RaycastHit2D hitInfo = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             // RaycastHit2D can be either true or null, but has an implicit conversion to bool, so we can use it like this
-            if (hitInfo.transform.gameObject.name == "Panel2DCollider")
+            if (hitInfo.transform.gameObject.name == "BottomPanel2dCollider")
             {
 
                 Reset();
@@ -48,14 +48,14 @@ public class SwipeManager : MonoBehaviour
 
                 RaycastHit2D hitInfo = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.touches[0].position), Vector2.zero);
                 // RaycastHit2D can be either true or null, but has an implicit conversion to bool, so we can use it like this
-                if (hitInfo.transform.gameObject.name == "Panel2DCollider")
+                if (hitInfo.transform.gameObject.name == "BottomPanel2dCollider")
                 {
-                    
+
                     Reset();
                     // Here you can check hitInfo to see which collider has been hit, and act appropriately.
                 }
-                
-               
+
+
 
             }
             else if (Input.touches[0].phase == TouchPhase.Ended || Input.touches[0].phase == TouchPhase.Canceled)
@@ -90,7 +90,14 @@ public class SwipeManager : MonoBehaviour
                 else
                     swipeRight = true;
             }
-           
+            else
+            {
+                //Up or Down
+                if (y < 0)
+                    swipeDown = true;
+                else
+                    swipeUp = true;
+            }
 
             Reset();
         }

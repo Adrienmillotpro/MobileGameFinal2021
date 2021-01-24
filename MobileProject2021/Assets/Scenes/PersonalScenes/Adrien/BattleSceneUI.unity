@@ -2217,6 +2217,8 @@ GameObject:
   - component: {fileID: 1264012799}
   - component: {fileID: 1264012801}
   - component: {fileID: 1264012800}
+  - component: {fileID: 1264012802}
+  - component: {fileID: 1264012803}
   m_Layer: 0
   m_Name: SwipeManager
   m_TagString: Untagged
@@ -2263,6 +2265,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7d1639fa60ac154b8006b33be956f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1264012802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264012798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddfad3de5c94cd4ba9cf0cac56a0c8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1264012803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264012798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b52a7917903586d41a626c5343a3075e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1269995276
