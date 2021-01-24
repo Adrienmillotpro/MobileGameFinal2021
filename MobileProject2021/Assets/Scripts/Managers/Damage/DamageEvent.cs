@@ -17,6 +17,10 @@ public class DamageEvent : MonoBehaviour
     {
         if (OnClick != null)
         {
+            if (this.heroStats == null)
+            {
+                Debug.Log("casse les couilles");
+            }
             this.damageArgs.damage = heroStats.heroDamage;
             this.damageArgs.damageTypes = heroTypes.heroTypes;
             OnClick?.Invoke(this, damageArgs);

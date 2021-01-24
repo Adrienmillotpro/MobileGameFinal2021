@@ -7,4 +7,5 @@ public class OnDamageEventArgs : EventArgs
 {
     public ElementalTypes[] damageTypes;
     public float damage;
+    public float bestElementalReaction;
 }

@@ -18,9 +18,8 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private int roomsPerWave;
     private int indexRoom;
 
-
     private GameObject currentEnemy;
-    private SO_Enemy currentSoEnemy;
+    [SerializeField] private SO_Enemy currentSoEnemy;
     private EnemyStats currentEnemyStats;
     private EnemyVisuals currentEnemyVisuals;
 
@@ -30,7 +29,11 @@ public class EnemyManager : MonoBehaviour
     private BossVisuals currentBossVisuals;
 
     public static event EventHandler<OnSpawnEventArgs> OnSpawn;
-    private OnSpawnEventArgs spawnArgs;
+    private OnSpawnEventArgs spawnArgs = new OnSpawnEventArgs();
+
+    public static event EventHandler<OnDamageEventArgs> OnDealDamage;
+    private OnDamageEventArgs OnDealDamageArgs = new OnDamageEventArgs();
+
     private void Start()
     {
         indexBiome = 0;
@@ -39,6 +42,7 @@ public class EnemyManager : MonoBehaviour
         UpdateBiome();
         UpdateWave();
         UpdateRoom();
+        DamageEvent.OnClick += OnClickCalculateDamage;
     }
 
     private void SpawnEnemy()
@@ -103,6 +107,27 @@ public class EnemyManager : MonoBehaviour
         }
         currentBiome = enemyBiomes[indexBiome];
         indexBiome++;
+    }
+
+    private void OnClickCalculateDamage(object sender, OnDamageEventArgs damageArgs)
+    {
+        float bestElementalReaction = new float();
+
+        for (int i = 0; i < this.currentSoEnemy.EnemyTypes.Length; i++)
+        {
+            for (int j = 0; j < damageArgs.damageTypes.Length; j++)
+            {
+                float newElementalReaction = TypeChart.DefineElementalReaction(damageArgs.damageTypes[j], currentSoEnemy.EnemyTypes[i]);
+                if (newElementalReaction > bestElementalReaction)
+                {
+                    bestElementalReaction = newElementalReaction;
+                }
+            }
+        }
+        OnDealDamageArgs.bestElementalReaction = bestElementalReaction;
+        OnDealDamageArgs.damage = damageArgs.damage * bestElementalReaction;
+
+        OnDealDamage?.Invoke(this, OnDealDamageArgs);
     }
 
     private void EnemyKilled(object sender, OnKilledEventArgs killedArgs)
