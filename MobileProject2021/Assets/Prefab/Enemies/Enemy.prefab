@@ -96,9 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ce60580ca770043a0110614e4e0bad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyTypes: 
-  enemyHealth: 0
-  elementalDamageReceived: 0
+  soEnemy: {fileID: 0}
 --- !u!114 &8628196801051197677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,5 +109,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050b9f043975db349b020e1092721701, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAnimator: {fileID: 0}
-  enemyRenderer: {fileID: 0}
+  soEnemy: {fileID: 0}
+  enemyRenderer: {fileID: 8628196801051197672}

@@ -10,10 +10,15 @@ public class EnemyVisuals : MonoBehaviour
 
     private void Awake()
     {
-        this.enemyRenderer = GetComponent<SpriteRenderer>();
-        //this.enemyAnimator = GetComponent<Animator>();
+        EnemyManager.OnSpawn += OnSpawnUpdateVisuals;
+    }
 
+    private void OnDestroy()
+    {
+        EnemyManager.OnSpawn -= OnSpawnUpdateVisuals;
+    }
+    private void OnSpawnUpdateVisuals(object sender, OnSpawnEventArgs spawnArgs)
+    {
         this.enemyRenderer.sprite = soEnemy.EnemySprite;
-        //this.enemyAnimator = soEnemy.EnemyAnimator;
     }
 }

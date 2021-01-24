@@ -6,47 +6,43 @@ using UnityEngine;
 public class EnemyStats : MonoBehaviour
 {
     [HideInInspector] public SO_Enemy soEnemy;
-    private ElementalTypes[] enemyTypes;
+    //private ElementalTypes[] enemyTypes;
     private float enemyHealth;
     private float elementalDamageReceived;
 
     public event EventHandler<OnKilledEventArgs> OnKilled;
-    private OnKilledEventArgs onKilledArgs;
+    private OnKilledEventArgs onKilledArgs = new OnKilledEventArgs(0f);
 
     private void Awake()
     {
-        DamageEvent.OnClick += ReceiveDamage;
+        EnemyManager.OnDealDamage += ReceiveDamage;
+        EnemyManager.OnSpawn += OnSpawnUpdateHealth;
+        Debug.Log("We got there" + this.soEnemy == null);
+        this.enemyHealth = 0f;
+        Debug.Log("Survived");
+    }
+
+    private void OnSpawnUpdateHealth(object sender, OnSpawnEventArgs spawnArgs)
+    {
         this.enemyHealth = soEnemy.EnemyHealth;
-        this.enemyTypes = soEnemy.EnemyTypes;
     }
 
     private void OnDestroy()
     {
         Debug.Log("I'm being destroyed");
-        DamageEvent.OnClick -= ReceiveDamage;
+        EnemyManager.OnDealDamage -= ReceiveDamage;
+        EnemyManager.OnSpawn -= OnSpawnUpdateHealth;
     }
 
     private void ReceiveDamage(object sender, OnDamageEventArgs damageArgs)
     {
-        float bestElementalReaction = new float();
+        
+        Debug.Log(this.name + damageArgs.bestElementalReaction);
+        this.enemyHealth -= damageArgs.damage;
 
-        for (int i = 0; i < this.enemyTypes.Length; i++)
+        if (damageArgs.bestElementalReaction == 2f)
         {
-            for (int j = 0; j < damageArgs.damageTypes.Length; j++)
-            {
-                float newElementalReaction = TypeChart.DefineElementalReaction(damageArgs.damageTypes[j], enemyTypes[i]);
-                if (newElementalReaction > bestElementalReaction)
-                {
-                    bestElementalReaction = newElementalReaction;
-                }
-            }
-        }
-        Debug.Log(this.name + bestElementalReaction);
-        this.enemyHealth -= damageArgs.damage * bestElementalReaction;
-
-        if (bestElementalReaction == 2f)
-        {
-            this.elementalDamageReceived += damageArgs.damage * bestElementalReaction;
+            this.elementalDamageReceived += damageArgs.damage;
         }
 
         if (this.enemyHealth <= 0)
