@@ -18,7 +18,16 @@ public class SwipeManager : MonoBehaviour
             tap = true;
             isDraging = true;
             startTouch = Input.mousePosition;
-           
+
+            RaycastHit2D hitInfo = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            // RaycastHit2D can be either true or null, but has an implicit conversion to bool, so we can use it like this
+            if (hitInfo.transform.gameObject.name == "Panel2DCollider")
+            {
+
+                Reset();
+                // Here you can check hitInfo to see which collider has been hit, and act appropriately.
+            }
+
         }
         else if (Input.GetMouseButtonUp(0))
         {

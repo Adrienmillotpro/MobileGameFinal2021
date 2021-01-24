@@ -29,7 +29,7 @@ public class UiSwipeBottom : MonoBehaviour
         {
             Debug.Log("Swipe Right");
             mainMenu.DOAnchorPos(new Vector2(0, 179), speed);
-            secondMenu.DOAnchorPos(new Vector2(1131, 179), speed);
+            secondMenu.DOAnchorPos(new Vector2(1124.5f, 179), speed);
         }
 
     
