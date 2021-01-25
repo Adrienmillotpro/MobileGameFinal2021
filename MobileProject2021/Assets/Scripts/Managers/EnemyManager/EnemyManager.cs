@@ -8,6 +8,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private GameObject bossPrefab;
 
+    #region Biome Settings
     private SO_Biome currentBiome;
     private int indexBiome;
 
@@ -17,16 +18,21 @@ public class EnemyManager : MonoBehaviour
 
     [SerializeField] private int roomsPerWave;
     private int indexRoom;
+    #endregion
 
+    #region Enemy Settings
     private GameObject currentEnemy;
     private SO_Enemy currentSoEnemy;
     private EnemyStats currentEnemyStats;
     private EnemyVisuals currentEnemyVisuals;
+    #endregion
 
+    #region Boss Settings
     private GameObject currentBoss;
     private SO_Boss currentSoBoss;
     private BossStats currentBossStats;
     private BossVisuals currentBossVisuals;
+    #endregion
 
     public static event EventHandler<OnSpawnEventArgs> OnSpawn;
     private OnSpawnEventArgs onSpawnArgs = new OnSpawnEventArgs();
@@ -42,7 +48,12 @@ public class EnemyManager : MonoBehaviour
         UpdateBiome();
         UpdateWave();
         UpdateRoom();
-        DamageEvent.OnClick += OnClickCalculateDamage;
+        HeroManager.OnClick += OnClickCalculateDamage;
+    }
+
+    private void OnDestroy()
+    {
+        HeroManager.OnClick -= OnClickCalculateDamage;
     }
 
     private void SpawnEnemy()

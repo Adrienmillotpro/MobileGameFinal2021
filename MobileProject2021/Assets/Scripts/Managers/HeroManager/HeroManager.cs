@@ -1,41 +1,90 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class HeroManager : MonoBehaviour
 {
-    public SO_Hero[] heroes = new SO_Hero[4];
-    public SO_Hero currentHero;
+    public GameObject[] heroes = new GameObject[4];
+    private HeroStats[] heroesStats = new HeroStats[4];
+    private HeroStats currentStats;
+    private HeroVisuals[] heroesVisuals = new HeroVisuals[4];
+    private HeroVisuals currentVisuals;
+
+    private bool isUp, isDown, isLeft, isRight;
+
+    public static event EventHandler<OnDamageEventArgs> OnClick;
+    private OnDamageEventArgs damageArgs = new OnDamageEventArgs();
 
     private void Awake()
     {
         SwipeAttackMenu.OnSwap += OnSwapUpdateHero;
+        for (int i = 0; i < heroes.Length; i++)
+        {
+            heroesStats[i] = heroes[i].GetComponent<HeroStats>();
+            heroesVisuals[i] = heroes[i].GetComponent<HeroVisuals>();
+        }
     }
-
     private void OnDestroy()
     {
         SwipeAttackMenu.OnSwap -= OnSwapUpdateHero;
     }
-
+    public void OnTapDealDamage()
+    {
+        if (OnClick != null)
+        {
+            this.damageArgs.damage = currentStats.heroDamage;
+            this.damageArgs.damageTypes = currentStats.heroTypes;
+            OnClick?.Invoke(this, damageArgs);
+        }
+    }
     private void OnSwapUpdateHero(object sender, OnSwapEventArgs swapArgs)
     {
-        if (swapArgs.swipeUp)
+        if (swapArgs.swipeUp && !isUp)
         {
-            currentHero = heroes[0];
+            currentVisuals.enabled = false;
+            isUp = true;
+            isRight = false;
+            isDown = false;
+            isLeft = false;
+            currentStats = heroesStats[0];
+            currentVisuals = heroesVisuals[0];
+            currentVisuals.enabled = true;
         }
+        if (swapArgs.swipeRight && !isRight)
+        {
+            currentVisuals.enabled = false;
+            isRight = true;
+            isUp = false;
+            isDown = false;
+            isLeft = false;
+            currentStats = heroesStats[1];
+            currentVisuals = heroesVisuals[1];
+            currentVisuals.enabled = true;
+        }
+        if (swapArgs.swipeDown && !isDown)
+        {
+            currentVisuals.enabled = false;
+            isDown = true;
+            isUp = false;
+            isRight = false;
+            isLeft = false;
+            currentStats = heroesStats[2];
+            currentVisuals = heroesVisuals[2];
+            currentVisuals.enabled = true;
 
-        if (swapArgs.swipeRight)
-        {
-            currentHero = heroes[1];
         }
-        if (swapArgs.swipeDown)
+        if (swapArgs.swipeLeft && !isLeft)
         {
-            currentHero = heroes[2];
-        }
-        if (swapArgs.swipeLeft)
-        {
-            currentHero = heroes[3];
+            currentVisuals.enabled = false;
+            isLeft = true;
+            isUp = false;
+            isRight = false;
+            isDown = false;
+            currentStats = heroesStats[3];
+            currentVisuals = heroesVisuals[3];
+            currentVisuals.enabled = true;
         }
     }
 }
