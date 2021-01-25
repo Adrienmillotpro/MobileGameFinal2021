@@ -13,17 +13,16 @@ public class EnemyVisuals : MonoBehaviour
         EnemyManager.OnSpawn += OnSpawnUpdateVisuals;
         EnemyManager.OnDealDamage += OnDealDamageUpdateVisuals;
     }
-
     private void OnDestroy()
     {
         EnemyManager.OnSpawn -= OnSpawnUpdateVisuals;
         EnemyManager.OnDealDamage -= OnDealDamageUpdateVisuals;
     }
+
     private void OnSpawnUpdateVisuals(OnSpawnEventArgs spawnArgs)
     {
         this.enemyRenderer.sprite = soEnemy.EnemySprite;
     }
-
     private void OnDealDamageUpdateVisuals(OnDamageEventArgs damageArgs)
     {
         // stuff

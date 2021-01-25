@@ -50,7 +50,6 @@ public class EnemyManager : MonoBehaviour
         UpdateRoom();
         HeroManager.OnClick += OnClickCalculateDamage;
     }
-
     private void OnDestroy()
     {
         HeroManager.OnClick -= OnClickCalculateDamage;

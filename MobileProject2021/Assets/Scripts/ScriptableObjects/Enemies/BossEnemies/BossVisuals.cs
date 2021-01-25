@@ -14,7 +14,6 @@ public class BossVisuals : MonoBehaviour
         EnemyManager.OnDealDamage += OnDealDamageReceiveDamage;
         EnemyManager.OnSpawn += OnSpawnUpdateHealth;
     }
-
     private void OnDestroy()
     {
         EnemyManager.OnDealDamage -= OnDealDamageReceiveDamage;
@@ -25,7 +24,6 @@ public class BossVisuals : MonoBehaviour
     {
         // Stuff
     }
-
     private void OnDealDamageReceiveDamage(OnDamageEventArgs damageArgs)
     {
         // Stuff

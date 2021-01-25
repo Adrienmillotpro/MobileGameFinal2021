@@ -20,7 +20,6 @@ public class BossStats : MonoBehaviour
         EnemyManager.OnSpawn += OnSpawnUpdateHealth;
 
     }
-
     private void OnDestroy()
     {
         EnemyManager.OnDealDamage -= OnDealDamageReceiveDamage;
@@ -32,7 +31,6 @@ public class BossStats : MonoBehaviour
         this.bossHealth = spawnArgs.maxHealth;
         this.bossTimer = spawnArgs.timer;
     }
-
     private void OnDealDamageReceiveDamage(OnDamageEventArgs damageArgs)
     {
         this.bossHealth -= damageArgs.damage;

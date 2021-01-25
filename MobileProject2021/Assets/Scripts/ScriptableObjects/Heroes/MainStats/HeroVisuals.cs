@@ -13,7 +13,6 @@ public class HeroVisuals : MonoBehaviour
     {
         EnemyManager.OnDealDamage += OnDealDamageUpdateVisuals;
     }
-
     private void OnDisable()
     {
         EnemyManager.OnDealDamage -= OnDealDamageUpdateVisuals;

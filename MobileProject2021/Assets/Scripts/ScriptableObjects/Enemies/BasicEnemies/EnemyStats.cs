@@ -30,7 +30,6 @@ public class EnemyStats : MonoBehaviour
     {
         this.enemyHealth = soEnemy.EnemyHealth;
     }
-
     private void OnDealDamageReceiveDamage(OnDamageEventArgs damageArgs)
     {
         this.enemyHealth -= damageArgs.damage;
