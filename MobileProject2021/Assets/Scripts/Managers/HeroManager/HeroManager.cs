@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class HeroManager : MonoBehaviour
 {
-    public GameObject[] heroes = new GameObject[4];
+    [SerializeField] private GameObject[] heroes = new GameObject[4];
     private HeroStats[] heroesStats = new HeroStats[4];
     private HeroStats currentStats;
     private HeroVisuals[] heroesVisuals = new HeroVisuals[4];
@@ -25,6 +25,8 @@ public class HeroManager : MonoBehaviour
             heroesStats[i] = heroes[i].GetComponent<HeroStats>();
             heroesVisuals[i] = heroes[i].GetComponent<HeroVisuals>();
         }
+        currentStats = heroesStats[0];
+        currentVisuals = heroesVisuals[0];
     }
     private void OnDestroy()
     {
@@ -41,6 +43,7 @@ public class HeroManager : MonoBehaviour
     }
     private void OnSwapUpdateHero(object sender, OnSwapEventArgs swapArgs)
     {
+        Debug.Log("I'm Updating Heroes");
         if (swapArgs.swipeUp && !isUp)
         {
             currentVisuals.enabled = false;
@@ -73,7 +76,6 @@ public class HeroManager : MonoBehaviour
             currentStats = heroesStats[2];
             currentVisuals = heroesVisuals[2];
             currentVisuals.enabled = true;
-
         }
         if (swapArgs.swipeLeft && !isLeft)
         {
@@ -86,5 +88,6 @@ public class HeroManager : MonoBehaviour
             currentVisuals = heroesVisuals[3];
             currentVisuals.enabled = true;
         }
+        Debug.Log(currentStats.gameObject);
     }
 }

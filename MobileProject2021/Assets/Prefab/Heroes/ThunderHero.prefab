@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 7000154314162702982}
   - component: {fileID: 7000154314162702977}
   - component: {fileID: 7000154314162702980}
-  - component: {fileID: 7000154313862408612}
   - component: {fileID: 7000154314162702983}
   m_Layer: 0
-  m_Name: Hero
+  m_Name: ThunderHero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efaae6b042fc74d498c91f7fb555093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hero: {fileID: 0}
+  hero: {fileID: 11400000, guid: 1eb0d450901404648aba435c91eca592, type: 2}
   heroDamage: 0
   heroAttackRate: 0
   heroElementalReactionMultiplier: 0
@@ -105,19 +104,6 @@ MonoBehaviour:
   heroCritDamage: 0
   heroAffinityMultiplier: 0
   herocurrencyMultiplier: 0
---- !u!114 &7000154313862408612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7000154314162702976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 552575e0787e1d143ae1fe8aa4ceaf91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hero: {fileID: 0}
   heroTypes: 
 --- !u!114 &7000154314162702983
 MonoBehaviour:
@@ -126,9 +112,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7000154314162702976}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e28eb8d86410544488f36d69c03b6e91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SO_Hero: {fileID: 0}
+  SO_Hero: {fileID: 11400000, guid: 1eb0d450901404648aba435c91eca592, type: 2}

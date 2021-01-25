@@ -5,8 +5,19 @@ using UnityEngine;
 public class HeroVisuals : MonoBehaviour
 {
     [SerializeField] private SO_Hero SO_Hero;
+
     private Animator heroAnimator;
     private SpriteRenderer heroRenderer;
+
+    private void OnEnable()
+    {
+        EnemyManager.OnDealDamage += OnDealDamageUpdateVisuals;
+    }
+
+    private void OnDisable()
+    {
+        EnemyManager.OnDealDamage -= OnDealDamageUpdateVisuals;
+    }
 
     private void Start()
     {
@@ -16,5 +27,10 @@ public class HeroVisuals : MonoBehaviour
         // Update Prefab Info with SO Info
         this.heroRenderer.sprite = SO_Hero.HeroSprite;
         this.heroAnimator = SO_Hero.HeroAnimator;
+    }
+
+    private void OnDealDamageUpdateVisuals(OnDamageEventArgs damageArgs)
+    {
+
     }
 }

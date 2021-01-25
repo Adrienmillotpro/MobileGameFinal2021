@@ -19,12 +19,12 @@ public class EnemyVisuals : MonoBehaviour
         EnemyManager.OnSpawn -= OnSpawnUpdateVisuals;
         EnemyManager.OnDealDamage -= OnDealDamageUpdateVisuals;
     }
-    private void OnSpawnUpdateVisuals(object sender, OnSpawnEventArgs spawnArgs)
+    private void OnSpawnUpdateVisuals(OnSpawnEventArgs spawnArgs)
     {
         this.enemyRenderer.sprite = soEnemy.EnemySprite;
     }
 
-    private void OnDealDamageUpdateVisuals(object sender, OnDamageEventArgs damageArgs)
+    private void OnDealDamageUpdateVisuals(OnDamageEventArgs damageArgs)
     {
         // stuff
     }

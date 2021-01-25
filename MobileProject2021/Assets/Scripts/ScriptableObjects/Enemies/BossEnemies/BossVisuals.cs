@@ -21,12 +21,12 @@ public class BossVisuals : MonoBehaviour
         EnemyManager.OnSpawn -= OnSpawnUpdateHealth;
     }
 
-    private void OnSpawnUpdateHealth(object sender, OnSpawnEventArgs spawnArgs)
+    private void OnSpawnUpdateHealth(OnSpawnEventArgs spawnArgs)
     {
         // Stuff
     }
 
-    private void OnDealDamageReceiveDamage(object sender, OnDamageEventArgs damageArgs)
+    private void OnDealDamageReceiveDamage(OnDamageEventArgs damageArgs)
     {
         // Stuff
     }

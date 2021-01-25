@@ -34,10 +34,10 @@ public class EnemyManager : MonoBehaviour
     private BossVisuals currentBossVisuals;
     #endregion
 
-    public static event EventHandler<OnSpawnEventArgs> OnSpawn;
+    public static event Action<OnSpawnEventArgs> OnSpawn;
     private OnSpawnEventArgs onSpawnArgs = new OnSpawnEventArgs();
 
-    public static event EventHandler<OnDamageEventArgs> OnDealDamage;
+    public static event Action<OnDamageEventArgs> OnDealDamage;
     private OnDamageEventArgs onDealDamageArgs = new OnDamageEventArgs();
 
     private void Awake()
@@ -70,7 +70,7 @@ public class EnemyManager : MonoBehaviour
         currentEnemyStats.soEnemy = currentSoEnemy;
         currentEnemyVisuals.soEnemy = currentSoEnemy;
 
-        OnSpawn?.Invoke(this, onSpawnArgs);
+        OnSpawn?.Invoke(onSpawnArgs);
     }
     private void SpawnBoss()
     {
@@ -83,7 +83,7 @@ public class EnemyManager : MonoBehaviour
         currentBossStats.soBoss = currentSoBoss;
         currentBossVisuals.soBoss = currentSoBoss;
 
-        OnSpawn?.Invoke(this, onSpawnArgs);
+        OnSpawn?.Invoke(onSpawnArgs);
     }
 
     private void UpdateRoom()
@@ -142,9 +142,9 @@ public class EnemyManager : MonoBehaviour
         onDealDamageArgs.bestElementalReaction = bestElementalReaction;
         onDealDamageArgs.damage = damageArgs.damage * bestElementalReaction;
 
-        OnDealDamage?.Invoke(this, onDealDamageArgs);
+        OnDealDamage?.Invoke(onDealDamageArgs);
     }
-    private void OnEnemyKilled(object sender, OnKilledEventArgs enemyKilledArgs)
+    private void OnEnemyKilled(OnKilledEventArgs enemyKilledArgs)
     {
         currentEnemyStats.OnEnemyKilled -= OnEnemyKilled;
         UpdateRoom();

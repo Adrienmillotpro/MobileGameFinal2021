@@ -10,8 +10,9 @@ public class EnemyStats : MonoBehaviour
     private float enemyHealth;
     private float elementalDamageReceived;
 
-    public event EventHandler<OnKilledEventArgs> OnEnemyKilled;
+    public event Action<OnKilledEventArgs> OnEnemyKilled;
     private OnKilledEventArgs onKilledArgs = new OnKilledEventArgs();
+
 
     private void Awake()
     {
@@ -19,18 +20,18 @@ public class EnemyStats : MonoBehaviour
         EnemyManager.OnSpawn += OnSpawnUpdateHealth;
         this.enemyHealth = 0f;
     }
-
     private void OnDestroy()
     {
         EnemyManager.OnDealDamage -= OnDealDamageReceiveDamage;
         EnemyManager.OnSpawn -= OnSpawnUpdateHealth;
     }
-    private void OnSpawnUpdateHealth(object sender, OnSpawnEventArgs spawnArgs)
+
+    private void OnSpawnUpdateHealth(OnSpawnEventArgs spawnArgs)
     {
         this.enemyHealth = soEnemy.EnemyHealth;
     }
 
-    private void OnDealDamageReceiveDamage(object sender, OnDamageEventArgs damageArgs)
+    private void OnDealDamageReceiveDamage(OnDamageEventArgs damageArgs)
     {
         this.enemyHealth -= damageArgs.damage;
 
@@ -41,7 +42,7 @@ public class EnemyStats : MonoBehaviour
 
         if (this.enemyHealth <= 0)
         {
-            OnEnemyKilled?.Invoke(this, onKilledArgs);
+            OnEnemyKilled?.Invoke(onKilledArgs);
             Destroy(this.gameObject);
         }
 
