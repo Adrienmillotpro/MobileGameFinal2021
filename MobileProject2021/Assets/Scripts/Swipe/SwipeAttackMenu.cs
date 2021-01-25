@@ -52,7 +52,7 @@ public class SwipeAttackMenu : MonoBehaviour
 
                 RaycastHit2D hitInfo = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.touches[0].position), Vector2.zero);
                 // RaycastHit2D can be either true or null, but has an implicit conversion to bool, so we can use it like this
-                if (hitInfo.transform.gameObject.name == "BottomPanel2dCollider")
+                if (hitInfo.collider.CompareTag("BottomPanel") && hitInfo.collider != null)
                 {
 
                     Reset();
