@@ -5,5 +5,6 @@ using UnityEngine;
 
 public class OnSpawnEventArgs : EventArgs
 {
-    
+    public float maxHealth;
+    public float timer;
 }

@@ -10,22 +10,28 @@ public class SwipeAttack : MonoBehaviour
     public GameObject left;
     public GameObject Right;
 
-
-
-    void Update()
+    private void Awake()
     {
-        if (SwipeAttackMenu.swipeRight)
+        SwipeAttackMenu.OnSwap += OnSwapUpdateSwipe;
+    }
+
+    private void OnDestroy()
+    {
+        SwipeAttackMenu.OnSwap -= OnSwapUpdateSwipe;
+    }
+
+    private void OnSwapUpdateSwipe(object sender, OnSwapEventArgs swapArgs)
+    {
+        if (swapArgs.swipeRight)
         {
             Debug.Log("Swipe Right Attack Menu");
             Right.SetActive(true);
             left.SetActive(false);
             Up.SetActive(false);
             Down.SetActive(false);
-
-
         }
 
-        if (SwipeAttackMenu.swipeLeft)
+        if (swapArgs.swipeLeft)
         {
             Debug.Log("Swipe left Attack Menu");
             Right.SetActive(false);
@@ -35,7 +41,7 @@ public class SwipeAttack : MonoBehaviour
 
         }
 
-        if (SwipeAttackMenu.swipeUp)
+        if (swapArgs.swipeUp)
         {
             Debug.Log("Swipe Up Attack Menu");
             Right.SetActive(false);
@@ -43,7 +49,7 @@ public class SwipeAttack : MonoBehaviour
             Up.SetActive(true);
             Down.SetActive(false);
         }
-        if (SwipeAttackMenu.swipeDown)
+        if (swapArgs.swipeDown)
         {
             Debug.Log("Swipe Down Attack Menu");
             Right.SetActive(false);

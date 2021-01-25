@@ -19,7 +19,7 @@ public class EnemyManager : MonoBehaviour
     private int indexRoom;
 
     private GameObject currentEnemy;
-    [SerializeField] private SO_Enemy currentSoEnemy;
+    private SO_Enemy currentSoEnemy;
     private EnemyStats currentEnemyStats;
     private EnemyVisuals currentEnemyVisuals;
 
@@ -29,12 +29,12 @@ public class EnemyManager : MonoBehaviour
     private BossVisuals currentBossVisuals;
 
     public static event EventHandler<OnSpawnEventArgs> OnSpawn;
-    private OnSpawnEventArgs spawnArgs = new OnSpawnEventArgs();
+    private OnSpawnEventArgs onSpawnArgs = new OnSpawnEventArgs();
 
     public static event EventHandler<OnDamageEventArgs> OnDealDamage;
-    private OnDamageEventArgs OnDealDamageArgs = new OnDamageEventArgs();
+    private OnDamageEventArgs onDealDamageArgs = new OnDamageEventArgs();
 
-    private void Start()
+    private void Awake()
     {
         indexBiome = 0;
         indexWave = 0;
@@ -50,7 +50,7 @@ public class EnemyManager : MonoBehaviour
         currentEnemy = Instantiate(enemyPrefab);
         currentEnemyStats = currentEnemy.GetComponent<EnemyStats>();
         currentEnemyVisuals = currentEnemy.GetComponent<EnemyVisuals>();
-        currentEnemyStats.OnKilled += EnemyKilled;
+        currentEnemyStats.OnEnemyKilled += OnEnemyKilled;
 
         System.Random randomEnemy = new System.Random();
         int indexEnemy = randomEnemy.Next(0, currentWave.PotentialEnemies.Count);
@@ -59,16 +59,20 @@ public class EnemyManager : MonoBehaviour
         currentEnemyStats.soEnemy = currentSoEnemy;
         currentEnemyVisuals.soEnemy = currentSoEnemy;
 
-        OnSpawn?.Invoke(this, spawnArgs);
+        OnSpawn?.Invoke(this, onSpawnArgs);
     }
     private void SpawnBoss()
     {
         currentBoss = Instantiate(bossPrefab);
-        currentBossStats = bossPrefab.GetComponent<BossStats>();
-        currentBossVisuals = bossPrefab.GetComponent<BossVisuals>();
+        currentBossStats = currentBoss.GetComponent<BossStats>();
+        currentBossVisuals = currentBoss.GetComponent<BossVisuals>();
+        currentBossStats.OnBossKilled += OnBossKilled;
 
         currentSoBoss = currentWave.PotentialBoss;
-        OnSpawn?.Invoke(this, spawnArgs);
+        currentBossStats.soBoss = currentSoBoss;
+        currentBossVisuals.soBoss = currentSoBoss;
+
+        OnSpawn?.Invoke(this, onSpawnArgs);
     }
 
     private void UpdateRoom()
@@ -124,16 +128,19 @@ public class EnemyManager : MonoBehaviour
                 }
             }
         }
-        OnDealDamageArgs.bestElementalReaction = bestElementalReaction;
-        OnDealDamageArgs.damage = damageArgs.damage * bestElementalReaction;
+        onDealDamageArgs.bestElementalReaction = bestElementalReaction;
+        onDealDamageArgs.damage = damageArgs.damage * bestElementalReaction;
 
-        OnDealDamage?.Invoke(this, OnDealDamageArgs);
+        OnDealDamage?.Invoke(this, onDealDamageArgs);
     }
-
-    private void EnemyKilled(object sender, OnKilledEventArgs killedArgs)
+    private void OnEnemyKilled(object sender, OnKilledEventArgs enemyKilledArgs)
     {
-        Debug.Log("OnKilledEvent received");
-        currentEnemyStats.OnKilled -= EnemyKilled;
+        currentEnemyStats.OnEnemyKilled -= OnEnemyKilled;
+        UpdateRoom();
+    }
+    private void OnBossKilled(object sender, OnKilledEventArgs bossKilledArgs)
+    {
+        currentBossStats.OnBossKilled -= OnBossKilled;
         UpdateRoom();
     }
 }

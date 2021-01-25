@@ -5,53 +5,47 @@ using System;
 
 public class BossStats : MonoBehaviour
 {
+    [HideInInspector] public SO_Boss soBoss;
     [HideInInspector] public float bossHealth;
     [HideInInspector] public float bossTimer;
     [HideInInspector] public ElementalTypes[] bossTypes;
     [HideInInspector] public float elementalDamageReceived;
 
-    public event EventHandler<OnKilledEventArgs> OnKilled;
+    public event EventHandler<OnKilledEventArgs> OnBossKilled;
     private OnKilledEventArgs onKilledArgs;
 
     private void Awake()
     {
-        DamageEvent.OnClick += ReceiveDamage;
+        EnemyManager.OnDealDamage += OnDealDamageReceiveDamage;
+        EnemyManager.OnSpawn += OnSpawnUpdateHealth;
+
     }
 
     private void OnDestroy()
     {
-        DamageEvent.OnClick -= ReceiveDamage;
-        OnKilled?.Invoke(this, onKilledArgs);
+        EnemyManager.OnDealDamage -= OnDealDamageReceiveDamage;
+        EnemyManager.OnSpawn -= OnSpawnUpdateHealth;
     }
 
-    private void ReceiveDamage(object sender, OnDamageEventArgs damageArgs)
+    private void OnSpawnUpdateHealth(object sender, OnSpawnEventArgs spawnArgs)
     {
-        float bestElementalReaction = new float();
+        this.bossHealth = spawnArgs.maxHealth;
+        this.bossTimer = spawnArgs.timer;
+    }
 
-        for (int i = 0; i < this.bossTypes.Length; i++)
-        {
-            for (int j = 0; j < damageArgs.damageTypes.Length; j++)
-            {
-                float newElementalReaction = TypeChart.DefineElementalReaction(damageArgs.damageTypes[j], bossTypes[i]);
-                if (newElementalReaction > bestElementalReaction)
-                {
-                    bestElementalReaction = newElementalReaction;
-                }
-            }
-        }
-        Debug.Log(this.name + bestElementalReaction);
-        this.bossHealth -= damageArgs.damage * bestElementalReaction;
+    private void OnDealDamageReceiveDamage(object sender, OnDamageEventArgs damageArgs)
+    {
+        this.bossHealth -= damageArgs.damage;
 
-        if (bestElementalReaction == 2f)
+        if (damageArgs.bestElementalReaction == 2f)
         {
-            this.elementalDamageReceived += damageArgs.damage * bestElementalReaction;
+            this.elementalDamageReceived += damageArgs.damage;
         }
 
         if (this.bossHealth <= 0)
         {
-            Destroy(this);
+            OnBossKilled?.Invoke(this, onKilledArgs);
+            Destroy(this.gameObject);
         }
-
-        //Debug.Log(this.name + enemyHealth);
     }
 }

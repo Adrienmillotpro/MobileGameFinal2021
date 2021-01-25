@@ -6,38 +6,32 @@ using UnityEngine;
 public class EnemyStats : MonoBehaviour
 {
     [HideInInspector] public SO_Enemy soEnemy;
-    //private ElementalTypes[] enemyTypes;
+    private ElementalTypes[] enemyTypes;
     private float enemyHealth;
     private float elementalDamageReceived;
 
-    public event EventHandler<OnKilledEventArgs> OnKilled;
-    private OnKilledEventArgs onKilledArgs = new OnKilledEventArgs(0f);
+    public event EventHandler<OnKilledEventArgs> OnEnemyKilled;
+    private OnKilledEventArgs onKilledArgs = new OnKilledEventArgs();
 
     private void Awake()
     {
-        EnemyManager.OnDealDamage += ReceiveDamage;
+        EnemyManager.OnDealDamage += OnDealDamageReceiveDamage;
         EnemyManager.OnSpawn += OnSpawnUpdateHealth;
-        Debug.Log("We got there" + this.soEnemy == null);
         this.enemyHealth = 0f;
-        Debug.Log("Survived");
     }
 
+    private void OnDestroy()
+    {
+        EnemyManager.OnDealDamage -= OnDealDamageReceiveDamage;
+        EnemyManager.OnSpawn -= OnSpawnUpdateHealth;
+    }
     private void OnSpawnUpdateHealth(object sender, OnSpawnEventArgs spawnArgs)
     {
         this.enemyHealth = soEnemy.EnemyHealth;
     }
 
-    private void OnDestroy()
+    private void OnDealDamageReceiveDamage(object sender, OnDamageEventArgs damageArgs)
     {
-        Debug.Log("I'm being destroyed");
-        EnemyManager.OnDealDamage -= ReceiveDamage;
-        EnemyManager.OnSpawn -= OnSpawnUpdateHealth;
-    }
-
-    private void ReceiveDamage(object sender, OnDamageEventArgs damageArgs)
-    {
-        
-        Debug.Log(this.name + damageArgs.bestElementalReaction);
         this.enemyHealth -= damageArgs.damage;
 
         if (damageArgs.bestElementalReaction == 2f)
@@ -47,12 +41,9 @@ public class EnemyStats : MonoBehaviour
 
         if (this.enemyHealth <= 0)
         {
-            Debug.Log("I'm dead");
-            OnKilled?.Invoke(this, onKilledArgs);
+            OnEnemyKilled?.Invoke(this, onKilledArgs);
             Destroy(this.gameObject);
         }
-
-        Debug.Log(this.enemyHealth);
 
     }
 }

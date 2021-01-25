@@ -6,9 +6,4 @@ using UnityEngine;
 public class OnKilledEventArgs : EventArgs
 {
     public float totalElementalDamage;
-
-    public OnKilledEventArgs(float ElementalDamage)
-    {
-        totalElementalDamage = ElementalDamage;
-    }
 }

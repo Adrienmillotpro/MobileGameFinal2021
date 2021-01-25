@@ -1,12 +1,15 @@
+using System;
 using UnityEngine;
 
 
 public class SwipeAttackMenu : MonoBehaviour
 {
-    public static bool tap, swipeLeft, swipeRight, swipeUp, swipeDown;
+    private bool tap, swipeLeft, swipeRight, swipeUp, swipeDown;
     private bool isDraging = false;
     private Vector2 startTouch, swipeDelta;
 
+    public static event EventHandler<OnSwapEventArgs> OnSwap;
+    private OnSwapEventArgs onSwapArgs = new OnSwapEventArgs();
 
     private void Update()
     {
@@ -98,6 +101,12 @@ public class SwipeAttackMenu : MonoBehaviour
                 else
                     swipeUp = true;
             }
+            onSwapArgs.swipeDown = swipeDown;
+            onSwapArgs.swipeUp = swipeUp;
+            onSwapArgs.swipeRight = swipeRight;
+            onSwapArgs.swipeLeft = swipeLeft;
+
+            OnSwap?.Invoke(this, onSwapArgs);
 
             Reset();
         }
