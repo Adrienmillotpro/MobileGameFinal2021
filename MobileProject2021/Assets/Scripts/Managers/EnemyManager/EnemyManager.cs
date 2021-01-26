@@ -45,6 +45,7 @@ public class EnemyManager : MonoBehaviour
 
     // Progression
     private int roomLevel;
+    [SerializeField] private int roomLevelMultiplier;
     private int waveLevel;
     [SerializeField] private int waveLevelMultiplier;
     private int biomeLevel;
@@ -99,17 +100,20 @@ public class EnemyManager : MonoBehaviour
         currentBossStats.soBoss = currentSoBoss;
         currentBossVisuals.soBoss = currentSoBoss;
 
+        UpdateEnemyLevel();
+        UpdateSpawnArgs();
         OnSpawn?.Invoke(onSpawnArgs);
     }
     private void UpdateEnemyLevel()
     {
-        enemyLevel = roomLevel + waveLevel*waveLevelMultiplier + biomeLevel*biomeLevelMultiplier;
+        enemyLevel = roomLevel * roomLevelMultiplier + waveLevel*waveLevelMultiplier + biomeLevel*biomeLevelMultiplier;
     }
     private void UpdateSpawnArgs()
     {
         onSpawnArgs.soEnemy = currentSoEnemy;
         onSpawnArgs.soBoss = currentSoBoss;
-        onSpawnArgs.enemyLevel = enemyLevel; 
+        onSpawnArgs.enemyLevel = enemyLevel;
+        onSpawnArgs.bossTimer = currentSoBoss.BossTimer;
     }
     private void UpdateRoom()
     {
