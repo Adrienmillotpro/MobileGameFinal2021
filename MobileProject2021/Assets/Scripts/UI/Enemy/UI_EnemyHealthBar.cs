@@ -13,6 +13,12 @@ public class UI_EnemyHealthBar : MonoBehaviour
         EnemyManager.OnDealDamage += OnDealDamageUpdateSlider;
     }
 
+    private void OnDisable()
+    {
+        EnemyManager.OnSpawn -= OnSpawnUpdateSlider;
+        EnemyManager.OnDealDamage -= OnDealDamageUpdateSlider;
+    }
+
     private void OnSpawnUpdateSlider(OnSpawnEventArgs spawnArgs)
     {
         slider.maxValue = spawnArgs.maxHealth;

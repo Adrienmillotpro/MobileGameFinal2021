@@ -173,6 +173,7 @@ public class EnemyManager : MonoBehaviour
     {
         //Debug.Log("I'm calculating damage");
         float bestElementalReaction = new float();
+        ElementalTypes bestElementalType = new ElementalTypes();
 
         for (int i = 0; i < this.currentSoEnemy.EnemyTypes.Length; i++)
         {
@@ -182,10 +183,14 @@ public class EnemyManager : MonoBehaviour
                 if (newElementalReaction > bestElementalReaction)
                 {
                     bestElementalReaction = newElementalReaction;
+                    bestElementalType = damageArgs.damageTypes[j];
                 }
             }
         }
+        onDealDamageArgs.enemyLevel = enemyLevel;
+        onDealDamageArgs.damageTypes = damageArgs.damageTypes;
         onDealDamageArgs.bestElementalReaction = bestElementalReaction;
+        onDealDamageArgs.bestHeroElement = bestElementalType;
         onDealDamageArgs.damage = damageArgs.damage * bestElementalReaction;
         Debug.Log("DealDamage - damageArgs.damage " +onDealDamageArgs.damage);
         OnDealDamage?.Invoke(onDealDamageArgs);

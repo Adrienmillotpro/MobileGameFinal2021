@@ -1,9 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System;
 
-public class OnUpgradeEventArgs : EventArgs
+public class OnEarnCurrencyEventArgs : EventArgs
 {
     public float currencyAmount;
     public float currencyBase;
