@@ -15,17 +15,10 @@ public class HeroStats : MonoBehaviour
     [HideInInspector] public float herocurrencyMultiplier;
     [HideInInspector] public ElementalTypes[] heroTypes;
 
+    private int heroLevel;
     private void Awake()
     {
         // Subscribe to Upgrade events
-        this.heroDamage = hero.HeroDamage;
-        this.heroAttackRate = hero.HeroAttackRate;
-        this.heroElementalReactionMultiplier = hero.HeroElementalReactionMultiplier;
-        this.heroCritRate = hero.HeroCritRate;
-        this.heroCritDamage = hero.HeroCritDamage;
-        this.heroAffinityMultiplier = hero.HeroAffinityMultiplier;
-        this.herocurrencyMultiplier = hero.HeroCurrencyMultiplier;
-        this.heroTypes = hero.HeroTypes;
     }
     private void OnDestroy()
     {
@@ -34,6 +27,14 @@ public class HeroStats : MonoBehaviour
 
     private void Start()
     {
+        this.heroDamage = hero.HeroDamage;
+        this.heroAttackRate = hero.HeroAttackRate;
+        this.heroElementalReactionMultiplier = hero.HeroElementalReactionMultiplier;
+        this.heroCritRate = hero.HeroCritRate;
+        this.heroCritDamage = hero.HeroCritDamage;
+        this.heroAffinityMultiplier = hero.HeroAffinityMultiplier;
+        this.herocurrencyMultiplier = hero.HeroCurrencyMultiplier;
+        this.heroTypes = hero.HeroTypes;
     }
 
 }

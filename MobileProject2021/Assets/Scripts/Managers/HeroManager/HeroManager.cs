@@ -29,7 +29,6 @@ public class HeroManager : MonoBehaviour
             heroesStats[i] = heroes[i].GetComponent<HeroStats>();
             heroesVisuals[i] = heroes[i].GetComponent<HeroVisuals>();
         }
-
     }
 
     private void Start()
