@@ -25,7 +25,7 @@ public class SwipeAttack : MonoBehaviour
         SwipeAttackMenu.OnSwap -= OnSwapUpdateSwipe;
     }
 
-    private void OnSwapUpdateSwipe(object sender, OnSwapEventArgs swapArgs)
+    private void OnSwapUpdateSwipe(OnSwapEventArgs swapArgs)
     {
         if (swapArgs.swipeRight)
         {

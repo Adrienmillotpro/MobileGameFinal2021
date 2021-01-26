@@ -8,7 +8,7 @@ public class SwipeAttackMenu : MonoBehaviour
     private bool isDraging = false;
     private Vector2 startTouch, swipeDelta;
 
-    public static event EventHandler<OnSwapEventArgs> OnSwap;
+    public static event Action<OnSwapEventArgs> OnSwap;
     private OnSwapEventArgs onSwapArgs = new OnSwapEventArgs();
 
     private void Update()
@@ -107,7 +107,7 @@ public class SwipeAttackMenu : MonoBehaviour
             onSwapArgs.swipeRight = swipeRight;
             onSwapArgs.swipeLeft = swipeLeft;
 
-            OnSwap?.Invoke(this, onSwapArgs);
+            OnSwap?.Invoke(onSwapArgs);
 
             Reset();
         }
