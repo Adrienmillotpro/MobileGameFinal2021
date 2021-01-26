@@ -28,8 +28,8 @@ public class BossStats : MonoBehaviour
 
     private void OnSpawnUpdateHealth(OnSpawnEventArgs spawnArgs)
     {
-        this.bossHealth = spawnArgs.maxHealth;
-        this.bossTimer = spawnArgs.timer;
+        this.bossHealth = spawnArgs.enemyLevel;
+        this.bossTimer = spawnArgs.bossTimer;
     }
     private void OnDealDamageReceiveDamage(OnDamageEventArgs damageArgs)
     {

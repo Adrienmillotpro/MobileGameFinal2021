@@ -13,7 +13,6 @@ public class EnemyStats : MonoBehaviour
     public event Action<OnKilledEventArgs> OnEnemyKilled;
     private OnKilledEventArgs onKilledArgs = new OnKilledEventArgs();
 
-
     private void Awake()
     {
         EnemyManager.OnDealDamage += OnDealDamageReceiveDamage;
@@ -28,7 +27,7 @@ public class EnemyStats : MonoBehaviour
 
     private void OnSpawnUpdateHealth(OnSpawnEventArgs spawnArgs)
     {
-        this.enemyHealth = soEnemy.EnemyHealth;
+        this.enemyHealth = soEnemy.EnemyHealth * spawnArgs.enemyLevel;
     }
     private void OnDealDamageReceiveDamage(OnDamageEventArgs damageArgs)
     {

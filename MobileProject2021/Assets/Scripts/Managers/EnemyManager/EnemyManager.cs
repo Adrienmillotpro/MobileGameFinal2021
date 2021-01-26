@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Security.Cryptography;
+
 public class EnemyManager : MonoBehaviour
 {
     [SerializeField] private SO_Biome[] enemyBiomes;
@@ -34,17 +36,30 @@ public class EnemyManager : MonoBehaviour
     private BossVisuals currentBossVisuals;
     #endregion
 
+    // Events
     public static event Action<OnSpawnEventArgs> OnSpawn;
     private OnSpawnEventArgs onSpawnArgs = new OnSpawnEventArgs();
 
     public static event Action<OnDamageEventArgs> OnDealDamage;
     private OnDamageEventArgs onDealDamageArgs = new OnDamageEventArgs();
 
+    // Progression
+    private int roomLevel;
+    private int waveLevel;
+    [SerializeField] private int waveLevelMultiplier;
+    private int biomeLevel;
+    [SerializeField] private int biomeLevelMultiplier;
+    private int enemyLevel;
+
+
     private void Awake()
     {
         indexBiome = 0;
         indexWave = 0;
         indexRoom = 0;
+        roomLevel = 0;
+        waveLevel = 0;
+        biomeLevel = 0;
         UpdateBiome();
         UpdateWave();
         UpdateRoom();
@@ -69,6 +84,8 @@ public class EnemyManager : MonoBehaviour
         currentEnemyStats.soEnemy = currentSoEnemy;
         currentEnemyVisuals.soEnemy = currentSoEnemy;
 
+        UpdateEnemyLevel();
+        UpdateSpawnArgs();
         OnSpawn?.Invoke(onSpawnArgs);
     }
     private void SpawnBoss()
@@ -84,9 +101,19 @@ public class EnemyManager : MonoBehaviour
 
         OnSpawn?.Invoke(onSpawnArgs);
     }
-
+    private void UpdateEnemyLevel()
+    {
+        enemyLevel = roomLevel + waveLevel*waveLevelMultiplier + biomeLevel*biomeLevelMultiplier;
+    }
+    private void UpdateSpawnArgs()
+    {
+        onSpawnArgs.soEnemy = currentSoEnemy;
+        onSpawnArgs.soBoss = currentSoBoss;
+        onSpawnArgs.enemyLevel = enemyLevel; 
+    }
     private void UpdateRoom()
     {
+        roomLevel++;
         if (indexRoom == roomsPerWave -1)
         {
             SpawnBoss();
@@ -105,6 +132,7 @@ public class EnemyManager : MonoBehaviour
     }
     private void UpdateWave()
     {
+        waveLevel++;
         if (indexWave >= roomsPerWave)
         {
             indexWave = 0;
@@ -115,6 +143,7 @@ public class EnemyManager : MonoBehaviour
     }
     private void UpdateBiome()
     {
+        biomeLevel++;
         if (indexBiome >= enemyBiomes.Length)
         {
             indexBiome = 0;

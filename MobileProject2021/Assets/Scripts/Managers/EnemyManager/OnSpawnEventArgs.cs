@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class OnSpawnEventArgs : EventArgs
 {
-    public float maxHealth;
-    public float timer;
+    public SO_Enemy soEnemy;
+    public SO_Boss soBoss;
+    public float enemyLevel;
+    public int bossTimer;
 }

@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class HeroManager : MonoBehaviour
 {
+    // Heroes Settings
     [SerializeField] private GameObject[] heroes = new GameObject[4];
     private HeroStats[] heroesStats = new HeroStats[4];
     private HeroStats currentStats;
@@ -14,6 +15,7 @@ public class HeroManager : MonoBehaviour
 
     private bool isUp, isDown, isLeft, isRight;
 
+    // Events
     public static event Action<OnDamageEventArgs> OnClick;
     private OnDamageEventArgs damageArgs = new OnDamageEventArgs();
 
