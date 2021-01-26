@@ -9,23 +9,29 @@ public class HeroVisuals : MonoBehaviour
     private Animator heroAnimator;
     private SpriteRenderer heroRenderer;
 
+    private void Awake()
+    {
+        this.heroRenderer = GetComponent<SpriteRenderer>();
+        this.heroAnimator = GetComponent<Animator>();
+    }
+
     private void OnEnable()
     {
+        this.heroRenderer.enabled = true;
         EnemyManager.OnDealDamage += OnDealDamageUpdateVisuals;
     }
     private void OnDisable()
     {
+        this.heroRenderer.enabled = false;
         EnemyManager.OnDealDamage -= OnDealDamageUpdateVisuals;
     }
 
     private void Start()
     {
-        this.heroRenderer = GetComponent<SpriteRenderer>();
-        this.heroAnimator = GetComponent<Animator>();
 
         // Update Prefab Info with SO Info
-        this.heroRenderer.sprite = SO_Hero.HeroSprite;
-        this.heroAnimator = SO_Hero.HeroAnimator;
+        //this.heroRenderer.sprite = SO_Hero.HeroSprite;
+        //this.heroAnimator = SO_Hero.HeroAnimator;
     }
 
     private void OnDealDamageUpdateVisuals(OnDamageEventArgs damageArgs)

@@ -14,36 +14,49 @@ public class HeroManager : MonoBehaviour
 
     private bool isUp, isDown, isLeft, isRight;
 
-    public static event EventHandler<OnDamageEventArgs> OnClick;
+    public static event Action<OnDamageEventArgs> OnClick;
     private OnDamageEventArgs damageArgs = new OnDamageEventArgs();
 
     private void Awake()
     {
         SwipeAttackMenu.OnSwap += OnSwapUpdateHero;
+        TapMechanic.OnTap += OnTapDealDamage;
+
         for (int i = 0; i < heroes.Length; i++)
         {
             heroesStats[i] = heroes[i].GetComponent<HeroStats>();
             heroesVisuals[i] = heroes[i].GetComponent<HeroVisuals>();
         }
+
+    }
+
+    private void Start()
+    {
         currentStats = heroesStats[0];
         currentVisuals = heroesVisuals[0];
+        heroesVisuals[1].enabled = false;
+        heroesVisuals[2].enabled = false;
+        heroesVisuals[3].enabled = false;
     }
     private void OnDestroy()
     {
         SwipeAttackMenu.OnSwap -= OnSwapUpdateHero;
+        TapMechanic.OnTap -= OnTapDealDamage;
     }
-    public void OnTapDealDamage()
+    public void OnTapDealDamage(OnTapEventArgs tapArgs)
     {
         if (OnClick != null)
         {
+            //Debug.Log("I received the Tap");
             this.damageArgs.damage = currentStats.heroDamage;
             this.damageArgs.damageTypes = currentStats.heroTypes;
-            OnClick?.Invoke(this, damageArgs);
+            //Debug.Log("I'm sending this damage" + damageArgs.damage);
+            OnClick?.Invoke(damageArgs);
         }
     }
-    private void OnSwapUpdateHero(object sender, OnSwapEventArgs swapArgs)
+    private void OnSwapUpdateHero(OnSwapEventArgs swapArgs)
     {
-        Debug.Log("I'm Updating Heroes");
+        //Debug.Log("I'm Updating Heroes");
         if (swapArgs.swipeUp && !isUp)
         {
             currentVisuals.enabled = false;
@@ -88,6 +101,6 @@ public class HeroManager : MonoBehaviour
             currentVisuals = heroesVisuals[3];
             currentVisuals.enabled = true;
         }
-        Debug.Log(currentStats.gameObject);
+        //Debug.Log(currentStats.heroDamage);
     }
 }

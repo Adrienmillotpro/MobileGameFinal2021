@@ -33,6 +33,7 @@ public class EnemyStats : MonoBehaviour
     private void OnDealDamageReceiveDamage(OnDamageEventArgs damageArgs)
     {
         this.enemyHealth -= damageArgs.damage;
+        //Debug.Log("This enemy has " + this.enemyHealth + " health left");
 
         if (damageArgs.bestElementalReaction == 2f)
         {

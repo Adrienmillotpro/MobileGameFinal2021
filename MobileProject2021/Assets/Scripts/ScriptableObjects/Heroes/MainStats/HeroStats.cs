@@ -18,14 +18,6 @@ public class HeroStats : MonoBehaviour
     private void Awake()
     {
         // Subscribe to Upgrade events
-    }
-    private void OnDestroy()
-    {
-        // Unsub to Upgrade events
-    }
-
-    private void Start()
-    {
         this.heroDamage = hero.HeroDamage;
         this.heroAttackRate = hero.HeroAttackRate;
         this.heroElementalReactionMultiplier = hero.HeroElementalReactionMultiplier;
@@ -34,6 +26,14 @@ public class HeroStats : MonoBehaviour
         this.heroAffinityMultiplier = hero.HeroAffinityMultiplier;
         this.herocurrencyMultiplier = hero.HeroCurrencyMultiplier;
         this.heroTypes = hero.HeroTypes;
+    }
+    private void OnDestroy()
+    {
+        // Unsub to Upgrade events
+    }
+
+    private void Start()
+    {
     }
 
 }

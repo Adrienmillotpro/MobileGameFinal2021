@@ -123,8 +123,9 @@ public class EnemyManager : MonoBehaviour
         indexBiome++;
     }
 
-    private void OnClickCalculateDamage(object sender, OnDamageEventArgs damageArgs)
+    private void OnClickCalculateDamage(OnDamageEventArgs damageArgs)
     {
+        //Debug.Log("I'm calculating damage");
         float bestElementalReaction = new float();
 
         for (int i = 0; i < this.currentSoEnemy.EnemyTypes.Length; i++)
@@ -140,7 +141,7 @@ public class EnemyManager : MonoBehaviour
         }
         onDealDamageArgs.bestElementalReaction = bestElementalReaction;
         onDealDamageArgs.damage = damageArgs.damage * bestElementalReaction;
-
+        //Debug.Log(onDealDamageArgs.damage);
         OnDealDamage?.Invoke(onDealDamageArgs);
     }
     private void OnEnemyKilled(OnKilledEventArgs enemyKilledArgs)
