@@ -16,23 +16,23 @@ public class EnemyStats : MonoBehaviour
     private void Awake()
     {
         EnemyManager.OnDealDamage += OnDealDamageReceiveDamage;
-        EnemyManager.OnSpawn += OnSpawnUpdateHealth;
+        EnemyManager.OnSpawn += OnSpawnUpdateStats;
         this.enemyHealth = 0f;
     }
     private void OnDestroy()
     {
         EnemyManager.OnDealDamage -= OnDealDamageReceiveDamage;
-        EnemyManager.OnSpawn -= OnSpawnUpdateHealth;
+        EnemyManager.OnSpawn -= OnSpawnUpdateStats;
     }
 
-    private void OnSpawnUpdateHealth(OnSpawnEventArgs spawnArgs)
+    private void OnSpawnUpdateStats(OnSpawnEventArgs spawnArgs)
     {
-        this.enemyHealth = soEnemy.EnemyHealth * spawnArgs.enemyLevel;
+        this.enemyHealth = spawnArgs.maxHealth;
     }
     private void OnDealDamageReceiveDamage(OnDamageEventArgs damageArgs)
     {
         this.enemyHealth -= damageArgs.damage;
-        //Debug.Log("This enemy has " + this.enemyHealth + " health left");
+        Debug.Log("This enemy has " + this.enemyHealth + " health left");
 
         if (damageArgs.bestElementalReaction == 2f)
         {

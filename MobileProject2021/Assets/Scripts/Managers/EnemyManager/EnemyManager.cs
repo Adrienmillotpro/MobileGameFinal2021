@@ -34,6 +34,7 @@ public class EnemyManager : MonoBehaviour
     private SO_Boss currentSoBoss;
     private BossStats currentBossStats;
     private BossVisuals currentBossVisuals;
+    private bool isBoss;
     #endregion
 
     // Events
@@ -85,6 +86,7 @@ public class EnemyManager : MonoBehaviour
         currentEnemyStats.soEnemy = currentSoEnemy;
         currentEnemyVisuals.soEnemy = currentSoEnemy;
 
+        isBoss = false;
         UpdateEnemyLevel();
         UpdateSpawnArgs();
         OnSpawn?.Invoke(onSpawnArgs);
@@ -100,6 +102,7 @@ public class EnemyManager : MonoBehaviour
         currentBossStats.soBoss = currentSoBoss;
         currentBossVisuals.soBoss = currentSoBoss;
 
+        isBoss = true;
         UpdateEnemyLevel();
         UpdateSpawnArgs();
         OnSpawn?.Invoke(onSpawnArgs);
@@ -110,10 +113,20 @@ public class EnemyManager : MonoBehaviour
     }
     private void UpdateSpawnArgs()
     {
-        onSpawnArgs.soEnemy = currentSoEnemy;
-        onSpawnArgs.soBoss = currentSoBoss;
+        onSpawnArgs.isBoss = isBoss;
         onSpawnArgs.enemyLevel = enemyLevel;
-        onSpawnArgs.bossTimer = currentSoBoss.BossTimer;
+
+        if (isBoss)
+        {
+            onSpawnArgs.soBoss = currentSoBoss;
+            onSpawnArgs.maxHealth = currentSoBoss.BossHealth * enemyLevel;
+            onSpawnArgs.bossTimer = currentSoBoss.BossTimer;
+        }
+        else if (!isBoss)
+        {
+            onSpawnArgs.soEnemy = currentSoEnemy;
+            onSpawnArgs.maxHealth = currentSoEnemy.EnemyHealth * enemyLevel;
+        }
     }
     private void UpdateRoom()
     {
@@ -125,6 +138,7 @@ public class EnemyManager : MonoBehaviour
         else if (indexRoom == roomsPerWave)
         {
             indexRoom = 0;
+            waveLevel++;
             UpdateWave();
             SpawnEnemy();
         }
@@ -136,10 +150,10 @@ public class EnemyManager : MonoBehaviour
     }
     private void UpdateWave()
     {
-        waveLevel++;
         if (indexWave >= roomsPerWave)
         {
             indexWave = 0;
+            biomeLevel++;
             UpdateBiome();
         }
         currentWave = currentBiome.Waves[indexWave];
@@ -147,7 +161,6 @@ public class EnemyManager : MonoBehaviour
     }
     private void UpdateBiome()
     {
-        biomeLevel++;
         if (indexBiome >= enemyBiomes.Length)
         {
             indexBiome = 0;
@@ -174,7 +187,7 @@ public class EnemyManager : MonoBehaviour
         }
         onDealDamageArgs.bestElementalReaction = bestElementalReaction;
         onDealDamageArgs.damage = damageArgs.damage * bestElementalReaction;
-        //Debug.Log(onDealDamageArgs.damage);
+        Debug.Log("DealDamage - damageArgs.damage " +onDealDamageArgs.damage);
         OnDealDamage?.Invoke(onDealDamageArgs);
     }
     private void OnEnemyKilled(OnKilledEventArgs enemyKilledArgs)

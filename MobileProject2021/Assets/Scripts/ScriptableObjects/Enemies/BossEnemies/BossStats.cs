@@ -17,19 +17,19 @@ public class BossStats : MonoBehaviour
     private void Awake()
     {
         EnemyManager.OnDealDamage += OnDealDamageReceiveDamage;
-        EnemyManager.OnSpawn += OnSpawnUpdateHealth;
-
+        EnemyManager.OnSpawn += OnSpawnUpdateStats;
     }
     private void OnDestroy()
     {
         EnemyManager.OnDealDamage -= OnDealDamageReceiveDamage;
-        EnemyManager.OnSpawn -= OnSpawnUpdateHealth;
+        EnemyManager.OnSpawn -= OnSpawnUpdateStats;
     }
 
-    private void OnSpawnUpdateHealth(OnSpawnEventArgs spawnArgs)
+    private void OnSpawnUpdateStats(OnSpawnEventArgs spawnArgs)
     {
-        this.bossHealth = spawnArgs.enemyLevel;
+        this.bossHealth = spawnArgs.maxHealth;
         this.bossTimer = spawnArgs.bossTimer;
+        StartCoroutine(BossTimer(this.bossTimer));
     }
     private void OnDealDamageReceiveDamage(OnDamageEventArgs damageArgs)
     {
@@ -42,8 +42,19 @@ public class BossStats : MonoBehaviour
 
         if (this.bossHealth <= 0)
         {
-            OnBossKilled?.Invoke(this, onKilledArgs);
-            Destroy(this.gameObject);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        OnBossKilled?.Invoke(this, onKilledArgs);
+        Destroy(this.gameObject);
+    }
+
+    private IEnumerator BossTimer(float timer)
+    {
+        yield return new WaitForSeconds(timer);
+        Die();
     }
 }
