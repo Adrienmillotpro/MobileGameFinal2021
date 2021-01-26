@@ -10,6 +10,11 @@ public class SwipeAttack : MonoBehaviour
     public GameObject left;
     public GameObject Right;
 
+    public GameObject AIR;
+    public GameObject FIRE;
+    public GameObject WATER;
+    public GameObject THUNDER;
+
     private void Awake()
     {
         SwipeAttackMenu.OnSwap += OnSwapUpdateSwipe;
@@ -29,6 +34,11 @@ public class SwipeAttack : MonoBehaviour
             left.SetActive(false);
             Up.SetActive(false);
             Down.SetActive(false);
+
+            AIR.SetActive(true);
+            FIRE.SetActive(false);
+            WATER.SetActive(false);
+            THUNDER.SetActive(false);
         }
 
         if (swapArgs.swipeLeft)
@@ -39,6 +49,11 @@ public class SwipeAttack : MonoBehaviour
             Up.SetActive(false);
             Down.SetActive(false);
 
+
+            AIR.SetActive(false);
+            FIRE.SetActive(true);
+            WATER.SetActive(false);
+            THUNDER.SetActive(false);
         }
 
         if (swapArgs.swipeUp)
@@ -48,6 +63,11 @@ public class SwipeAttack : MonoBehaviour
             left.SetActive(false);
             Up.SetActive(true);
             Down.SetActive(false);
+
+            AIR.SetActive(false);
+            FIRE.SetActive(false);
+            WATER.SetActive(true);
+            THUNDER.SetActive(false);
         }
         if (swapArgs.swipeDown)
         {
@@ -56,6 +76,11 @@ public class SwipeAttack : MonoBehaviour
             left.SetActive(false);
             Up.SetActive(false);
             Down.SetActive(true);
+
+            AIR.SetActive(false);
+            FIRE.SetActive(false);
+            WATER.SetActive(false);
+            THUNDER.SetActive(true);
         }
     }
 }
