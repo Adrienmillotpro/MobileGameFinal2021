@@ -5,26 +5,30 @@ using UnityEngine;
 
 public class PlayerCurrencies : MonoBehaviour
 {
-    public static event Action<OnEarnCurrencyEventArgs> OnEarnCurrency;
-    private OnEarnCurrencyEventArgs onEarnCurrencyArgs;
-
     private float currencyBase;
     private float currencyPremium;
     private float currencyFire;
     private float currencyThunder;
     private float currencyWater;
     private float currencyAir;
+    #region Getters
+    public float CurrencyBase { get { return currencyBase; } }
+    public float CurrencyPremium { get { return currencyPremium; } }
+    public float CurrencyFire { get { return currencyFire; } }
+    public float CurrencyWater { get { return currencyWater; } }
+    public float CurrencyThunder { get { return currencyThunder; } }
+    public float CurrencyAir { get { return currencyAir; } }
+    #endregion
 
     private void Awake()
     {
         EnemyManager.OnDealDamage += OnDealDamageEarnCurrency;
-        GeneralUpgrade.OnUpgrade += OnUpgradeUpdateCurrency;
+        UpgradeDMG.OnUpgradeDMG += OnUpgradeUpdateCurrency;
     }
-
     private void OnDisable()
     {
         EnemyManager.OnDealDamage -= OnDealDamageEarnCurrency;
-        GeneralUpgrade.OnUpgrade -= OnUpgradeUpdateCurrency;
+        UpgradeDMG.OnUpgradeDMG -= OnUpgradeUpdateCurrency;
     }
 
     private void OnUpgradeUpdateCurrency(OnUpgradeEventArgs upgradeArgs)
@@ -36,26 +40,24 @@ public class PlayerCurrencies : MonoBehaviour
         currencyAir -= upgradeArgs.currencyAir;
         currencyPremium -= upgradeArgs.currencyPremium;
     }
-
-    private void OnDealDamageEarnCurrency(OnDamageEventArgs damageArgs)
+    private void OnDealDamageEarnCurrency(OnDamageEventArgs damageArgs) // This triggers when player deals damage to an enemy
     {
-        onEarnCurrencyArgs.currencyAmount = damageArgs.enemyLevel;
-        currencyBase += damageArgs.enemyLevel;
+        currencyBase += damageArgs.CurrencyOnDamage(); // Player earns Base Currency
         if (damageArgs.bestElementalReaction == 2)
         {
-            switch (damageArgs.bestHeroElement)
+            switch (damageArgs.bestHeroElement) // Check if player should earn Elemental Currency
             {
                 case ElementalTypes.Air:
-                    currencyAir += damageArgs.enemyLevel;
+                    currencyAir += damageArgs.CurrencyOnDamage();
                     break;
                 case ElementalTypes.Fire:
-                    currencyFire += damageArgs.enemyLevel;
+                    currencyFire += damageArgs.CurrencyOnDamage();
                     break;
                 case ElementalTypes.Thunder:
-                    currencyThunder += damageArgs.enemyLevel;
+                    currencyThunder += damageArgs.CurrencyOnDamage();
                     break;
                 case ElementalTypes.Water:
-                    currencyWater += damageArgs.enemyLevel;
+                    currencyWater += damageArgs.CurrencyOnDamage();
                     break;
             }
         }

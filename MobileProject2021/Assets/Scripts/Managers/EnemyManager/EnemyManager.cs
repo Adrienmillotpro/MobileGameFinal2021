@@ -62,10 +62,13 @@ public class EnemyManager : MonoBehaviour
         roomLevel = 0;
         waveLevel = 0;
         biomeLevel = 0;
+        HeroManager.OnClick += OnClickCalculateDamage;
+    }
+    private void Start()
+    {
         UpdateBiome();
         UpdateWave();
         UpdateRoom();
-        HeroManager.OnClick += OnClickCalculateDamage;
     }
     private void OnDestroy()
     {
@@ -89,6 +92,7 @@ public class EnemyManager : MonoBehaviour
         isBoss = false;
         UpdateEnemyLevel();
         UpdateSpawnArgs();
+
         OnSpawn?.Invoke(onSpawnArgs);
     }
     private void SpawnBoss()
@@ -105,28 +109,13 @@ public class EnemyManager : MonoBehaviour
         isBoss = true;
         UpdateEnemyLevel();
         UpdateSpawnArgs();
+
         OnSpawn?.Invoke(onSpawnArgs);
     }
+
     private void UpdateEnemyLevel()
     {
         enemyLevel = roomLevel * roomLevelMultiplier + waveLevel*waveLevelMultiplier + biomeLevel*biomeLevelMultiplier;
-    }
-    private void UpdateSpawnArgs()
-    {
-        onSpawnArgs.isBoss = isBoss;
-        onSpawnArgs.enemyLevel = enemyLevel;
-
-        if (isBoss)
-        {
-            onSpawnArgs.soBoss = currentSoBoss;
-            onSpawnArgs.maxHealth = currentSoBoss.BossHealth * enemyLevel;
-            onSpawnArgs.bossTimer = currentSoBoss.BossTimer;
-        }
-        else if (!isBoss)
-        {
-            onSpawnArgs.soEnemy = currentSoEnemy;
-            onSpawnArgs.maxHealth = currentSoEnemy.EnemyHealth * enemyLevel;
-        }
     }
     private void UpdateRoom()
     {
@@ -174,6 +163,7 @@ public class EnemyManager : MonoBehaviour
         //Debug.Log("I'm calculating damage");
         float bestElementalReaction = new float();
         ElementalTypes bestElementalType = new ElementalTypes();
+        ElementalTypes weakElementalType = new ElementalTypes();
 
         for (int i = 0; i < this.currentSoEnemy.EnemyTypes.Length; i++)
         {
@@ -184,17 +174,25 @@ public class EnemyManager : MonoBehaviour
                 {
                     bestElementalReaction = newElementalReaction;
                     bestElementalType = damageArgs.damageTypes[j];
+                    weakElementalType = currentSoEnemy.EnemyTypes[i];
                 }
             }
         }
         onDealDamageArgs.enemyLevel = enemyLevel;
+        onDealDamageArgs.enemyMaxHealth = onSpawnArgs.maxHealth;
         onDealDamageArgs.damageTypes = damageArgs.damageTypes;
         onDealDamageArgs.bestElementalReaction = bestElementalReaction;
         onDealDamageArgs.bestHeroElement = bestElementalType;
+        onDealDamageArgs.weakEnemyElement = weakElementalType;
         onDealDamageArgs.damage = damageArgs.damage * bestElementalReaction;
         Debug.Log("DealDamage - damageArgs.damage " +onDealDamageArgs.damage);
-        OnDealDamage?.Invoke(onDealDamageArgs);
+
+        if (OnDealDamage != null)
+        {
+            OnDealDamage?.Invoke(onDealDamageArgs);
+        }
     }
+
     private void OnEnemyKilled(OnKilledEventArgs enemyKilledArgs)
     {
         currentEnemyStats.OnEnemyKilled -= OnEnemyKilled;
@@ -204,5 +202,23 @@ public class EnemyManager : MonoBehaviour
     {
         currentBossStats.OnBossKilled -= OnBossKilled;
         UpdateRoom();
+    }
+
+    private void UpdateSpawnArgs()
+    {
+        onSpawnArgs.isBoss = isBoss;
+        onSpawnArgs.enemyLevel = enemyLevel;
+
+        if (isBoss)
+        {
+            onSpawnArgs.soBoss = currentSoBoss;
+            onSpawnArgs.maxHealth = currentSoBoss.BossHealth * enemyLevel;
+            onSpawnArgs.bossTimer = currentSoBoss.BossTimer;
+        }
+        else if (!isBoss)
+        {
+            onSpawnArgs.soEnemy = currentSoEnemy;
+            onSpawnArgs.maxHealth = currentSoEnemy.EnemyHealth * enemyLevel;
+        }
     }
 }

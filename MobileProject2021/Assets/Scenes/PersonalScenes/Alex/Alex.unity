@@ -1410,6 +1410,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6959686288201315308, guid: 70ebeb40a2788964abde14236282bee3, type: 3}
+      propertyPath: enemyBiomes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959686288201315308, guid: 70ebeb40a2788964abde14236282bee3, type: 3}
+      propertyPath: enemyBiomes.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4504c0e2e0858f64cbbcde270451d5f2, type: 2}
     - target: {fileID: 6959686288201315309, guid: 70ebeb40a2788964abde14236282bee3, type: 3}
       propertyPath: m_RootOrder
       value: 3

@@ -7,10 +7,14 @@ using UnityEngine;
 
 public class SO_Enemy : ScriptableObject
 {
-    [Header ("Enemy Visuals")]
+    [Header("Enemy Visuals")]
+    [SerializeField] private string enemyName;
+    [SerializeField] private string enemyDescription;
     [SerializeField] private Sprite enemySprite;
     [SerializeField] private Animator enemyAnimator;
     #region Getters
+    public string EnemyName { get { return enemyName; } }
+    public string EnemyDescription { get { return enemyDescription; } }
     public Sprite EnemySprite { get { return enemySprite; } }
     public Animator EnemyAnimator { get { return enemyAnimator; } }
     #endregion

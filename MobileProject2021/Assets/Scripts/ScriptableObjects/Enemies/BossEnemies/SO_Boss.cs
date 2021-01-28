@@ -7,9 +7,13 @@ using UnityEngine;
 public class SO_Boss : ScriptableObject
 {
     [Header("Enemy Visuals")]
+    [SerializeField] private string bossName;
+    [SerializeField] private string bossDescription;
     [SerializeField] private Sprite bossSprite;
     [SerializeField] private Animator bossAnimator;
     #region Getters
+    public string BossName { get { return bossName; } }
+    public string BossDescritpion { get { return bossName; } }
     public Sprite BossSprite { get { return bossSprite; } }
     public Animator BossAnimator { get { return bossAnimator; } }
     #endregion

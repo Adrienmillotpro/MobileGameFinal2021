@@ -20,7 +20,7 @@ public class HeroStats : MonoBehaviour
     {
         // Subscribe to Upgrade events
     }
-    private void OnDestroy()
+    private void OnDisable()
     {
         // Unsub to Upgrade events
     }
