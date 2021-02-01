@@ -11,12 +11,12 @@ public class EnemyVisuals : MonoBehaviour
     private void Awake()
     {
         EnemyManager.OnSpawn += OnSpawnUpdateVisuals;
-        EnemyManager.OnDealDamage += OnDealDamageUpdateVisuals;
+        DamageManager.OnDealDamage += OnDealDamageUpdateVisuals;
     }
     private void OnDestroy()
     {
         EnemyManager.OnSpawn -= OnSpawnUpdateVisuals;
-        EnemyManager.OnDealDamage -= OnDealDamageUpdateVisuals;
+        DamageManager.OnDealDamage -= OnDealDamageUpdateVisuals;
     }
 
     private void OnSpawnUpdateVisuals(OnSpawnEventArgs spawnArgs)

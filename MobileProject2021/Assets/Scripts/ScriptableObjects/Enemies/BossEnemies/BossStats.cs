@@ -16,12 +16,12 @@ public class BossStats : MonoBehaviour
 
     private void Awake()
     {
-        EnemyManager.OnDealDamage += OnDealDamageReceiveDamage;
+        DamageManager.OnDealDamage += OnDealDamageReceiveDamage;
         EnemyManager.OnSpawn += OnSpawnUpdateStats;
     }
     private void OnDestroy()
     {
-        EnemyManager.OnDealDamage -= OnDealDamageReceiveDamage;
+        DamageManager.OnDealDamage -= OnDealDamageReceiveDamage;
         EnemyManager.OnSpawn -= OnSpawnUpdateStats;
     }
 

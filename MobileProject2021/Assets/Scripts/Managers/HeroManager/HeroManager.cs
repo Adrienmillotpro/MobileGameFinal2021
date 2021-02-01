@@ -12,18 +12,17 @@ public class HeroManager : MonoBehaviour
     private HeroStats currentStats;
     private HeroVisuals[] heroesVisuals = new HeroVisuals[4];
     private HeroVisuals currentVisuals;
+    #region Getters
+    public HeroStats CurrentStats { get { return currentStats; } }
+    public HeroVisuals CurrentVisuals { get { return currentVisuals; } }
 
     private bool isUp, isDown, isLeft, isRight;
+    #endregion
 
-    // Events
-    public static event Action<OnDamageEventArgs> OnClick;
-    private OnDamageEventArgs damageArgs = new OnDamageEventArgs();
 
     private void Awake()
     {
         SwipeAttackMenu.OnSwap += OnSwapUpdateHero;
-        TapMechanic.OnTap += OnTapDealDamage;
-
         for (int i = 0; i < heroes.Length; i++)
         {
             heroesStats[i] = heroes[i].GetComponent<HeroStats>();
@@ -41,20 +40,9 @@ public class HeroManager : MonoBehaviour
     private void OnDestroy()
     {
         SwipeAttackMenu.OnSwap -= OnSwapUpdateHero;
-        TapMechanic.OnTap -= OnTapDealDamage;
     }
 
-    public void OnTapDealDamage(OnTapEventArgs tapArgs) // Pass Arguments to reduce enemy health
-    {
-        if (OnClick != null)
-        {
-            //Debug.Log("I received the Tap");
-            this.damageArgs.damage = currentStats.heroDamage;
-            this.damageArgs.damageTypes = currentStats.heroTypes;
-            //Debug.Log("I'm sending this damage" + damageArgs.damage);
-            OnClick?.Invoke(damageArgs);
-        }
-    }
+
     private void OnSwapUpdateHero(OnSwapEventArgs swapArgs) // Change currentHero OnSwap
     {
         //Debug.Log("I'm Updating Heroes");

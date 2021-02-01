@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class PlayerCurrencies : MonoBehaviour
 {
-    private float currencyBase;
-    private float currencyPremium;
-    private float currencyFire;
-    private float currencyThunder;
-    private float currencyWater;
-    private float currencyAir;
+    [SerializeField] private float currencyBase;
+    [SerializeField] private float currencyPremium;
+    [SerializeField] private float currencyFire;
+    [SerializeField] private float currencyThunder;
+    [SerializeField] private float currencyWater;
+    [SerializeField] private float currencyAir;
     #region Getters
     public float CurrencyBase { get { return currencyBase; } }
     public float CurrencyPremium { get { return currencyPremium; } }
@@ -22,12 +22,12 @@ public class PlayerCurrencies : MonoBehaviour
 
     private void Awake()
     {
-        EnemyManager.OnDealDamage += OnDealDamageEarnCurrency;
+        DamageManager.OnDealDamage += OnDealDamageEarnCurrency;
         UpgradeDMG.OnUpgradeDMG += OnUpgradeUpdateCurrency;
     }
     private void OnDisable()
     {
-        EnemyManager.OnDealDamage -= OnDealDamageEarnCurrency;
+        DamageManager.OnDealDamage -= OnDealDamageEarnCurrency;
         UpgradeDMG.OnUpgradeDMG -= OnUpgradeUpdateCurrency;
     }
 
@@ -45,7 +45,7 @@ public class PlayerCurrencies : MonoBehaviour
         currencyBase += damageArgs.CurrencyOnDamage(); // Player earns Base Currency
         if (damageArgs.bestElementalReaction == 2)
         {
-            switch (damageArgs.bestHeroElement) // Check if player should earn Elemental Currency
+            switch (damageArgs.weakEnemyElement) // Check if player should earn Elemental Currency
             {
                 case ElementalTypes.Air:
                     currencyAir += damageArgs.CurrencyOnDamage();

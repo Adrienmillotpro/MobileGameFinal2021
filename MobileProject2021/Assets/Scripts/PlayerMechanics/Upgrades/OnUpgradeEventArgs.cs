@@ -14,4 +14,6 @@ public class OnUpgradeEventArgs : EventArgs
     public float currencyAir;
 
     public float upgradeEffect;
+    public float upgradeLevel;
+    public float nextUpgradeEffect;
 }

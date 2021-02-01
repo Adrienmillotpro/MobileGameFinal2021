@@ -10,7 +10,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private GameObject bossPrefab;
 
-    #region Biome Settings
+    // Biome Settings
     private SO_Biome currentBiome;
     private int indexBiome;
 
@@ -20,29 +20,28 @@ public class EnemyManager : MonoBehaviour
 
     [SerializeField] private int roomsPerWave;
     private int indexRoom;
-    #endregion
 
-    #region Enemy Settings
+    // Enemy Settings
     private GameObject currentEnemy;
     private SO_Enemy currentSoEnemy;
     private EnemyStats currentEnemyStats;
     private EnemyVisuals currentEnemyVisuals;
+    #region Getters
+    public SO_Enemy CurrentSoEnemy { get { return currentSoEnemy; } }
+    public EnemyStats CurrentEnemyStats { get { return currentEnemyStats; } }
+    public EnemyVisuals CurrentEnemyVisuals { get { return currentEnemyVisuals; } }
     #endregion
 
-    #region Boss Settings
+    // Boss Settings
     private GameObject currentBoss;
     private SO_Boss currentSoBoss;
     private BossStats currentBossStats;
     private BossVisuals currentBossVisuals;
     private bool isBoss;
-    #endregion
 
     // Events
     public static event Action<OnSpawnEventArgs> OnSpawn;
     private OnSpawnEventArgs onSpawnArgs = new OnSpawnEventArgs();
-
-    public static event Action<OnDamageEventArgs> OnDealDamage;
-    private OnDamageEventArgs onDealDamageArgs = new OnDamageEventArgs();
 
     // Progression
     private int roomLevel;
@@ -52,7 +51,12 @@ public class EnemyManager : MonoBehaviour
     private int biomeLevel;
     [SerializeField] private int biomeLevelMultiplier;
     private int enemyLevel;
-
+    #region Getters
+    public int RoomLevel { get { return roomLevel; } }
+    public int WaveLevel { get { return waveLevel; } }
+    public int BiomeLevel { get { return biomeLevel; } }
+    public int EnemyLevel { get { return enemyLevel; } }
+    #endregion
 
     private void Awake()
     {
@@ -62,7 +66,6 @@ public class EnemyManager : MonoBehaviour
         roomLevel = 0;
         waveLevel = 0;
         biomeLevel = 0;
-        HeroManager.OnClick += OnClickCalculateDamage;
     }
     private void Start()
     {
@@ -72,7 +75,6 @@ public class EnemyManager : MonoBehaviour
     }
     private void OnDestroy()
     {
-        HeroManager.OnClick -= OnClickCalculateDamage;
     }
 
     private void SpawnEnemy()
@@ -156,41 +158,6 @@ public class EnemyManager : MonoBehaviour
         }
         currentBiome = enemyBiomes[indexBiome];
         indexBiome++;
-    }
-
-    private void OnClickCalculateDamage(OnDamageEventArgs damageArgs)
-    {
-        //Debug.Log("I'm calculating damage");
-        float bestElementalReaction = new float();
-        ElementalTypes bestElementalType = new ElementalTypes();
-        ElementalTypes weakElementalType = new ElementalTypes();
-
-        for (int i = 0; i < this.currentSoEnemy.EnemyTypes.Length; i++)
-        {
-            for (int j = 0; j < damageArgs.damageTypes.Length; j++)
-            {
-                float newElementalReaction = TypeChart.DefineElementalReaction(damageArgs.damageTypes[j], currentSoEnemy.EnemyTypes[i]);
-                if (newElementalReaction > bestElementalReaction)
-                {
-                    bestElementalReaction = newElementalReaction;
-                    bestElementalType = damageArgs.damageTypes[j];
-                    weakElementalType = currentSoEnemy.EnemyTypes[i];
-                }
-            }
-        }
-        onDealDamageArgs.enemyLevel = enemyLevel;
-        onDealDamageArgs.enemyMaxHealth = onSpawnArgs.maxHealth;
-        onDealDamageArgs.damageTypes = damageArgs.damageTypes;
-        onDealDamageArgs.bestElementalReaction = bestElementalReaction;
-        onDealDamageArgs.bestHeroElement = bestElementalType;
-        onDealDamageArgs.weakEnemyElement = weakElementalType;
-        onDealDamageArgs.damage = damageArgs.damage * bestElementalReaction;
-        Debug.Log("DealDamage - damageArgs.damage " +onDealDamageArgs.damage);
-
-        if (OnDealDamage != null)
-        {
-            OnDealDamage?.Invoke(onDealDamageArgs);
-        }
     }
 
     private void OnEnemyKilled(OnKilledEventArgs enemyKilledArgs)

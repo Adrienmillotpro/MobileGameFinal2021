@@ -11,12 +11,12 @@ public class BossVisuals : MonoBehaviour
 
     private void Awake()
     {
-        EnemyManager.OnDealDamage += OnDealDamageReceiveDamage;
+        DamageManager.OnDealDamage += OnDealDamageReceiveDamage;
         EnemyManager.OnSpawn += OnSpawnUpdateHealth;
     }
     private void OnDestroy()
     {
-        EnemyManager.OnDealDamage -= OnDealDamageReceiveDamage;
+        DamageManager.OnDealDamage -= OnDealDamageReceiveDamage;
         EnemyManager.OnSpawn -= OnSpawnUpdateHealth;
     }
 

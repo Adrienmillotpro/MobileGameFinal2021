@@ -6,12 +6,13 @@ using UnityEngine.UI;
 
 public class UpgradeDMG : GeneralUpgrade
 {
+    [SerializeField] private Button upgradeDmgButton;
+
     [SerializeField] private PlayerCurrencies playerCurrencies;
     [SerializeField] private HeroManager heroManager;
-    [SerializeField]
+
     public static event Action<OnUpgradeEventArgs> OnUpgradeDMG;
-    private OnUpgradeEventArgs onUpgradeArgs;
-    [SerializeField] private Button upgradeDmgButton;
+    private OnUpgradeEventArgs onUpgradeArgs = new OnUpgradeEventArgs();
 
     private void Start()
     {
@@ -47,5 +48,7 @@ public class UpgradeDMG : GeneralUpgrade
     {
         onUpgradeArgs.currencyBase = this.upgradeCost;
         onUpgradeArgs.upgradeEffect = this.upgradeEffect;
+        onUpgradeArgs.upgradeLevel = this.upgradeLevel;
+        onUpgradeArgs.nextUpgradeEffect = this.upgradeEffect + this.upgradeLevel * this.upgradeEffectMultiplier;
     }
 }

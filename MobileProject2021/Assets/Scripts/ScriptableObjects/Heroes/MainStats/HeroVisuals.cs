@@ -18,12 +18,12 @@ public class HeroVisuals : MonoBehaviour
     private void OnEnable()
     {
         this.heroRenderer.enabled = true;
-        EnemyManager.OnDealDamage += OnDealDamageUpdateVisuals;
+        DamageManager.OnDealDamage += OnDealDamageUpdateVisuals;
     }
     private void OnDisable()
     {
         this.heroRenderer.enabled = false;
-        EnemyManager.OnDealDamage -= OnDealDamageUpdateVisuals;
+        DamageManager.OnDealDamage -= OnDealDamageUpdateVisuals;
     }
 
     private void Start()

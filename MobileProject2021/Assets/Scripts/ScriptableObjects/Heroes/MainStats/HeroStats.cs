@@ -12,7 +12,6 @@ public class HeroStats : MonoBehaviour
     [HideInInspector] public float herocurrencyMultiplier;
     [HideInInspector] public ElementalTypes[] heroTypes;
 
-    private int heroLevel;
     private void Awake()
     {
         // Subscribe to Upgrade events
@@ -30,5 +29,4 @@ public class HeroStats : MonoBehaviour
         this.herocurrencyMultiplier = hero.HeroCurrencyMultiplier;
         this.heroTypes = hero.HeroTypes;
     }
-
 }

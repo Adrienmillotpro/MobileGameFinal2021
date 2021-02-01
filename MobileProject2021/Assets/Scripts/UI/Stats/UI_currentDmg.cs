@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class UI_currentDmg : MonoBehaviour
 {
     [SerializeField] private Text text;
-    private string dmgText;
 
     private void Awake()
     {
@@ -16,6 +15,6 @@ public class UI_currentDmg : MonoBehaviour
 
     private void OnUpgradeDMGUpdateUI(OnUpgradeEventArgs upgradeArgs)
     {
-        
+        text.text = (upgradeArgs.upgradeEffect.ToString() + "=>" + upgradeArgs.nextUpgradeEffect.ToString());
     }
 }

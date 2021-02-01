@@ -11,10 +11,15 @@ public class McStats : MonoBehaviour
 
     private void Awake()
     {
-        // subscribe to upgrade events
+        UpgradeDMG.OnUpgradeDMG += OnUpgradeDMGUpdateStats;
     }
     private void OnDisable()
     {
-        // unsub to upgrade events
+        UpgradeDMG.OnUpgradeDMG -= OnUpgradeDMGUpdateStats;
+    }
+
+    private void OnUpgradeDMGUpdateStats(OnUpgradeEventArgs upgradeArgs)
+    {
+        this.damage += upgradeArgs.upgradeEffect;
     }
 }

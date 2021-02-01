@@ -10,13 +10,13 @@ public class UI_EnemyHealthBar : MonoBehaviour
     private void Awake()
     {
         EnemyManager.OnSpawn += OnSpawnUpdateSlider;
-        EnemyManager.OnDealDamage += OnDealDamageUpdateSlider;
+        DamageManager.OnDealDamage += OnDealDamageUpdateSlider;
     }
 
     private void OnDisable()
     {
         EnemyManager.OnSpawn -= OnSpawnUpdateSlider;
-        EnemyManager.OnDealDamage -= OnDealDamageUpdateSlider;
+        DamageManager.OnDealDamage -= OnDealDamageUpdateSlider;
     }
 
     private void OnSpawnUpdateSlider(OnSpawnEventArgs spawnArgs)
