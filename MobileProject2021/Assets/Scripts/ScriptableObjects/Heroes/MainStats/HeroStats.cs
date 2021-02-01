@@ -9,9 +9,6 @@ public class HeroStats : MonoBehaviour
     [HideInInspector] public float heroDamage;
     [HideInInspector] public float heroAttackRate;
     [HideInInspector] public float heroElementalReactionMultiplier;
-    [HideInInspector] public float heroCritRate;
-    [HideInInspector] public float heroCritDamage;
-    [HideInInspector] public float heroAffinityMultiplier;
     [HideInInspector] public float herocurrencyMultiplier;
     [HideInInspector] public ElementalTypes[] heroTypes;
 
@@ -30,9 +27,6 @@ public class HeroStats : MonoBehaviour
         this.heroDamage = hero.HeroDamage;
         this.heroAttackRate = hero.HeroAttackRate;
         this.heroElementalReactionMultiplier = hero.HeroElementalReactionMultiplier;
-        this.heroCritRate = hero.HeroCritRate;
-        this.heroCritDamage = hero.HeroCritDamage;
-        this.heroAffinityMultiplier = hero.HeroAffinityMultiplier;
         this.herocurrencyMultiplier = hero.HeroCurrencyMultiplier;
         this.heroTypes = hero.HeroTypes;
     }

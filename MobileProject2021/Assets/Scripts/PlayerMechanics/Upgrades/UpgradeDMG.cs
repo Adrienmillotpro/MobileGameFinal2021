@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class UpgradeDMG : GeneralUpgrade
 {
     [SerializeField] private PlayerCurrencies playerCurrencies;
-
+    [SerializeField] private HeroManager heroManager;
+    [SerializeField]
     public static event Action<OnUpgradeEventArgs> OnUpgradeDMG;
     private OnUpgradeEventArgs onUpgradeArgs;
     [SerializeField] private Button upgradeDmgButton;

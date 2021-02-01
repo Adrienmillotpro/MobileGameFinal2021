@@ -29,12 +29,11 @@ public class HeroManager : MonoBehaviour
             heroesStats[i] = heroes[i].GetComponent<HeroStats>();
             heroesVisuals[i] = heroes[i].GetComponent<HeroVisuals>();
         }
-    }
-
-    private void Start()
-    {
         currentStats = heroesStats[0];
         currentVisuals = heroesVisuals[0];
+    }
+    private void Start()
+    {
         heroesVisuals[1].enabled = false;
         heroesVisuals[2].enabled = false;
         heroesVisuals[3].enabled = false;
@@ -44,7 +43,8 @@ public class HeroManager : MonoBehaviour
         SwipeAttackMenu.OnSwap -= OnSwapUpdateHero;
         TapMechanic.OnTap -= OnTapDealDamage;
     }
-    public void OnTapDealDamage(OnTapEventArgs tapArgs)
+
+    public void OnTapDealDamage(OnTapEventArgs tapArgs) // Pass Arguments to reduce enemy health
     {
         if (OnClick != null)
         {
@@ -55,7 +55,7 @@ public class HeroManager : MonoBehaviour
             OnClick?.Invoke(damageArgs);
         }
     }
-    private void OnSwapUpdateHero(OnSwapEventArgs swapArgs)
+    private void OnSwapUpdateHero(OnSwapEventArgs swapArgs) // Change currentHero OnSwap
     {
         //Debug.Log("I'm Updating Heroes");
         if (swapArgs.swipeUp && !isUp)
