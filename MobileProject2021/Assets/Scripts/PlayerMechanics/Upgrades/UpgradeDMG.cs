@@ -8,11 +8,15 @@ public class UpgradeDMG : GeneralUpgrade
 {
     [SerializeField] private Button upgradeDmgButton;
 
-    [SerializeField] private PlayerCurrencies playerCurrencies;
-    [SerializeField] private HeroManager heroManager;
-
+    private PlayerCurrencies playerCurrencies;
+    
     public static event Action<OnUpgradeEventArgs> OnUpgradeDMG;
     private OnUpgradeEventArgs onUpgradeArgs = new OnUpgradeEventArgs();
+
+    private void Awake()
+    {
+        playerCurrencies = FindObjectOfType<PlayerCurrencies>();
+    }
 
     private void Start()
     {
