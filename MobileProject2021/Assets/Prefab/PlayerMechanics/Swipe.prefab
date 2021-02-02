@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6233745081025203581}
   - component: {fileID: 3436555149554153395}
+  - component: {fileID: 930180048}
+  - component: {fileID: 930180049}
   m_Layer: 0
   m_Name: Swipe
   m_TagString: Untagged
@@ -41,5 +43,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b52a7917903586d41a626c5343a3075e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &930180048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801105368192359314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8818fad06d3bef4091ec019ff898af3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenu: {fileID: 0}
+  secondMenu: {fileID: 0}
+  speed: 0.3
+--- !u!114 &930180049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801105368192359314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7d1639fa60ac154b8006b33be956f10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

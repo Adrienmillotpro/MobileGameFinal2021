@@ -19,8 +19,8 @@ public class UiSwipeBottom : MonoBehaviour
         if (SwipeManager.swipeLeft)
         {
             Debug.Log("Swipe Left Bottom Menu");
-            mainMenu.DOAnchorPos(new Vector2(-1124, 202), speed);
-            secondMenu.DOAnchorPos(new Vector2(0, 202), speed);
+            mainMenu.DOAnchorPos(new Vector2(-714, 202), speed);
+            secondMenu.DOAnchorPos(new Vector2(410, 202), speed);
         }
 
 
