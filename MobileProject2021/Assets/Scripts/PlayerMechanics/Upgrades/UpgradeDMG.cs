@@ -41,7 +41,7 @@ public class UpgradeDMG : GeneralUpgrade
     private void UpdateUpgradeSettings() // Increase cost & effect
     {
         this.upgradeLevel++;
-        this.upgradeCost += this.upgradeLevel * this.upgradeCostMultiplier;
+        this.upgradeCost += this.upgradeCost * this.upgradeLevel * this.upgradeCostMultiplier;
         this.upgradeEffect += this.upgradeLevel * this.upgradeEffectMultiplier;
     }
     private void UpdateArgs() // Update arguments passed in event
