@@ -141,7 +141,7 @@ public class EnemyManager : MonoBehaviour
     }
     private void UpdateWave()
     {
-        if (indexWave >= roomsPerWave)
+        if (indexWave >= wavesPerBiome)
         {
             indexWave = 0;
             biomeLevel++;
