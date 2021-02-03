@@ -14,8 +14,13 @@ public class TapMechanic : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !isTouching)
         {
-            isTouching = true;
-            StartCoroutine(TapTimeWindow(timeWindow));
+            RaycastHit2D hitInfo = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            if (hitInfo.transform.gameObject.name == "Panel2DCollider")
+            {
+                isTouching = true;
+                StartCoroutine(TapTimeWindow(timeWindow));
+            }
+                
         }
         else if (Input.GetMouseButtonUp(0) && isTap)
         {
