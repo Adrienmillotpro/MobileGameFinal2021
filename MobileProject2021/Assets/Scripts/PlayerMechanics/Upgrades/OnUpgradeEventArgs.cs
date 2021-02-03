@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class OnUpgradeEventArgs : EventArgs
 {
-    public float currencyAmount;
-    public float currencyBase;
-    public float currencyPremium;
-    public float currencyFire;
-    public float currencyThunder;
-    public float currencyWater;
-    public float currencyAir;
+    public int currencyAmount;
+    public int currencyBase;
+    public int currencyPremium;
+    public int currencyFire;
+    public int currencyThunder;
+    public int currencyWater;
+    public int currencyAir;
 
     public float upgradeEffect;
     public float upgradeLevel;

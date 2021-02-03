@@ -42,7 +42,6 @@ public class HeroManager : MonoBehaviour
         SwipeAttackMenu.OnSwap -= OnSwapUpdateHero;
     }
 
-
     private void OnSwapUpdateHero(OnSwapEventArgs swapArgs) // Change currentHero OnSwap
     {
         //Debug.Log("I'm Updating Heroes");

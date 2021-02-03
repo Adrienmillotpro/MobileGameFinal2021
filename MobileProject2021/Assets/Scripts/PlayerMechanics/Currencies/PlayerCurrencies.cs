@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class PlayerCurrencies : MonoBehaviour
 {
-    [SerializeField] private float currencyBase;
-    [SerializeField] private float currencyPremium;
-    [SerializeField] private float currencyFire;
-    [SerializeField] private float currencyThunder;
-    [SerializeField] private float currencyWater;
-    [SerializeField] private float currencyAir;
+    [SerializeField] private int currencyBase;
+    [SerializeField] private int currencyPremium;
+    [SerializeField] private int currencyFire;
+    [SerializeField] private int currencyThunder;
+    [SerializeField] private int currencyWater;
+    [SerializeField] private int currencyAir;
     #region Getters
     public float CurrencyBase { get { return currencyBase; } }
     public float CurrencyPremium { get { return currencyPremium; } }
@@ -19,6 +19,9 @@ public class PlayerCurrencies : MonoBehaviour
     public float CurrencyThunder { get { return currencyThunder; } }
     public float CurrencyAir { get { return currencyAir; } }
     #endregion
+
+    public static event Action<OnUpdateCurrenciesEventArgs> OnUpdateCurrency;
+    private OnUpdateCurrenciesEventArgs currenciesArgs;
 
     private void Awake()
     {
@@ -33,33 +36,48 @@ public class PlayerCurrencies : MonoBehaviour
 
     private void OnUpgradeUpdateCurrency(OnUpgradeEventArgs upgradeArgs)
     {
-        currencyBase -= upgradeArgs.currencyBase;
-        currencyFire -= upgradeArgs.currencyFire;
-        currencyThunder -= upgradeArgs.currencyThunder;
-        currencyWater -= upgradeArgs.currencyWater;
-        currencyAir -= upgradeArgs.currencyAir;
-        currencyPremium -= upgradeArgs.currencyPremium;
+        currencyBase -= (int)upgradeArgs.currencyBase;
+        currencyFire -= (int)upgradeArgs.currencyFire;
+        currencyThunder -= (int)upgradeArgs.currencyThunder;
+        currencyWater -= (int)upgradeArgs.currencyWater;
+        currencyAir -= (int)upgradeArgs.currencyAir;
+        currencyPremium -= (int)upgradeArgs.currencyPremium;
+
+
+        OnUpdateCurrency?.Invoke(currenciesArgs);
     }
     private void OnDealDamageEarnCurrency(OnDamageEventArgs damageArgs) // This triggers when player deals damage to an enemy
     {
-        currencyBase += damageArgs.CurrencyOnDamage(); // Player earns Base Currency
+        currencyBase += (int)damageArgs.CurrencyOnDamage(); // Player earns Base Currency
         if (damageArgs.bestElementalReaction == 2)
         {
             switch (damageArgs.weakEnemyElement) // Check if player should earn Elemental Currency
             {
                 case ElementalTypes.Air:
-                    currencyAir += damageArgs.CurrencyOnDamage();
+                    currencyAir += (int)damageArgs.CurrencyOnDamage();
                     break;
                 case ElementalTypes.Fire:
-                    currencyFire += damageArgs.CurrencyOnDamage();
+                    currencyFire += (int)damageArgs.CurrencyOnDamage();
                     break;
                 case ElementalTypes.Thunder:
-                    currencyThunder += damageArgs.CurrencyOnDamage();
+                    currencyThunder += (int)damageArgs.CurrencyOnDamage();
                     break;
                 case ElementalTypes.Water:
-                    currencyWater += damageArgs.CurrencyOnDamage();
+                    currencyWater += (int)damageArgs.CurrencyOnDamage();
                     break;
             }
         }
+        UpdateCurrenciesArgs();
+        OnUpdateCurrency?.Invoke(currenciesArgs);
+    }
+
+    private void UpdateCurrenciesArgs()
+    {
+        currenciesArgs.currentBase = this.currencyBase;
+        currenciesArgs.currentPremium = this.currencyPremium;
+        currenciesArgs.currentFire = this.currencyFire;
+        currenciesArgs.currentAir = this.currencyAir;
+        currenciesArgs.currentThunder = this.currencyThunder;
+        currenciesArgs.currentWater = this.currencyWater;
     }
 }
