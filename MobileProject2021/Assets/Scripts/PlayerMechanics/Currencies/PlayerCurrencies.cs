@@ -21,7 +21,7 @@ public class PlayerCurrencies : MonoBehaviour
     #endregion
 
     public static event Action<OnUpdateCurrenciesEventArgs> OnUpdateCurrency;
-    private OnUpdateCurrenciesEventArgs currenciesArgs;
+    private OnUpdateCurrenciesEventArgs currenciesArgs = new OnUpdateCurrenciesEventArgs();
 
     private void Awake()
     {

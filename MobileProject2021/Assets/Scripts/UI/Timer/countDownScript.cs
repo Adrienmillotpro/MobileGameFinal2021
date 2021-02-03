@@ -3,35 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Threading;
 
 public class countDownScript : MonoBehaviour
 {
-    [SerializeField]
-    private int StartCountDown = 60;
+    [SerializeField] Button button;
 
-    [SerializeField]
-    TextMeshProUGUI TxtCountDown;
+    private bool isInCooldown;
+    public float timer;
 
-     void Start()
+    private void Update()
     {
-        
-        StartCoroutine(Pause());
+        // Check if touch
+
     }
 
-    IEnumerator Pause()
+
+
+
+    public void OnClickDoStuff()
     {
-        while(StartCountDown>0)
-        {
-            yield return new WaitForSeconds(1f);
-            StartCountDown--;
-            TxtCountDown.text = "TimeLeft : " + StartCountDown;
-        }
-
-        Debug.Log("You're dead");
+        // Do stuff
+        StartCoroutine(Cooldown(timer));
     }
-    
 
-
+    private IEnumerator Cooldown(float timer)
+    {
+        isInCooldown = true;
+        yield return new WaitForSeconds(timer);
+        isInCooldown = false;
+    }
 }
 
 
