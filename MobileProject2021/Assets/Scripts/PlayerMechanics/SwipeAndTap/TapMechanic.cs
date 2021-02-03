@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TapMechanic : MonoBehaviour
@@ -8,14 +7,36 @@ public class TapMechanic : MonoBehaviour
     public static event Action<OnTapEventArgs> OnTap;
     private OnTapEventArgs onTapArgs;
 
+    [SerializeField] float timeWindow;
+    private bool isTouching;
+    private bool isTap;
     private void Update()
     {
-        // Check if there is a tap there
-        // Tap();
+        if (Input.GetMouseButtonDown(0) && !isTouching)
+        {
+            isTouching = true;
+            StartCoroutine(TapTimeWindow(timeWindow));
+        }
+        else if (Input.GetMouseButtonUp(0) && isTap)
+        {
+            isTouching = false;
+            Tap();
+        }
+        else if (Input.GetMouseButtonUp(0) && !isTap)
+        {
+            isTouching = false;
+        }
     }
 
     public void Tap()
     {
         OnTap?.Invoke(onTapArgs);
+    }
+
+    private IEnumerator TapTimeWindow(float timeWindow)
+    {
+        isTap = true;
+        yield return new WaitForSeconds(timeWindow);
+        isTap = false;
     }
 }
