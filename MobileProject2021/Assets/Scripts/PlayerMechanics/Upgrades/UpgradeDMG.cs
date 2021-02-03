@@ -7,26 +7,28 @@ using UnityEngine.UI;
 public class UpgradeDMG : GeneralUpgrade
 {
     [SerializeField] private Button upgradeDmgButton;
-
-    private PlayerCurrencies playerCurrencies;
     
     public static event Action<OnUpgradeEventArgs> OnUpgradeDMG;
     private OnUpgradeEventArgs onUpgradeArgs = new OnUpgradeEventArgs();
 
     private void Awake()
     {
-        playerCurrencies = FindObjectOfType<PlayerCurrencies>();
+        PlayerCurrencies.OnUpdateCurrency += OnUpdateCurrencyUpdateButton;
     }
 
+    private void OnDisable()
+    {
+        PlayerCurrencies.OnUpdateCurrency -= OnUpdateCurrencyUpdateButton;
+    }
     private void Start()
     {
         this.upgradeLevel = 1;
         this.upgradeCost = 150;
         this.upgradeEffect = 20;
     }
-    private void Update()
+    private void OnUpdateCurrencyUpdateButton(OnUpdateCurrenciesEventArgs currenciesArgs)
     {
-        if (this.upgradeCost < playerCurrencies.CurrencyBase)
+        if (this.upgradeCost < currenciesArgs.currentBase)
         {
             upgradeDmgButton.interactable = true;
         }

@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
 
-public class Ui_CurrencyBase : MonoBehaviour
+public class Ui_CurrencyFire : MonoBehaviour
 {
-    [SerializeField] private TMP_Text text;
+    private TMP_Text text;
 
     private void Awake()
     {
@@ -18,9 +17,9 @@ public class Ui_CurrencyBase : MonoBehaviour
         PlayerCurrencies.OnUpdateCurrency -= OnUpdateCurrencyUpdateUI;
     }
 
-    private void OnUpdateCurrencyUpdateUI(OnUpdateCurrenciesEventArgs currencyArgs)
+    private void OnUpdateCurrencyUpdateUI(OnUpdateCurrenciesEventArgs currenciesArgs)
     {
-        text.text = currencyArgs.currentBase.ToString();
+        text.text = currenciesArgs.currentFire.ToString();
     }
 
 }

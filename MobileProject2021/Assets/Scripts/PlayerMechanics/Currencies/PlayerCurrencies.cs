@@ -34,6 +34,11 @@ public class PlayerCurrencies : MonoBehaviour
         UpgradeDMG.OnUpgradeDMG -= OnUpgradeUpdateCurrency;
     }
 
+    private void Start()
+    {
+        UpdateCurrenciesArgs();
+        OnUpdateCurrency?.Invoke(currenciesArgs);
+    }
     private void OnUpgradeUpdateCurrency(OnUpgradeEventArgs upgradeArgs)
     {
         currencyBase -= (int)upgradeArgs.currencyBase;
@@ -43,7 +48,7 @@ public class PlayerCurrencies : MonoBehaviour
         currencyAir -= (int)upgradeArgs.currencyAir;
         currencyPremium -= (int)upgradeArgs.currencyPremium;
 
-
+        UpdateCurrenciesArgs();
         OnUpdateCurrency?.Invoke(currenciesArgs);
     }
     private void OnDealDamageEarnCurrency(OnDamageEventArgs damageArgs) // This triggers when player deals damage to an enemy
