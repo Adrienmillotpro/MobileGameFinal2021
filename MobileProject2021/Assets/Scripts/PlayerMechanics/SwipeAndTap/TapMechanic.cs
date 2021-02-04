@@ -25,6 +25,7 @@ public class TapMechanic : MonoBehaviour
         else if (Input.GetMouseButtonUp(0) && isTap)
         {
             isTouching = false;
+            isTap = false;
             StopCoroutine("TapTimeWindow");
             Tap();
         }
