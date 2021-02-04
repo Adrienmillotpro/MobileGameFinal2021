@@ -17,9 +17,10 @@ public class EnemyManager : MonoBehaviour
     private WaveOfEnemies currentWave;
     [SerializeField] private int wavesPerBiome;
     private int indexWave;
+    private int waveCount;
 
     [SerializeField] private int roomsPerWave;
-    private int indexRoom;
+    private int roomCount;
 
     // Enemy Settings
     private GameObject currentEnemy;
@@ -62,7 +63,8 @@ public class EnemyManager : MonoBehaviour
     {
         indexBiome = 0;
         indexWave = 0;
-        indexRoom = 0;
+        waveCount = 0;
+        roomCount = 0;
         roomLevel = 0;
         waveLevel = 0;
         biomeLevel = 0;
@@ -122,13 +124,13 @@ public class EnemyManager : MonoBehaviour
     private void UpdateRoom()
     {
         roomLevel++;
-        if (indexRoom == roomsPerWave -1)
+        if (roomCount == roomsPerWave -1)
         {
             SpawnBoss();
         }
-        else if (indexRoom == roomsPerWave)
+        else if (roomCount == roomsPerWave)
         {
-            indexRoom = 0;
+            roomCount = 0;
             waveLevel++;
             UpdateWave();
             SpawnEnemy();
@@ -137,13 +139,18 @@ public class EnemyManager : MonoBehaviour
         {
             SpawnEnemy();
         }
-        indexRoom++;
+        roomCount++;
     }
     private void UpdateWave()
     {
-        if (indexWave >= wavesPerBiome)
+        waveCount++;
+        if (indexWave >= currentBiome.Waves.Length)
         {
             indexWave = 0;
+        }
+        if (waveCount > wavesPerBiome)
+        {
+            waveCount = 0;
             biomeLevel++;
             UpdateBiome();
         }
