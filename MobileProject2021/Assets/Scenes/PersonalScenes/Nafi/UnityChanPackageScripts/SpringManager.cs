@@ -11,6 +11,7 @@
 //
 using UnityEngine;
 using System.Collections;
+using UnityChan;
 
 namespace UnityChan
 {

@@ -547,7 +547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 1336100272}
-  boneAxis: {x: -1, y: 0, z: 0}
+  boneAxis: {x: 0, y: -1, z: 0}
   radius: 0.05
   isUseEachBoneForceSettings: 0
   stiffnessForce: 0.01
@@ -628,7 +628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 1336100272}
-  boneAxis: {x: -1, y: 0, z: 0}
+  boneAxis: {x: 0, y: -1, z: 0}
   radius: 0.05
   isUseEachBoneForceSettings: 0
   stiffnessForce: 0.01
@@ -902,8 +902,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b7c58dc2d739b4c90fe59f6875debf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 1336100272}
-  boneAxis: {x: -1, y: 0, z: 0}
+  child: {fileID: 1249204354}
+  boneAxis: {x: 0, y: -1, z: 0}
   radius: 0.05
   isUseEachBoneForceSettings: 0
   stiffnessForce: 0.01
@@ -1205,6 +1205,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -2003609223444290898, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
   m_PrefabInstance: {fileID: 1336100268}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &505952596 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2533084059364448628, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  m_PrefabInstance: {fileID: 1336100268}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &505952597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1212,13 +1217,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505952595}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37b7c58dc2d739b4c90fe59f6875debf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 1336100272}
-  boneAxis: {x: -1, y: 0, z: 0}
+  child: {fileID: 1249204354}
+  boneAxis: {x: 0, y: -1, z: 0}
   radius: 0.05
   isUseEachBoneForceSettings: 0
   stiffnessForce: 0.01
@@ -1421,6 +1426,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5203698933115357263, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
   m_PrefabInstance: {fileID: 1336100268}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &650323089 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2836717249062934107, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  m_PrefabInstance: {fileID: 1336100268}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &650323090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1433,8 +1443,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b7c58dc2d739b4c90fe59f6875debf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 1336100272}
-  boneAxis: {x: -1, y: 0, z: 0}
+  child: {fileID: 1472390993}
+  boneAxis: {x: 0, y: -1, z: 0}
   radius: 0.05
   isUseEachBoneForceSettings: 0
   stiffnessForce: 0.01
@@ -1691,6 +1701,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -7202745956695460540, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
   m_PrefabInstance: {fileID: 1336100268}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &849136709 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1910003384373883106, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  m_PrefabInstance: {fileID: 1336100268}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &849136710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1703,8 +1718,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b7c58dc2d739b4c90fe59f6875debf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 1336100272}
-  boneAxis: {x: -1, y: 0, z: 0}
+  child: {fileID: 650323089}
+  boneAxis: {x: 0, y: -1, z: 0}
   radius: 0.05
   isUseEachBoneForceSettings: 0
   stiffnessForce: 0.01
@@ -2080,8 +2095,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b7c58dc2d739b4c90fe59f6875debf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 1336100272}
-  boneAxis: {x: -1, y: 0, z: 0}
+  child: {fileID: 2093430482}
+  boneAxis: {x: 0, y: -1, z: 0}
   radius: 0.05
   isUseEachBoneForceSettings: 0
   stiffnessForce: 0.01
@@ -2264,13 +2279,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226600024}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37b7c58dc2d739b4c90fe59f6875debf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 1336100272}
-  boneAxis: {x: -1, y: 0, z: 0}
+  child: {fileID: 2093430482}
+  boneAxis: {x: 0, y: -1, z: 0}
   radius: 0.05
   isUseEachBoneForceSettings: 0
   stiffnessForce: 0.01
@@ -2282,6 +2297,11 @@ MonoBehaviour:
 --- !u!1 &1249204353 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3893790189372569358, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  m_PrefabInstance: {fileID: 1336100268}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1249204354 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5537107611768377372, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
   m_PrefabInstance: {fileID: 1336100268}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1249204355
@@ -2296,8 +2316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b7c58dc2d739b4c90fe59f6875debf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 1336100272}
-  boneAxis: {x: -1, y: 0, z: 0}
+  child: {fileID: 1249204354}
+  boneAxis: {x: 0, y: -1, z: 0}
   radius: 0.05
   isUseEachBoneForceSettings: 0
   stiffnessForce: 0.01
@@ -2493,10 +2513,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: -7680779675833885670, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+      propertyPath: m_Name
+      value: HairFib12
+      objectReference: {fileID: 0}
     - target: {fileID: -7658486950276268092, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: -7202745956695460540, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+      propertyPath: m_Name
+      value: hairfibe15
+      objectReference: {fileID: 0}
     - target: {fileID: -7025474543398604991, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2505,6 +2533,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: -6365037533447607488, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+      propertyPath: m_Name
+      value: HairFib10
+      objectReference: {fileID: 0}
+    - target: {fileID: -5624645587934603454, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+      propertyPath: m_Name
+      value: HairFib5
+      objectReference: {fileID: 0}
+    - target: {fileID: -5428502393989854324, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+      propertyPath: m_Name
+      value: HairFib9
+      objectReference: {fileID: 0}
     - target: {fileID: -4939022208006735052, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
       propertyPath: m_Name
       value: Bwahero
@@ -2553,6 +2593,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3893790189372569358, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+      propertyPath: m_Name
+      value: HairFib11
+      objectReference: {fileID: 0}
     - target: {fileID: -2654400494489884658, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2561,6 +2605,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: -2003609223444290898, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+      propertyPath: m_Name
+      value: HairFib8
+      objectReference: {fileID: 0}
     - target: {fileID: -1706234291816963127, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2577,6 +2625,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: -176787963864717899, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+      propertyPath: m_Name
+      value: HairFib6
+      objectReference: {fileID: 0}
     - target: {fileID: 276406968717644294, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2593,6 +2645,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 1016643045948038109, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+      propertyPath: m_Name
+      value: HairFib13
+      objectReference: {fileID: 0}
     - target: {fileID: 2854895792079595789, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
       propertyPath: m_Name
       value: HairFib2
@@ -2609,10 +2665,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 5003775124860887934, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+      propertyPath: m_Name
+      value: HairFib7
+      objectReference: {fileID: 0}
     - target: {fileID: 5174145939996303143, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 5203698933115357263, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+      propertyPath: m_Name
+      value: Hairfib14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5452968612557490557, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+      propertyPath: m_Name
+      value: Hairfib16
+      objectReference: {fileID: 0}
     - target: {fileID: 6724455125891574617, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2660,6 +2728,23 @@ MonoBehaviour:
   - {fileID: 1931468365}
   - {fileID: 1573033338}
   - {fileID: 1920253547}
+  - {fileID: 2093430483}
+  - {fileID: 1226600026}
+  - {fileID: 1105696985}
+  - {fileID: 505952597}
+  - {fileID: 1466510526}
+  - {fileID: 323000084}
+  - {fileID: 1249204355}
+  - {fileID: 1751203219}
+  - {fileID: 1472390994}
+  - {fileID: 650323090}
+  - {fileID: 849136710}
+  - {fileID: 1971971561}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!95 &1336100271
 Animator:
   serializedVersion: 3
@@ -3008,7 +3093,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7659175195667060015, guid: 452934dfbd559d049a15b6f44588c6e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -7.21
       objectReference: {fileID: 0}
     - target: {fileID: -7659175195667060015, guid: 452934dfbd559d049a15b6f44588c6e6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3064,13 +3149,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466510524}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37b7c58dc2d739b4c90fe59f6875debf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 1336100272}
-  boneAxis: {x: -1, y: 0, z: 0}
+  child: {fileID: 505952596}
+  boneAxis: {x: 0, y: -1, z: 0}
   radius: 0.05
   isUseEachBoneForceSettings: 0
   stiffnessForce: 0.01
@@ -3111,6 +3196,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1016643045948038109, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
   m_PrefabInstance: {fileID: 1336100268}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1472390993 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1900104628453546111, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  m_PrefabInstance: {fileID: 1336100268}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1472390994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3123,8 +3213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b7c58dc2d739b4c90fe59f6875debf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 1336100272}
-  boneAxis: {x: -1, y: 0, z: 0}
+  child: {fileID: 1751203218}
+  boneAxis: {x: 0, y: -1, z: 0}
   radius: 0.05
   isUseEachBoneForceSettings: 0
   stiffnessForce: 0.01
@@ -3133,6 +3223,18 @@ MonoBehaviour:
   colliders: []
   debug: 1
   threshold: 0.01
+--- !u!114 &1472390995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472390992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfc82cda93488f74ba0cc4c9f5e9b12f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1499333830 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6877473291169498086, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
@@ -3453,7 +3555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 1336100272}
-  boneAxis: {x: -1, y: 0, z: 0}
+  boneAxis: {x: 0, y: -1, z: 0}
   radius: 0.05
   isUseEachBoneForceSettings: 0
   stiffnessForce: 0.01
@@ -3587,6 +3689,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -7680779675833885670, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
   m_PrefabInstance: {fileID: 1336100268}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1751203218 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3762047092350140564, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  m_PrefabInstance: {fileID: 1336100268}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1751203219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3599,8 +3706,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b7c58dc2d739b4c90fe59f6875debf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 1336100272}
-  boneAxis: {x: -1, y: 0, z: 0}
+  child: {fileID: 1751203218}
+  boneAxis: {x: 0, y: -1, z: 0}
   radius: 0.05
   isUseEachBoneForceSettings: 0
   stiffnessForce: 0.01
@@ -4090,8 +4197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b7c58dc2d739b4c90fe59f6875debf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 1336100272}
-  boneAxis: {x: -1, y: 0, z: 0}
+  child: {fileID: 849136709}
+  boneAxis: {x: 0, y: -1, z: 0}
   radius: 0.05
   isUseEachBoneForceSettings: 0
   stiffnessForce: 0.01
@@ -4199,7 +4306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 1336100272}
-  boneAxis: {x: -1, y: 0, z: 0}
+  boneAxis: {x: 0, y: -1, z: 0}
   radius: 0.05
   isUseEachBoneForceSettings: 0
   stiffnessForce: 0.01
@@ -4503,6 +4610,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -5624645587934603454, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
   m_PrefabInstance: {fileID: 1336100268}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2093430482 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1429188406631701127, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  m_PrefabInstance: {fileID: 1336100268}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2093430483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4510,13 +4622,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093430481}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37b7c58dc2d739b4c90fe59f6875debf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 1336100272}
-  boneAxis: {x: -1, y: 0, z: 0}
+  child: {fileID: 2093430482}
+  boneAxis: {x: 0, y: -1, z: 0}
   radius: 0.05
   isUseEachBoneForceSettings: 0
   stiffnessForce: 0.01
