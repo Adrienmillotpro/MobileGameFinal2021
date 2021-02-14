@@ -1,0 +1,586 @@
+fileFormatVersion: 2
+guid: 77a0a8e01ac6ce847b40599163201f43
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Drum
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 549
+      height: 381
+    spriteID: 4bcc31ddcc1ebd445b569b5831b4b18f
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -198, y: -696}
+  - name: Bras_front
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 447
+      y: 850
+      width: 95
+      height: 307
+    spriteID: 0cc767471546b224896e8a1dacfb92be
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -457, y: -174}
+  - name: Avantbras_front
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 561
+      y: 796
+      width: 120
+      height: 283
+    spriteID: b50a9aff4c46a1b4aa650a30fd08acfd
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -360, y: -13}
+  - name: Main_front
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 694
+      y: 172
+      width: 133
+      height: 194
+    spriteID: 0501f131d95edeb40a1e5f26730e61ca
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -294, y: -495}
+  - name: Corp_up
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 850
+      width: 297
+      height: 466
+    spriteID: 683f19771a7c5654d91ff2d5d91c3c04
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -936, y: -78}
+  - name: Corp_bottom
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1324
+      width: 354
+      height: 388
+    spriteID: 144633c31a285aa4eb863197217e8c8d
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -944, y: 626}
+  - name: Bras_back
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 561
+      y: 482
+      width: 114
+      height: 306
+    spriteID: a5147aaf736f9cb4a90c7a65d73dd500
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -572, y: -573}
+  - name: Avantbras_back
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 315
+      y: 1720
+      width: 157
+      height: 272
+    spriteID: 9c36b1919cb7122429eed1144b8bf986
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -876, y: 861}
+  - name: Main_back
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 461
+      y: 393
+      width: 88
+      height: 162
+    spriteID: a711f812f689c014aa124d386b702dbd
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -840, y: -359}
+  - name: Cuisse_front
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 321
+      y: 393
+      width: 132
+      height: 442
+    spriteID: c2d849f807023664e9c26a5581de1921
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -667, y: -88}
+  - name: Mollet_front
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 366
+      y: 1324
+      width: 128
+      height: 303
+    spriteID: c81de2d1fb2a7c345a1bd16920c3d24b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -614, y: 1060}
+  - name: Cuisse_back
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 309
+      y: 850
+      width: 130
+      height: 442
+    spriteID: 15d1aaa1cbd7ce14f9b1988b0bb040fe
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -808, y: 352}
+  - name: Mollet_back
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 561
+      y: 172
+      width: 125
+      height: 302
+    spriteID: 71d5add0fc8752c44bdfe6bc7363349c
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -557, y: -109}
+  - name: Pied_front
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1720
+      width: 303
+      height: 178
+    spriteID: 931b6d2f99537ab4b8aeeaf86efaa952
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -952, y: 1586}
+  - name: Pied_back
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 561
+      y: 4
+      width: 267
+      height: 160
+    spriteID: 5a158a54df9fcb54ab2118a62f6f3584
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -530, y: -179}
+  - name: "T\xEAte"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 393
+      width: 309
+      height: 449
+    spriteID: 7252c1fa020f7e24a88caf6c5d4e4534
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -885, y: -915}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 1024
+  importedTextureHeight: 2048
+  documentSize: {x: 2048, y: 2048}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 1024
+  textureActualHeight: 2048
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Drum
+    spriteName: Drum
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4bcc31ddcc1ebd445b569b5831b4b18f
+    layerID: 17
+    mosaicPosition: {x: 4, y: 4}
+  - name: Bras_front
+    spriteName: Bras_front
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0cc767471546b224896e8a1dacfb92be
+    layerID: 16
+    mosaicPosition: {x: 447, y: 850}
+  - name: Avantbras_front
+    spriteName: Avantbras_front
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b50a9aff4c46a1b4aa650a30fd08acfd
+    layerID: 15
+    mosaicPosition: {x: 561, y: 796}
+  - name: Main_front
+    spriteName: Main_front
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0501f131d95edeb40a1e5f26730e61ca
+    layerID: 14
+    mosaicPosition: {x: 694, y: 172}
+  - name: Corp_up
+    spriteName: Corp_up
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 683f19771a7c5654d91ff2d5d91c3c04
+    layerID: 13
+    mosaicPosition: {x: 4, y: 850}
+  - name: Corp_bottom
+    spriteName: Corp_bottom
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 144633c31a285aa4eb863197217e8c8d
+    layerID: 12
+    mosaicPosition: {x: 4, y: 1324}
+  - name: Bras_back
+    spriteName: Bras_back
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a5147aaf736f9cb4a90c7a65d73dd500
+    layerID: 11
+    mosaicPosition: {x: 561, y: 482}
+  - name: Avantbras_back
+    spriteName: Avantbras_back
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9c36b1919cb7122429eed1144b8bf986
+    layerID: 10
+    mosaicPosition: {x: 315, y: 1720}
+  - name: Main_back
+    spriteName: Main_back
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a711f812f689c014aa124d386b702dbd
+    layerID: 9
+    mosaicPosition: {x: 461, y: 393}
+  - name: Cuisse_front
+    spriteName: Cuisse_front
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c2d849f807023664e9c26a5581de1921
+    layerID: 8
+    mosaicPosition: {x: 321, y: 393}
+  - name: Mollet_front
+    spriteName: Mollet_front
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c81de2d1fb2a7c345a1bd16920c3d24b
+    layerID: 7
+    mosaicPosition: {x: 366, y: 1324}
+  - name: Cuisse_back
+    spriteName: Cuisse_back
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 15d1aaa1cbd7ce14f9b1988b0bb040fe
+    layerID: 6
+    mosaicPosition: {x: 309, y: 850}
+  - name: Mollet_back
+    spriteName: Mollet_back
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 71d5add0fc8752c44bdfe6bc7363349c
+    layerID: 5
+    mosaicPosition: {x: 561, y: 172}
+  - name: Pied_front
+    spriteName: Pied_front
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 931b6d2f99537ab4b8aeeaf86efaa952
+    layerID: 4
+    mosaicPosition: {x: 4, y: 1720}
+  - name: Pied_back
+    spriteName: Pied_back
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5a158a54df9fcb54ab2118a62f6f3584
+    layerID: 3
+    mosaicPosition: {x: 561, y: 4}
+  - name: "T\xEAte"
+    spriteName: "T\xEAte"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7252c1fa020f7e24a88caf6c5d4e4534
+    layerID: 2
+    mosaicPosition: {x: 4, y: 393}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: Drummer Texture
+  prefabAssetName: Drummer Prefab
+  spriteLibAssetName: Drummer Sprite Lib
+  secondarySpriteTextures: []
