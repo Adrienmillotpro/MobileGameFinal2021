@@ -39,38 +39,6 @@ public class DamageManager : MonoBehaviour
         DealDamage();
     }
 
-    private void OnClickCalculateDamage(OnDamageEventArgs damageArgs)
-    {
-        //Debug.Log("I'm calculating damage");
-        float bestElementalReaction = new float();
-        ElementalTypes bestElementalType = new ElementalTypes();
-        ElementalTypes weakElementalType = new ElementalTypes();
-
-        for (int i = 0; i < this.enemyManager.CurrentSoEnemy.EnemyTypes.Length; i++)
-        {
-            for (int j = 0; j < damageArgs.damageTypes.Length; j++)
-            {
-                float newElementalReaction = TypeChart.DefineElementalReaction(damageArgs.damageTypes[j], enemyManager.CurrentSoEnemy.EnemyTypes[i]);
-                if (newElementalReaction > bestElementalReaction)
-                {
-                    bestElementalReaction = newElementalReaction;
-                    bestElementalType = damageArgs.damageTypes[j];
-                    weakElementalType = enemyManager.CurrentSoEnemy.EnemyTypes[i];
-                }
-            }
-        }
-        onDealDamageArgs.enemyLevel = enemyManager.EnemyLevel;
-        onDealDamageArgs.enemyMaxHealth = enemyManager.CurrentEnemyStats.EnemyMaxHealth;
-        onDealDamageArgs.damageTypes = damageArgs.damageTypes;
-        onDealDamageArgs.bestElementalReaction = bestElementalReaction;
-        onDealDamageArgs.bestHeroElement = bestElementalType;
-        onDealDamageArgs.weakEnemyElement = weakElementalType;
-        onDealDamageArgs.damage = damageArgs.damage * bestElementalReaction;
-        Debug.Log("DealDamage - damageArgs.damage " + onDealDamageArgs.damage);
-
-        OnDealDamage?.Invoke(onDealDamageArgs);
-    }
-
     private void CalculateDamage()
     {
         //Debug.Log("I'm calculating damage");
