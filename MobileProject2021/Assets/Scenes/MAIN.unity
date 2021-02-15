@@ -1340,6 +1340,10 @@ PrefabInstance:
       propertyPath: damage
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2983874576809219362, guid: 0f09536fc08f27b43816863f4058cdb8, type: 3}
+      propertyPath: rateOfAttack
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2983874576809219363, guid: 0f09536fc08f27b43816863f4058cdb8, type: 3}
       propertyPath: m_Name
       value: MC
@@ -2147,7 +2151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5575221064947855030, guid: d7339bf772f07ce4d96837a12867a61b, type: 3}
       propertyPath: timeWindow
-      value: 0.3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5798241186485891736, guid: d7339bf772f07ce4d96837a12867a61b, type: 3}
       propertyPath: m_RootOrder
@@ -5597,8 +5601,8 @@ MonoBehaviour:
   - {fileID: 5198392409586287008}
   - {fileID: 2763685059621351953}
   m_Bounds:
-    m_Center: {x: -0.00007009506, y: -0.0038887858, z: 0}
-    m_Extent: {x: 0.27981004, y: 0.63610744, z: 0}
+    m_Center: {x: -0.1662854, y: 0.93663734, z: 0}
+    m_Extent: {x: 0.44087547, y: 1.2318383, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!4 &1523492906105670538
@@ -6532,7 +6536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &2200278340325290672
 Animator:
   serializedVersion: 3
