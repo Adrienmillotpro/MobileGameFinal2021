@@ -13,30 +13,30 @@ public class DamageManager : MonoBehaviour
     public static event Action<OnDamageEventArgs> OnDealDamage;
     private OnDamageEventArgs onDealDamageArgs = new OnDamageEventArgs();
 
-    private event Action<OnDamageEventArgs> OnClick;
-    private OnDamageEventArgs damageArgs = new OnDamageEventArgs();
+
+    private bool isInCooldown;
 
     private void Awake()
     {
         TapMechanic.OnTap += OnTapDealDamage;
-        OnClick += OnClickCalculateDamage;
+        isInCooldown = false;
     }
     private void OnDisable()
     {
         TapMechanic.OnTap -= OnTapDealDamage;
-        OnClick -= OnClickCalculateDamage;
+    }
+
+    private void Update()
+    {
+        if (mcStats.rateOfAttack != 0 && heroManager.CurrentStats.heroAttackRate != 0 && !isInCooldown)
+        {
+            AutoAttack();
+        }
     }
 
     public void OnTapDealDamage(OnTapEventArgs tapArgs) // Pass Arguments to reduce enemy health
     {
-        if (OnClick != null)
-        {
-            //Debug.Log("I received the Tap");
-            this.damageArgs.damage = heroManager.CurrentStats.heroDamage + mcStats.damage;
-            this.damageArgs.damageTypes = heroManager.CurrentStats.heroTypes;
-            //Debug.Log("I'm sending this damage" + damageArgs.damage);
-            OnClick?.Invoke(damageArgs);
-        }
+        DealDamage();
     }
 
     private void OnClickCalculateDamage(OnDamageEventArgs damageArgs)
@@ -68,7 +68,58 @@ public class DamageManager : MonoBehaviour
         onDealDamageArgs.damage = damageArgs.damage * bestElementalReaction;
         Debug.Log("DealDamage - damageArgs.damage " + onDealDamageArgs.damage);
 
-         OnDealDamage?.Invoke(onDealDamageArgs);
+        OnDealDamage?.Invoke(onDealDamageArgs);
     }
 
+    private void CalculateDamage()
+    {
+        //Debug.Log("I'm calculating damage");
+        float bestElementalReaction = new float();
+        ElementalTypes bestElementalType = new ElementalTypes();
+        ElementalTypes weakElementalType = new ElementalTypes();
+
+        for (int i = 0; i < enemyManager.CurrentSoEnemy.EnemyTypes.Length; i++)
+        {
+            for (int j = 0; j < heroManager.CurrentStats.heroTypes.Length; j++)
+            {
+                float newElementalReaction = TypeChart.DefineElementalReaction(heroManager.CurrentStats.heroTypes[j], enemyManager.CurrentSoEnemy.EnemyTypes[i]);
+                if (newElementalReaction > bestElementalReaction)
+                {
+                    bestElementalReaction = newElementalReaction;
+                    bestElementalType = heroManager.CurrentStats.heroTypes[j];
+                    weakElementalType = enemyManager.CurrentSoEnemy.EnemyTypes[i];
+                }
+            }
+        }
+
+        onDealDamageArgs.damage = (heroManager.CurrentStats.heroDamage + mcStats.damage) * bestElementalReaction;
+        onDealDamageArgs.damageTypes = heroManager.CurrentStats.heroTypes;
+        Debug.Log("DealDamage - damageArgs.damage " + onDealDamageArgs.damage);
+
+        onDealDamageArgs.enemyLevel = enemyManager.EnemyLevel;
+        onDealDamageArgs.enemyMaxHealth = enemyManager.CurrentEnemyStats.EnemyMaxHealth;
+        onDealDamageArgs.bestElementalReaction = bestElementalReaction;
+        onDealDamageArgs.bestHeroElement = bestElementalType;
+        onDealDamageArgs.weakEnemyElement = weakElementalType;
+    }
+
+    private void DealDamage()
+    {
+        CalculateDamage();
+        OnDealDamage?.Invoke(onDealDamageArgs);
+    }
+
+
+    private void AutoAttack()
+    {
+        DealDamage();
+        StartCoroutine(CooldownAutoAttack());
+    }
+
+    private IEnumerator CooldownAutoAttack()
+    {
+        isInCooldown = true;
+        yield return new WaitForSeconds(mcStats.rateOfAttack + heroManager.CurrentStats.heroAttackRate / 2);
+        isInCooldown = false;
+    }
 }

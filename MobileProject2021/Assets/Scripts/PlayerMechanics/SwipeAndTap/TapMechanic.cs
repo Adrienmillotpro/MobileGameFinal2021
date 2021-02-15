@@ -5,7 +5,7 @@ using UnityEngine;
 public class TapMechanic : MonoBehaviour
 {
     public static event Action<OnTapEventArgs> OnTap;
-    private OnTapEventArgs onTapArgs;
+    private OnTapEventArgs onTapArgs = new OnTapEventArgs();
 
     [SerializeField] float timeWindow;
     private bool isTouching;
