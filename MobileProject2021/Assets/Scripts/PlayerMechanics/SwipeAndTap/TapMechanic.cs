@@ -10,6 +10,8 @@ public class TapMechanic : MonoBehaviour
     [SerializeField] float timeWindow;
     private bool isTouching;
     private bool isTap;
+    [SerializeField] private GameObject particuleHit;
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0) && !isTouching)
@@ -19,6 +21,7 @@ public class TapMechanic : MonoBehaviour
             {
                 isTouching = true;
                 StartCoroutine(TapTimeWindow(timeWindow));
+                 
             }
                 
         }
@@ -38,6 +41,7 @@ public class TapMechanic : MonoBehaviour
     public void Tap()
     {
         OnTap?.Invoke(onTapArgs);
+        GameObject hitPart = Instantiate(particuleHit, Camera.main.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity);
     }
 
     private IEnumerator TapTimeWindow(float timeWindow)
