@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class OnTapVisuals : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class OnTapVisuals : MonoBehaviour
 
     private void OnTapDoPS(OnTapEventArgs tapArgs)
     {
-        GameObject hitPart = Instantiate(particuleHit, Camera.main.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity);
+        Vector3 spawnLocation = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, Camera.main.ScreenToWorldPoint(Input.mousePosition).z + 5f);
+        GameObject hitPart = Instantiate(particuleHit, spawnLocation, Quaternion.identity);
     }
+
 }
