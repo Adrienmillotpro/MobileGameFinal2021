@@ -34,7 +34,7 @@ public class DamageManager : MonoBehaviour
         }
     }
 
-    public void OnTapDealDamage(OnTapEventArgs tapArgs) // Pass Arguments to reduce enemy health
+    public void OnTapDealDamage(OnTapEventArgs tapArgs)
     {
         DealDamage();
     }
@@ -76,7 +76,6 @@ public class DamageManager : MonoBehaviour
         CalculateDamage();
         OnDealDamage?.Invoke(onDealDamageArgs);
     }
-
 
     private void AutoAttack()
     {
