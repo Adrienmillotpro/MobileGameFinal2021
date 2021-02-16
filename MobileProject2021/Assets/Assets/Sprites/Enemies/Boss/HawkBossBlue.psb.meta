@@ -1,0 +1,489 @@
+fileFormatVersion: 2
+guid: fe8bd04e579fde849ac267b3943ddb7e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Plume
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 771
+      y: 4
+      width: 622
+      height: 924
+    spriteID: 114d694c99233044f90b2ba30d58bd6a
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 190, y: -818}
+  - name: Plume_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 759
+      height: 1111
+    spriteID: b95068e36e2db4c4dac2d4c93f209e92
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -529, y: -711}
+  - name: Masque
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 771
+      y: 936
+      width: 393
+      height: 752
+    spriteID: facd8adb7163f6d4ba6c9ef8189132bb
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 161, y: 195}
+  - name: Plume_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1123
+      width: 604
+      height: 906
+    spriteID: af13044a62d78f1419e10bba7b191766
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -581, y: 281}
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Windows Store Apps
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: tvOS
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: iPhone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Lumin
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 2048
+  importedTextureHeight: 2048
+  documentSize: {x: 2048, y: 2048}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 2048
+  textureActualHeight: 2048
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Masque
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 29
+    mosaicPosition: {x: 0, y: 0}
+  - name: Plume
+    spriteName: Plume
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 114d694c99233044f90b2ba30d58bd6a
+    layerID: 38
+    mosaicPosition: {x: 771, y: 4}
+  - name: Plume
+    spriteName: Plume_1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: b95068e36e2db4c4dac2d4c93f209e92
+    layerID: 33
+    mosaicPosition: {x: 4, y: 4}
+  - name: Masque
+    spriteName: Masque
+    isGroup: 0
+    parentIndex: 0
+    spriteID: facd8adb7163f6d4ba6c9ef8189132bb
+    layerID: 27
+    mosaicPosition: {x: 771, y: 936}
+  - name: Plume
+    spriteName: Plume_2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: af13044a62d78f1419e10bba7b191766
+    layerID: 39
+    mosaicPosition: {x: 4, y: 1123}
+  characterData:
+    bones:
+    - name: FeathBone
+      position: {x: 814.35376, y: 1037.7106, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7238043, w: 0.69000536}
+      length: 95.77297
+      parentId: -1
+    - name: FeathBone1
+      position: {x: 95.772934, y: -0.000007374256, z: 0}
+      rotation: {x: 0, y: 0, z: -0.1959261, w: 0.98061866}
+      length: 139.13228
+      parentId: 0
+    - name: Head
+      position: {x: -238.21358, y: -3.0636408, z: 0}
+      rotation: {x: 0, y: 0, z: 0.008199636, w: 0.9999664}
+      length: 238.64445
+      parentId: 0
+    - name: Beak
+      position: {x: 99.7861, y: 19.33174, z: 0}
+      rotation: {x: 0, y: 0, z: 0.60406995, w: 0.7969313}
+      length: 116.92026
+      parentId: 2
+    - name: FeathBone1_1
+      position: {x: 160.49402, y: 53.674175, z: 0}
+      rotation: {x: 0, y: 0, z: 0.77071196, w: 0.6371838}
+      length: 81.25056
+      parentId: 1
+    - name: FeathBone1_2
+      position: {x: -6.82138, y: 82.43811, z: 0}
+      rotation: {x: 0, y: 0, z: 0.23730789, w: 0.9714345}
+      length: 112.6803
+      parentId: 4
+    - name: FeathBone1_3
+      position: {x: -7.297318, y: -78.92162, z: 0}
+      rotation: {x: 0, y: 0, z: -0.36472443, w: 0.9311155}
+      length: 95.13337
+      parentId: 4
+    - name: FeathBone1_4
+      position: {x: 50.60087, y: -74.94314, z: 0}
+      rotation: {x: 0, y: 0, z: -0.23302642, w: 0.97247046}
+      length: 81.895226
+      parentId: 6
+    - name: FeathBone1_5
+      position: {x: 139.1322, y: 0.00004387424, z: 0}
+      rotation: {x: 0, y: 0, z: 0.032005716, w: 0.9994877}
+      length: 99.73605
+      parentId: 1
+    - name: FeathBone1_6
+      position: {x: 142.225, y: -72.7255, z: 0}
+      rotation: {x: 0, y: -0, z: -0.8343368, w: 0.551255}
+      length: 118.97503
+      parentId: 1
+    - name: FeathBone1_7
+      position: {x: 97.504776, y: -96.43609, z: 0}
+      rotation: {x: 0, y: 0, z: -0.17755944, w: 0.9841101}
+      length: 117.984604
+      parentId: 9
+    - name: FeathBone1_8
+      position: {x: -35.827038, y: 67.75046, z: 0}
+      rotation: {x: 0, y: 0, z: 0.12134158, w: 0.9926108}
+      length: 104.818016
+      parentId: 9
+    - name: FeathBone1_9
+      position: {x: -40.774677, y: 106.33091, z: 0}
+      rotation: {x: 0, y: 0, z: 0.100486636, w: 0.99493843}
+      length: 75.20215
+      parentId: 11
+    - name: FeathBone1_10
+      position: {x: -77.818726, y: 54.07951, z: 0}
+      rotation: {x: 0, y: 0, z: 0.5383826, w: 0.84270054}
+      length: 56.785824
+      parentId: 12
+    - name: FeathBone1_11
+      position: {x: 56.78586, y: -0.00000747, z: 0}
+      rotation: {x: 0, y: 0, z: 0.2431724, w: 0.9699831}
+      length: 222.89047
+      parentId: 13
+    - name: FeathBone1_12
+      position: {x: 75.202156, y: -0.00003500849, z: 0}
+      rotation: {x: 0, y: 0, z: -0.12753879, w: 0.9918336}
+      length: 207.47928
+      parentId: 12
+    - name: FeathBone1_13
+      position: {x: 104.817986, y: 0.000042700914, z: 0}
+      rotation: {x: 0, y: 0, z: -0.16550513, w: 0.986209}
+      length: 162.08902
+      parentId: 11
+    - name: FeathBone1_14
+      position: {x: 118.974815, y: 0.00014236406, z: 0}
+      rotation: {x: 0, y: 0, z: -0.14854579, w: 0.98890555}
+      length: 200.51842
+      parentId: 9
+    - name: FeathBone1_15
+      position: {x: 117.98458, y: -0.00003180285, z: 0}
+      rotation: {x: 0, y: 0, z: -0.12043708, w: 0.992721}
+      length: 222.12073
+      parentId: 10
+    - name: FeathBone1_16
+      position: {x: 112.68024, y: 0.0000090153335, z: 0}
+      rotation: {x: 0, y: 0, z: 0.124376066, w: 0.9922352}
+      length: 130.81377
+      parentId: 5
+    - name: FeathBone1_17
+      position: {x: 81.25055, y: -0.000030296858, z: 0}
+      rotation: {x: 0, y: 0, z: 0.09036437, w: 0.9959088}
+      length: 131.08708
+      parentId: 4
+    - name: FeathBone1_18
+      position: {x: 95.133224, y: -0.0000657384, z: 0}
+      rotation: {x: 0, y: 0, z: 0.23080634, w: 0.97299975}
+      length: 98.402214
+      parentId: 6
+    - name: FeathBone1_19
+      position: {x: 81.8953, y: 0.000073159696, z: 0}
+      rotation: {x: 0, y: 0, z: 0.0810237, w: 0.9967122}
+      length: 112.81765
+      parentId: 7
+    - name: FeathBone1_20
+      position: {x: 96.51185, y: -0.93632615, z: 0}
+      rotation: {x: 0, y: 0, z: 0.08397035, w: 0.99646825}
+      length: 147.01053
+      parentId: 8
+    parts:
+    - spritePosition:
+        x: 581
+        y: 822
+        width: 622
+        height: 924
+      spriteId: 34b3b5ff33a10e54abf8e923f6250f6f
+      bones: 0d0000000e0000000600000015000000070000001600000011000000090000000b0000000c0000000f00000010000000040000001400000013000000050000000a00000012000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 533
+        y: 715
+        width: 759
+        height: 1111
+      spriteId: 4f20f37969c076846bfc05a54178c799
+      bones: 0d0000000e000000060000001500000016000000070000000f000000040000001400000011000000090000000b0000000c000000100000001300000005000000120000000a000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 610
+        y: 741
+        width: 393
+        height: 752
+      spriteId: 97ffd2e7948329d47939c1cacc80c26e
+      bones: 020000000300000000000000010000000e0000000800000017000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 585
+        y: 842
+        width: 604
+        height: 906
+      spriteId: 3ed1cd48f620e934b9e11badd07c58d6
+      bones: 130000000500000014000000040000001500000007000000160000000d0000000e0000000c0000000f000000100000000b0000000900000011000000120000000a000000
+      parentGroup: 0
+      order: 0
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: The_Hawk_ Texture
+  prefabAssetName: The_Hawk_ Prefab
+  spriteLibAssetName: The_Hawk_ Sprite Lib
+  secondarySpriteTextures: []
