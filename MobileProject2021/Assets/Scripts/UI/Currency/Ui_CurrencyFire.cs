@@ -19,7 +19,7 @@ public class Ui_CurrencyFire : MonoBehaviour
 
     private void OnUpdateCurrencyUpdateUI(OnUpdateCurrenciesEventArgs currenciesArgs)
     {
-        text.text = currenciesArgs.currentFire.ToString();
+        text.text = currenciesArgs.currentElemental.ToString();
     }
 
 }

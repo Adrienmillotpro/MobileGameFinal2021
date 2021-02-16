@@ -1336,14 +1336,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2983874576809219362, guid: 0f09536fc08f27b43816863f4058cdb8, type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2983874576809219362, guid: 0f09536fc08f27b43816863f4058cdb8, type: 3}
-      propertyPath: rateOfAttack
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2983874576809219363, guid: 0f09536fc08f27b43816863f4058cdb8, type: 3}
       propertyPath: m_Name
       value: MC
@@ -2153,6 +2145,10 @@ PrefabInstance:
       propertyPath: timeWindow
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 5575221064947855030, guid: d7339bf772f07ce4d96837a12867a61b, type: 3}
+      propertyPath: particuleHit
+      value: 
+      objectReference: {fileID: 100000, guid: 3d84922c38d7c444782fb1a791d97b21, type: 3}
     - target: {fileID: 5798241186485891736, guid: d7339bf772f07ce4d96837a12867a61b, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -2199,6 +2195,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7339bf772f07ce4d96837a12867a61b, type: 3}
+--- !u!1 &1479600756 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1871685931700160767, guid: d7339bf772f07ce4d96837a12867a61b, type: 3}
+  m_PrefabInstance: {fileID: 1479600755}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1479600757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479600756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a756070545cc542b68b0d2bd60f849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particuleHit: {fileID: 100000, guid: 3d84922c38d7c444782fb1a791d97b21, type: 3}
 --- !u!1 &1601201083
 GameObject:
   m_ObjectHideFlags: 0
@@ -2366,7 +2380,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 541993566}
   m_HandleRect: {fileID: 0}
@@ -2638,6 +2652,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6959686288201315308, guid: 70ebeb40a2788964abde14236282bee3, type: 3}
+      propertyPath: roomLevelMultiplierMajor
+      value: 1.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959686288201315308, guid: 70ebeb40a2788964abde14236282bee3, type: 3}
+      propertyPath: roomLevelMultiplierMinor
+      value: 1.17
+      objectReference: {fileID: 0}
     - target: {fileID: 6959686288201315309, guid: 70ebeb40a2788964abde14236282bee3, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -11243,8 +11265,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae61050199b7424a94d7fc1397600b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeCostMultiplier: 0
-  upgradeEffectMultiplier: 0
+  baseUpgradeCost: 10
+  upgradeCostMultiplier: 1.17
+  baseUpgradeEffect: 1.5
+  upgradeEffectMultiplier: 2.5
   upgradeDmgButton: {fileID: 3600066863215305392}
 --- !u!222 &3600066863215305398
 CanvasRenderer:

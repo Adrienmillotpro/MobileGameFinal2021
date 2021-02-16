@@ -5,9 +5,11 @@ using System;
 
 public class GeneralUpgrade : MonoBehaviour
 {
-    [SerializeField] protected int upgradeCostMultiplier;
-    [SerializeField] protected int upgradeEffectMultiplier;
-    protected int upgradeLevel;
-    protected int upgradeCost;
-    protected float upgradeEffect;
+    [SerializeField] protected float baseUpgradeCost;
+    [SerializeField] protected float upgradeCostMultiplier;
+    [SerializeField] protected float baseUpgradeEffect;
+    [SerializeField] protected float upgradeEffectMultiplier;
+    protected float upgradeLevel;
+    protected float currentUpgradeCost;
+    protected float currentUpgradeEffect;
 }

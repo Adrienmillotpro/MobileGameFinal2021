@@ -34,7 +34,7 @@ public class DamageManager : MonoBehaviour
         }
     }
 
-    public void OnTapDealDamage(OnTapEventArgs tapArgs) // Pass Arguments to reduce enemy health
+    public void OnTapDealDamage(OnTapEventArgs tapArgs)
     {
         DealDamage();
     }
@@ -62,7 +62,7 @@ public class DamageManager : MonoBehaviour
 
         onDealDamageArgs.damage = (heroManager.CurrentStats.heroDamage + mcStats.damage) * bestElementalReaction;
         onDealDamageArgs.damageTypes = heroManager.CurrentStats.heroTypes;
-        Debug.Log("DealDamage - damageArgs.damage " + onDealDamageArgs.damage);
+        //Debug.Log("DealDamage - damageArgs.damage " + onDealDamageArgs.damage);
 
         onDealDamageArgs.enemyLevel = enemyManager.EnemyLevel;
         onDealDamageArgs.enemyMaxHealth = enemyManager.CurrentEnemyStats.EnemyMaxHealth;
@@ -76,7 +76,6 @@ public class DamageManager : MonoBehaviour
         CalculateDamage();
         OnDealDamage?.Invoke(onDealDamageArgs);
     }
-
 
     private void AutoAttack()
     {

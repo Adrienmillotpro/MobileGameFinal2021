@@ -10,6 +10,7 @@ public class TapMechanic : MonoBehaviour
     [SerializeField] float timeWindow;
     private bool isTouching;
     private bool isTap;
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0) && !isTouching)
@@ -19,6 +20,7 @@ public class TapMechanic : MonoBehaviour
             {
                 isTouching = true;
                 StartCoroutine(TapTimeWindow(timeWindow));
+                 
             }
                 
         }

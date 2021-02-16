@@ -23,12 +23,12 @@ public class UI_EnemyHealthBar : MonoBehaviour
     {
         slider.maxValue = spawnArgs.maxHealth;
         slider.value = spawnArgs.maxHealth;
-        Debug.Log("Spawn - Slider update" + slider.maxValue);
+        //Debug.Log("Spawn - Slider update" + slider.maxValue);
     }
 
     private void OnDealDamageUpdateSlider(OnDamageEventArgs damageArgs)
     {
         slider.value -= damageArgs.damage;
-        Debug.Log("DealDamage - Slider update" + slider.value);
+        //Debug.Log("DealDamage - Slider update" + slider.value);
     }
 }

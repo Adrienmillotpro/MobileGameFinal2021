@@ -22,13 +22,11 @@ public class UpgradeDMG : GeneralUpgrade
     }
     private void Start()
     {
-        this.upgradeLevel = 1;
-        this.upgradeCost = 150;
-        this.upgradeEffect = 20;
+        
     }
     private void OnUpdateCurrencyUpdateButton(OnUpdateCurrenciesEventArgs currenciesArgs)
     {
-        if (this.upgradeCost < currenciesArgs.currentBase)
+        if (this.currentUpgradeCost < currenciesArgs.currentBase)
         {
             upgradeDmgButton.interactable = true;
         }
@@ -41,20 +39,21 @@ public class UpgradeDMG : GeneralUpgrade
     public void UpgradeDamage() // Assign this to OnClick event of Button
     {
         UpdateArgs();
-        OnUpgradeDMG?.Invoke(onUpgradeArgs);
         UpdateUpgradeSettings();
+        OnUpgradeDMG?.Invoke(onUpgradeArgs);
     }
     private void UpdateUpgradeSettings() // Increase cost & effect
     {
         this.upgradeLevel++;
-        this.upgradeCost += this.upgradeCost * this.upgradeLevel * this.upgradeCostMultiplier;
-        this.upgradeEffect += this.upgradeLevel * this.upgradeEffectMultiplier;
+        this.currentUpgradeCost = this.baseUpgradeCost * Mathf.Pow(this.upgradeCostMultiplier, this.upgradeLevel);
+        this.currentUpgradeEffect = this.upgradeLevel * this.baseUpgradeEffect * this.upgradeEffectMultiplier;
+        Debug.Log(this.currentUpgradeEffect);
     }
     private void UpdateArgs() // Update arguments passed in event
     {
-        onUpgradeArgs.currencyBase = this.upgradeCost;
-        onUpgradeArgs.upgradeEffect = this.upgradeEffect;
+        onUpgradeArgs.currencyBase = this.currentUpgradeCost;
+        onUpgradeArgs.upgradeEffect = this.currentUpgradeEffect;
         onUpgradeArgs.upgradeLevel = this.upgradeLevel;
-        onUpgradeArgs.nextUpgradeEffect = this.upgradeEffect + this.upgradeLevel * this.upgradeEffectMultiplier;
+        onUpgradeArgs.nextUpgradeEffect = this.currentUpgradeEffect + this.upgradeLevel * this.upgradeEffectMultiplier;
     }
 }
