@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class PlayerCurrencies : MonoBehaviour
 {
-    [SerializeField] private int currencyBase;
-    [SerializeField] private int currencyPremium;
-    [SerializeField] private int currencyElemental;
+    [SerializeField] private float currencyBase;
+    [SerializeField] private float currencyPremium;
+    [SerializeField] private float currencyElemental;
     #region Getters
     public float CurrencyBase { get { return currencyBase; } }
     public float CurrencyPremium { get { return currencyPremium; } }
@@ -36,19 +36,19 @@ public class PlayerCurrencies : MonoBehaviour
     }
     private void OnUpgradeUpdateCurrency(OnUpgradeEventArgs upgradeArgs)
     {
-        currencyBase -= (int)upgradeArgs.currencyBase;
-        currencyElemental -= (int)upgradeArgs.currencyElemental;
-        currencyPremium -= (int)upgradeArgs.currencyPremium;
+        currencyBase -= upgradeArgs.currencyBase;
+        currencyElemental -= upgradeArgs.currencyElemental;
+        currencyPremium -= upgradeArgs.currencyPremium;
 
         UpdateCurrenciesArgs();
         OnUpdateCurrency?.Invoke(currenciesArgs);
     }
     private void OnDealDamageEarnCurrency(OnDamageEventArgs damageArgs) // This triggers when player deals damage to an enemy
     {
-        currencyBase += (int)damageArgs.CurrencyOnDamage(); // Player earns Base Currency
+        currencyBase += damageArgs.CurrencyOnDamage(); // Player earns Base Currency
         if (damageArgs.bestElementalReaction == 2)
         {
-            currencyElemental += (int)damageArgs.CurrencyOnDamage();
+            currencyElemental += damageArgs.CurrencyOnDamage();
         }
         UpdateCurrenciesArgs();
         OnUpdateCurrency?.Invoke(currenciesArgs);

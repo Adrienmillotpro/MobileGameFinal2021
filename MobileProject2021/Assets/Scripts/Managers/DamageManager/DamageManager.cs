@@ -62,7 +62,7 @@ public class DamageManager : MonoBehaviour
 
         onDealDamageArgs.damage = (heroManager.CurrentStats.heroDamage + mcStats.damage) * bestElementalReaction;
         onDealDamageArgs.damageTypes = heroManager.CurrentStats.heroTypes;
-        Debug.Log("DealDamage - damageArgs.damage " + onDealDamageArgs.damage);
+        //Debug.Log("DealDamage - damageArgs.damage " + onDealDamageArgs.damage);
 
         onDealDamageArgs.enemyLevel = enemyManager.EnemyLevel;
         onDealDamageArgs.enemyMaxHealth = enemyManager.CurrentEnemyStats.EnemyMaxHealth;

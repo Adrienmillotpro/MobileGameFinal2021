@@ -1,6 +1,6 @@
 ﻿public class OnUpdateCurrenciesEventArgs
 {
-    public int currentBase;
-    public int currentPremium;
-    public int currentElemental;
+    public float currentBase;
+    public float currentPremium;
+    public float currentElemental;
 }

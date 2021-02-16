@@ -39,18 +39,19 @@ public class UpgradeDMG : GeneralUpgrade
     public void UpgradeDamage() // Assign this to OnClick event of Button
     {
         UpdateArgs();
-        OnUpgradeDMG?.Invoke(onUpgradeArgs);
         UpdateUpgradeSettings();
+        OnUpgradeDMG?.Invoke(onUpgradeArgs);
     }
     private void UpdateUpgradeSettings() // Increase cost & effect
     {
         this.upgradeLevel++;
         this.currentUpgradeCost = this.baseUpgradeCost * Mathf.Pow(this.upgradeCostMultiplier, this.upgradeLevel);
-        this.currentUpgradeEffect = this.upgradeLevel * this.baseUpgradeEffect;
+        this.currentUpgradeEffect = this.upgradeLevel * this.baseUpgradeEffect * this.upgradeEffectMultiplier;
+        Debug.Log(this.currentUpgradeEffect);
     }
     private void UpdateArgs() // Update arguments passed in event
     {
-        onUpgradeArgs.currencyBase = (int)this.currentUpgradeCost;
+        onUpgradeArgs.currencyBase = this.currentUpgradeCost;
         onUpgradeArgs.upgradeEffect = this.currentUpgradeEffect;
         onUpgradeArgs.upgradeLevel = this.upgradeLevel;
         onUpgradeArgs.nextUpgradeEffect = this.currentUpgradeEffect + this.upgradeLevel * this.upgradeEffectMultiplier;
