@@ -46,7 +46,8 @@ public class EnemyManager : MonoBehaviour
 
     // Progression
     private int roomLevel;
-    [SerializeField] private int roomLevelMultiplier;
+    [SerializeField] private int roomLevelMultiplierMajor;
+    [SerializeField] private int roomLevelMultiplierManor;
     private int waveLevel;
     [SerializeField] private int waveLevelMultiplier;
     private int biomeLevel;
@@ -119,7 +120,7 @@ public class EnemyManager : MonoBehaviour
 
     private void UpdateEnemyLevel()
     {
-        enemyLevel = roomLevel * roomLevelMultiplier + waveLevel*waveLevelMultiplier + biomeLevel*biomeLevelMultiplier;
+        enemyLevel = roomLevelMultiplier^Mathf.Min(roomLevel, 150);
     }
     private void UpdateRoom()
     {
