@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BwaHair
-  m_Shader: {fileID: -6465566751694194690, guid: 197bb9813b5f1e34a96fecc73880a23d, type: 3}
+  m_Name: M_BwaMaskTorso
+  m_Shader: {fileID: -6465566751694194690, guid: d3e16c3ac1d8b4747a51122d4030c322, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_d741e9386ff544ab8f4d08d3218c8470:
-        m_Texture: {fileID: -8145965410484105173, guid: 51b43086f74eb064b9093bdbc2e7ebc2, type: 3}
+        m_Texture: {fileID: 8336145376424447083, guid: 8fe08ed086cc25949bdf4e71a4c0a8f2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -28,7 +28,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2DLOD_83cd239ba2ab4d588042293db5c8449d_Texture_1:
-        m_Texture: {fileID: -8145965410484105173, guid: 51b43086f74eb064b9093bdbc2e7ebc2, type: 3}
+        m_Texture: {fileID: 8336145376424447083, guid: 8fe08ed086cc25949bdf4e71a4c0a8f2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
