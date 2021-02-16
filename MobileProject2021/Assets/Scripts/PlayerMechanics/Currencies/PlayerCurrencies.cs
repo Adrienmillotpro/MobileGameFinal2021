@@ -7,17 +7,12 @@ public class PlayerCurrencies : MonoBehaviour
 {
     [SerializeField] private int currencyBase;
     [SerializeField] private int currencyPremium;
-    [SerializeField] private int currencyFire;
-    [SerializeField] private int currencyThunder;
-    [SerializeField] private int currencyWater;
-    [SerializeField] private int currencyAir;
+    [SerializeField] private int currencyElemental;
     #region Getters
     public float CurrencyBase { get { return currencyBase; } }
     public float CurrencyPremium { get { return currencyPremium; } }
-    public float CurrencyFire { get { return currencyFire; } }
-    public float CurrencyWater { get { return currencyWater; } }
-    public float CurrencyThunder { get { return currencyThunder; } }
-    public float CurrencyAir { get { return currencyAir; } }
+    public float CurrencyElemental { get { return currencyElemental; } }
+
     #endregion
 
     public static event Action<OnUpdateCurrenciesEventArgs> OnUpdateCurrency;
@@ -42,10 +37,7 @@ public class PlayerCurrencies : MonoBehaviour
     private void OnUpgradeUpdateCurrency(OnUpgradeEventArgs upgradeArgs)
     {
         currencyBase -= (int)upgradeArgs.currencyBase;
-        currencyFire -= (int)upgradeArgs.currencyFire;
-        currencyThunder -= (int)upgradeArgs.currencyThunder;
-        currencyWater -= (int)upgradeArgs.currencyWater;
-        currencyAir -= (int)upgradeArgs.currencyAir;
+        currencyElemental -= (int)upgradeArgs.currencyElemental;
         currencyPremium -= (int)upgradeArgs.currencyPremium;
 
         UpdateCurrenciesArgs();
@@ -56,21 +48,7 @@ public class PlayerCurrencies : MonoBehaviour
         currencyBase += (int)damageArgs.CurrencyOnDamage(); // Player earns Base Currency
         if (damageArgs.bestElementalReaction == 2)
         {
-            switch (damageArgs.weakEnemyElement) // Check if player should earn Elemental Currency
-            {
-                case ElementalTypes.Air:
-                    currencyAir += (int)damageArgs.CurrencyOnDamage();
-                    break;
-                case ElementalTypes.Fire:
-                    currencyFire += (int)damageArgs.CurrencyOnDamage();
-                    break;
-                case ElementalTypes.Thunder:
-                    currencyThunder += (int)damageArgs.CurrencyOnDamage();
-                    break;
-                case ElementalTypes.Water:
-                    currencyWater += (int)damageArgs.CurrencyOnDamage();
-                    break;
-            }
+            currencyElemental += (int)damageArgs.CurrencyOnDamage();
         }
         UpdateCurrenciesArgs();
         OnUpdateCurrency?.Invoke(currenciesArgs);
@@ -80,9 +58,6 @@ public class PlayerCurrencies : MonoBehaviour
     {
         currenciesArgs.currentBase = this.currencyBase;
         currenciesArgs.currentPremium = this.currencyPremium;
-        currenciesArgs.currentFire = this.currencyFire;
-        currenciesArgs.currentAir = this.currencyAir;
-        currenciesArgs.currentThunder = this.currencyThunder;
-        currenciesArgs.currentWater = this.currencyWater;
+        currenciesArgs.currentElemental = this.currencyElemental;
     }
 }

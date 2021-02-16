@@ -20,7 +20,7 @@ public class OnTapVisuals : MonoBehaviour
     private void OnTapDoPS(OnTapEventArgs tapArgs)
     {
         Vector3 spawnLocation = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, Camera.main.ScreenToWorldPoint(Input.mousePosition).z + 5f);
-        GameObject hitPart = Instantiate(particuleHit, spawnLocation, Quaternion.identity);
+        Instantiate(particuleHit, spawnLocation, Quaternion.identity);
     }
 
 }
