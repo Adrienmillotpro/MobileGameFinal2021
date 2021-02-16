@@ -2660,6 +2660,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6959686288201315308, guid: 70ebeb40a2788964abde14236282bee3, type: 3}
+      propertyPath: roomLevelMultiplierMajor
+      value: 1.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959686288201315308, guid: 70ebeb40a2788964abde14236282bee3, type: 3}
+      propertyPath: roomLevelMultiplierMinor
+      value: 1.17
+      objectReference: {fileID: 0}
     - target: {fileID: 6959686288201315309, guid: 70ebeb40a2788964abde14236282bee3, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -11265,8 +11273,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae61050199b7424a94d7fc1397600b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeCostMultiplier: 0
-  upgradeEffectMultiplier: 0
+  baseUpgradeCost: 30
+  upgradeCostMultiplier: 1.07
+  baseUpgradeEffect: 1.5
+  upgradeEffectMultiplier: 2.5
   upgradeDmgButton: {fileID: 3600066863215305392}
 --- !u!222 &3600066863215305398
 CanvasRenderer:

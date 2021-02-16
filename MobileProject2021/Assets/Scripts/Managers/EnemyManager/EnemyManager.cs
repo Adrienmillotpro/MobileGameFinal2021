@@ -46,18 +46,12 @@ public class EnemyManager : MonoBehaviour
 
     // Progression
     private int roomLevel;
-    [SerializeField] private int roomLevelMultiplierMajor;
-    [SerializeField] private int roomLevelMultiplierManor;
-    private int waveLevel;
-    [SerializeField] private int waveLevelMultiplier;
-    private int biomeLevel;
-    [SerializeField] private int biomeLevelMultiplier;
-    private int enemyLevel;
+    [SerializeField] private float roomLevelMultiplierMajor;
+    [SerializeField] private float roomLevelMultiplierMinor;
+    private float enemyLevel;
     #region Getters
     public int RoomLevel { get { return roomLevel; } }
-    public int WaveLevel { get { return waveLevel; } }
-    public int BiomeLevel { get { return biomeLevel; } }
-    public int EnemyLevel { get { return enemyLevel; } }
+    public float EnemyLevel { get { return enemyLevel; } }
     #endregion
 
     private void Awake()
@@ -67,8 +61,6 @@ public class EnemyManager : MonoBehaviour
         waveCount = 0;
         roomCount = 0;
         roomLevel = 0;
-        waveLevel = 0;
-        biomeLevel = 0;
     }
     private void Start()
     {
@@ -120,7 +112,7 @@ public class EnemyManager : MonoBehaviour
 
     private void UpdateEnemyLevel()
     {
-        enemyLevel = roomLevelMultiplier^Mathf.Min(roomLevel, 150);
+        enemyLevel = Mathf.Pow(roomLevelMultiplierMajor, Mathf.Min(roomLevel, 115f)) * Mathf.Pow(roomLevelMultiplierMinor, Mathf.Max(roomLevel - 115f, 0f));
     }
     private void UpdateRoom()
     {
@@ -132,7 +124,6 @@ public class EnemyManager : MonoBehaviour
         else if (roomCount == roomsPerWave)
         {
             roomCount = 0;
-            waveLevel++;
             UpdateWave();
             SpawnEnemy();
         }
@@ -152,7 +143,6 @@ public class EnemyManager : MonoBehaviour
         if (waveCount > wavesPerBiome)
         {
             waveCount = 0;
-            biomeLevel++;
             UpdateBiome();
         }
         currentWave = currentBiome.Waves[indexWave];
