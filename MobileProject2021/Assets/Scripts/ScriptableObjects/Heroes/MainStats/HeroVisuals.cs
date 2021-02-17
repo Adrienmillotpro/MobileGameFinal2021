@@ -8,6 +8,7 @@ public class HeroVisuals : MonoBehaviour
 
     private Animator heroAnimator;
     private SpriteRenderer heroRenderer;
+    [SerializeField] private Animation[] animations;
 
     private void Awake()
     {
@@ -17,6 +18,7 @@ public class HeroVisuals : MonoBehaviour
     private void OnEnable()
     {
         DamageManager.OnDealDamage += OnDealDamageUpdateVisuals;
+        animations[0].Play();
     }
     private void OnDisable()
     {
@@ -25,7 +27,6 @@ public class HeroVisuals : MonoBehaviour
 
     private void Start()
     {
-
         // Update Prefab Info with SO Info
         //this.heroRenderer.sprite = SO_Hero.HeroSprite;
         //this.heroAnimator = SO_Hero.HeroAnimator;
@@ -33,6 +34,15 @@ public class HeroVisuals : MonoBehaviour
 
     private void OnDealDamageUpdateVisuals(OnDamageEventArgs damageArgs)
     {
+        if (damageArgs.bestElementalReaction == 2)
+        {
+            // do animation for elemental reaction
+        }
+        else if (damageArgs.bestElementalReaction == 0)
+        {
+            // do other stuff
+        }
 
+        // 
     }
 }
