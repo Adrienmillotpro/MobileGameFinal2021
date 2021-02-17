@@ -11,18 +11,15 @@ public class HeroVisuals : MonoBehaviour
 
     private void Awake()
     {
-        this.heroRenderer = GetComponent<SpriteRenderer>();
-        this.heroAnimator = GetComponent<Animator>();
+        //this.heroAnimator = GetComponent<Animator>();
     }
 
     private void OnEnable()
     {
-        this.heroRenderer.enabled = true;
         DamageManager.OnDealDamage += OnDealDamageUpdateVisuals;
     }
     private void OnDisable()
     {
-        this.heroRenderer.enabled = false;
         DamageManager.OnDealDamage -= OnDealDamageUpdateVisuals;
     }
 
