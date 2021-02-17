@@ -1228,7 +1228,7 @@ MonoBehaviour:
   - {fileID: 5390185263199296900}
   m_Bounds:
     m_Center: {x: -0.00025951862, y: 0.0082678795, z: 0}
-    m_Extent: {x: 1.1329198, y: 2.1417325, z: 0}
+    m_Extent: {x: 1.1329198, y: 2.1417327, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &1355974743622032923
@@ -7164,8 +7164,8 @@ MonoBehaviour:
   - {fileID: 635105235382865054}
   - {fileID: 181789865278585973}
   m_Bounds:
-    m_Center: {x: -0.0011550188, y: 0.009999692, z: 0}
-    m_Extent: {x: 0.613009, y: 0.9599997, z: 0}
+    m_Center: {x: -0.0011550188, y: 0.009999752, z: 0}
+    m_Extent: {x: 0.613009, y: 0.9599998, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &6849176445490700467
@@ -7326,7 +7326,7 @@ MonoBehaviour:
   - {fileID: 1022487022276344205}
   - {fileID: 3567815992846601301}
   m_Bounds:
-    m_Center: {x: 0.015910864, y: -0.1562078, z: 0}
+    m_Center: {x: 0.015910864, y: -0.15620756, z: 0}
     m_Extent: {x: 1.1240892, y: 2.4562078, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -8413,8 +8413,8 @@ MonoBehaviour:
   - {fileID: 111561429208242791}
   - {fileID: 8296528616289174240}
   m_Bounds:
-    m_Center: {x: 0.013578296, y: 0.010990143, z: 0}
-    m_Extent: {x: 1.0964203, y: 2.5790102, z: 0}
+    m_Center: {x: 0.013578296, y: 0.010990381, z: 0}
+    m_Extent: {x: 1.0964203, y: 2.5790105, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &8073606713813959842
@@ -8516,7 +8516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dynamicRatio: 1
-  stiffnessForce: 0
+  stiffnessForce: 0.1
   stiffnessCurve:
     serializedVersion: 2
     m_Curve:
@@ -8541,7 +8541,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  dragForce: 0
+  dragForce: 0.1
   dragCurve:
     serializedVersion: 2
     m_Curve:
