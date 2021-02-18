@@ -8,7 +8,7 @@ public class HeroVisuals : MonoBehaviour
 
     private Animator heroAnimator;
     private SpriteRenderer heroRenderer;
-    [SerializeField] private Animation[] animations;
+    [SerializeField] private Animator animator;
 
     private void Awake()
     {
@@ -18,11 +18,16 @@ public class HeroVisuals : MonoBehaviour
     private void OnEnable()
     {
         DamageManager.OnDealDamage += OnDealDamageUpdateVisuals;
-        animations[0].Play();
+        animator.SetBool("EntranceAnimation", true);
+        animator.SetBool("ExitAnimation", false);
+
     }
     private void OnDisable()
     {
         DamageManager.OnDealDamage -= OnDealDamageUpdateVisuals;
+        animator.SetBool("ExitAnimation", true);
+        animator.SetBool("EntranceAnimation", false);
+       
     }
 
     private void Start()

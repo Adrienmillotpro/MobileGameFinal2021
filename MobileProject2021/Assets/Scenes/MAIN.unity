@@ -887,6 +887,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MC
       objectReference: {fileID: 0}
+    - target: {fileID: 2095556870174516885, guid: c3a4904821557cc4cb7415c82682dfa4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3a4904821557cc4cb7415c82682dfa4, type: 3}
 --- !u!114 &603112384 stripped
@@ -1197,6 +1201,10 @@ PrefabInstance:
     - target: {fileID: 2783542022343851511, guid: 608a218e90726534da555967ebd4e41f, type: 3}
       propertyPath: m_Name
       value: Hero_Bwa
+      objectReference: {fileID: 0}
+    - target: {fileID: 2783542022343851511, guid: 608a218e90726534da555967ebd4e41f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 608a218e90726534da555967ebd4e41f, type: 3}
@@ -1621,6 +1629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hero_Hawk
       objectReference: {fileID: 0}
+    - target: {fileID: 457221667013529149, guid: 4747e43f1f918fa45bade1ed7aa206a3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 457221667013529150, guid: 4747e43f1f918fa45bade1ed7aa206a3, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -1726,6 +1738,10 @@ PrefabInstance:
     - target: {fileID: 3537384117981777303, guid: f6198a57c691d3e4fa58eca42043adfd, type: 3}
       propertyPath: m_Name
       value: Hero_Monkey
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537384117981777303, guid: f6198a57c691d3e4fa58eca42043adfd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6198a57c691d3e4fa58eca42043adfd, type: 3}
@@ -2011,6 +2027,10 @@ PrefabInstance:
     - target: {fileID: 5602556348765009163, guid: db423e8b6f4ef37449a485e79f584345, type: 3}
       propertyPath: m_Name
       value: Hero_Buffalo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5602556348765009163, guid: db423e8b6f4ef37449a485e79f584345, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db423e8b6f4ef37449a485e79f584345, type: 3}
