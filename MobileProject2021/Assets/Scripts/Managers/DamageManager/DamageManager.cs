@@ -13,7 +13,6 @@ public class DamageManager : MonoBehaviour
     public static event Action<OnDamageEventArgs> OnDealDamage;
     private OnDamageEventArgs onDealDamageArgs = new OnDamageEventArgs();
 
-
     private bool isInCooldown;
 
     private void Awake()
@@ -83,7 +82,6 @@ public class DamageManager : MonoBehaviour
         DealDamage();
         StartCoroutine(CooldownAutoAttack());
     }
-
     private IEnumerator CooldownAutoAttack()
     {
         isInCooldown = true;
