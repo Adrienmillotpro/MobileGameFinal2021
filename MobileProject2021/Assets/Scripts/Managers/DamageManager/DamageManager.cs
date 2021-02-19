@@ -36,6 +36,7 @@ public class DamageManager : MonoBehaviour
 
     public void OnTapDealDamage(OnTapEventArgs tapArgs)
     {
+        onDealDamageArgs.isAutoAttack = false;
         DealDamage();
     }
 
@@ -70,7 +71,6 @@ public class DamageManager : MonoBehaviour
         onDealDamageArgs.bestHeroElement = bestElementalType;
         onDealDamageArgs.weakEnemyElement = weakElementalType;
     }
-
     private void DealDamage()
     {
         CalculateDamage();
@@ -79,6 +79,7 @@ public class DamageManager : MonoBehaviour
 
     private void AutoAttack()
     {
+        onDealDamageArgs.isAutoAttack = true;
         DealDamage();
         StartCoroutine(CooldownAutoAttack());
     }

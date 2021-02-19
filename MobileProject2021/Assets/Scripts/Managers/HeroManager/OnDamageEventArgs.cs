@@ -13,6 +13,8 @@ public class OnDamageEventArgs : EventArgs
     public ElementalTypes bestHeroElement;
     public ElementalTypes weakEnemyElement;
 
+    public bool isAutoAttack;
+
     public float CurrencyOnDamage()
     {
         float currencyOnDamage;
