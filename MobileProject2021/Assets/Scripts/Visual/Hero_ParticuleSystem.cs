@@ -82,7 +82,6 @@ public class Hero_ParticuleSystem : MonoBehaviour
                 }
                 break;
         }
-
     }
 
     private void RandomizeParticlePos()
