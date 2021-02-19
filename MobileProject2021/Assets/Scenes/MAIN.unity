@@ -492,6 +492,18 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3824263879144473412, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824263879144473412, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824263879144473412, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824263879144473412, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -543,6 +555,62 @@ PrefabInstance:
       propertyPath: particuleHit
       value: 
       objectReference: {fileID: 7530455180428848306, guid: 8d6fa9503c5e9e34491b54edb0833855, type: 3}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particuleHit0
+      value: 
+      objectReference: {fileID: 19800002, guid: f71e7641f4394c44095cabfbc0c46ef9, type: 3}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particuleHit1
+      value: 
+      objectReference: {fileID: 2100227801521839761, guid: 9d183a5214766ac45ab180dff5b04e6a, type: 3}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particuleHit2
+      value: 
+      objectReference: {fileID: 4726896016612366713, guid: ea2c342b3bbec2a4b8ac0ea191e4adfa, type: 3}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particuleHitsFire.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particuleHitsAir.Array.data[0]
+      value: 
+      objectReference: {fileID: 19800000, guid: 8dfb05b57dbd9a648802f583881da9dc, type: 3}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particuleHitsAir.Array.data[1]
+      value: 
+      objectReference: {fileID: 19800000, guid: a4585a9f0750b8b4a80739050af7ecbc, type: 3}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particuleHitsAir.Array.data[2]
+      value: 
+      objectReference: {fileID: 8163684771574148737, guid: 6dc4191059d6c3a4a820270672bbf567, type: 3}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particuleHitsFire.Array.data[0]
+      value: 
+      objectReference: {fileID: 4188488072830444618, guid: f39eaecc55ebc4f40bca23c8f4500759, type: 3}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particuleHitsFire.Array.data[1]
+      value: 
+      objectReference: {fileID: 8618872680750141246, guid: f4bdca9264213374d84e0fe3e5b3f465, type: 3}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particuleHitsFire.Array.data[2]
+      value: 
+      objectReference: {fileID: 2398608829508964985, guid: f387ac791007951459ed6a93dfa675bf, type: 3}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particuleHitsThunder.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particuleHitsThunder.Array.data[0]
+      value: 
+      objectReference: {fileID: 19800000, guid: 7ebfa53bee9bf514c908752626f3c27d, type: 3}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particuleHitsThunder.Array.data[1]
+      value: 
+      objectReference: {fileID: 19800012, guid: 54d0c49d87986664c800de1f55be9587, type: 3}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particuleHitsThunder.Array.data[2]
+      value: 
+      objectReference: {fileID: 4726896016612366713, guid: ea2c342b3bbec2a4b8ac0ea191e4adfa, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
 --- !u!1 &456033950
@@ -2009,7 +2077,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2402129454763694718, guid: 3eac0f8ac0503184d9b3a949b9679fb4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.32
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 2402129454763694718, guid: 3eac0f8ac0503184d9b3a949b9679fb4, type: 3}
       propertyPath: m_LocalPosition.z
