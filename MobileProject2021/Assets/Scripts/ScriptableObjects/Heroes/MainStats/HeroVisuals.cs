@@ -20,6 +20,7 @@ public class HeroVisuals : MonoBehaviour
         DamageManager.OnDealDamage += OnDealDamageUpdateVisuals;
         animator.SetBool("EntranceAnimation", true);
         animator.SetBool("ExitAnimation", false);
+        animator.SetBool("NoDamage", false);
 
     }
     private void OnDisable()
@@ -27,7 +28,8 @@ public class HeroVisuals : MonoBehaviour
         DamageManager.OnDealDamage -= OnDealDamageUpdateVisuals;
         animator.SetBool("ExitAnimation", true);
         animator.SetBool("EntranceAnimation", false);
-       
+        animator.SetBool("NoDamage", true);
+
     }
 
     private void Start()
@@ -39,15 +41,19 @@ public class HeroVisuals : MonoBehaviour
 
     private void OnDealDamageUpdateVisuals(OnDamageEventArgs damageArgs)
     {
-        if (damageArgs.bestElementalReaction == 2)
+        
+        if (damageArgs.isAutoAttack && damageArgs.bestElementalReaction != 0 )
         {
-            // do animation for elemental reaction
-        }
-        else if (damageArgs.bestElementalReaction == 0)
-        {
-            // do other stuff
-        }
+            animator.SetBool("AutoAttack", true);
+            
 
-        // 
+
+        }
+        else if(damageArgs.isAutoAttack && damageArgs.bestElementalReaction == 0)
+        {
+            animator.SetBool("NoDamage", true);
+            animator.SetBool("AutoAttack", false);
+        }
+       
     }
 }
