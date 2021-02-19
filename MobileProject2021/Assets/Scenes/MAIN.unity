@@ -573,11 +573,11 @@ PrefabInstance:
       objectReference: {fileID: 4726896016612366713, guid: ea2c342b3bbec2a4b8ac0ea191e4adfa, type: 3}
     - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: particlePosOffsetMax
-      value: 0.25
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: particlePosOffsetMin
-      value: -0.25
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: particuleHitsFire.Array.size
@@ -622,7 +622,7 @@ PrefabInstance:
     - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: particuleHitsThunder.Array.data[2]
       value: 
-      objectReference: {fileID: 4726896016612366713, guid: ea2c342b3bbec2a4b8ac0ea191e4adfa, type: 3}
+      objectReference: {fileID: 1256930163580335536, guid: d9a6b62b67fc0ff4fb24f51151287ed9, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
 --- !u!1 &456033950
