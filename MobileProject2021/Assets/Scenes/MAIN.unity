@@ -573,11 +573,11 @@ PrefabInstance:
       objectReference: {fileID: 4726896016612366713, guid: ea2c342b3bbec2a4b8ac0ea191e4adfa, type: 3}
     - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: particlePosOffsetMax
-      value: 0.56
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: particlePosOffsetMin
-      value: -0.54
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: particuleHitsFire.Array.size
@@ -598,15 +598,15 @@ PrefabInstance:
     - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: particuleHitsFire.Array.data[0]
       value: 
-      objectReference: {fileID: 4188488072830444618, guid: f39eaecc55ebc4f40bca23c8f4500759, type: 3}
+      objectReference: {fileID: 19800000, guid: 136682ab43d9f574183c3ee7dbe076fc, type: 3}
     - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: particuleHitsFire.Array.data[1]
       value: 
-      objectReference: {fileID: 8618872680750141246, guid: f4bdca9264213374d84e0fe3e5b3f465, type: 3}
+      objectReference: {fileID: 4155764736166186940, guid: fb731aabf33b85247a2022c110dcd61a, type: 3}
     - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: particuleHitsFire.Array.data[2]
       value: 
-      objectReference: {fileID: 2398608829508964985, guid: f387ac791007951459ed6a93dfa675bf, type: 3}
+      objectReference: {fileID: 9022066806678992438, guid: 7ccebf8cdf5dd584988dbbf95fd08683, type: 3}
     - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: particuleHitsThunder.Array.size
       value: 3
