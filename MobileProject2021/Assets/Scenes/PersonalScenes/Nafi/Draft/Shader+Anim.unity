@@ -1451,6 +1451,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4552618196636712253, guid: fd3daec9355a93041b10ad637128fd81, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6165383867049314145, guid: fd3daec9355a93041b10ad637128fd81, type: 3}
       propertyPath: m_Name
       value: PREFAB-HawkBoss
