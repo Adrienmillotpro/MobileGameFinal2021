@@ -552,6 +552,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 232319291}
     - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particleSpot
+      value: 
+      objectReference: {fileID: 232319291}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: particuleHit
       value: 
       objectReference: {fileID: 7530455180428848306, guid: 8d6fa9503c5e9e34491b54edb0833855, type: 3}
@@ -567,6 +571,14 @@ PrefabInstance:
       propertyPath: particuleHit2
       value: 
       objectReference: {fileID: 4726896016612366713, guid: ea2c342b3bbec2a4b8ac0ea191e4adfa, type: 3}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particlePosOffsetMax
+      value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particlePosOffsetMin
+      value: -0.54
+      objectReference: {fileID: 0}
     - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: particuleHitsFire.Array.size
       value: 3
@@ -2073,11 +2085,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2402129454763694718, guid: 3eac0f8ac0503184d9b3a949b9679fb4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.986
+      value: 1.81
       objectReference: {fileID: 0}
     - target: {fileID: 2402129454763694718, guid: 3eac0f8ac0503184d9b3a949b9679fb4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.34
+      value: 0.77
       objectReference: {fileID: 0}
     - target: {fileID: 2402129454763694718, guid: 3eac0f8ac0503184d9b3a949b9679fb4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2113,7 +2125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2402129454763694719, guid: 3eac0f8ac0503184d9b3a949b9679fb4, type: 3}
       propertyPath: m_Name
-      value: EnemyPos
+      value: ParticleSpot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3eac0f8ac0503184d9b3a949b9679fb4, type: 3}
