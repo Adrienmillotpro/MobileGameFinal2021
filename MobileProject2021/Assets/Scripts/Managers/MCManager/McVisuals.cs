@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class McVisuals : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    [SerializeField] private Animator animator;
+
+    private void Awake()
     {
+        TapMechanic.OnTap += OnTapDoPS;
+    }
+    private void OnDisable()
+    {
+        TapMechanic.OnTap -= OnTapDoPS;
+    }
+
+    private void OnTapDoPS(OnTapEventArgs tapArgs)
+    {
+        animator.SetBool("Tap", true);
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
