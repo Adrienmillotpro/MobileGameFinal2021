@@ -7332,6 +7332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PREFAB-HawkBoss
       objectReference: {fileID: 0}
+    - target: {fileID: 6165383867049314145, guid: fd3daec9355a93041b10ad637128fd81, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6823523211453593386, guid: fd3daec9355a93041b10ad637128fd81, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -8759,7 +8763,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6678210654767348122, guid: 7d8bcb22d6149c34bbd4292e8d0c38a4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d8bcb22d6149c34bbd4292e8d0c38a4, type: 3}
