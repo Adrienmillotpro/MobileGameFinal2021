@@ -32,6 +32,10 @@ public class McStats : MonoBehaviour
     private void OnUpgradeAtkRateUpdateAtkRate(OnUpgradeEventArgs upgradeArgs)
     {
         this.rateOfAttack += upgradeArgs.upgradeEffect;
+        if (this.rateOfAttack <= 0.3f)
+        {
+            this.rateOfAttack = 0.3f;
+        }
     }
 
     private void OnUpgradeElemMultUpdateElemUlt(OnUpgradeEventArgs upgradeArgs)

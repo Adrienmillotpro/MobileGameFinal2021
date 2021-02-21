@@ -573,11 +573,11 @@ PrefabInstance:
       objectReference: {fileID: 4726896016612366713, guid: ea2c342b3bbec2a4b8ac0ea191e4adfa, type: 3}
     - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: particlePosOffsetMax
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: particlePosOffsetMin
-      value: -0.1
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: particuleHitsFire.Array.size
@@ -618,7 +618,7 @@ PrefabInstance:
     - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: particuleHitsThunder.Array.data[1]
       value: 
-      objectReference: {fileID: 19800012, guid: 54d0c49d87986664c800de1f55be9587, type: 3}
+      objectReference: {fileID: 19800000, guid: 7ebfa53bee9bf514c908752626f3c27d, type: 3}
     - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: particuleHitsThunder.Array.data[2]
       value: 
@@ -1085,6 +1085,10 @@ PrefabInstance:
     - target: {fileID: 1994445828344139216, guid: c3a4904821557cc4cb7415c82682dfa4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 40.955
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095556869297651716, guid: c3a4904821557cc4cb7415c82682dfa4, type: 3}
+      propertyPath: rateOfAttack
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2095556869297651716, guid: c3a4904821557cc4cb7415c82682dfa4, type: 3}
       propertyPath: currencyMultiplier
@@ -3207,7 +3211,7 @@ PrefabInstance:
     - target: {fileID: 6959686288201315308, guid: 70ebeb40a2788964abde14236282bee3, type: 3}
       propertyPath: bossPrefab
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2441637233487527552, guid: 66cfa9c86808e33438ddfa63d6fa16b2, type: 3}
     - target: {fileID: 6959686288201315308, guid: 70ebeb40a2788964abde14236282bee3, type: 3}
       propertyPath: roomLevelMultiplierMajor
       value: 1.57
@@ -5728,7 +5732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseUpgradeCost: 750
   upgradeCostMultiplier: 1.15
-  baseUpgradeEffect: 2
+  baseUpgradeEffect: 0.5
   upgradeEffectMultiplier: 1.17
   upgradeElemMultButton: {fileID: 3600066863080485737}
 --- !u!114 &3600066863080485742

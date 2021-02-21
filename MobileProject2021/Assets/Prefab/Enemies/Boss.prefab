@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4160854463583662809}
+  - component: {fileID: 6577662250042471361}
+  - component: {fileID: 4888312174528989380}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -28,49 +30,16 @@ Transform:
   m_LocalScale: {x: 0.21127, y: 0.21127, z: 0.21127}
   m_Children:
   - {fileID: 5302847792154956307}
-  - {fileID: 1488940368997267798}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6544219033896753517
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1488940368997267798}
-  - component: {fileID: 3328431778384878795}
-  - component: {fileID: 831128898463351802}
-  m_Layer: 0
-  m_Name: Boss_Logic
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1488940368997267798
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6544219033896753517}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4160854463583662809}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3328431778384878795
+--- !u!114 &6577662250042471361
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6544219033896753517}
+  m_GameObject: {fileID: 2441637233487527552}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b6ba347f87aac047b584c17b26b14b4, type: 3}
@@ -81,13 +50,13 @@ MonoBehaviour:
   bossTimer: 0
   bossTypes: 
   elementalDamageReceived: 0
---- !u!114 &831128898463351802
+--- !u!114 &4888312174528989380
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6544219033896753517}
+  m_GameObject: {fileID: 2441637233487527552}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 309e651c01f92724daac27e951acd0f0, type: 3}
