@@ -22,11 +22,17 @@ public class PlayerCurrencies : MonoBehaviour
     {
         DamageManager.OnDealDamage += OnDealDamageEarnCurrency;
         UpgradeDMG.OnUpgradeDMG += OnUpgradeUpdateCurrency;
+        UpgradeAttackRate.OnUpgradeAttackRate += OnUpgradeUpdateCurrency;
+        UpgradeElementalMultiplier.OnUpgradeElemMult += OnUpgradeUpdateCurrency;
+        UpgradeCurrencyMultiplier.OnUpgradeCurrMult += OnUpgradeUpdateCurrency;
     }
     private void OnDisable()
     {
         DamageManager.OnDealDamage -= OnDealDamageEarnCurrency;
         UpgradeDMG.OnUpgradeDMG -= OnUpgradeUpdateCurrency;
+        UpgradeAttackRate.OnUpgradeAttackRate -= OnUpgradeUpdateCurrency;
+        UpgradeElementalMultiplier.OnUpgradeElemMult -= OnUpgradeUpdateCurrency;
+        UpgradeCurrencyMultiplier.OnUpgradeCurrMult -= OnUpgradeUpdateCurrency;
     }
 
     private void Start()
@@ -43,6 +49,7 @@ public class PlayerCurrencies : MonoBehaviour
         UpdateCurrenciesArgs();
         OnUpdateCurrency?.Invoke(currenciesArgs);
     }
+
     private void OnDealDamageEarnCurrency(OnDamageEventArgs damageArgs) // This triggers when player deals damage to an enemy
     {
         currencyBase += damageArgs.CurrencyOnDamage(); // Player earns Base Currency

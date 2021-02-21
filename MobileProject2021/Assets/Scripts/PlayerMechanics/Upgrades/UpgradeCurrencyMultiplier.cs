@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UpgradeDMG : GeneralUpgrade
+public class UpgradeCurrencyMultiplier : GeneralUpgrade
 {
-    [SerializeField] private Button upgradeDmgButton;
-    
-    public static event Action<OnUpgradeEventArgs> OnUpgradeDMG;
+    [SerializeField] private Button upgradeCurrMultButton;
+
+    public static event Action<OnUpgradeEventArgs> OnUpgradeCurrMult;
     private OnUpgradeEventArgs onUpgradeArgs = new OnUpgradeEventArgs();
 
     private void Awake()
@@ -25,11 +25,11 @@ public class UpgradeDMG : GeneralUpgrade
     {
         if (this.currentUpgradeCost < currenciesArgs.currentBase)
         {
-            upgradeDmgButton.interactable = true;
+            upgradeCurrMultButton.interactable = true;
         }
         else
         {
-            upgradeDmgButton.interactable = false;
+            upgradeCurrMultButton.interactable = false;
         }
     }
 
@@ -37,7 +37,7 @@ public class UpgradeDMG : GeneralUpgrade
     {
         UpdateArgs();
         UpdateUpgradeSettings();
-        OnUpgradeDMG?.Invoke(onUpgradeArgs);
+        OnUpgradeCurrMult?.Invoke(onUpgradeArgs);
     }
     private void UpdateUpgradeSettings() // Increase cost & effect
     {
