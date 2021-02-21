@@ -1086,6 +1086,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 40.955
       objectReference: {fileID: 0}
+    - target: {fileID: 2095556869297651716, guid: c3a4904821557cc4cb7415c82682dfa4, type: 3}
+      propertyPath: currencyMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095556869297651716, guid: c3a4904821557cc4cb7415c82682dfa4, type: 3}
+      propertyPath: elementalMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2095556869297651719, guid: c3a4904821557cc4cb7415c82682dfa4, type: 3}
       propertyPath: animator
       value: 
@@ -4476,6 +4484,7 @@ GameObject:
   - component: {fileID: 3600066862082293077}
   - component: {fileID: 3600066862082293076}
   - component: {fileID: 3600066862082293079}
+  - component: {fileID: 3600066862082293074}
   m_Layer: 5
   m_Name: CurrencyUp
   m_TagString: Untagged
@@ -4483,6 +4492,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3600066862082293074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600066862082293073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92933c7dda7c4f049baab3f70ebf7a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseUpgradeCost: 15
+  upgradeCostMultiplier: 3.3
+  baseUpgradeEffect: 0.5
+  upgradeEffectMultiplier: 1.4
+  upgradeCurrMultButton: {fileID: 3600066862082293079}
 --- !u!114 &3600066862082293076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4583,7 +4609,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3600066862082293076}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3600066862082293074}
+        m_TargetAssemblyTypeName: UpgradeCurrencyMultiplier, Assembly-CSharp
+        m_MethodName: UpgradeCurrMult
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3600066862085233684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5443,6 +5481,7 @@ GameObject:
   - component: {fileID: 3600066863054132116}
   - component: {fileID: 3600066863054132119}
   - component: {fileID: 3600066863054132118}
+  - component: {fileID: 3600066863054132114}
   m_Layer: 5
   m_Name: AttackRateUp
   m_TagString: Untagged
@@ -5469,6 +5508,23 @@ RectTransform:
   m_AnchoredPosition: {x: 858.4, y: -1445.9995}
   m_SizeDelta: {x: 247.8, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3600066863054132114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600066863054132112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd9b600963b680f43b47c5f2eddf56af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseUpgradeCost: 7
+  upgradeCostMultiplier: 1.34
+  baseUpgradeEffect: -0.05
+  upgradeEffectMultiplier: 2
+  upgradeAtkRateButton: {fileID: 3600066863054132118}
 --- !u!222 &3600066863054132116
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5520,7 +5576,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3600066863054132119}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3600066863054132114}
+        m_TargetAssemblyTypeName: UpgradeAttackRate, Assembly-CSharp
+        m_MethodName: UpgradeAtkRate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3600066863054132119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5613,7 +5681,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3600066863080485742}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3600066863080485740}
+        m_TargetAssemblyTypeName: UpgradeElementalMultiplier, Assembly-CSharp
+        m_MethodName: UpgradeElemMult
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3600066863080485739
 GameObject:
   m_ObjectHideFlags: 0
@@ -5626,6 +5706,7 @@ GameObject:
   - component: {fileID: 3600066863080485743}
   - component: {fileID: 3600066863080485742}
   - component: {fileID: 3600066863080485737}
+  - component: {fileID: 3600066863080485740}
   m_Layer: 5
   m_Name: ElementalReactUp
   m_TagString: Untagged
@@ -5633,6 +5714,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3600066863080485740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3600066863080485739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5de2bec431362ca49af0524efa80c68e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseUpgradeCost: 750
+  upgradeCostMultiplier: 1.15
+  baseUpgradeEffect: 2
+  upgradeEffectMultiplier: 1.17
+  upgradeElemMultButton: {fileID: 3600066863080485737}
 --- !u!114 &3600066863080485742
 MonoBehaviour:
   m_ObjectHideFlags: 0

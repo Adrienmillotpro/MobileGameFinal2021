@@ -43,6 +43,7 @@ public class DamageManager : MonoBehaviour
     {
         //Debug.Log("I'm calculating damage");
         float bestElementalReaction = new float();
+        float elementalMultiplier = new float();
         ElementalTypes bestElementalType = new ElementalTypes();
         ElementalTypes weakElementalType = new ElementalTypes();
 
@@ -54,13 +55,20 @@ public class DamageManager : MonoBehaviour
                 if (newElementalReaction > bestElementalReaction)
                 {
                     bestElementalReaction = newElementalReaction;
+                    elementalMultiplier = bestElementalReaction;
                     bestElementalType = heroManager.CurrentStats.heroTypes[j];
                     weakElementalType = enemyManager.CurrentSoEnemy.EnemyTypes[i];
                 }
             }
         }
 
-        onDealDamageArgs.damage = (heroManager.CurrentStats.heroDamage + mcStats.damage) * bestElementalReaction;
+        if (bestElementalReaction == 2)
+        {
+            elementalMultiplier = bestElementalReaction * heroManager.CurrentStats.heroElementalReactionMultiplier * mcStats.elementalMultiplier;
+        }
+
+        onDealDamageArgs.elementalMultiplier = elementalMultiplier;
+        onDealDamageArgs.damage = (heroManager.CurrentStats.heroDamage + mcStats.damage) * elementalMultiplier;
         onDealDamageArgs.damageTypes = heroManager.CurrentStats.heroTypes;
         //Debug.Log("DealDamage - damageArgs.damage " + onDealDamageArgs.damage);
 

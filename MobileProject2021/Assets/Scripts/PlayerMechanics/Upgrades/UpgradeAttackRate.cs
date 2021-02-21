@@ -33,7 +33,7 @@ public class UpgradeAttackRate : GeneralUpgrade
         }
     }
 
-    public void UpgradeDamage() // Assign this to OnClick event of Button
+    public void UpgradeAtkRate() // Assign this to OnClick event of Button
     {
         UpdateArgs();
         UpdateUpgradeSettings();

@@ -33,7 +33,7 @@ public class UpgradeCurrencyMultiplier : GeneralUpgrade
         }
     }
 
-    public void UpgradeDamage() // Assign this to OnClick event of Button
+    public void UpgradeCurrMult() // Assign this to OnClick event of Button
     {
         UpdateArgs();
         UpdateUpgradeSettings();

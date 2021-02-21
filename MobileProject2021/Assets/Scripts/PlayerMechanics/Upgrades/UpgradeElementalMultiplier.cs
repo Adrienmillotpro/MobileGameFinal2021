@@ -33,7 +33,7 @@ public class UpgradeElementalMultiplier : GeneralUpgrade
         }
     }
 
-    public void UpgradeDamage() // Assign this to OnClick event of Button
+    public void UpgradeElemMult() // Assign this to OnClick event of Button
     {
         UpdateArgs();
         UpdateUpgradeSettings();

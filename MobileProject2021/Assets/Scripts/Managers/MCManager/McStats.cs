@@ -11,15 +11,36 @@ public class McStats : MonoBehaviour
 
     private void Awake()
     {
-        UpgradeDMG.OnUpgradeDMG += OnUpgradeDMGUpdateStats;
+        UpgradeDMG.OnUpgradeDMG += OnUpgradeDMGUpdateDMG;
+        UpgradeAttackRate.OnUpgradeAttackRate += OnUpgradeAtkRateUpdateAtkRate;
+        UpgradeElementalMultiplier.OnUpgradeElemMult += OnUpgradeElemMultUpdateElemUlt;
+        UpgradeCurrencyMultiplier.OnUpgradeCurrMult += OnUpgradeCurrMultUpdateCurrMult;
     }
     private void OnDisable()
     {
-        UpgradeDMG.OnUpgradeDMG -= OnUpgradeDMGUpdateStats;
+        UpgradeDMG.OnUpgradeDMG -= OnUpgradeDMGUpdateDMG;
+        UpgradeAttackRate.OnUpgradeAttackRate -= OnUpgradeAtkRateUpdateAtkRate;
+        UpgradeElementalMultiplier.OnUpgradeElemMult -= OnUpgradeElemMultUpdateElemUlt;
+        UpgradeCurrencyMultiplier.OnUpgradeCurrMult -= OnUpgradeCurrMultUpdateCurrMult;
     }
 
-    private void OnUpgradeDMGUpdateStats(OnUpgradeEventArgs upgradeArgs)
+    private void OnUpgradeDMGUpdateDMG(OnUpgradeEventArgs upgradeArgs)
     {
         this.damage += upgradeArgs.upgradeEffect;
+    }
+
+    private void OnUpgradeAtkRateUpdateAtkRate(OnUpgradeEventArgs upgradeArgs)
+    {
+        this.rateOfAttack += upgradeArgs.upgradeEffect;
+    }
+
+    private void OnUpgradeElemMultUpdateElemUlt(OnUpgradeEventArgs upgradeArgs)
+    {
+        this.elementalMultiplier += upgradeArgs.upgradeEffect;
+    }
+
+    private void OnUpgradeCurrMultUpdateCurrMult(OnUpgradeEventArgs upgradeArgs)
+    {
+        this.currencyMultiplier += upgradeArgs.upgradeEffect;
     }
 }

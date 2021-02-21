@@ -18,17 +18,12 @@ public class SO_Hero : ScriptableObject
     [SerializeField] private float heroDamage;
     [SerializeField] private float heroAttackRate;
     [SerializeField] private float heroElementalReactionMultiplier;
-    [SerializeField] private float heroCritRate;
-    [SerializeField] private float heroCritDamage;
-    [SerializeField] private float heroAffinityMultiplier;
+
     [SerializeField] private float heroCurrencyMultiplier;
     #region Getters
     public float HeroDamage { get { return heroDamage; } }
     public float HeroAttackRate { get { return heroAttackRate; } }
     public float HeroElementalReactionMultiplier { get { return heroElementalReactionMultiplier; } }
-    public float HeroCritRate { get { return heroCritRate; } }
-    public float HeroCritDamage { get { return heroCritDamage; } }
-    public float HeroAffinityMultiplier { get { return heroAffinityMultiplier; } }
     public float HeroCurrencyMultiplier { get { return heroCurrencyMultiplier; } }
     #endregion
 

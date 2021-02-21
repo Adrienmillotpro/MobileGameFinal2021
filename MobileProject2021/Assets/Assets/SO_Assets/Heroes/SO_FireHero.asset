@@ -16,11 +16,8 @@ MonoBehaviour:
   heroAnimator: {fileID: 0}
   heroDamage: 4
   heroAttackRate: 2
-  heroElementalReactionMultiplier: 0
-  heroCritRate: 0
-  heroCritDamage: 0
-  heroAffinityMultiplier: 0
-  heroCurrencyMultiplier: 0
+  heroElementalReactionMultiplier: 1
+  heroCurrencyMultiplier: 1
   heroTypes: 00000000
   passivePerk: {fileID: 0}
   activePerk: {fileID: 11400000, guid: 9d02de0b642f56842a1cb036b85fc1c4, type: 2}
