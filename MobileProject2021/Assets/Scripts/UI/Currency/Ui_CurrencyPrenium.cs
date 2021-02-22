@@ -21,6 +21,6 @@ public class Ui_CurrencyPrenium : MonoBehaviour
 
     private void OnUpdateCurrencyUpdateUI(OnUpdateCurrenciesEventArgs currencyArgs)
     {
-        text.text = currencyArgs.currentPremium.ToString();
+        text.text = currencyArgs.currentPremium.ToString("f0");
     }
 }

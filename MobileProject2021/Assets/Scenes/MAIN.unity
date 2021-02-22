@@ -147,11 +147,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18078260}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1544468, y: 4.676038, z: -6.239596}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &32358937
 GameObject:
@@ -752,6 +752,14 @@ PrefabInstance:
       propertyPath: particleSpot
       value: 
       objectReference: {fileID: 232319291}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particuleHitsAir.Array.data[2]
+      value: 
+      objectReference: {fileID: 19800000, guid: 3136d0e1368895e4ca24a0484734871a, type: 3}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particuleHitsFire.Array.data[1]
+      value: 
+      objectReference: {fileID: 2427786012956944611, guid: da0de216ad60c5d46a6b049d61961615, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
 --- !u!1001 &394938015
@@ -764,6 +772,10 @@ PrefabInstance:
     - target: {fileID: 1700617938970035976, guid: 9b5ec9b31ca469f4191918837842e2b9, type: 3}
       propertyPath: m_Name
       value: WindAuraParticules
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700617938970035976, guid: 9b5ec9b31ca469f4191918837842e2b9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2261661760971033014, guid: 9b5ec9b31ca469f4191918837842e2b9, type: 3}
       propertyPath: m_RootOrder
@@ -2870,8 +2882,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4281328637
+  m_fontColor: {r: 0.9921569, g: 0.89019614, b: 0.18431373, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3083,7 +3095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7361807239735587743, guid: 94d4ebbeaf6ffa44c995ddeaef5de097, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7361807239735587743, guid: 94d4ebbeaf6ffa44c995ddeaef5de097, type: 3}
       propertyPath: m_LocalPosition.x

@@ -8,6 +8,7 @@ public class UpgradeDMG : GeneralUpgrade
 {
     [SerializeField] private Button upgradeDmgButton;
     
+
     public static event Action<OnUpgradeEventArgs> OnUpgradeDMG;
     private OnUpgradeEventArgs onUpgradeArgs = new OnUpgradeEventArgs();
 
@@ -25,7 +26,8 @@ public class UpgradeDMG : GeneralUpgrade
     {
         if (this.currentUpgradeCost < currenciesArgs.currentBase)
         {
-            upgradeDmgButton.interactable = true;
+           upgradeDmgButton.interactable = true;
+
         }
         else
         {

@@ -21,7 +21,7 @@ public class Ui_CurrencyElemental : MonoBehaviour
 
     private void OnUpdateCurrencyUpdateUI(OnUpdateCurrenciesEventArgs currencyArgs)
     {
-        text.text = currencyArgs.currentElemental.ToString();
+        text.text = currencyArgs.currentElemental.ToString("f0");
     }
 }
 

@@ -20,7 +20,7 @@ public class Ui_CurrencyBase : MonoBehaviour
 
     private void OnUpdateCurrencyUpdateUI(OnUpdateCurrenciesEventArgs currencyArgs)
     {
-        text.text = currencyArgs.currentBase.ToString();
+        text.text = currencyArgs.currentBase.ToString("f0");
     }
 
 }
