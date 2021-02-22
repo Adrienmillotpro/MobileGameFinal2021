@@ -4,23 +4,42 @@ using UnityEngine;
 
 public class McVisuals : MonoBehaviour
 {
-    
     [SerializeField] private Animator animator;
+    [SerializeField] private float attackToIdleCooldown;
+
+    private bool isAttacking;
 
     private void Awake()
     {
-        TapMechanic.OnTap += OnTapDoPS;
+        TapMechanic.OnTap += OnTapDoUpdateState;
     }
     private void OnDisable()
     {
-        TapMechanic.OnTap -= OnTapDoPS;
+        TapMechanic.OnTap -= OnTapDoUpdateState;
     }
 
-    private void OnTapDoPS(OnTapEventArgs tapArgs)
+    private void Update()
     {
-        animator.SetBool("Tap", true);
-        
+        if (isAttacking)
+        {
+            animator.SetBool("Tap", true);
+        }
+        else
+        {
+            animator.SetBool("Tap", false);
+        }
     }
 
+    private void OnTapDoUpdateState(OnTapEventArgs tapArgs)
+    {
+        StopCoroutine(AttackToIdleCooldown());
+        StartCoroutine(AttackToIdleCooldown());
+    }
 
+    private IEnumerator AttackToIdleCooldown()
+    {
+        isAttacking = true;
+        yield return new WaitForSeconds(attackToIdleCooldown);
+        isAttacking = false;
+    }
 }

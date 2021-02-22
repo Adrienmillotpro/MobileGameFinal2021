@@ -44,7 +44,7 @@ public class Hero_ParticuleSystem : MonoBehaviour
                     {
                         Instantiate(particuleHitsThunder[0], particleSpot.transform);
                     }
-                    else if (damageArgs.bestElementalReaction == 1)
+                    else if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
                     {
                         Instantiate(particuleHitsThunder[1], particleSpot.transform);
                     }
@@ -58,7 +58,7 @@ public class Hero_ParticuleSystem : MonoBehaviour
                     {
                         Instantiate(particuleHitsFire[0], particleSpot.transform);
                     }
-                    else if (damageArgs.bestElementalReaction == 1)
+                    else if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
                     {
                         Instantiate(particuleHitsFire[1], particleSpot.transform);
                     }
@@ -74,7 +74,7 @@ public class Hero_ParticuleSystem : MonoBehaviour
                     {
                         Instantiate(particuleHitsAir[0], particleSpot.transform);
                     }
-                    else if (damageArgs.bestElementalReaction == 1)
+                    else if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
                     {
                         Instantiate(particuleHitsAir[1], particleSpot.transform);
                     }
