@@ -74,7 +74,7 @@ MonoBehaviour:
     m_Value: {x: 0.9466144, y: 1, z: 0.9645818, w: 0.10118045}
   highlights:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.9743853, z: 0.8790718, w: 0}
+    m_Value: {x: 0.94149333, y: 1, z: 0.98006284, w: -0.125}
   shadowsStart:
     m_OverrideState: 0
     m_Value: 0
@@ -169,12 +169,12 @@ MonoBehaviour:
     max: 200
   redOutGreenIn:
     m_OverrideState: 1
-    m_Value: -28
+    m_Value: -10
     min: -200
     max: 200
   redOutBlueIn:
     m_OverrideState: 1
-    m_Value: 21
+    m_Value: 50
     min: -200
     max: 200
   greenOutRedIn:
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   temperature:
     m_OverrideState: 1
-    m_Value: -8
+    m_Value: 4
     min: -100
     max: 100
   tint:
