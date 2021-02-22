@@ -32,7 +32,7 @@ public class McVisuals : MonoBehaviour
 
     private void OnTapDoUpdateState(OnTapEventArgs tapArgs)
     {
-        StopCoroutine(AttackToIdleCooldown());
+        StopAllCoroutines();
         StartCoroutine(AttackToIdleCooldown());
     }
 
