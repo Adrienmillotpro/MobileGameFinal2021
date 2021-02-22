@@ -492,18 +492,6 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3824263879144473412, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3824263879144473412, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3824263879144473412, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3824263879144473412, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -548,81 +536,9 @@ PrefabInstance:
       value: HeroParticuleManager
       objectReference: {fileID: 0}
     - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: enemyPos
-      value: 
-      objectReference: {fileID: 232319291}
-    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: particleSpot
       value: 
       objectReference: {fileID: 232319291}
-    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: particuleHit
-      value: 
-      objectReference: {fileID: 7530455180428848306, guid: 8d6fa9503c5e9e34491b54edb0833855, type: 3}
-    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: particuleHit0
-      value: 
-      objectReference: {fileID: 19800002, guid: f71e7641f4394c44095cabfbc0c46ef9, type: 3}
-    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: particuleHit1
-      value: 
-      objectReference: {fileID: 2100227801521839761, guid: 9d183a5214766ac45ab180dff5b04e6a, type: 3}
-    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: particuleHit2
-      value: 
-      objectReference: {fileID: 4726896016612366713, guid: ea2c342b3bbec2a4b8ac0ea191e4adfa, type: 3}
-    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: particlePosOffsetMax
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: particlePosOffsetMin
-      value: -0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: particuleHitsFire.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: particuleHitsAir.Array.data[0]
-      value: 
-      objectReference: {fileID: 19800000, guid: 8dfb05b57dbd9a648802f583881da9dc, type: 3}
-    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: particuleHitsAir.Array.data[1]
-      value: 
-      objectReference: {fileID: 19800000, guid: a4585a9f0750b8b4a80739050af7ecbc, type: 3}
-    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: particuleHitsAir.Array.data[2]
-      value: 
-      objectReference: {fileID: 8163684771574148737, guid: 6dc4191059d6c3a4a820270672bbf567, type: 3}
-    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: particuleHitsFire.Array.data[0]
-      value: 
-      objectReference: {fileID: 19800000, guid: 136682ab43d9f574183c3ee7dbe076fc, type: 3}
-    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: particuleHitsFire.Array.data[1]
-      value: 
-      objectReference: {fileID: 4155764736166186940, guid: fb731aabf33b85247a2022c110dcd61a, type: 3}
-    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: particuleHitsFire.Array.data[2]
-      value: 
-      objectReference: {fileID: 9022066806678992438, guid: 7ccebf8cdf5dd584988dbbf95fd08683, type: 3}
-    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: particuleHitsThunder.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: particuleHitsThunder.Array.data[0]
-      value: 
-      objectReference: {fileID: 19800000, guid: 7ebfa53bee9bf514c908752626f3c27d, type: 3}
-    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: particuleHitsThunder.Array.data[1]
-      value: 
-      objectReference: {fileID: 19800000, guid: 7ebfa53bee9bf514c908752626f3c27d, type: 3}
-    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
-      propertyPath: particuleHitsThunder.Array.data[2]
-      value: 
-      objectReference: {fileID: 1256930163580335536, guid: d9a6b62b67fc0ff4fb24f51151287ed9, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
 --- !u!1 &456033950
@@ -5731,7 +5647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseUpgradeCost: 750
-  upgradeCostMultiplier: 1.15
+  upgradeCostMultiplier: 30
   baseUpgradeEffect: 0.5
   upgradeEffectMultiplier: 1.17
   upgradeElemMultButton: {fileID: 3600066863080485737}
