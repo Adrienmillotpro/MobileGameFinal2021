@@ -20,12 +20,12 @@ public class Hero_ParticuleSystem : MonoBehaviour
 
     private void OnEnable()
     {
-        DamageManager.OnDealDamage += OnDealDamageUpdateParticules;
+        DamageManager.OnDealDamage += OnDealDamageGetParticlesFromPool;
 
     }
     private void OnDisable()
     {
-        DamageManager.OnDealDamage -= OnDealDamageUpdateParticules;
+        DamageManager.OnDealDamage -= OnDealDamageGetParticlesFromPool;
 
     }
     private void Start()
@@ -33,73 +33,16 @@ public class Hero_ParticuleSystem : MonoBehaviour
         particleStarterPos = particleSpot.transform.position;
     }
 
-    private void OnDealDamageUpdateParticules(OnDamageEventArgs damageArgs)
+    private void OnDealDamageGetParticlesFromPool(OnDamageEventArgs damageArgs)
     {
         if (!isInCooldown)
         {
+            var newParticles = HeroParticlesPool.Instance.Get(damageArgs.damageType, damageArgs.bestElementalReaction);
             RandomizeParticlePos();
-            switch (damageArgs.damageType)
-            {
-                case ElementalTypes.Thunder:
-                    if (damageArgs.bestElementalReaction == 0)
-                    {
-                        Instantiate(particuleHitsThunder[0], particleSpot.transform);
-                    }
-                    else if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
-                    {
-                        Instantiate(particuleHitsThunder[1], particleSpot.transform);
-                    }
-                    else if (damageArgs.bestElementalReaction == 2)
-                    {
-                        Instantiate(particuleHitsThunder[2], particleSpot.transform);
-                    }
-                    break;
-                case ElementalTypes.Fire:
-                    if (damageArgs.bestElementalReaction == 0)
-                    {
-                        Instantiate(particuleHitsFire[0], particleSpot.transform);
-                    }
-                    else if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
-                    {
-                        Instantiate(particuleHitsFire[1], particleSpot.transform);
-                    }
-                    else if (damageArgs.bestElementalReaction == 2)
-                    {
-                        Instantiate(particuleHitsFire[2], particleSpot.transform);
-                    }
-                    break;
-                case ElementalTypes.Water:
-                    if (damageArgs.bestElementalReaction == 0)
-                    {
-                        Instantiate(particuleHitsWater[0], particleSpot.transform);
-                    }
-                    else if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
-                    {
-                        Instantiate(particuleHitsWater[1], particleSpot.transform);
-                    }
-                    else if(damageArgs.bestElementalReaction == 2)
-                    {
-                        Instantiate(particuleHitsWater[2], particleSpot.transform);
-                    }
-                    break;
-                case ElementalTypes.Air:
-                    if (damageArgs.bestElementalReaction == 0)
-                    {
-                        Instantiate(particuleHitsAir[0], particleSpot.transform);
-                    }
-                    else if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
-                    {
-                        Instantiate(particuleHitsAir[1], particleSpot.transform);
-                    }
-                    else if (damageArgs.bestElementalReaction == 2)
-                    {
-                        Instantiate(particuleHitsAir[2], particleSpot.transform);
-                    }
-                    break;
-            }
+            newParticles.transform.position = particleSpot.transform.position;
+            newParticles.gameObject.SetActive(true);
             StartCoroutine(ParticleCooldown());
         }
-
     }
 
     private void RandomizeParticlePos()
@@ -116,3 +59,72 @@ public class Hero_ParticuleSystem : MonoBehaviour
         isInCooldown = false;
     }
 }
+
+    //private void OnDealDamageUpdateParticules(OnDamageEventArgs damageArgs)
+    //{
+    //    if (!isInCooldown)
+    //    {
+    //        RandomizeParticlePos();
+    //        switch (damageArgs.damageType)
+    //        {
+    //            case ElementalTypes.Thunder:
+    //                if (damageArgs.bestElementalReaction == 0)
+    //                {
+    //                    Instantiate(particuleHitsThunder[0], particleSpot.transform);
+    //                }
+    //                else if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
+    //                {
+    //                    Instantiate(particuleHitsThunder[1], particleSpot.transform);
+    //                }
+    //                else if (damageArgs.bestElementalReaction == 2)
+    //                {
+    //                    Instantiate(particuleHitsThunder[2], particleSpot.transform);
+    //                }
+    //                break;
+    //            case ElementalTypes.Fire:
+    //                if (damageArgs.bestElementalReaction == 0)
+    //                {
+    //                    Instantiate(particuleHitsFire[0], particleSpot.transform);
+    //                }
+    //                else if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
+    //                {
+    //                    Instantiate(particuleHitsFire[1], particleSpot.transform);
+    //                }
+    //                else if (damageArgs.bestElementalReaction == 2)
+    //                {
+    //                    Instantiate(particuleHitsFire[2], particleSpot.transform);
+    //                }
+    //                break;
+    //            case ElementalTypes.Water:
+    //                if (damageArgs.bestElementalReaction == 0)
+    //                {
+    //                    Instantiate(particuleHitsWater[0], particleSpot.transform);
+    //                }
+    //                else if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
+    //                {
+    //                    Instantiate(particuleHitsWater[1], particleSpot.transform);
+    //                }
+    //                else if(damageArgs.bestElementalReaction == 2)
+    //                {
+    //                    Instantiate(particuleHitsWater[2], particleSpot.transform);
+    //                }
+    //                break;
+    //            case ElementalTypes.Air:
+    //                if (damageArgs.bestElementalReaction == 0)
+    //                {
+    //                    Instantiate(particuleHitsAir[0], particleSpot.transform);
+    //                }
+    //                else if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
+    //                {
+    //                    Instantiate(particuleHitsAir[1], particleSpot.transform);
+    //                }
+    //                else if (damageArgs.bestElementalReaction == 2)
+    //                {
+    //                    Instantiate(particuleHitsAir[2], particleSpot.transform);
+    //                }
+    //                break;
+    //        }
+    //        StartCoroutine(ParticleCooldown());
+    //    }
+
+    //}

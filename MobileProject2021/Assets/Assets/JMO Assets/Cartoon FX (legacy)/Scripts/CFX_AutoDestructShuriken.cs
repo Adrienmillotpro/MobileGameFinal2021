@@ -12,7 +12,9 @@ public class CFX_AutoDestructShuriken : MonoBehaviour
 {
 	// If true, deactivate the object instead of destroying it
 	public bool OnlyDeactivate;
-	
+	[SerializeField] private ElementalTypes particleType;
+	[SerializeField] private int intensity;
+
 	void OnEnable()
 	{
 		StartCoroutine("CheckIfAlive");
@@ -33,6 +35,7 @@ public class CFX_AutoDestructShuriken : MonoBehaviour
 						this.gameObject.SetActiveRecursively(false);
 					#else
 						this.gameObject.SetActive(false);
+					HeroParticlesPool.Instance.ReturnToPool(this.gameObject, particleType, intensity);
 					#endif
 				}
 				else
