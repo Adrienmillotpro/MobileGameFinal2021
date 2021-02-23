@@ -4834,6 +4834,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDeactivate: 0
+  particleType: 0
+  intensity: 0
 --- !u!1 &100006
 GameObject:
   m_ObjectHideFlags: 0
@@ -14365,6 +14367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDeactivate: 0
+  particleType: 0
+  intensity: 0
 --- !u!1 &100012
 GameObject:
   m_ObjectHideFlags: 0
@@ -19145,6 +19149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDeactivate: 0
+  particleType: 0
+  intensity: 0
 --- !u!1 &100014
 GameObject:
   m_ObjectHideFlags: 0
@@ -24061,3 +24067,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDeactivate: 1
+  particleType: 3
+  intensity: 1

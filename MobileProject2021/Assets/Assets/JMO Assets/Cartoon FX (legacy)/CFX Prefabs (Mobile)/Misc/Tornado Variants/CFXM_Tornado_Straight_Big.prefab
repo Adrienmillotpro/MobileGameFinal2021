@@ -194,7 +194,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.09019608, g: 0.19215687, b: 1, a: 0.8784314}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.8784314}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1257,7 +1257,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.09019608, g: 0.19215687, b: 1, a: 1}
+        key0: {r: 1, g: 1, b: 1, a: 1}
         key1: {r: 1, g: 1, b: 1, a: 1}
         key2: {r: 0.3254902, g: 0.61960787, b: 0.61960787, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -4693,6 +4693,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDeactivate: 0
+  particleType: 0
+  intensity: 0
 --- !u!1 &29688501786585446
 GameObject:
   m_ObjectHideFlags: 0
@@ -9379,6 +9381,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDeactivate: 0
+  particleType: 0
+  intensity: 0
 --- !u!1 &5224623137736215650
 GameObject:
   m_ObjectHideFlags: 0
@@ -14065,6 +14069,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDeactivate: 0
+  particleType: 0
+  intensity: 0
 --- !u!1 &5788400449033056828
 GameObject:
   m_ObjectHideFlags: 0
@@ -18751,6 +18757,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDeactivate: 0
+  particleType: 0
+  intensity: 0
 --- !u!1 &6462854766156302944
 GameObject:
   m_ObjectHideFlags: 0
@@ -28311,6 +28319,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDeactivate: 0
+  particleType: 0
+  intensity: 0
 --- !u!1 &7532882574610016300
 GameObject:
   m_ObjectHideFlags: 0
@@ -32997,6 +33007,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDeactivate: 0
+  particleType: 0
+  intensity: 0
 --- !u!1 &7944905196674570778
 GameObject:
   m_ObjectHideFlags: 0
@@ -37683,3 +37695,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDeactivate: 0
+  particleType: 0
+  intensity: 0
