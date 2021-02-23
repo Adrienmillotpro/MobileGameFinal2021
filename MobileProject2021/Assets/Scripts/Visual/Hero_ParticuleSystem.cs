@@ -17,7 +17,7 @@ public class Hero_ParticuleSystem : MonoBehaviour
     [SerializeField] private float cooldown;
     private bool isInCooldown;
     private Vector3 particleStarterPos;
-    
+
     private void OnEnable()
     {
         DamageManager.OnDealDamage += OnDealDamageUpdateParticules;
@@ -26,7 +26,7 @@ public class Hero_ParticuleSystem : MonoBehaviour
     private void OnDisable()
     {
         DamageManager.OnDealDamage -= OnDealDamageUpdateParticules;
-        
+
     }
     private void Start()
     {
@@ -41,11 +41,11 @@ public class Hero_ParticuleSystem : MonoBehaviour
             switch (damageArgs.bestHeroElement)
             {
                 case ElementalTypes.Thunder:
-                    //if (damageArgs.bestElementalReaction == 0)
-                    //{
-                    //    Instantiate(particuleHitsThunder[0], particleSpot.transform);
-                    //}
-                     if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
+                    if (damageArgs.bestElementalReaction == 0)
+                    {
+                        Instantiate(particuleHitsThunder[0], particleSpot.transform);
+                    }
+                    else if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
                     {
                         Instantiate(particuleHitsThunder[1], particleSpot.transform);
                     }
@@ -55,11 +55,11 @@ public class Hero_ParticuleSystem : MonoBehaviour
                     }
                     break;
                 case ElementalTypes.Fire:
-                    //if (damageArgs.bestElementalReaction == 0)
-                    //{
-                    //    Instantiate(particuleHitsFire[0], particleSpot.transform);
-                    //}
-                     if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
+                    if (damageArgs.bestElementalReaction == 0)
+                    {
+                        Instantiate(particuleHitsFire[0], particleSpot.transform);
+                    }
+                    else if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
                     {
                         Instantiate(particuleHitsFire[1], particleSpot.transform);
                     }
@@ -69,25 +69,25 @@ public class Hero_ParticuleSystem : MonoBehaviour
                     }
                     break;
                 case ElementalTypes.Water:
-                    //if (damageArgs.bestElementalReaction == 0)
-                    //{
-                    //    Instantiate(particuleHitsWater[0], particleSpot.transform);
-                    //}
-                     if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
+                    if (damageArgs.bestElementalReaction == 0)
+                    {
+                        Instantiate(particuleHitsWater[0], particleSpot.transform);
+                    }
+                    else if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
                     {
                         Instantiate(particuleHitsWater[1], particleSpot.transform);
                     }
-                     if (damageArgs.bestElementalReaction == 2)
+                    else if(damageArgs.bestElementalReaction == 2)
                     {
                         Instantiate(particuleHitsWater[2], particleSpot.transform);
                     }
                     break;
                 case ElementalTypes.Air:
-                    //if (damageArgs.bestElementalReaction == 0)
-                    //{
-                    //    Instantiate(particuleHitsAir[0], particleSpot.transform);
-                    //}
-                     if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
+                    if (damageArgs.bestElementalReaction == 0)
+                    {
+                        Instantiate(particuleHitsAir[0], particleSpot.transform);
+                    }
+                    else if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
                     {
                         Instantiate(particuleHitsAir[1], particleSpot.transform);
                     }
@@ -99,7 +99,7 @@ public class Hero_ParticuleSystem : MonoBehaviour
             }
             StartCoroutine(ParticleCooldown());
         }
-        
+
     }
 
     private void RandomizeParticlePos()
