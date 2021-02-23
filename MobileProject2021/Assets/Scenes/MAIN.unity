@@ -759,7 +759,23 @@ PrefabInstance:
     - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
       propertyPath: particuleHitsFire.Array.data[1]
       value: 
-      objectReference: {fileID: 2427786012956944611, guid: da0de216ad60c5d46a6b049d61961615, type: 3}
+      objectReference: {fileID: 8292648223902147613, guid: f2b894e1f4d86aa4dae81fbff7e5e336, type: 3}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particuleHitsWater.Array.data[0]
+      value: 
+      objectReference: {fileID: 2510883309010884766, guid: deb4957b29806144d8e57d6e27824f2f, type: 3}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particuleHitsWater.Array.data[1]
+      value: 
+      objectReference: {fileID: 5582959372779851111, guid: f6a3c3d847782f842adfa192f9ad05ed, type: 3}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particuleHitsWater.Array.data[2]
+      value: 
+      objectReference: {fileID: 19800014, guid: 5f2b97d836476fa4c9124136177d640c, type: 3}
+    - target: {fileID: 3824263879144473415, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
+      propertyPath: particuleHitsThunder.Array.data[1]
+      value: 
+      objectReference: {fileID: 19800012, guid: 9deb034c5e54cc047b32607c9be3c5a9, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c97098f4bc9e77b449714652c58425e7, type: 3}
 --- !u!1001 &394938015
@@ -2791,6 +2807,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hero_Monkey
       objectReference: {fileID: 0}
+    - target: {fileID: 6249832570845444197, guid: f6198a57c691d3e4fa58eca42043adfd, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1570674315}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6198a57c691d3e4fa58eca42043adfd, type: 3}
 --- !u!1 &1167256713 stripped
@@ -3391,6 +3411,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particuleHit: {fileID: 100000, guid: 3d84922c38d7c444782fb1a791d97b21, type: 3}
+--- !u!95 &1570674315 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8056653901654962586, guid: f6198a57c691d3e4fa58eca42043adfd, type: 3}
+  m_PrefabInstance: {fileID: 1167256712}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1601201083
 GameObject:
   m_ObjectHideFlags: 0
