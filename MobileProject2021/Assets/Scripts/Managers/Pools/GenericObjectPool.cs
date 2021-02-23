@@ -13,4 +13,27 @@ public abstract class GenericObjectPool<T> : MonoBehaviour where T : Component
     {
         Instance = this;
     }
+
+    public T Get()
+    {
+        if (objects.Count == 0)
+        {
+            AddObject();
+
+        }
+        return objects.Dequeue();
+    }
+
+    public void ReturnToPool(T objectToReturn)
+    {
+        objectToReturn.gameObject.SetActive(false);
+        objects.Enqueue(objectToReturn);
+    }
+
+    private void AddObject()
+    {
+        var newObject = GameObject.Instantiate(prefab);
+        newObject.gameObject.SetActive(false);
+        objects.Enqueue(newObject);
+    }
 }
