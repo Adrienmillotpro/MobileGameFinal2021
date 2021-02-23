@@ -12,6 +12,10 @@ PrefabInstance:
       value: CFXR Lightning Strike + Impact (Purple)
       objectReference: {fileID: 0}
     - target: {fileID: 1834598533700266193, guid: 334ccdade87a4194b9f1855c484967dc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834598533700266193, guid: 334ccdade87a4194b9f1855c484967dc, type: 3}
       propertyPath: clearBehavior
       value: 0
       objectReference: {fileID: 0}
@@ -162,6 +166,10 @@ PrefabInstance:
     - target: {fileID: 2518388753668105223, guid: 334ccdade87a4194b9f1855c484967dc, type: 3}
       propertyPath: InitialModule.startColor.maxGradient.key1.r
       value: 0.23487222
+      objectReference: {fileID: 0}
+    - target: {fileID: 3960018906311444401, guid: 334ccdade87a4194b9f1855c484967dc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5337203621404181406, guid: 334ccdade87a4194b9f1855c484967dc, type: 3}
       propertyPath: InitialModule.startColor.maxColor.g

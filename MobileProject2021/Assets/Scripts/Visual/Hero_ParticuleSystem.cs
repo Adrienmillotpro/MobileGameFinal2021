@@ -7,6 +7,7 @@ public class Hero_ParticuleSystem : MonoBehaviour
     [SerializeField] ParticleSystem[] particuleHitsThunder = new ParticleSystem[3];
     [SerializeField] ParticleSystem[] particuleHitsFire = new ParticleSystem[3];
     [SerializeField] ParticleSystem[] particuleHitsAir = new ParticleSystem[3];
+    [SerializeField] ParticleSystem[] particuleHitsWater = new ParticleSystem[3];
 
     [SerializeField] GameObject particleSpot;
 
@@ -40,11 +41,11 @@ public class Hero_ParticuleSystem : MonoBehaviour
             switch (damageArgs.bestHeroElement)
             {
                 case ElementalTypes.Thunder:
-                    if (damageArgs.bestElementalReaction == 0)
-                    {
-                        Instantiate(particuleHitsThunder[0], particleSpot.transform);
-                    }
-                    else if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
+                    //if (damageArgs.bestElementalReaction == 0)
+                    //{
+                    //    Instantiate(particuleHitsThunder[0], particleSpot.transform);
+                    //}
+                     if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
                     {
                         Instantiate(particuleHitsThunder[1], particleSpot.transform);
                     }
@@ -54,11 +55,11 @@ public class Hero_ParticuleSystem : MonoBehaviour
                     }
                     break;
                 case ElementalTypes.Fire:
-                    if (damageArgs.bestElementalReaction == 0)
-                    {
-                        Instantiate(particuleHitsFire[0], particleSpot.transform);
-                    }
-                    else if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
+                    //if (damageArgs.bestElementalReaction == 0)
+                    //{
+                    //    Instantiate(particuleHitsFire[0], particleSpot.transform);
+                    //}
+                     if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
                     {
                         Instantiate(particuleHitsFire[1], particleSpot.transform);
                     }
@@ -68,13 +69,25 @@ public class Hero_ParticuleSystem : MonoBehaviour
                     }
                     break;
                 case ElementalTypes.Water:
+                    //if (damageArgs.bestElementalReaction == 0)
+                    //{
+                    //    Instantiate(particuleHitsWater[0], particleSpot.transform);
+                    //}
+                     if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
+                    {
+                        Instantiate(particuleHitsWater[1], particleSpot.transform);
+                    }
+                     if (damageArgs.bestElementalReaction == 2)
+                    {
+                        Instantiate(particuleHitsWater[2], particleSpot.transform);
+                    }
                     break;
                 case ElementalTypes.Air:
-                    if (damageArgs.bestElementalReaction == 0)
-                    {
-                        Instantiate(particuleHitsAir[0], particleSpot.transform);
-                    }
-                    else if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
+                    //if (damageArgs.bestElementalReaction == 0)
+                    //{
+                    //    Instantiate(particuleHitsAir[0], particleSpot.transform);
+                    //}
+                     if (damageArgs.bestElementalReaction == 1 || damageArgs.bestElementalReaction == 0.5)
                     {
                         Instantiate(particuleHitsAir[1], particleSpot.transform);
                     }
