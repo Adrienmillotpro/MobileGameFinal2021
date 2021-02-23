@@ -16,15 +16,15 @@ MonoBehaviour:
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 1.05
+    m_Value: 1
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 0.5
     min: 0
   scatter:
     m_OverrideState: 0
-    m_Value: 0.7
+    m_Value: 1
     min: 0
     max: 1
   clamp:
@@ -74,7 +74,7 @@ MonoBehaviour:
     m_Value: {x: 0.9466144, y: 1, z: 0.9645818, w: 0.10118045}
   highlights:
     m_OverrideState: 1
-    m_Value: {x: 0.94149333, y: 1, z: 0.98006284, w: -0.125}
+    m_Value: {x: 1, y: 0.98067904, z: 0.8900006, w: -0.125}
   shadowsStart:
     m_OverrideState: 0
     m_Value: 0
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   temperature:
     m_OverrideState: 1
-    m_Value: 4
+    m_Value: -8
     min: -100
     max: 100
   tint:
