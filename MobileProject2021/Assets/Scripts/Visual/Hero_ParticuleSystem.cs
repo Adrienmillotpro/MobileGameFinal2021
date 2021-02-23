@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Hero_ParticuleSystem : MonoBehaviour
 {
-    [SerializeField] ParticleSystem[] particuleHitsThunder = new ParticleSystem[3];
-    [SerializeField] ParticleSystem[] particuleHitsFire = new ParticleSystem[3];
-    [SerializeField] ParticleSystem[] particuleHitsAir = new ParticleSystem[3];
-    [SerializeField] ParticleSystem[] particuleHitsWater = new ParticleSystem[3];
+    //[SerializeField] ParticleSystem[] particuleHitsThunder = new ParticleSystem[3];
+    //[SerializeField] ParticleSystem[] particuleHitsFire = new ParticleSystem[3];
+    //[SerializeField] ParticleSystem[] particuleHitsAir = new ParticleSystem[3];
+    //[SerializeField] ParticleSystem[] particuleHitsWater = new ParticleSystem[3];
 
     [SerializeField] GameObject particleSpot;
 
