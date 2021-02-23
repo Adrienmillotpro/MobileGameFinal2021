@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ButtonAttackRate : MonoBehaviour
+public class ButtonAttackRateUi : MonoBehaviour
 {
     [SerializeField] private TMP_Text textCurrentRateAtk;
     [SerializeField] private TMP_Text textNextRateATtk;

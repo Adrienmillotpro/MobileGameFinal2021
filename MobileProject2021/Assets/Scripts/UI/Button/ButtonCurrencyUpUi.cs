@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ButtonCurrencyUp : MonoBehaviour
+public class ButtonCurrencyUpUi : MonoBehaviour
 {
     [SerializeField] private TMP_Text currentCurrency;
     [SerializeField] private TMP_Text nextCurrency;

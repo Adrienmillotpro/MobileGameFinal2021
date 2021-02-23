@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ButtonElementalReaction : MonoBehaviour
+public class ButtonElementalReactionUi : MonoBehaviour
 {
     [SerializeField] private TMP_Text currentElementalReaction;
     [SerializeField] private TMP_Text nextElementalReaction;

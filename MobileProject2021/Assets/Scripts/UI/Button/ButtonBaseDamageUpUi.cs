@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ButtonBaseDamageUp : MonoBehaviour
+public class ButtonBaseDamageUpUi : MonoBehaviour
 {
     [SerializeField] private TMP_Text textCurrentAtk;
     [SerializeField] private TMP_Text textNextATtk;
