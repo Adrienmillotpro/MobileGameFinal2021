@@ -38,7 +38,7 @@ public class Hero_ParticuleSystem : MonoBehaviour
         if (!isInCooldown)
         {
             RandomizeParticlePos();
-            switch (damageArgs.bestHeroElement)
+            switch (damageArgs.damageType)
             {
                 case ElementalTypes.Thunder:
                     if (damageArgs.bestElementalReaction == 0)

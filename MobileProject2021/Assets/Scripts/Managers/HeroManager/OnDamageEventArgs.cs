@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class OnDamageEventArgs : EventArgs
 {
-    public ElementalTypes[] damageTypes;
+    public ElementalTypes damageType;
     public float elementalMultiplier;
     public float currencyMultiplier;
     public float enemyLevel;

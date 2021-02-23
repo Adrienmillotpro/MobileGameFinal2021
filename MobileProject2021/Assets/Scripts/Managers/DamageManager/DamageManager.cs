@@ -51,6 +51,7 @@ public class DamageManager : MonoBehaviour
         {
             for (int j = 0; j < heroManager.CurrentStats.heroTypes.Length; j++)
             {
+                onDealDamageArgs.damageType = heroManager.CurrentStats.heroTypes[j];
                 float newElementalReaction = TypeChart.DefineElementalReaction(heroManager.CurrentStats.heroTypes[j], enemyManager.CurrentSoEnemy.EnemyTypes[i]);
                 if (newElementalReaction > bestElementalReaction)
                 {
@@ -69,7 +70,6 @@ public class DamageManager : MonoBehaviour
 
         onDealDamageArgs.elementalMultiplier = elementalMultiplier;
         onDealDamageArgs.damage = (heroManager.CurrentStats.heroDamage + mcStats.damage) * elementalMultiplier;
-        onDealDamageArgs.damageTypes = heroManager.CurrentStats.heroTypes;
         //Debug.Log("DealDamage - damageArgs.damage " + onDealDamageArgs.damage);
 
         onDealDamageArgs.enemyLevel = enemyManager.EnemyLevel;
