@@ -7,6 +7,7 @@ using TMPro;
 public class EnemyNameUi : MonoBehaviour
 {
     [SerializeField] private TMP_Text enemyName;
+  
 
     private void Awake()
     {
@@ -20,6 +21,14 @@ public class EnemyNameUi : MonoBehaviour
 
     private void OnUpgradeEnemyNameUi(OnSpawnEventArgs spawnEventArgs)
     {
-        enemyName.text = spawnEventArgs.soEnemy.EnemyName.ToString();
+        if (spawnEventArgs.isBoss)
+        {
+            enemyName.text = spawnEventArgs.soBoss.BossName;
+        }
+
+        else
+        {
+            enemyName.text = spawnEventArgs.soEnemy.EnemyName;
+        }
     }
 }
