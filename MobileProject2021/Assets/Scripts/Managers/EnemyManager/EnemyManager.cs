@@ -73,17 +73,17 @@ public class EnemyManager : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        currentEnemy = Instantiate(enemyPrefab);
-        currentEnemyStats = currentEnemy.GetComponent<EnemyStats>();
-        currentEnemyVisuals = currentEnemy.GetComponent<EnemyVisuals>();
-        currentEnemyStats.OnEnemyKilled += OnEnemyKilled;
-
         System.Random randomEnemy = new System.Random();
         int indexEnemy = randomEnemy.Next(0, currentWave.PotentialEnemies.Count);
 
         currentSoEnemy = currentWave.PotentialEnemies[indexEnemy];
+
+        currentEnemy = Instantiate(currentSoEnemy.EnemyPrefab);
+        currentEnemyStats = currentEnemy.GetComponent<EnemyStats>();
+        currentEnemyVisuals = currentEnemy.GetComponent<EnemyVisuals>();
         currentEnemyStats.soEnemy = currentSoEnemy;
         currentEnemyVisuals.soEnemy = currentSoEnemy;
+        currentEnemyStats.OnEnemyKilled += OnEnemyKilled;
 
         isBoss = false;
         UpdateEnemyLevel();

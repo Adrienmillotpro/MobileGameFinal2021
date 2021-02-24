@@ -5,8 +5,6 @@ using UnityEngine;
 public class EnemyVisuals : MonoBehaviour
 {
     [HideInInspector] public SO_Enemy soEnemy;
-    //[SerializeField] private Animator enemyAnimator;
-    [SerializeField] private SpriteRenderer enemyRenderer;
 
     private void Awake()
     {
@@ -21,7 +19,6 @@ public class EnemyVisuals : MonoBehaviour
 
     private void OnSpawnUpdateVisuals(OnSpawnEventArgs spawnArgs)
     {
-        this.enemyRenderer.sprite = soEnemy.EnemySprite;
     }
     private void OnDealDamageUpdateVisuals(OnDamageEventArgs damageArgs)
     {

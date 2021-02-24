@@ -7,6 +7,10 @@ using UnityEngine;
 
 public class SO_Enemy : ScriptableObject
 {
+    [Header("Enemy Prefab")]
+    [SerializeField] private GameObject enemyPrefab;
+    public GameObject EnemyPrefab { get { return enemyPrefab; } } 
+
     [Header("Enemy Visuals")]
     [SerializeField] private string enemyName;
     [SerializeField] private string enemyDescription;
