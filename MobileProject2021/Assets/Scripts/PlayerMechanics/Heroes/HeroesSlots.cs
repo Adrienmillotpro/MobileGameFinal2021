@@ -9,7 +9,6 @@ public class HeroesSlots : MonoBehaviour
     private ElementalTypes slotType;
     private GameObject[] equippedHeroes = new GameObject[4];
     private int slotIndex;
-    private bool isSelected;
 
     public GameObject[] EquippedHeroes { get { return equippedHeroes; } }
 

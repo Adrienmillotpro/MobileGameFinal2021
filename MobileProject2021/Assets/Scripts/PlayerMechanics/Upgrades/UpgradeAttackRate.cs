@@ -56,7 +56,7 @@ public class UpgradeAttackRate : GeneralUpgrade
     }
     private void UpdateArgs() // Update arguments passed in event
     {
-        onUpgradeArgs.currencyBase = this.baseUpgradeCost * Mathf.Pow(this.upgradeCostMultiplier, this.upgradeLevel);
+        onUpgradeArgs.currencyBase = this.currentUpgradeCost;
         onUpgradeArgs.upgradeEffect = this.upgradeLevel * this.baseUpgradeEffect * this.upgradeEffectMultiplier;
         onUpgradeArgs.upgradeLevel = this.upgradeLevel;
         onUpgradeArgs.nextUpgradeEffect = (this.upgradeLevel +1) * this.baseUpgradeEffect * this.upgradeEffectMultiplier;
