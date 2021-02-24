@@ -21,8 +21,8 @@ public class ButtonCurrencyUpUi : MonoBehaviour
 
     private void OnUpgradeCurrency(OnUpgradeEventArgs upgradeEventArgs)
     {
-        currentCurrency.text = upgradeEventArgs.upgradeEffect.ToString("f0");
-        nextCurrency.text = upgradeEventArgs.nextUpgradeEffect.ToString("f0");
+        currentCurrency.text = upgradeEventArgs.upgradeEffect.ToString("f1");
+        nextCurrency.text = upgradeEventArgs.nextUpgradeEffect.ToString("f1");
 
     }
 }

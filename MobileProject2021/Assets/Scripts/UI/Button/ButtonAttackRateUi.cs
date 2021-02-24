@@ -21,8 +21,8 @@ public class ButtonAttackRateUi : MonoBehaviour
 
     private void OnUpgradeRateAttack(OnUpgradeEventArgs upgradeEventArgs)
     {
-        textCurrentRateAtk.text = upgradeEventArgs.upgradeEffect.ToString();
-        textNextRateATtk.text = upgradeEventArgs.nextUpgradeEffect.ToString();
+        textCurrentRateAtk.text = upgradeEventArgs.upgradeEffect.ToString("f1");
+        textNextRateATtk.text = upgradeEventArgs.nextUpgradeEffect.ToString("f1");
 
     }
 }

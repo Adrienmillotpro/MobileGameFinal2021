@@ -21,8 +21,8 @@ public class ButtonElementalReactionUi : MonoBehaviour
 
     private void OnUpgradeElementalReaction(OnUpgradeEventArgs upgradeEventArgs)
     {
-        currentElementalReaction.text = upgradeEventArgs.upgradeEffect.ToString("f0");
-        nextElementalReaction.text = upgradeEventArgs.nextUpgradeEffect.ToString("f0");
+        currentElementalReaction.text = upgradeEventArgs.upgradeEffect.ToString("f1");
+        nextElementalReaction.text = upgradeEventArgs.nextUpgradeEffect.ToString("f1");
     }
 }
 

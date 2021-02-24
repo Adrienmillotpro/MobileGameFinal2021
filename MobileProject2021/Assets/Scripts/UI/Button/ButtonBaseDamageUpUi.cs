@@ -21,11 +21,10 @@ public class ButtonBaseDamageUpUi : MonoBehaviour
 
     private void OnUpgradeDMGUpdateTexts(OnUpgradeEventArgs upgradeEventArgs)
     {
-        textCurrentAtk.text = upgradeEventArgs.upgradeEffect.ToString("f0");
-        textNextATtk.text = upgradeEventArgs.nextUpgradeEffect.ToString("f0");
+        textCurrentAtk.text = upgradeEventArgs.upgradeEffect.ToString("f1");
+        textNextATtk.text = upgradeEventArgs.nextUpgradeEffect.ToString("f1");
 
-        Debug.Log(upgradeEventArgs.nextUpgradeEffect + "Next Upgrade Effect");
-        Debug.Log(upgradeEventArgs.upgradeEffect + "Current Update");
+      ;
 
     }
 

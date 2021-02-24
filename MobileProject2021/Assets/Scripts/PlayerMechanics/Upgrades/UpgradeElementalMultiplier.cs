@@ -21,6 +21,14 @@ public class UpgradeElementalMultiplier : GeneralUpgrade
         PlayerCurrencies.OnUpdateCurrency -= OnUpdateCurrencyUpdateButton;
     }
 
+    private void Start()
+    {
+        this.currentUpgradeEffect = this.baseUpgradeEffect;
+        this.currentUpgradeCost = this.baseUpgradeCost;
+        this.upgradeLevel = 1;
+
+    }
+
     private void OnUpdateCurrencyUpdateButton(OnUpdateCurrenciesEventArgs currenciesArgs)
     {
         if (this.currentUpgradeCost < currenciesArgs.currentBase)
@@ -48,9 +56,9 @@ public class UpgradeElementalMultiplier : GeneralUpgrade
     }
     private void UpdateArgs() // Update arguments passed in event
     {
-        onUpgradeArgs.currencyBase = this.currentUpgradeCost;
-        onUpgradeArgs.upgradeEffect = this.currentUpgradeEffect;
+        onUpgradeArgs.currencyBase = this.baseUpgradeCost * Mathf.Pow(this.upgradeCostMultiplier, this.upgradeLevel);
+        onUpgradeArgs.upgradeEffect = this.upgradeLevel * this.baseUpgradeEffect * this.upgradeEffectMultiplier;
         onUpgradeArgs.upgradeLevel = this.upgradeLevel;
-        onUpgradeArgs.nextUpgradeEffect = this.currentUpgradeEffect + this.upgradeLevel * this.upgradeEffectMultiplier;
+        onUpgradeArgs.nextUpgradeEffect = (this.upgradeLevel +1) * this.baseUpgradeEffect * this.upgradeEffectMultiplier;
     }
 }

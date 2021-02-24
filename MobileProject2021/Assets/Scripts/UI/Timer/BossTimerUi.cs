@@ -7,7 +7,7 @@ using TMPro;
 public class BossTimerUi : MonoBehaviour
 {
     [SerializeField] private TMP_Text bossTimerUi;
-    [SerializeField] private Slider sliderUi;
+    //[SerializeField] private Slider sliderUi;
 
 
     private void Awake()
@@ -46,7 +46,7 @@ public class BossTimerUi : MonoBehaviour
             bossTimer--;
             bossTimerUi.text = bossTimer.ToString();
 
-            sliderUi.value = bossTimer;
+           
         }
 
     }
