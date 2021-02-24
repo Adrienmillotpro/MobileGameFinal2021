@@ -5,5 +5,5 @@ using UnityEngine;
 
 public class OnTapEventArgs : EventArgs
 {
-
+    public Vector3 hitLocation;
 }

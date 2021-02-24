@@ -16,6 +16,7 @@ public class TapMechanic : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !isTouching)
         {
             RaycastHit2D hitInfo = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            onTapArgs.hitLocation = hitInfo.point;
             if (hitInfo.transform.gameObject.name == "Panel2DCollider")
             {
                 isTouching = true;

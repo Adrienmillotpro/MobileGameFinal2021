@@ -3132,6 +3132,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 940089076}
   m_CullTransparentMesh: 1
+--- !u!1 &942632541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 942632543}
+  - component: {fileID: 942632542}
+  m_Layer: 0
+  m_Name: TapParticleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &942632542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942632541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 543ae404d83299940b5f48236314dc4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particuleHit: {fileID: 100000, guid: bb24fa1a8c34a19499547533720cea99, type: 3}
+--- !u!4 &942632543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942632541}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1889305, y: -2.9968843, z: 185.42828}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &996301525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4935,7 +4979,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7a756070545cc542b68b0d2bd60f849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particuleHit: {fileID: 100000, guid: 3d84922c38d7c444782fb1a791d97b21, type: 3}
 --- !u!95 &1570674315 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8056653901654962586, guid: f6198a57c691d3e4fa58eca42043adfd, type: 3}

@@ -6,7 +6,6 @@ using System;
 
 public class OnTapVisuals : MonoBehaviour
 {
-    [SerializeField] private GameObject particuleHit;
 
     private void Awake()
     {
@@ -19,8 +18,9 @@ public class OnTapVisuals : MonoBehaviour
 
     private void OnTapDoPS(OnTapEventArgs tapArgs)
     {
-        Vector3 spawnLocation = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, Camera.main.ScreenToWorldPoint(Input.mousePosition).z + 5f);
-        Instantiate(particuleHit, spawnLocation, Quaternion.identity);
+        var newPs = TapParticleSystem.Instance.Get();
+        newPs.transform.position = tapArgs.hitLocation;
+        newPs.gameObject.SetActive(true);
     }
 
 }
