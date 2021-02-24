@@ -16,6 +16,7 @@ public class HeroesSlots : MonoBehaviour
     public static event Action<OnUpdateHeroesSlotsEventArgs> OnUpdateHeroesSlots;
     public static event Action<OnUpdateHeroesSlotsEventArgs> OnEquipHeroes;
     private OnUpdateHeroesSlotsEventArgs onUpdateHeroesArgs = new OnUpdateHeroesSlotsEventArgs();
+    private OnUpdateHeroesSlotsEventArgs onEquipHeroesArgs = new OnUpdateHeroesSlotsEventArgs();
 
     public void OnSelectFireSlot()
     {
@@ -49,6 +50,9 @@ public class HeroesSlots : MonoBehaviour
     public void EquipHero(GameObject hero)
     {
         equippedHeroes[slotIndex] = hero;
+        onEquipHeroesArgs.equippedHero = hero;
+        onEquipHeroesArgs.slotIndex = slotIndex;
+        OnEquipHeroes?.Invoke(onEquipHeroesArgs);
     }
 
 }
