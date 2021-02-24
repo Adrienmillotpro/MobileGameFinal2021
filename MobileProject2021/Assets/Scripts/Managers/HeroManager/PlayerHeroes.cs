@@ -6,5 +6,8 @@ public class PlayerHeroes : MonoBehaviour
 {
     [HideInInspector] public GameObject[] playerHeroes = new GameObject[4];
 
-
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
 }
