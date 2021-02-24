@@ -6,14 +6,13 @@ using UnityEngine.SceneManagement;
 public class SceneTransitions : MonoBehaviour
 {
     [SerializeField] private Animator transitionAnimator;
-    
+    [SerializeField] private Animator mcAnimator;
 
-    private void Update()
+
+    public void LoadSceneButton()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartCoroutine(LoadScene());
-        }
+        mcAnimator.SetBool("EnterCommunion", true);
+        StartCoroutine(LoadScene());
     }
     IEnumerator LoadScene()
     {
