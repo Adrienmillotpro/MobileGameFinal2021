@@ -1556,6 +1556,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PREFAB-BossMask
       objectReference: {fileID: 0}
+    - target: {fileID: 2947106669752803050, guid: 6e573c77af499eb4596a1979b4f07c0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4658377178935477234, guid: 6e573c77af499eb4596a1979b4f07c0d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4503,6 +4507,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThunderWiaga
       objectReference: {fileID: 0}
+    - target: {fileID: 2131857307154502889, guid: b838e2cbb9686094492be827a2967ec4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b838e2cbb9686094492be827a2967ec4, type: 3}
 --- !u!1 &748185430415599554
@@ -6874,6 +6882,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterWiaga
       objectReference: {fileID: 0}
+    - target: {fileID: 1616188647475882007, guid: 4177bf32c0c93bd4aa5d1c687a476478, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4177bf32c0c93bd4aa5d1c687a476478, type: 3}
 --- !u!114 &3895969815033655620
@@ -7070,7 +7082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4212590916914499945, guid: 6b7f1512fa0c07d4ba5dceb45c1ff247, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8138637234764822050, guid: 6b7f1512fa0c07d4ba5dceb45c1ff247, type: 3}
       propertyPath: m_RootOrder
@@ -7349,6 +7361,10 @@ PrefabInstance:
     - target: {fileID: 6137581868511717334, guid: e3a8a9560f8e8be409f2ac4ac7bc636b, type: 3}
       propertyPath: m_Name
       value: AirWiaga
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137581868511717334, guid: e3a8a9560f8e8be409f2ac4ac7bc636b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3a8a9560f8e8be409f2ac4ac7bc636b, type: 3}
@@ -8708,6 +8724,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Wiaga
       objectReference: {fileID: 0}
+    - target: {fileID: 1131763642823929682, guid: f952d6bdb23474d4f802e782ff64f5b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1860455632963886902, guid: f952d6bdb23474d4f802e782ff64f5b0, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -9589,6 +9609,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PREFAB-MonkeyBoss
       objectReference: {fileID: 0}
+    - target: {fileID: 276572193618296962, guid: ad9bbc4ba31f0dc44987237aad40450c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5446717294111665309, guid: ad9bbc4ba31f0dc44987237aad40450c, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -9973,6 +9997,10 @@ PrefabInstance:
     - target: {fileID: 6191834965197021547, guid: e8fd3db0e923e6542a154b8d6f87a651, type: 3}
       propertyPath: m_Name
       value: Singe
+      objectReference: {fileID: 0}
+    - target: {fileID: 6191834965197021547, guid: e8fd3db0e923e6542a154b8d6f87a651, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8fd3db0e923e6542a154b8d6f87a651, type: 3}
