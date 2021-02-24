@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class McVisuals : MonoBehaviour
 {
@@ -12,6 +13,18 @@ public class McVisuals : MonoBehaviour
     private void Awake()
     {
         TapMechanic.OnTap += OnTapDoUpdateState;
+
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+
+        if (sceneName == "CommunionSceneUI")
+        {
+            animator.SetBool("CommunionScene", true);
+        }
+        else
+        {
+            animator.SetBool("CommunionScene", false);
+        }
     }
     private void OnDisable()
     {
