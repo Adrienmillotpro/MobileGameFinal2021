@@ -14,6 +14,7 @@ public class McVisuals : MonoBehaviour
     {
         TapMechanic.OnTap += OnTapDoUpdateState;
 
+
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 
