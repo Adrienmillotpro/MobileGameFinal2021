@@ -81,7 +81,7 @@ public class SwipeAttackMenu : MonoBehaviour
         }
 
         //Did we cross the distance?
-        if (swipeDelta.magnitude > 200)
+        if (swipeDelta.magnitude > 150)
         {
             //Which direction?
             float x = swipeDelta.x;
