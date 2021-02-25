@@ -1009,7 +1009,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56777e54e7ae73b409beb2018042d207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionAnimator: {fileID: 768370337}
+  transitionAnimator:
+  - {fileID: 768370337}
   mcAnimator: {fileID: 571341625}
   requireHoldTime: 3
   onLongClick:
