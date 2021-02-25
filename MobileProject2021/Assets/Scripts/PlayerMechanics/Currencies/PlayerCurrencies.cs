@@ -67,4 +67,16 @@ public class PlayerCurrencies : MonoBehaviour
         currenciesArgs.currentPremium = this.currencyPremium;
         currenciesArgs.currentElemental = this.currencyElemental;
     }
+
+    public void CommunionUpdateCurrency(bool isPremium, float cost)
+    {
+        if (isPremium)
+        {
+            currencyPremium -= cost;
+        }
+        else
+        {
+            currencyElemental -= cost;
+        }
+    }
 }
