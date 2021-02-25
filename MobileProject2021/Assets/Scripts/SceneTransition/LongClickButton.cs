@@ -71,7 +71,7 @@ public class LongClickButton : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         IEnumerator LoadScene()
         {
             transitionAnimator.enabled = true;
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(2f);
             SceneManager.LoadScene(+1);
 
 
