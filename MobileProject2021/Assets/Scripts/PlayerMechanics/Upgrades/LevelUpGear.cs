@@ -13,7 +13,7 @@ public class LevelUpGear : MonoBehaviour
 
     private void Awake()
     {
-        playerCurrencies = FindObjectOfType<PlayerCurrencies>();
+        playerCurrencies = PlayerCurrencies.Instance;
     }
 
     private void Update()

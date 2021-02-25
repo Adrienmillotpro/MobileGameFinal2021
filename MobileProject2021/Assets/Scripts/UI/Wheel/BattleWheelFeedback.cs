@@ -17,6 +17,16 @@ public class BattleWheelFeedback : MonoBehaviour
         SwipeAttackMenu.OnSwap -= OnSwapUpdateWheelFeedback;
     }
 
+    private void Start()
+    {
+        for (int i = 0; i < shadedSymbols.Length; i++)
+        {
+            shadedSymbols[i].SetActive(false);
+        }
+        shadedSymbols[0].SetActive(true);
+        nonShadedSymbols[0].SetActive(false);
+    }
+
     private void OnSwapUpdateWheelFeedback(OnSwapEventArgs swapArgs)
     {
         for (int i = 0; i < shadedSymbols.Length; i++)
