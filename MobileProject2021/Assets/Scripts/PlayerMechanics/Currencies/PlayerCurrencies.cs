@@ -36,6 +36,7 @@ public class PlayerCurrencies : MonoBehaviour
         UpgradeElementalMultiplier.OnUpgradeElemMult += OnUpgradeUpdateCurrency;
         UpgradeCurrencyMultiplier.OnUpgradeCurrMult += OnUpgradeUpdateCurrency;
     }
+
     private void OnDisable()
     {
         DamageManager.OnDealDamage -= OnDealDamageEarnCurrency;
