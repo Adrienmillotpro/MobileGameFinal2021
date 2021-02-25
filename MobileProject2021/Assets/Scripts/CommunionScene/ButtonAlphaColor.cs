@@ -14,7 +14,7 @@ public class ButtonAlphaColor : MonoBehaviour
 
     [SerializeField] private float alpha = 0.1f;
 
-    private void Gear()
+    public void Gear()
     {
         gearButton.color = new Color(1, 1, 1, 1);
 
@@ -24,7 +24,7 @@ public class ButtonAlphaColor : MonoBehaviour
         achievementsButton.color = new Color(1, 1, 1, alpha);
     }
 
-    private void Heroes()
+    public void Heroes()
     {
         heroesButton.color = new Color(1, 1, 1, 1);
 
@@ -34,7 +34,7 @@ public class ButtonAlphaColor : MonoBehaviour
         achievementsButton.color = new Color(1, 1, 1, alpha);
     }
 
-    private void Shop()
+    public void Shop()
     {
         shopButton.color = new Color(1, 1, 1, 1);
 
@@ -44,7 +44,7 @@ public class ButtonAlphaColor : MonoBehaviour
         achievementsButton.color = new Color(1, 1, 1, alpha);
     }
 
-    private void Options()
+    public void Options()
     {
         optionsButton.color = new Color(1, 1, 1, 1);
 
@@ -54,7 +54,7 @@ public class ButtonAlphaColor : MonoBehaviour
         achievementsButton.color = new Color(1, 1, 1, alpha);
     }
 
-    private void Achievement()
+    public void Achievement()
     {
         achievementsButton.color = new Color(1, 1, 1, 1);
 
