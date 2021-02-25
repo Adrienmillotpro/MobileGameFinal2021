@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCurrencies : MonoBehaviour
 {
@@ -30,20 +31,28 @@ public class PlayerCurrencies : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        DamageManager.OnDealDamage += OnDealDamageEarnCurrency;
-        UpgradeDMG.OnUpgradeDMG += OnUpgradeUpdateCurrency;
-        UpgradeAttackRate.OnUpgradeAttackRate += OnUpgradeUpdateCurrency;
-        UpgradeElementalMultiplier.OnUpgradeElemMult += OnUpgradeUpdateCurrency;
-        UpgradeCurrencyMultiplier.OnUpgradeCurrMult += OnUpgradeUpdateCurrency;
+        if (SceneManager.GetActiveScene().name == "MAIN")
+        {
+            DamageManager.OnDealDamage += OnDealDamageEarnCurrency;
+            UpgradeDMG.OnUpgradeDMG += OnUpgradeUpdateCurrency;
+            UpgradeAttackRate.OnUpgradeAttackRate += OnUpgradeUpdateCurrency;
+            UpgradeElementalMultiplier.OnUpgradeElemMult += OnUpgradeUpdateCurrency;
+            UpgradeCurrencyMultiplier.OnUpgradeCurrMult += OnUpgradeUpdateCurrency;
+        }
+
     }
 
     private void OnDisable()
     {
-        DamageManager.OnDealDamage -= OnDealDamageEarnCurrency;
-        UpgradeDMG.OnUpgradeDMG -= OnUpgradeUpdateCurrency;
-        UpgradeAttackRate.OnUpgradeAttackRate -= OnUpgradeUpdateCurrency;
-        UpgradeElementalMultiplier.OnUpgradeElemMult -= OnUpgradeUpdateCurrency;
-        UpgradeCurrencyMultiplier.OnUpgradeCurrMult -= OnUpgradeUpdateCurrency;
+        if (SceneManager.GetActiveScene().name == "MAIN")
+        {
+            DamageManager.OnDealDamage -= OnDealDamageEarnCurrency;
+            UpgradeDMG.OnUpgradeDMG -= OnUpgradeUpdateCurrency;
+            UpgradeAttackRate.OnUpgradeAttackRate -= OnUpgradeUpdateCurrency;
+            UpgradeElementalMultiplier.OnUpgradeElemMult -= OnUpgradeUpdateCurrency;
+            UpgradeCurrencyMultiplier.OnUpgradeCurrMult -= OnUpgradeUpdateCurrency;
+        }
+
     }
 
     private void Start()

@@ -23,6 +23,15 @@ public class HeroManager : MonoBehaviour
     private void Awake()
     {
         SwipeAttackMenu.OnSwap += OnSwapUpdateHero;
+
+    }
+    private void Start()
+    {
+        for (int i = 0; i < heroes.Length; i++)
+        {
+            heroes[i] = PlayerHeroes.Instance.InstantiatedHeroes[i];
+        }
+
         for (int i = 0; i < heroes.Length; i++)
         {
             heroesStats[i] = heroes[i].GetComponent<HeroStats>();
@@ -30,9 +39,6 @@ public class HeroManager : MonoBehaviour
         }
         currentStats = heroesStats[0];
         currentVisuals = heroesVisuals[0];
-    }
-    private void Start()
-    {
         heroesVisuals[1].enabled = false;
         heroesVisuals[2].enabled = false;
         heroesVisuals[3].enabled = false;

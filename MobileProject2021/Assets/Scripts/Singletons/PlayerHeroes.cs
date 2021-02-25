@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHeroes : MonoBehaviour
 {
-    private GameObject[] playerHeroes = new GameObject[4];
+    [SerializeField] private GameObject[] playerHeroes = new GameObject[4];
     private GameObject[] instantiatedHeroes = new GameObject[4];
+    public GameObject[] InstantiatedHeroes { get { return instantiatedHeroes; } }
 
     public static PlayerHeroes Instance { get; private set; }
 
