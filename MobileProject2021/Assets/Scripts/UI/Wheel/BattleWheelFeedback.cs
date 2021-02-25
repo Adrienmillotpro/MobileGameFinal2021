@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BattleWheelFeedback : MonoBehaviour
 {
-
+    [SerializeField] private GameObject[] shadedSymbols;
+    [SerializeField] private GameObject[] nonShadedSymbols;
 
     private void Awake()
     {
@@ -18,21 +19,31 @@ public class BattleWheelFeedback : MonoBehaviour
 
     private void OnSwapUpdateWheelFeedback(OnSwapEventArgs swapArgs)
     {
+        for (int i = 0; i < shadedSymbols.Length; i++)
+        {
+            shadedSymbols[i].SetActive(false);
+            nonShadedSymbols[i].SetActive(true);
+        }
+
         if (swapArgs.swipeUp)
         {
-
+            nonShadedSymbols[0].SetActive(false);
+            shadedSymbols[0].SetActive(true);
         }
         if (swapArgs.swipeRight)
         {
-
+            nonShadedSymbols[1].SetActive(false);
+            shadedSymbols[1].SetActive(true);
         }
         if (swapArgs.swipeDown)
         {
-
+            nonShadedSymbols[2].SetActive(false);
+            shadedSymbols[2].SetActive(true);
         }
         if (swapArgs.swipeLeft)
         {
-
+            nonShadedSymbols[3].SetActive(false);
+            shadedSymbols[3].SetActive(true);
         }
     }
 }
