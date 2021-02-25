@@ -6,7 +6,6 @@ using System;
 public class EnemyManager : MonoBehaviour
 {
     [SerializeField] private SO_Biome[] enemyBiomes;
-    [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private GameObject bossPrefab;
 
     // Biome Settings

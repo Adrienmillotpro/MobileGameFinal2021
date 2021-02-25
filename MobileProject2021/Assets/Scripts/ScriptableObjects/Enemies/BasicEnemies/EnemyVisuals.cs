@@ -19,6 +19,7 @@ public class EnemyVisuals : MonoBehaviour
 
     private void OnSpawnUpdateVisuals(OnSpawnEventArgs spawnArgs)
     {
+
     }
     private void OnDealDamageUpdateVisuals(OnDamageEventArgs damageArgs)
     {
