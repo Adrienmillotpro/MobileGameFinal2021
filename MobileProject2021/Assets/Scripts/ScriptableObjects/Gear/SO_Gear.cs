@@ -10,15 +10,13 @@ public class SO_Gear : ScriptableObject
     [SerializeField] private string gearDescription;
 
     [SerializeField] private GearType gearType;
-    [SerializeField] private GearTier gearTier;
     #region Getters
     public GearType GearType { get { return gearType; } }
-    public GearTier GearTier { get { return gearTier; } }
     #endregion
 
     [SerializeField] private GameObject prefabGear;
 
-    [Header("Stats")]
+    [Header("Stats Multipliers")]
     [SerializeField] private float gearDamage;
     [SerializeField] private float gearAtkRate;
     [SerializeField] private float gearElemMult;
@@ -30,6 +28,25 @@ public class SO_Gear : ScriptableObject
     public float GearCurrMult { get { return gearCurrMult; } }
     #endregion
 
+    [SerializeField] private float gearBaseCost;
+    [SerializeField] private int[] lvlCapForTier;
+    #region Getters
+    public int[] LvlCapForTier { get { return lvlCapForTier; } }
+    public float GearBaseCost { get { return gearBaseCost; } }
+    #endregion
 
+    [HideInInspector] public GearTier gearTier;
+
+    [HideInInspector] public int gearLevel;
+    [HideInInspector] public float gearTierMultiplier;
+
+    [HideInInspector] public float costToLevelUp;
+    [HideInInspector] public float costToTierUp;
+    [HideInInspector] public bool isAtTierCap;
+
+    [HideInInspector] public float currentGearDamage;
+    [HideInInspector] public float currentGearAtkRate;
+    [HideInInspector] public float currentGearElemMult;
+    [HideInInspector] public float currentGearCurrMult;
 
 }
