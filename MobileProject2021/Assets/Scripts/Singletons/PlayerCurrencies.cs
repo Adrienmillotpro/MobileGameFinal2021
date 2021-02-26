@@ -20,7 +20,7 @@ public class PlayerCurrencies : MonoBehaviour
     public static event Action<OnUpdateCurrenciesEventArgs> OnUpdateCurrency;
     private OnUpdateCurrenciesEventArgs currenciesArgs = new OnUpdateCurrenciesEventArgs();
 
-    private void Awake()
+    private void OnEnable()
     {
         if (Instance == null)
         {
@@ -40,6 +40,7 @@ public class PlayerCurrencies : MonoBehaviour
             UpgradeCurrencyMultiplier.OnUpgradeCurrMult += OnUpgradeUpdateCurrency;
         }
 
+        DontDestroyOnLoad(this.gameObject);
     }
 
     private void OnDisable()

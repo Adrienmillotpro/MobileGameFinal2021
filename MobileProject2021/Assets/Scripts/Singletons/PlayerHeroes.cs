@@ -21,6 +21,7 @@ public class PlayerHeroes : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
     }
 
     private void OnEnable()
@@ -36,7 +37,8 @@ public class PlayerHeroes : MonoBehaviour
         {
             HeroesSlots.OnEquipHeroes += OnEquipHeroesUpdatePlayerHeroes;
         }
-        DontDestroyOnLoad(this);
+
+        DontDestroyOnLoad(this.gameObject);
     }
 
     private void OnDisable()
