@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class SceneTransitions : MonoBehaviour
 {
     [SerializeField] private Animator[] transitionAnimator;
-    [SerializeField] private Animator mcAnimator;
-
+    
+    
     private int indexAnimator;
 
     private void OnEnable()
@@ -45,9 +45,9 @@ public class SceneTransitions : MonoBehaviour
         }
     }
 
-    public void LoadSceneButton()
+    
+    public void NextSceneTransition()
     {
-        mcAnimator.SetBool("EnterCommunion", true);
         StartCoroutine(LoadScene());
     }
 
