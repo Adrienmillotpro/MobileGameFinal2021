@@ -10,7 +10,6 @@ public class PlayerGear : MonoBehaviour
     public SO_Gear[] SO_HandGears { get { return so_handGears; } }
     public SO_Gear[] SO_AnkleGears { get { return so_ankleGears; } }
 
-
     public static PlayerGear Instance { get; private set; }
 
     private void Awake()
@@ -28,5 +27,10 @@ public class PlayerGear : MonoBehaviour
     private void OnEnable()
     {
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    public void UpdateGear(GearType gearType, int index)
+    {
+
     }
 }
