@@ -15,13 +15,13 @@ public class CommunionSceneTransition : MonoBehaviour
                 transitionAnimators[0].enabled = true;
                 break;
             case SwipeType.Right:
-                transitionAnimators[1].enabled = true;
+                transitionAnimators[0].enabled = true;
                 break;
             case SwipeType.Down:
-                transitionAnimators[2].enabled = true;
+                transitionAnimators[0].enabled = true;
                 break;
             case SwipeType.Left:
-                transitionAnimators[3].enabled = true;
+                transitionAnimators[0].enabled = true;
                 break;
         }
     }
