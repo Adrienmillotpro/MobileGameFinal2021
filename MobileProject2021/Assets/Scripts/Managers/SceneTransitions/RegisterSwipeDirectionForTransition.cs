@@ -16,6 +16,11 @@ public class RegisterSwipeDirectionForTransition : MonoBehaviour
         SwipeAttackMenu.OnSwap -= OnSwapUpdateTransitionType;
     }
 
+    private void Start()
+    {
+        so_Direction.swipeType = SwipeType.Up;
+    }
+
     private void OnSwapUpdateTransitionType(OnSwapEventArgs swapArgs)
     {
         if (swapArgs.swipeUp)
@@ -35,4 +40,6 @@ public class RegisterSwipeDirectionForTransition : MonoBehaviour
             so_Direction.swipeType = SwipeType.Left;
         }
     }
+
+    
 }
