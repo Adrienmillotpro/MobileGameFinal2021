@@ -22,15 +22,17 @@ public class HeroManager : MonoBehaviour
 
     private void Awake()
     {
-        SwipeAttackMenu.OnSwap += OnSwapUpdateHero;
+        SwipeAttackMenu.OnSwap += OnSwapUpdateHero;;
+
+        for (int i = 0; i < heroes.Length; i++)
+        {
+            heroes[i] = Instantiate(PlayerHeroes.Instance.equippedPlayerHeroes[i]);
+        }
 
     }
     private void Start()
     {
-        for (int i = 0; i < heroes.Length; i++)
-        {
-            heroes[i] = PlayerHeroes.Instance.InstantiatedHeroes[i];
-        }
+
 
         for (int i = 0; i < heroes.Length; i++)
         {

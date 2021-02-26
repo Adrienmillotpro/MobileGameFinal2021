@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class PlayerHeroes : MonoBehaviour
 {
     [SerializeField] private GameObject[] playerHeroes = new GameObject[4];
-    private GameObject[] instantiatedHeroes = new GameObject[4];
+    private GameObject[] instantiatedHeroes;
+    public GameObject[] equippedPlayerHeroes { get { return playerHeroes; } }
     public GameObject[] InstantiatedHeroes { get { return instantiatedHeroes; } }
 
     public static PlayerHeroes Instance { get; private set; }
@@ -27,10 +28,11 @@ public class PlayerHeroes : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "MAIN")
         {
-            for (int i = 0; i < playerHeroes.Length; i++)
-            {
-                instantiatedHeroes[i] = Instantiate(playerHeroes[i]);
-            }
+            //instantiatedHeroes = new GameObject[4];
+            //for (int i = 0; i < playerHeroes.Length; i++)
+            //{
+            //    instantiatedHeroes[i] = Instantiate(playerHeroes[i]);
+            //}
         }
         else if (SceneManager.GetActiveScene().name == "CommunionSceneUI")
         {
