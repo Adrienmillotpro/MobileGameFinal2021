@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3121657688080340804}
   - component: {fileID: 4433201819157535929}
   - component: {fileID: 2750382922042901671}
+  - component: {fileID: 7786442244820586029}
   m_Layer: 0
   m_Name: Feu2
   m_TagString: Untagged
@@ -4815,3 +4816,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &7786442244820586029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098420043632930214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fd2e8874f60266498a388d7229a1bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnlyDeactivate: 1
+  particleType: 0
+  intensity: 2

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6073799978476263812}
   - component: {fileID: 4800210857516536441}
   - component: {fileID: 6427605839054637671}
+  - component: {fileID: 3293617342347279910}
   m_Layer: 0
   m_Name: Eau2
   m_TagString: Untagged
@@ -4815,3 +4816,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &3293617342347279910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115623707811504998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fd2e8874f60266498a388d7229a1bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnlyDeactivate: 1
+  particleType: 1
+  intensity: 2
