@@ -7,7 +7,6 @@ public class EquipGear : MonoBehaviour
     [SerializeField] private SO_Gear gear;
     private PlayerGear playerGear;
 
-
     private void Awake()
     {
         playerGear = PlayerGear.Instance;

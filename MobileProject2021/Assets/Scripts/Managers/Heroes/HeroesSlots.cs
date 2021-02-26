@@ -13,9 +13,17 @@ public class HeroesSlots : MonoBehaviour
     public GameObject[] EquippedHeroes { get { return equippedHeroes; } }
 
     public static event Action<OnUpdateHeroesSlotsEventArgs> OnUpdateHeroesSlots;
-    public static event Action<OnUpdateHeroesSlotsEventArgs> OnEquipHeroes;
     private OnUpdateHeroesSlotsEventArgs onUpdateHeroesArgs = new OnUpdateHeroesSlotsEventArgs();
-    private OnUpdateHeroesSlotsEventArgs onEquipHeroesArgs = new OnUpdateHeroesSlotsEventArgs();
+
+    private void OnEnable()
+    {
+        EquipHeroes.OnEquipHero += OnEquipHeroesUpdatePlayerHeroes;
+    }
+
+    private void OnDisable()
+    {
+        EquipHeroes.OnEquipHero -= OnEquipHeroesUpdatePlayerHeroes;
+    }
 
     public void OnSelectFireSlot()
     {
@@ -43,15 +51,12 @@ public class HeroesSlots : MonoBehaviour
         slotType = ElementalTypes.Water;
         slotIndex = 3;
         onUpdateHeroesArgs.slotType = slotType;
-        OnUpdateHeroesSlots?.Invoke(onUpdateHeroesArgs);
     }
 
-    public void EquipHero(GameObject hero)
+    private void OnEquipHeroesUpdatePlayerHeroes(OnUpdateHeroesSlotsEventArgs equipArgs)
     {
-        equippedHeroes[slotIndex] = hero;
-        onEquipHeroesArgs.equippedHero = hero;
-        onEquipHeroesArgs.slotIndex = slotIndex;
-        OnEquipHeroes?.Invoke(onEquipHeroesArgs);
+        onUpdateHeroesArgs.equippedHero = equipArgs.equippedHero;
+        OnUpdateHeroesSlots?.Invoke(onUpdateHeroesArgs);
     }
 
 }

@@ -34,7 +34,7 @@ public class PlayerHeroes : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "CommunionSceneUI")
         {
-            HeroesSlots.OnEquipHeroes += OnEquipHeroesUpdatePlayerHeroes;
+            HeroesSlots.OnUpdateHeroesSlots += OnEquipHeroesUpdatePlayerHeroes;
         }
 
         DontDestroyOnLoad(this.gameObject);
@@ -44,7 +44,7 @@ public class PlayerHeroes : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "CommunionSceneUI")
         {
-            HeroesSlots.OnEquipHeroes -= OnEquipHeroesUpdatePlayerHeroes;
+            HeroesSlots.OnUpdateHeroesSlots -= OnEquipHeroesUpdatePlayerHeroes;
         }
     }
 

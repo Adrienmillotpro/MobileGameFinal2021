@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,8 @@ public class EquipHeroes : MonoBehaviour
     [SerializeField] private GameObject hero;
     [SerializeField] private GameObject heroUi;
 
-    private HeroesSlots slots;
+    public static event Action<OnUpdateHeroesSlotsEventArgs> OnEquipHero;
+    private OnUpdateHeroesSlotsEventArgs equipHeroArgs = new OnUpdateHeroesSlotsEventArgs();
 
     private void Awake()
     {
@@ -34,12 +36,11 @@ public class EquipHeroes : MonoBehaviour
 
     private void Start()
     {
-        slots = FindObjectOfType<HeroesSlots>();
+        this.equipHeroArgs.equippedHero = this.hero;
     }
 
     public void EquipHero()
     {
-        slots.EquipHero(hero);
-        Debug.Log(hero);
+        OnEquipHero?.Invoke(this.equipHeroArgs);
     }
 }

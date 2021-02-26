@@ -1655,7 +1655,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 704055823}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.49183136
+  m_Size: 0.4918314
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -18946,8 +18946,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56777e54e7ae73b409beb2018042d207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionAnimator:
-  - {fileID: 0}
   mcAnimator: {fileID: 0}
   requireHoldTime: 3
   onLongClick:
