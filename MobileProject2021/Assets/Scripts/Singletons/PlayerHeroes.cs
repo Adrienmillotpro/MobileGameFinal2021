@@ -21,7 +21,6 @@ public class PlayerHeroes : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
     }
 
     private void OnEnable()
