@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class LongClickButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    [SerializeField] private Animator[] transitionAnimator;
+   
     [SerializeField] private Animator mcAnimator;
 
 
@@ -33,15 +33,7 @@ public class LongClickButton : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     {
         Reset();
     }
-
-    private void OnEnable()
-    {
-        SwipeAttackMenu.OnSwap += OnSwapUpdateTransition;
-    }
-    private void OnDisable()
-    {
-        SwipeAttackMenu.OnSwap -= OnSwapUpdateTransition;
-    }
+        
     private void Update()
     {
         if(pointerDown)
@@ -50,9 +42,9 @@ public class LongClickButton : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
             if(pointerDownTimer >= requireHoldTime)
             {
-                if (onLongClick != null)
-                    // onLongClick.Invoke();
-                    LoadScene1();
+                
+                     onLongClick?.Invoke();
+                    
 
                 Reset();
             }
@@ -62,10 +54,7 @@ public class LongClickButton : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             mcAnimator.SetBool("ExitCommunion", false);
         }
     }
-    private void Start()
-    {
-        indexAnimator = 0;
-    }
+   
     private void Reset()
     {
         pointerDown = false;
@@ -75,40 +64,7 @@ public class LongClickButton : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         mcAnimator.SetBool("EnterCommunion", false);
     }
 
-    private void OnSwapUpdateTransition(OnSwapEventArgs swapArgs)
-    {
-        if (swapArgs.swipeUp)
-        {
-            indexAnimator = 0;
-        }
-        if (swapArgs.swipeRight)
-        {
-            indexAnimator = 1;
-        }
-        if (swapArgs.swipeDown)
-        {
-            indexAnimator = 2;
-        }
-        if (swapArgs.swipeLeft)
-        {
-            indexAnimator = 3;
-        }
-    }
-
-    private void LoadScene1()
-    {
-        
-        StartCoroutine(LoadScene());
-        
-        IEnumerator LoadScene()
-        {
-            transitionAnimator[indexAnimator].enabled = true;
-            yield return new WaitForSeconds(2f);
-            SceneManager.LoadScene(+1);
-
-
-        }
-    }
+    
 
 
 
