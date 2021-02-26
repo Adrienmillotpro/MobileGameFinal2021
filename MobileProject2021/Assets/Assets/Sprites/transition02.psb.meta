@@ -1,0 +1,2181 @@
+fileFormatVersion: 2
+guid: 7d7fe7d7b51ed0d43997c24cd3cd31b2
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: transition02_00.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1308
+      height: 2436
+    spriteID: a350543b1166c694392030b4f9f9b260
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+  - name: transition02_01.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2448
+      width: 1308
+      height: 2436
+    spriteID: b173c39e6c34d024c970e6bd94ac078e
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 2448}
+  - name: transition02_02.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4892
+      width: 1308
+      height: 2436
+    spriteID: b33d2e435f89b364cb0c56b4508e091f
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4892}
+  - name: transition02_03.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 7336
+      width: 1308
+      height: 2436
+    spriteID: 84ddfe7c6306f55449c9bc5113ced379
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 7336}
+  - name: transition02_04.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 9780
+      width: 1308
+      height: 2436
+    spriteID: d1c2a05b66cd0b74e8bef4d84dcb85a2
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 9780}
+  - name: transition02_05.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 12224
+      width: 1308
+      height: 2436
+    spriteID: 784dbaf1900b03640a6c67b2bca439da
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 12224}
+  - name: transition02_06.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1320
+      y: 4
+      width: 1308
+      height: 2436
+    spriteID: b1ea318db8eae2f4c8e12d92e9ebd227
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1320, y: 4}
+  - name: transition02_07.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1320
+      y: 2448
+      width: 1308
+      height: 2436
+    spriteID: 2deb3ed31ec6d1b4cba57befefb0b51c
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1320, y: 2448}
+  - name: transition02_08.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1320
+      y: 4892
+      width: 1308
+      height: 2436
+    spriteID: 2764be8d43cc0174e86d423efe8a464a
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1320, y: 4892}
+  - name: transition02_09.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1320
+      y: 7336
+      width: 1308
+      height: 2436
+    spriteID: c8c883b44f272a642a7f4f6f078d154b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1320, y: 7336}
+  - name: transition02_10.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1320
+      y: 9780
+      width: 1308
+      height: 2436
+    spriteID: 2b7b2d345fb2d1a4f97aab4437433627
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1320, y: 9780}
+  - name: transition02_11.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1320
+      y: 12224
+      width: 1308
+      height: 2436
+    spriteID: f91d46b64b80a4d4c9114135d2face94
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1320, y: 12224}
+  - name: transition02_12.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2636
+      y: 4
+      width: 1308
+      height: 2436
+    spriteID: ac8dfde1c30809840841e33513aa8e37
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2636, y: 4}
+  - name: transition02_13.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2636
+      y: 2448
+      width: 1308
+      height: 2436
+    spriteID: 72028a267089c62439732badfdbeaba8
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2636, y: 2448}
+  - name: transition02_14.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2636
+      y: 4892
+      width: 1308
+      height: 2436
+    spriteID: fd4943ebdde5332459fc71597b4af4e9
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2636, y: 4892}
+  - name: transition02_15.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2636
+      y: 7336
+      width: 1308
+      height: 2436
+    spriteID: d40a4441ca15ad14ab84ebb54ab7bdc1
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2636, y: 7336}
+  - name: transition02_16.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2636
+      y: 9780
+      width: 1308
+      height: 2436
+    spriteID: 98730afc0c8681045a8f92fe7deddbfc
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2636, y: 9780}
+  - name: transition02_17.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2636
+      y: 12224
+      width: 1308
+      height: 2436
+    spriteID: 5684431fe39a8f6499c8c07ce49b8381
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2636, y: 12224}
+  - name: transition02_18.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3952
+      y: 4
+      width: 1308
+      height: 2436
+    spriteID: 0b15f918ba976974bb7b009082d880df
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3952, y: 4}
+  - name: transition02_19.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3952
+      y: 2448
+      width: 1308
+      height: 2436
+    spriteID: d4e47374b1353354b8f3cc7cd199e3ab
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3952, y: 2448}
+  - name: transition02_20.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3952
+      y: 4892
+      width: 1308
+      height: 2436
+    spriteID: e749a70c36819cb4990559a57e75cb94
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3952, y: 4892}
+  - name: transition02_21.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3952
+      y: 7336
+      width: 1308
+      height: 2436
+    spriteID: dcebec66edd848d40bae9106f84f8426
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3952, y: 7336}
+  - name: transition02_22.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3952
+      y: 9780
+      width: 1308
+      height: 2436
+    spriteID: 1479a0077d31a8e4c81ed0bcbf953b85
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3952, y: 9780}
+  - name: transition02_23.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3952
+      y: 12224
+      width: 1308
+      height: 2436
+    spriteID: 53222f91acdbb1d4983b1c3b05d98053
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3952, y: 12224}
+  - name: transition02_24.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 5268
+      y: 4
+      width: 1308
+      height: 2436
+    spriteID: 54d917996f4671b45bb6a98d99d5f1d6
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 5268, y: 4}
+  - name: transition02_25.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 5268
+      y: 2448
+      width: 1308
+      height: 2436
+    spriteID: 3fb0391ad6b5ac9488a4820479b62675
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 5268, y: 2448}
+  - name: transition02_26.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 5268
+      y: 4892
+      width: 1308
+      height: 2436
+    spriteID: 975a119ba7aa07744abbc59d6fd25f87
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 5268, y: 4892}
+  - name: transition02_27.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 5268
+      y: 7336
+      width: 1308
+      height: 2436
+    spriteID: 235ff9ae48407474082f7d552af874ac
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 5268, y: 7336}
+  - name: transition02_28.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 5268
+      y: 9780
+      width: 1308
+      height: 2436
+    spriteID: fcbff7bca73988f4f97bda6e61f0a2d6
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 5268, y: 9780}
+  - name: transition02_29.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 5268
+      y: 12224
+      width: 1308
+      height: 2436
+    spriteID: 75590901129375e478a6f97cca74ab5a
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 5268, y: 12224}
+  - name: transition02_30.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6584
+      y: 4
+      width: 1308
+      height: 2436
+    spriteID: b99a65c82776a3448ae83d5f85a48bfd
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 6584, y: 4}
+  - name: transition02_31.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6584
+      y: 2448
+      width: 1308
+      height: 2436
+    spriteID: 65e4b7fc2279f4140bfb61f1784d0a87
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 6584, y: 2448}
+  - name: transition02_32.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6584
+      y: 4892
+      width: 1308
+      height: 2436
+    spriteID: c1da26244839a8d4b8b908f40ca175b5
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 6584, y: 4892}
+  - name: transition02_33.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6584
+      y: 7336
+      width: 1308
+      height: 2436
+    spriteID: 0234b2f05e3b4dc439b1c31129955638
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 6584, y: 7336}
+  - name: transition02_34.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6584
+      y: 9780
+      width: 1308
+      height: 2436
+    spriteID: 170f113e3cb9e864db146b80d02e27cc
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 6584, y: 9780}
+  - name: transition02_35.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6584
+      y: 12224
+      width: 1308
+      height: 2436
+    spriteID: 8cd085d6becc857459db5404405068f1
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 6584, y: 12224}
+  - name: transition02_36.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7900
+      y: 4
+      width: 1308
+      height: 2436
+    spriteID: c3717b7de6b62714dac58669a9609985
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 7900, y: 4}
+  - name: transition02_37.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7900
+      y: 2448
+      width: 1308
+      height: 2436
+    spriteID: 58bc846eaf1dc054ea390d8314894a73
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 7900, y: 2448}
+  - name: transition02_38.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7900
+      y: 4892
+      width: 1308
+      height: 2436
+    spriteID: dc5ce69206988ac4f9c152a5afed5aed
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 7900, y: 4892}
+  - name: transition02_39.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7900
+      y: 7336
+      width: 1308
+      height: 2436
+    spriteID: 53d7745ebe0a42d43965bb3bcdaf3f56
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 7900, y: 7336}
+  - name: transition02_40.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7900
+      y: 9780
+      width: 1308
+      height: 2436
+    spriteID: 288f8a845955480439d7747cc063534b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 7900, y: 9780}
+  - name: transition02_41.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7900
+      y: 12224
+      width: 1308
+      height: 2436
+    spriteID: 534c1565775774a49bde03a7160c71ec
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 7900, y: 12224}
+  - name: transition02_42.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 9216
+      y: 4
+      width: 1308
+      height: 2436
+    spriteID: 40dc4f74986a8b84ca7bb11794b253cd
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 9216, y: 4}
+  - name: transition02_43.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 9216
+      y: 2448
+      width: 1308
+      height: 2436
+    spriteID: 99317bb8ddd92bc4b9376edc8e8530d6
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 9216, y: 2448}
+  - name: transition02_44.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 9216
+      y: 4892
+      width: 1308
+      height: 2436
+    spriteID: 86ab2ca7a997f3943be723cdef025573
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 9216, y: 4892}
+  - name: transition02_45.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 9216
+      y: 7336
+      width: 1308
+      height: 2436
+    spriteID: 214ca0837c072394481ec0187ab7d720
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 9216, y: 7336}
+  - name: transition02_46.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 9216
+      y: 9780
+      width: 1308
+      height: 2436
+    spriteID: 0fbe28986ebfc0c4baec1dc0dfb49870
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 9216, y: 9780}
+  - name: transition02_47.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 9216
+      y: 12224
+      width: 1308
+      height: 2436
+    spriteID: 2badf007905320542b13ceb54d562a9f
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 9216, y: 12224}
+  - name: transition02_48.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 10532
+      y: 4
+      width: 1308
+      height: 2436
+    spriteID: edeb73b278fbedc4b9e037c43dca859a
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 10532, y: 4}
+  - name: transition02_49.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 10532
+      y: 2448
+      width: 1308
+      height: 2436
+    spriteID: 09791e855f9a0b54193e36e12ab0c996
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 10532, y: 2448}
+  - name: transition02_50.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 10532
+      y: 4892
+      width: 1308
+      height: 2436
+    spriteID: c174e3bf9bf9a56438dc01c31f292ecc
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 10532, y: 4892}
+  - name: transition02_51.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 10532
+      y: 7336
+      width: 1308
+      height: 2436
+    spriteID: d9b4688b15b2dd94c8516f81d4ebf884
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 10532, y: 7336}
+  - name: transition02_52.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 10532
+      y: 9780
+      width: 1308
+      height: 2436
+    spriteID: f9ef8434cb85a1745b13e4ec06e66078
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 10532, y: 9780}
+  - name: transition02_53.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 10532
+      y: 12224
+      width: 1308
+      height: 2436
+    spriteID: 4dedc5dcfadcb2b49b29fff66ea34cb8
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 10532, y: 12224}
+  - name: transition02_54.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 11848
+      y: 4
+      width: 1308
+      height: 2436
+    spriteID: 0544dc825e5ed024bbe2787efdaa14a4
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 11848, y: 4}
+  - name: transition02_55.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 11848
+      y: 2448
+      width: 1308
+      height: 2436
+    spriteID: 44ece74054fcd4b4a97318ca0863f940
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 11848, y: 2448}
+  - name: transition02_56.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 11848
+      y: 4892
+      width: 1308
+      height: 2436
+    spriteID: f28188e480f18dd419ce2085cf2f3387
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 11848, y: 4892}
+  - name: transition02_57.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 11848
+      y: 7336
+      width: 1308
+      height: 2436
+    spriteID: 59c914b5f11b18246a9ba3996cd7e161
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 11848, y: 7336}
+  - name: transition02_58.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 11848
+      y: 9780
+      width: 1308
+      height: 2436
+    spriteID: 67123a9c36e9fbf45a87cf2506871aad
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 11848, y: 9780}
+  - name: transition02_59.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 11848
+      y: 12224
+      width: 1308
+      height: 2436
+    spriteID: 57883f429badb2a44a22de9767c5abee
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 11848, y: 12224}
+  - name: transition02_60.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 13164
+      y: 4
+      width: 1308
+      height: 2436
+    spriteID: 9c3d76d0f0cd3634f85dfa257ab6eff0
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 13164, y: 4}
+  - name: transition02_61.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 13164
+      y: 2448
+      width: 1308
+      height: 2436
+    spriteID: fef4811672e28e646b02adbc7e954277
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 13164, y: 2448}
+  - name: transition02_62.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 13164
+      y: 4892
+      width: 1308
+      height: 2436
+    spriteID: 634da88706c28ce4eb5f110ce434d636
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 13164, y: 4892}
+  - name: transition02_63.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 13164
+      y: 7336
+      width: 1308
+      height: 2436
+    spriteID: 91ea20c4105799345b51a4971fe9912f
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 13164, y: 7336}
+  - name: transition02_64.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 13164
+      y: 9780
+      width: 1308
+      height: 2436
+    spriteID: 303a190b033eed243bd685aa3919ef24
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 13164, y: 9780}
+  - name: transition02_65.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 13164
+      y: 12224
+      width: 1308
+      height: 2436
+    spriteID: 54582dd0be06fbb4498184be1fc08658
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 13164, y: 12224}
+  - name: transition02_66.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 14480
+      y: 4
+      width: 1308
+      height: 2436
+    spriteID: b459bf1535a86374093846fa756fc5f0
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 14480, y: 4}
+  - name: transition02_67.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 14480
+      y: 2448
+      width: 1308
+      height: 2436
+    spriteID: 814aa48994e90274ea7c66b06425f841
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 14480, y: 2448}
+  - name: transition02_68.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 14480
+      y: 4892
+      width: 1308
+      height: 2436
+    spriteID: 0f86af4bed5063944a4bca1b212e1538
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 14480, y: 4892}
+  - name: transition02_69.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 14480
+      y: 7336
+      width: 1308
+      height: 2436
+    spriteID: 998b9d5103ebd5a44af3c490ba9043c7
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 14480, y: 7336}
+  - name: transition02_70.png
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 14480
+      y: 9780
+      width: 1308
+      height: 2436
+    spriteID: afcf7476733929e41937d981b78ebfef
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 14480, y: 9780}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 2048
+  importedTextureHeight: 2048
+  documentSize: {x: 1308, y: 2436}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 16384
+  textureActualHeight: 16384
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: transition02_00.png
+    spriteName: transition02_00.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a350543b1166c694392030b4f9f9b260
+    layerID: 75
+    mosaicPosition: {x: 4, y: 4}
+  - name: transition02_01.png
+    spriteName: transition02_01.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b173c39e6c34d024c970e6bd94ac078e
+    layerID: 74
+    mosaicPosition: {x: 4, y: 2448}
+  - name: transition02_02.png
+    spriteName: transition02_02.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b33d2e435f89b364cb0c56b4508e091f
+    layerID: 73
+    mosaicPosition: {x: 4, y: 4892}
+  - name: transition02_03.png
+    spriteName: transition02_03.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 84ddfe7c6306f55449c9bc5113ced379
+    layerID: 72
+    mosaicPosition: {x: 4, y: 7336}
+  - name: transition02_04.png
+    spriteName: transition02_04.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d1c2a05b66cd0b74e8bef4d84dcb85a2
+    layerID: 71
+    mosaicPosition: {x: 4, y: 9780}
+  - name: transition02_05.png
+    spriteName: transition02_05.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 784dbaf1900b03640a6c67b2bca439da
+    layerID: 70
+    mosaicPosition: {x: 4, y: 12224}
+  - name: transition02_06.png
+    spriteName: transition02_06.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b1ea318db8eae2f4c8e12d92e9ebd227
+    layerID: 69
+    mosaicPosition: {x: 1320, y: 4}
+  - name: transition02_07.png
+    spriteName: transition02_07.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2deb3ed31ec6d1b4cba57befefb0b51c
+    layerID: 68
+    mosaicPosition: {x: 1320, y: 2448}
+  - name: transition02_08.png
+    spriteName: transition02_08.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2764be8d43cc0174e86d423efe8a464a
+    layerID: 67
+    mosaicPosition: {x: 1320, y: 4892}
+  - name: transition02_09.png
+    spriteName: transition02_09.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c8c883b44f272a642a7f4f6f078d154b
+    layerID: 66
+    mosaicPosition: {x: 1320, y: 7336}
+  - name: transition02_10.png
+    spriteName: transition02_10.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2b7b2d345fb2d1a4f97aab4437433627
+    layerID: 65
+    mosaicPosition: {x: 1320, y: 9780}
+  - name: transition02_11.png
+    spriteName: transition02_11.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f91d46b64b80a4d4c9114135d2face94
+    layerID: 64
+    mosaicPosition: {x: 1320, y: 12224}
+  - name: transition02_12.png
+    spriteName: transition02_12.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ac8dfde1c30809840841e33513aa8e37
+    layerID: 63
+    mosaicPosition: {x: 2636, y: 4}
+  - name: transition02_13.png
+    spriteName: transition02_13.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 72028a267089c62439732badfdbeaba8
+    layerID: 62
+    mosaicPosition: {x: 2636, y: 2448}
+  - name: transition02_14.png
+    spriteName: transition02_14.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fd4943ebdde5332459fc71597b4af4e9
+    layerID: 61
+    mosaicPosition: {x: 2636, y: 4892}
+  - name: transition02_15.png
+    spriteName: transition02_15.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d40a4441ca15ad14ab84ebb54ab7bdc1
+    layerID: 60
+    mosaicPosition: {x: 2636, y: 7336}
+  - name: transition02_16.png
+    spriteName: transition02_16.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 98730afc0c8681045a8f92fe7deddbfc
+    layerID: 59
+    mosaicPosition: {x: 2636, y: 9780}
+  - name: transition02_17.png
+    spriteName: transition02_17.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5684431fe39a8f6499c8c07ce49b8381
+    layerID: 58
+    mosaicPosition: {x: 2636, y: 12224}
+  - name: transition02_18.png
+    spriteName: transition02_18.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0b15f918ba976974bb7b009082d880df
+    layerID: 57
+    mosaicPosition: {x: 3952, y: 4}
+  - name: transition02_19.png
+    spriteName: transition02_19.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d4e47374b1353354b8f3cc7cd199e3ab
+    layerID: 56
+    mosaicPosition: {x: 3952, y: 2448}
+  - name: transition02_20.png
+    spriteName: transition02_20.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e749a70c36819cb4990559a57e75cb94
+    layerID: 55
+    mosaicPosition: {x: 3952, y: 4892}
+  - name: transition02_21.png
+    spriteName: transition02_21.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: dcebec66edd848d40bae9106f84f8426
+    layerID: 54
+    mosaicPosition: {x: 3952, y: 7336}
+  - name: transition02_22.png
+    spriteName: transition02_22.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1479a0077d31a8e4c81ed0bcbf953b85
+    layerID: 53
+    mosaicPosition: {x: 3952, y: 9780}
+  - name: transition02_23.png
+    spriteName: transition02_23.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 53222f91acdbb1d4983b1c3b05d98053
+    layerID: 52
+    mosaicPosition: {x: 3952, y: 12224}
+  - name: transition02_24.png
+    spriteName: transition02_24.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 54d917996f4671b45bb6a98d99d5f1d6
+    layerID: 51
+    mosaicPosition: {x: 5268, y: 4}
+  - name: transition02_25.png
+    spriteName: transition02_25.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3fb0391ad6b5ac9488a4820479b62675
+    layerID: 50
+    mosaicPosition: {x: 5268, y: 2448}
+  - name: transition02_26.png
+    spriteName: transition02_26.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 975a119ba7aa07744abbc59d6fd25f87
+    layerID: 49
+    mosaicPosition: {x: 5268, y: 4892}
+  - name: transition02_27.png
+    spriteName: transition02_27.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 235ff9ae48407474082f7d552af874ac
+    layerID: 48
+    mosaicPosition: {x: 5268, y: 7336}
+  - name: transition02_28.png
+    spriteName: transition02_28.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fcbff7bca73988f4f97bda6e61f0a2d6
+    layerID: 47
+    mosaicPosition: {x: 5268, y: 9780}
+  - name: transition02_29.png
+    spriteName: transition02_29.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 75590901129375e478a6f97cca74ab5a
+    layerID: 46
+    mosaicPosition: {x: 5268, y: 12224}
+  - name: transition02_30.png
+    spriteName: transition02_30.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b99a65c82776a3448ae83d5f85a48bfd
+    layerID: 45
+    mosaicPosition: {x: 6584, y: 4}
+  - name: transition02_31.png
+    spriteName: transition02_31.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 65e4b7fc2279f4140bfb61f1784d0a87
+    layerID: 44
+    mosaicPosition: {x: 6584, y: 2448}
+  - name: transition02_32.png
+    spriteName: transition02_32.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c1da26244839a8d4b8b908f40ca175b5
+    layerID: 43
+    mosaicPosition: {x: 6584, y: 4892}
+  - name: transition02_33.png
+    spriteName: transition02_33.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0234b2f05e3b4dc439b1c31129955638
+    layerID: 42
+    mosaicPosition: {x: 6584, y: 7336}
+  - name: transition02_34.png
+    spriteName: transition02_34.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 170f113e3cb9e864db146b80d02e27cc
+    layerID: 41
+    mosaicPosition: {x: 6584, y: 9780}
+  - name: transition02_35.png
+    spriteName: transition02_35.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8cd085d6becc857459db5404405068f1
+    layerID: 40
+    mosaicPosition: {x: 6584, y: 12224}
+  - name: transition02_36.png
+    spriteName: transition02_36.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c3717b7de6b62714dac58669a9609985
+    layerID: 39
+    mosaicPosition: {x: 7900, y: 4}
+  - name: transition02_37.png
+    spriteName: transition02_37.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 58bc846eaf1dc054ea390d8314894a73
+    layerID: 38
+    mosaicPosition: {x: 7900, y: 2448}
+  - name: transition02_38.png
+    spriteName: transition02_38.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: dc5ce69206988ac4f9c152a5afed5aed
+    layerID: 37
+    mosaicPosition: {x: 7900, y: 4892}
+  - name: transition02_39.png
+    spriteName: transition02_39.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 53d7745ebe0a42d43965bb3bcdaf3f56
+    layerID: 36
+    mosaicPosition: {x: 7900, y: 7336}
+  - name: transition02_40.png
+    spriteName: transition02_40.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 288f8a845955480439d7747cc063534b
+    layerID: 35
+    mosaicPosition: {x: 7900, y: 9780}
+  - name: transition02_41.png
+    spriteName: transition02_41.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 534c1565775774a49bde03a7160c71ec
+    layerID: 34
+    mosaicPosition: {x: 7900, y: 12224}
+  - name: transition02_42.png
+    spriteName: transition02_42.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 40dc4f74986a8b84ca7bb11794b253cd
+    layerID: 33
+    mosaicPosition: {x: 9216, y: 4}
+  - name: transition02_43.png
+    spriteName: transition02_43.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 99317bb8ddd92bc4b9376edc8e8530d6
+    layerID: 32
+    mosaicPosition: {x: 9216, y: 2448}
+  - name: transition02_44.png
+    spriteName: transition02_44.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 86ab2ca7a997f3943be723cdef025573
+    layerID: 31
+    mosaicPosition: {x: 9216, y: 4892}
+  - name: transition02_45.png
+    spriteName: transition02_45.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 214ca0837c072394481ec0187ab7d720
+    layerID: 30
+    mosaicPosition: {x: 9216, y: 7336}
+  - name: transition02_46.png
+    spriteName: transition02_46.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0fbe28986ebfc0c4baec1dc0dfb49870
+    layerID: 29
+    mosaicPosition: {x: 9216, y: 9780}
+  - name: transition02_47.png
+    spriteName: transition02_47.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2badf007905320542b13ceb54d562a9f
+    layerID: 28
+    mosaicPosition: {x: 9216, y: 12224}
+  - name: transition02_48.png
+    spriteName: transition02_48.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: edeb73b278fbedc4b9e037c43dca859a
+    layerID: 27
+    mosaicPosition: {x: 10532, y: 4}
+  - name: transition02_49.png
+    spriteName: transition02_49.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 09791e855f9a0b54193e36e12ab0c996
+    layerID: 26
+    mosaicPosition: {x: 10532, y: 2448}
+  - name: transition02_50.png
+    spriteName: transition02_50.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c174e3bf9bf9a56438dc01c31f292ecc
+    layerID: 25
+    mosaicPosition: {x: 10532, y: 4892}
+  - name: transition02_51.png
+    spriteName: transition02_51.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d9b4688b15b2dd94c8516f81d4ebf884
+    layerID: 24
+    mosaicPosition: {x: 10532, y: 7336}
+  - name: transition02_52.png
+    spriteName: transition02_52.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f9ef8434cb85a1745b13e4ec06e66078
+    layerID: 23
+    mosaicPosition: {x: 10532, y: 9780}
+  - name: transition02_53.png
+    spriteName: transition02_53.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4dedc5dcfadcb2b49b29fff66ea34cb8
+    layerID: 22
+    mosaicPosition: {x: 10532, y: 12224}
+  - name: transition02_54.png
+    spriteName: transition02_54.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0544dc825e5ed024bbe2787efdaa14a4
+    layerID: 21
+    mosaicPosition: {x: 11848, y: 4}
+  - name: transition02_55.png
+    spriteName: transition02_55.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 44ece74054fcd4b4a97318ca0863f940
+    layerID: 20
+    mosaicPosition: {x: 11848, y: 2448}
+  - name: transition02_56.png
+    spriteName: transition02_56.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f28188e480f18dd419ce2085cf2f3387
+    layerID: 19
+    mosaicPosition: {x: 11848, y: 4892}
+  - name: transition02_57.png
+    spriteName: transition02_57.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 59c914b5f11b18246a9ba3996cd7e161
+    layerID: 18
+    mosaicPosition: {x: 11848, y: 7336}
+  - name: transition02_58.png
+    spriteName: transition02_58.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 67123a9c36e9fbf45a87cf2506871aad
+    layerID: 17
+    mosaicPosition: {x: 11848, y: 9780}
+  - name: transition02_59.png
+    spriteName: transition02_59.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 57883f429badb2a44a22de9767c5abee
+    layerID: 16
+    mosaicPosition: {x: 11848, y: 12224}
+  - name: transition02_60.png
+    spriteName: transition02_60.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9c3d76d0f0cd3634f85dfa257ab6eff0
+    layerID: 15
+    mosaicPosition: {x: 13164, y: 4}
+  - name: transition02_61.png
+    spriteName: transition02_61.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fef4811672e28e646b02adbc7e954277
+    layerID: 14
+    mosaicPosition: {x: 13164, y: 2448}
+  - name: transition02_62.png
+    spriteName: transition02_62.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 634da88706c28ce4eb5f110ce434d636
+    layerID: 13
+    mosaicPosition: {x: 13164, y: 4892}
+  - name: transition02_63.png
+    spriteName: transition02_63.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 91ea20c4105799345b51a4971fe9912f
+    layerID: 12
+    mosaicPosition: {x: 13164, y: 7336}
+  - name: transition02_64.png
+    spriteName: transition02_64.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 303a190b033eed243bd685aa3919ef24
+    layerID: 11
+    mosaicPosition: {x: 13164, y: 9780}
+  - name: transition02_65.png
+    spriteName: transition02_65.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 54582dd0be06fbb4498184be1fc08658
+    layerID: 10
+    mosaicPosition: {x: 13164, y: 12224}
+  - name: transition02_66.png
+    spriteName: transition02_66.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b459bf1535a86374093846fa756fc5f0
+    layerID: 9
+    mosaicPosition: {x: 14480, y: 4}
+  - name: transition02_67.png
+    spriteName: transition02_67.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 814aa48994e90274ea7c66b06425f841
+    layerID: 8
+    mosaicPosition: {x: 14480, y: 2448}
+  - name: transition02_68.png
+    spriteName: transition02_68.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0f86af4bed5063944a4bca1b212e1538
+    layerID: 7
+    mosaicPosition: {x: 14480, y: 4892}
+  - name: transition02_69.png
+    spriteName: transition02_69.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 998b9d5103ebd5a44af3c490ba9043c7
+    layerID: 6
+    mosaicPosition: {x: 14480, y: 7336}
+  - name: transition02_70.png
+    spriteName: transition02_70.png
+    isGroup: 0
+    parentIndex: -1
+    spriteID: afcf7476733929e41937d981b78ebfef
+    layerID: 5
+    mosaicPosition: {x: 14480, y: 9780}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: transition02 Texture
+  prefabAssetName: transition02 Prefab
+  spriteLibAssetName: transition02 Sprite Lib
+  secondarySpriteTextures: []
