@@ -6,8 +6,10 @@ using UnityEngine;
 
 public class HeroManager : MonoBehaviour
 {
+    [SerializeField] private SO_Player activePlayer;
+
     // Heroes Settings
-    [SerializeField] private GameObject[] heroes = new GameObject[4];
+    private GameObject[] heroes = new GameObject[4];
     private HeroStats[] heroesStats = new HeroStats[4];
     private HeroStats currentStats;
     private HeroVisuals[] heroesVisuals = new HeroVisuals[4];
@@ -19,21 +21,18 @@ public class HeroManager : MonoBehaviour
     private bool isUp, isDown, isLeft, isRight;
     #endregion
 
-
     private void Awake()
     {
         SwipeAttackMenu.OnSwap += OnSwapUpdateHero;;
-
-        for (int i = 0; i < heroes.Length; i++)
-        {
-            heroes[i] = Instantiate(PlayerHeroes.Instance.equippedPlayerHeroes[i]);
-        }
-
     }
+
     private void Start()
     {
 
-
+        for (int i = 0; i < heroes.Length; i++)
+        {
+            heroes[i] = Instantiate(activePlayer.PlayerHeroes[i].PrefabToInstantiate);
+        }
         for (int i = 0; i < heroes.Length; i++)
         {
             heroesStats[i] = heroes[i].GetComponent<HeroStats>();

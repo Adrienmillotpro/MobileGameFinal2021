@@ -7,18 +7,14 @@ using UnityEngine.UI;
 
 public class LevelUpGear : MonoBehaviour
 {
+    [SerializeField] SO_Player activePlayer;
+
     [SerializeField] private SO_Gear gear;
     [SerializeField] private Button buttonLevelUp;
-    private PlayerCurrencies playerCurrencies;
-
-    private void Awake()
-    {
-        playerCurrencies = PlayerCurrencies.Instance;
-    }
 
     private void Update()
     {
-        if ((gear.isAtTierCap && playerCurrencies.CurrencyPremium < gear.costToTierUp) || (!gear.isAtTierCap && playerCurrencies.CurrencyElemental < gear.costToLevelUp))
+        if ((gear.isAtTierCap && activePlayer.CurrencyPremium < gear.costToTierUp) || (!gear.isAtTierCap && activePlayer.CurrencyElemental < gear.costToLevelUp))
         {
             buttonLevelUp.interactable = false;
         }
@@ -32,12 +28,12 @@ public class LevelUpGear : MonoBehaviour
     {
         if (gear.isAtTierCap)
         {
-            playerCurrencies.CommunionUpdateCurrency(true, gear.costToTierUp);
+            activePlayer.CommunionUpdateCurrency(true, gear.costToTierUp);
             TierUp();
         }
         else
         {
-            playerCurrencies.CommunionUpdateCurrency(false, gear.costToLevelUp);
+            activePlayer.CommunionUpdateCurrency(false, gear.costToLevelUp);
             LevelUp();
         }
     }

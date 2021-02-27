@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCurrencies : MonoBehaviour
 {
+    [SerializeField] private SO_Player activePlayer;
+
     [SerializeField] private float currencyBase;
     [SerializeField] private float currencyPremium;
     [SerializeField] private float currencyElemental;
@@ -15,22 +17,13 @@ public class PlayerCurrencies : MonoBehaviour
     public float CurrencyElemental { get { return currencyElemental; } }
 
     #endregion
-    public static PlayerCurrencies Instance { get; private set; }
+
 
     public static event Action<OnUpdateCurrenciesEventArgs> OnUpdateCurrency;
     private OnUpdateCurrenciesEventArgs currenciesArgs = new OnUpdateCurrenciesEventArgs();
 
     private void OnEnable()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
-
         if (SceneManager.GetActiveScene().name == "MAIN")
         {
             DamageManager.OnDealDamage += OnDealDamageEarnCurrency;
@@ -39,14 +32,14 @@ public class PlayerCurrencies : MonoBehaviour
             UpgradeElementalMultiplier.OnUpgradeElemMult += OnUpgradeUpdateCurrency;
             UpgradeCurrencyMultiplier.OnUpgradeCurrMult += OnUpgradeUpdateCurrency;
         }
-
-        DontDestroyOnLoad(this.gameObject);
     }
 
     private void OnDisable()
     {
         if (SceneManager.GetActiveScene().name == "MAIN")
         {
+            activePlayer.EndBattleUpdateCurrency(currencyPremium, currencyElemental);
+
             DamageManager.OnDealDamage -= OnDealDamageEarnCurrency;
             UpgradeDMG.OnUpgradeDMG -= OnUpgradeUpdateCurrency;
             UpgradeAttackRate.OnUpgradeAttackRate -= OnUpgradeUpdateCurrency;
@@ -89,15 +82,4 @@ public class PlayerCurrencies : MonoBehaviour
         currenciesArgs.currentElemental = this.currencyElemental;
     }
 
-    public void CommunionUpdateCurrency(bool isPremium, float cost)
-    {
-        if (isPremium)
-        {
-            currencyPremium -= cost;
-        }
-        else
-        {
-            currencyElemental -= cost;
-        }
-    }
 }

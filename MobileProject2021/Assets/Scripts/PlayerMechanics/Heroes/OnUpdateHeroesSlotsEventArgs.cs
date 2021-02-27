@@ -6,6 +6,6 @@ using UnityEngine;
 public class OnUpdateHeroesSlotsEventArgs : EventArgs
 {
     public int slotIndex;
-    public GameObject equippedHero;
+    public SO_Hero equippedHero;
     public ElementalTypes slotType;
 }

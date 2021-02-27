@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class SO_Hero : ScriptableObject
 {
+    [SerializeField] private GameObject prefabToInstantiate;
+    public GameObject PrefabToInstantiate { get { return prefabToInstantiate; } }
+
     [Header ("Hero Visuals")]
     [SerializeField] private Sprite heroSprite;
     [SerializeField] private Animator heroAnimator;

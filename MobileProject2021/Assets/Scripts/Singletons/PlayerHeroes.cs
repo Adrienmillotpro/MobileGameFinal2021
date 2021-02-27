@@ -5,53 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHeroes : MonoBehaviour
 {
-    [SerializeField] private GameObject[] playerHeroes = new GameObject[4];
-    private GameObject[] instantiatedHeroes;
-    public GameObject[] equippedPlayerHeroes { get { return playerHeroes; } }
-    public GameObject[] InstantiatedHeroes { get { return instantiatedHeroes; } }
-
-    public static PlayerHeroes Instance { get; private set; }
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
-    }
+    [SerializeField] private SO_Player activePlayer;
 
     private void OnEnable()
     {
-        if (SceneManager.GetActiveScene().name == "MAIN")
-        {
-            //instantiatedHeroes = new GameObject[4];
-            //for (int i = 0; i < playerHeroes.Length; i++)
-            //{
-            //    instantiatedHeroes[i] = Instantiate(playerHeroes[i]);
-            //}
-        }
-        else if (SceneManager.GetActiveScene().name == "CommunionSceneUI")
-        {
-            HeroesSlots.OnUpdateHeroesSlots += OnEquipHeroesUpdatePlayerHeroes;
-        }
-
-        DontDestroyOnLoad(this.gameObject);
+        HeroesSlots.OnUpdateHeroesSlots += OnEquipHeroesUpdatePlayerHeroes;
     }
 
     private void OnDisable()
-    {
-        if (SceneManager.GetActiveScene().name == "CommunionSceneUI")
-        {
-            HeroesSlots.OnUpdateHeroesSlots -= OnEquipHeroesUpdatePlayerHeroes;
-        }
+    {       
+        HeroesSlots.OnUpdateHeroesSlots -= OnEquipHeroesUpdatePlayerHeroes;
     }
 
-    private void OnEquipHeroesUpdatePlayerHeroes(OnUpdateHeroesSlotsEventArgs slotsArgs)
+    public void OnEquipHeroesUpdatePlayerHeroes(OnUpdateHeroesSlotsEventArgs slotsArgs)
     {
-        playerHeroes[slotsArgs.slotIndex] = slotsArgs.equippedHero;
+        activePlayer.EquipHero(slotsArgs.equippedHero, slotsArgs.slotIndex);
     }
+
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 public class EquipHeroes : MonoBehaviour
 {
     [SerializeField] private ElementalTypes element;
-    [SerializeField] private GameObject hero;
+    [SerializeField] private SO_Hero hero;
     [SerializeField] private GameObject heroUi;
 
     public static event Action<OnUpdateHeroesSlotsEventArgs> OnEquipHero;
