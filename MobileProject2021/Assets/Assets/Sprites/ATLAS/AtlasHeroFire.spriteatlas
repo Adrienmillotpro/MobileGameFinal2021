@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AtlasHeroFire
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: -3249951802846856073, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+    totalSpriteSurfaceArea: 910468
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 9121227927996155815, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  - {fileID: -2541394383038772905, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  - {fileID: -3229660934104120967, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  - {fileID: -3972945823801195657, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  - {fileID: -639459149816497081, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  - {fileID: -1438612242244887570, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  - {fileID: 9134695997923887626, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  - {fileID: 8231311522452712782, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  - {fileID: -1249123288875116973, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  - {fileID: -1525145956291553655, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  - {fileID: 6016546282033527874, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  - {fileID: 8105648798692799910, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  - {fileID: -7847237717367008296, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  - {fileID: 7478580667898836613, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  - {fileID: 8919889349225703064, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  - {fileID: 4937046414058421423, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  - {fileID: -7205711633483932455, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  - {fileID: -4506608164505930605, guid: ed749b5cdbfd97d40a2fa5b1d5736866, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Fibre_masque
+  - Jambe_mollet_front
+  - Buste_bottom
+  - Jambe_cuisse_back
+  - Bras_front
+  - Avantbras_back
+  - Avantbras_front
+  - Jambe_cuisse_front
+  - Calque 1
+  - Main_front
+  - Pied_front
+  - Bras_back
+  - Buste_up
+  - Main_back
+  - Pied_back
+  - Jambe_mollet_back
+  - Cou
+  - Masque
+  m_RenderDataMap: {}
+  m_Tag: AtlasHeroFire
+  m_IsVariant: 0

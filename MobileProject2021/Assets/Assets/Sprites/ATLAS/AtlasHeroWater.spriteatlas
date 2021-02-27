@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AtlasHeroWater
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: -8231072804911951486, guid: 5e3d72f3e626eb346b61217e0cb5bfba, type: 3}
+    totalSpriteSurfaceArea: 1549844
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 9024226944384113434, guid: 5e3d72f3e626eb346b61217e0cb5bfba, type: 3}
+  - {fileID: 4404411094276617353, guid: 5e3d72f3e626eb346b61217e0cb5bfba, type: 3}
+  - {fileID: -127263054909710466, guid: 5e3d72f3e626eb346b61217e0cb5bfba, type: 3}
+  - {fileID: 802004547431998404, guid: 5e3d72f3e626eb346b61217e0cb5bfba, type: 3}
+  - {fileID: -8780738260910315485, guid: 5e3d72f3e626eb346b61217e0cb5bfba, type: 3}
+  - {fileID: -1681994689768312039, guid: 5e3d72f3e626eb346b61217e0cb5bfba, type: 3}
+  - {fileID: 4464078443933318743, guid: 5e3d72f3e626eb346b61217e0cb5bfba, type: 3}
+  - {fileID: 3616842442530453955, guid: 5e3d72f3e626eb346b61217e0cb5bfba, type: 3}
+  - {fileID: -7418105055960671100, guid: 5e3d72f3e626eb346b61217e0cb5bfba, type: 3}
+  - {fileID: -1577942656337181969, guid: 5e3d72f3e626eb346b61217e0cb5bfba, type: 3}
+  - {fileID: 9192812931016352152, guid: 5e3d72f3e626eb346b61217e0cb5bfba, type: 3}
+  - {fileID: 5410135066469814594, guid: 5e3d72f3e626eb346b61217e0cb5bfba, type: 3}
+  - {fileID: 8254490104012751305, guid: 5e3d72f3e626eb346b61217e0cb5bfba, type: 3}
+  - {fileID: -5909761290691085428, guid: 5e3d72f3e626eb346b61217e0cb5bfba, type: 3}
+  - {fileID: -7337821919602695845, guid: 5e3d72f3e626eb346b61217e0cb5bfba, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Avantbras_right
+  - Avantbras_left
+  - Pied_right
+  - Jambe_left
+  - Jambe_right
+  - Main_right
+  - Bras_left
+  - Furmarque
+  - Pied_left
+  - Main_left
+  - Mollet_left
+  - Corp
+  - Bras_right
+  - Mollet_right
+  - Masque
+  m_RenderDataMap: {}
+  m_Tag: AtlasHeroWater
+  m_IsVariant: 0
