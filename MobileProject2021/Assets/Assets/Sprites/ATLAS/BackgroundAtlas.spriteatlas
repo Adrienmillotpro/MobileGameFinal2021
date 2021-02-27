@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BackgroundAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 17d88fa8f354daa4b8c1cbfb214f6b9d, type: 3}
+    - {fileID: 102900000, guid: 8619206e20706e0409395c7ff998bf41, type: 3}
+    - {fileID: 102900000, guid: c59edde4bf129e942bb15d00d5650748, type: 3}
+    totalSpriteSurfaceArea: 8250350
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 610ec87fea272144286cbc821595564b, type: 3}
+  - {fileID: 21300000, guid: 0f2aeacfa5684ff459db15efd63dfd01, type: 3}
+  - {fileID: 21300000, guid: 8b35bcc8cfe41d84ea20d91a2e89bdcf, type: 3}
+  - {fileID: 21300000, guid: 47b6e7fd19c062f43ab77c7e7c64ac2a, type: 3}
+  - {fileID: 21300000, guid: 7113d31d2b76cdc4c952e20e0cdc8ca7, type: 3}
+  - {fileID: 21300000, guid: 8b426c23a8ea186478cdcf384aae2a2e, type: 3}
+  - {fileID: 21300000, guid: 8992b095d30cc3e448d330c7f95991bf, type: 3}
+  - {fileID: 21300000, guid: 5de40d83aeaec8b4dbdc569dcfc0e5fc, type: 3}
+  - {fileID: 21300000, guid: aeb057a147330ff419fdc41b227bf76e, type: 3}
+  - {fileID: 21300000, guid: 5e33424cfd9ffc0478aa66a0284d0caa, type: 3}
+  - {fileID: 21300000, guid: d633fdae805cd0344ad36b3f61abf53b, type: 3}
+  - {fileID: 21300000, guid: 9cf0a4456c7495e4da51bb75401b499f, type: 3}
+  - {fileID: 21300000, guid: 6e9321ffdf81c914f828c299122873d0, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - ENVIRO_0002s_0003_Background05
+  - "ENVIRO_0002s_0000_PerspectiveAtmosph\xE9rique07-"
+  - ENVIRO_0002s_0005_Background12
+  - ENVIRO_0000s_0001_Foreground02
+  - ENVIRO_0000s_0002_Foreground03
+  - ENVIRO_0002s_0004_Background11
+  - ENVIRO_0000s_0000_Foreground01
+  - ENVIRO_0002s_0001_Background06
+  - ENVIRO_0002s_0008_Fondimage15
+  - ENVIRO_0002s_0006_Sun13
+  - ENVIRO_0002s_0007_Background14
+  - ENVIRO_0001s_0000_Scene04
+  - ENVIRO_0002s_0002_Background09
+  m_RenderDataMap: {}
+  m_Tag: BackgroundAtlas
+  m_IsVariant: 0
