@@ -18,34 +18,27 @@ public class PlayerCurrencies : MonoBehaviour
 
     #endregion
 
-
     public static event Action<OnUpdateCurrenciesEventArgs> OnUpdateCurrency;
     private OnUpdateCurrenciesEventArgs currenciesArgs = new OnUpdateCurrenciesEventArgs();
 
     private void OnEnable()
     {
-        if (SceneManager.GetActiveScene().name == "MAIN")
-        {
-            DamageManager.OnDealDamage += OnDealDamageEarnCurrency;
-            UpgradeDMG.OnUpgradeDMG += OnUpgradeUpdateCurrency;
-            UpgradeAttackRate.OnUpgradeAttackRate += OnUpgradeUpdateCurrency;
-            UpgradeElementalMultiplier.OnUpgradeElemMult += OnUpgradeUpdateCurrency;
-            UpgradeCurrencyMultiplier.OnUpgradeCurrMult += OnUpgradeUpdateCurrency;
-        }
+        DamageManager.OnDealDamage += OnDealDamageEarnCurrency;
+        UpgradeDMG.OnUpgradeDMG += OnUpgradeUpdateCurrency;
+        UpgradeAttackRate.OnUpgradeAttackRate += OnUpgradeUpdateCurrency;
+        UpgradeElementalMultiplier.OnUpgradeElemMult += OnUpgradeUpdateCurrency;
+        UpgradeCurrencyMultiplier.OnUpgradeCurrMult += OnUpgradeUpdateCurrency;
     }
 
     private void OnDisable()
     {
-        if (SceneManager.GetActiveScene().name == "MAIN")
-        {
-            activePlayer.EndBattleUpdateCurrency(currencyPremium, currencyElemental);
+        activePlayer.EndBattleUpdateCurrency(currencyPremium, currencyElemental);
 
-            DamageManager.OnDealDamage -= OnDealDamageEarnCurrency;
-            UpgradeDMG.OnUpgradeDMG -= OnUpgradeUpdateCurrency;
-            UpgradeAttackRate.OnUpgradeAttackRate -= OnUpgradeUpdateCurrency;
-            UpgradeElementalMultiplier.OnUpgradeElemMult -= OnUpgradeUpdateCurrency;
-            UpgradeCurrencyMultiplier.OnUpgradeCurrMult -= OnUpgradeUpdateCurrency;
-        }
+        DamageManager.OnDealDamage -= OnDealDamageEarnCurrency;
+        UpgradeDMG.OnUpgradeDMG -= OnUpgradeUpdateCurrency;
+        UpgradeAttackRate.OnUpgradeAttackRate -= OnUpgradeUpdateCurrency;
+        UpgradeElementalMultiplier.OnUpgradeElemMult -= OnUpgradeUpdateCurrency;
+        UpgradeCurrencyMultiplier.OnUpgradeCurrMult -= OnUpgradeUpdateCurrency;
     }
 
     private void Start()
