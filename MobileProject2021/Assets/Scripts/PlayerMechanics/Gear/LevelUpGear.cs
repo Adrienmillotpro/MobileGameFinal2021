@@ -14,7 +14,7 @@ public class LevelUpGear : MonoBehaviour
 
     private void Update()
     {
-        if ((gear.isAtTierCap && activePlayer.CurrencyPremium < gear.costToTierUp) || (!gear.isAtTierCap && activePlayer.CurrencyElemental < gear.costToLevelUp))
+        if ((gear.isAtTierCap && activePlayer.currencyPremium < gear.costToTierUp) || (!gear.isAtTierCap && activePlayer.currencyElemental < gear.costToLevelUp))
         {
             buttonLevelUp.interactable = false;
         }
@@ -28,12 +28,12 @@ public class LevelUpGear : MonoBehaviour
     {
         if (gear.isAtTierCap)
         {
-            activePlayer.CommunionUpdateCurrency(true, gear.costToTierUp);
+            activePlayer.currencyPremium -= gear.costToTierUp;
             TierUp();
         }
         else
         {
-            activePlayer.CommunionUpdateCurrency(false, gear.costToLevelUp);
+            activePlayer.currencyElemental -= gear.costToLevelUp;
             LevelUp();
         }
     }

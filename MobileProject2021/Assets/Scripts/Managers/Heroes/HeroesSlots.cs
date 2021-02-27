@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 public class HeroesSlots : MonoBehaviour
 {
-    private ElementalTypes slotType;
-    private GameObject[] equippedHeroes = new GameObject[4];
-    private int slotIndex;
+    [SerializeField] private SO_Player activePlayer;
+    private SO_Hero[] equippedHeroes = new SO_Hero[4];
 
-    public GameObject[] EquippedHeroes { get { return equippedHeroes; } }
+    private ElementalTypes slotType;
+    private int slotIndex;
 
     public static event Action<OnUpdateHeroesSlotsEventArgs> OnUpdateHeroesSlots;
     private OnUpdateHeroesSlotsEventArgs onUpdateHeroesArgs = new OnUpdateHeroesSlotsEventArgs();
@@ -23,6 +23,14 @@ public class HeroesSlots : MonoBehaviour
     private void OnDisable()
     {
         EquipHeroes.OnEquipHero -= OnEquipHeroesUpdatePlayerHeroes;
+    }
+
+    private void Start()
+    {
+        for (int i = 0; i < equippedHeroes.Length; i++)
+        {
+            equippedHeroes[i] = activePlayer.playerHeroes[i];
+        }
     }
 
     public void OnSelectFireSlot()
@@ -55,8 +63,8 @@ public class HeroesSlots : MonoBehaviour
 
     private void OnEquipHeroesUpdatePlayerHeroes(OnUpdateHeroesSlotsEventArgs equipArgs)
     {
-        onUpdateHeroesArgs.equippedHero = equipArgs.equippedHero;
-        OnUpdateHeroesSlots?.Invoke(onUpdateHeroesArgs);
+        equippedHeroes[slotIndex] = equipArgs.equippedHero;
+        activePlayer.playerHeroes[slotIndex] = equipArgs.equippedHero;
     }
 
 }

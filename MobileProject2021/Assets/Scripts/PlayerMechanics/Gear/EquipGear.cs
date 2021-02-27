@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,15 +6,41 @@ using UnityEngine;
 public class EquipGear : MonoBehaviour
 {
     [SerializeField] private SO_Gear gear;
-    private PlayerGear playerGear;
+    [SerializeField] private GameObject gearUi;
 
-    private void Awake()
+    public static event Action<OnUpdateGearEventArgs> OnEquipGear;
+    private OnUpdateGearEventArgs onEquipGearArgs = new OnUpdateGearEventArgs();
+
+    private void OnEnable()
     {
-        playerGear = PlayerGear.Instance;
+        GearSlotsManager.OnUpdateGearSlot += OnUpdateGearSlotUpdateUI;
+    }
+
+    private void OnDisable()
+    {
+        GearSlotsManager.OnUpdateGearSlot -= OnUpdateGearSlotUpdateUI;
+    }
+
+    private void Start()
+    {
+        this.onEquipGearArgs.so_equippedGear = this.gear;
+        this.gearUi.SetActive(false);
+    }
+
+    public void OnUpdateGearSlotUpdateUI(OnUpdateGearEventArgs updateGearArgs)
+    {
+        if (updateGearArgs.gearType == this.gear.GearType)
+        {
+            this.gearUi.SetActive(true);
+        }
+        else
+        {
+            this.gearUi.SetActive(false);
+        }
     }
 
     public void Equip()
     {
-        playerGear.UpdateGear(gear.GearType, 1);
+        OnEquipGear?.Invoke(this.onEquipGearArgs);
     }
 }

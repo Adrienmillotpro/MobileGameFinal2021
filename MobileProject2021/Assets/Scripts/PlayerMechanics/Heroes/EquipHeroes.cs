@@ -24,18 +24,19 @@ public class EquipHeroes : MonoBehaviour
 
     private void OnUpdateHeroesSlotsDisplayOrNot(OnUpdateHeroesSlotsEventArgs updateSlotArgs)
     {
-        if (updateSlotArgs.slotType == element)
+        if (updateSlotArgs.slotType == this.element)
         {
-            heroUi.SetActive(true);
+            this.heroUi.SetActive(true);
         }
         else
         {
-            heroUi.SetActive(false);
+            this.heroUi.SetActive(false);
         } 
     }
 
     private void Start()
     {
+        this.heroUi.SetActive(false);
         this.equipHeroArgs.equippedHero = this.hero;
     }
 

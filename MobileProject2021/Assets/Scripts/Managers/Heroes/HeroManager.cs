@@ -31,7 +31,7 @@ public class HeroManager : MonoBehaviour
 
         for (int i = 0; i < heroes.Length; i++)
         {
-            heroes[i] = Instantiate(activePlayer.PlayerHeroes[i].PrefabToInstantiate);
+            heroes[i] = Instantiate(activePlayer.playerHeroes[i].PrefabToInstantiate);
         }
         for (int i = 0; i < heroes.Length; i++)
         {
