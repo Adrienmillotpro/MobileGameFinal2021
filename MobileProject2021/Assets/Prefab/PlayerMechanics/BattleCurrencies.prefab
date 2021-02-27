@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6782266861712764485}
   - component: {fileID: 6782266861712764484}
   m_Layer: 0
-  m_Name: Currencies
+  m_Name: BattleCurrencies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,9 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e294318668f94f4c87f5cebe8cc002f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activePlayer: {fileID: 11400000, guid: 8cab687252f88634683689feb961262a, type: 2}
   currencyBase: 0
   currencyPremium: 0
-  currencyFire: 0
-  currencyThunder: 0
-  currencyWater: 0
-  currencyAir: 0
+  currencyElemental: 0

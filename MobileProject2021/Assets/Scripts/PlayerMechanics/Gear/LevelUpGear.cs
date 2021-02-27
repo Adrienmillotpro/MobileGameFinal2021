@@ -9,8 +9,18 @@ public class LevelUpGear : MonoBehaviour
 {
     [SerializeField] SO_Player activePlayer;
 
-    [SerializeField] private SO_Gear gear;
+    private SO_Gear gear;
     [SerializeField] private Button buttonLevelUp;
+
+    private void OnEnable()
+    {
+        GearSlotsManager.OnUpdateGearSlot += OnUpdateGearSlotUpdateCurrentGear;
+    }
+
+    private void OnDisable()
+    {
+        GearSlotsManager.OnUpdateGearSlot -= OnUpdateGearSlotUpdateCurrentGear;
+    }
 
     private void Update()
     {
@@ -22,6 +32,11 @@ public class LevelUpGear : MonoBehaviour
         {
             buttonLevelUp.interactable = true;
         }
+    }
+
+    private void OnUpdateGearSlotUpdateCurrentGear(OnUpdateGearEventArgs updateGearArgs)
+    {
+        gear = updateGearArgs.so_equippedGear;
     }
 
     public void GearLevelUp()

@@ -29,6 +29,7 @@ public class GearSlotsManager : MonoBehaviour
         slotIndex = 0;
         slotType = GearType.Hand;
         gearArgs.gearType = slotType;
+        gearArgs.so_equippedGear = equippedHandGear[0];
         OnUpdateGearSlot?.Invoke(gearArgs);
     }
 
@@ -37,6 +38,7 @@ public class GearSlotsManager : MonoBehaviour
         slotType = GearType.Hand;
         slotIndex = 1;
         gearArgs.gearType = slotType;
+        gearArgs.so_equippedGear = equippedHandGear[1];
         OnUpdateGearSlot?.Invoke(gearArgs);
     }
 
@@ -45,6 +47,7 @@ public class GearSlotsManager : MonoBehaviour
         slotType = GearType.Hand;
         slotIndex = 0;
         gearArgs.gearType = slotType;
+        gearArgs.so_equippedGear = equippedHandGear[0];
         OnUpdateGearSlot?.Invoke(gearArgs);
     }
 
@@ -53,6 +56,7 @@ public class GearSlotsManager : MonoBehaviour
         slotType = GearType.Ankle;
         slotIndex = 1;
         gearArgs.gearType = slotType;
+        gearArgs.so_equippedGear = equippedAnkleGear[1];
         OnUpdateGearSlot?.Invoke(gearArgs);
     }
 
@@ -61,6 +65,7 @@ public class GearSlotsManager : MonoBehaviour
         slotType = GearType.Ankle;
         slotIndex = 0;
         gearArgs.gearType = slotType;
+        gearArgs.so_equippedGear = equippedAnkleGear[0];
         OnUpdateGearSlot?.Invoke(gearArgs);
     }
 
