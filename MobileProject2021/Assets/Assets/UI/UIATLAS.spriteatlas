@@ -39,12 +39,12 @@ SpriteAtlas:
       blockOffset: 1
       allowAlphaSplitting: 0
       enableRotation: 1
-      enableTightPacking: 1
+      enableTightPacking: 0
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 428502290106aa64ca90b7b58f26fea9, type: 3}
-    totalSpriteSurfaceArea: 16805308
+    totalSpriteSurfaceArea: 12764530
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -63,7 +63,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: d29c3d7178ff47f4c875df9b7a11f8d7, type: 3}
   - {fileID: 21300000, guid: 15b10ee1a9bcd264ca98a9ed6c6edcdd, type: 3}
   - {fileID: 21300000, guid: bca30112e3c40d14ca3d9dee4fd9be02, type: 3}
-  - {fileID: 21300000, guid: 00a9344209721244f8b42fd0cb445ea1, type: 3}
   - {fileID: 21300000, guid: 8e61df82ab760bf42ba911ad8f2d1131, type: 3}
   - {fileID: 21300000, guid: a9101573b985d03419a7e19a7268d825, type: 3}
   - {fileID: 21300000, guid: 74a916a33fcb4b44280e282fce334cfb, type: 3}
@@ -104,7 +103,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: ea284dca049a84f4285ede15bd7e6234, type: 3}
   - {fileID: 21300000, guid: f73cf9dbd913fe345b0f21ff39564027, type: 3}
   - {fileID: 21300000, guid: aa1fa3eb7257b9d489893350520f431c, type: 3}
-  - {fileID: 21300000, guid: 574b72fb9cf10224aa8f9e80f0b33405, type: 3}
   - {fileID: 21300000, guid: 3b171c0c643f62240b4df18e8f5b7cf1, type: 3}
   - {fileID: 21300000, guid: f3d19e2c1e38c774f9bda34c8da8929c, type: 3}
   - {fileID: 21300000, guid: d288715c616d57945b90d66ad92e33b7, type: 3}
@@ -134,7 +132,6 @@ SpriteAtlas:
   - ui-photoshop_0001s_0001s_0002s_0006_Calque-19
   - ui-photoshop_0002s_0001_elec
   - ui-photoshop_0001s_0005_PM_COquille
-  - ui-photoshop_0001s_0001_Calque-10
   - ui-photoshop_0002s_0000_feu
   - ui-photoshop_0001s_0000s_0003_os-elec
   - ui-photoshop_0001s_0000s_0004_os-feu
@@ -175,7 +172,6 @@ SpriteAtlas:
   - ElemReac
   - ui-photoshop_0002s_0002_eau
   - ui-photoshop_0000s_0001_Calque-3 1
-  - Comminion Scene
   - ui-photoshop_0001s_0004_PM_noix
   - ui-photoshop_0003s_0000s_0006_Calque-5
   - Attspeed
