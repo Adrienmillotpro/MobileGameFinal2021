@@ -49,8 +49,8 @@ public class PlayerCurrencies : MonoBehaviour
     private void OnUpgradeUpdateCurrency(OnUpgradeEventArgs upgradeArgs)
     {
         currencyBase -= upgradeArgs.currencyBase;
-        currencyElemental -= upgradeArgs.currencyElemental;
-        currencyPremium -= upgradeArgs.currencyPremium;
+        activePlayer.currencyElemental -= upgradeArgs.currencyElemental;
+        activePlayer.currencyPremium -= upgradeArgs.currencyPremium;
 
         UpdateCurrenciesArgs();
         OnUpdateCurrency?.Invoke(currenciesArgs);
@@ -61,7 +61,7 @@ public class PlayerCurrencies : MonoBehaviour
         currencyBase += damageArgs.CurrencyOnDamage(); // Player earns Base Currency
         if (damageArgs.bestElementalReaction == 2)
         {
-            currencyElemental += damageArgs.CurrencyOnDamage();
+            activePlayer.currencyElemental += damageArgs.CurrencyOnDamage();
         }
         UpdateCurrenciesArgs();
         OnUpdateCurrency?.Invoke(currenciesArgs);
@@ -70,8 +70,8 @@ public class PlayerCurrencies : MonoBehaviour
     private void UpdateCurrenciesArgs()
     {
         currenciesArgs.currentBase = this.currencyBase;
-        currenciesArgs.currentPremium = this.currencyPremium;
-        currenciesArgs.currentElemental = this.currencyElemental;
+        currenciesArgs.currentPremium = activePlayer.currencyPremium;
+        currenciesArgs.currentElemental = activePlayer.currencyElemental;
     }
 
 }
