@@ -18,7 +18,6 @@ public class UiSwipeBottom : MonoBehaviour
     {
         if (SwipeManager.swipeLeft)
         {
-            Debug.Log("Swipe Left Bottom Menu");
             mainMenu.DOAnchorPos(new Vector2(-714, 202), speed);
             secondMenu.DOAnchorPos(new Vector2(410, 202), speed);
         }
@@ -26,7 +25,6 @@ public class UiSwipeBottom : MonoBehaviour
 
         if (SwipeManager.swipeRight)
         {
-            Debug.Log("Swipe Right Bottom Menu");
             mainMenu.DOAnchorPos(new Vector2(0, 202), speed);
             secondMenu.DOAnchorPos(new Vector2(1124.5f, 202), speed);
         }
