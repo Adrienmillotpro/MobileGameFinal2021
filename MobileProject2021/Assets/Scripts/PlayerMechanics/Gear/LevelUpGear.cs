@@ -100,5 +100,6 @@ public class LevelUpGear : MonoBehaviour
         gear.currentGearCurrMult = gear.GearCurrMult * gear.gearLevel * gear.gearTierMultiplier;
 
         gear.costToLevelUp = gear.GearBaseCost * Mathf.Pow(gear.gearTierMultiplier, gear.gearLevel);
+        gear.costToTierUp = gear.GearBasePremiumCost * Mathf.Pow(gear.gearTierMultiplier, gear.gearLevel);
     }
 }

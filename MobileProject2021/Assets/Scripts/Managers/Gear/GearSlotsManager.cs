@@ -33,6 +33,14 @@ public class GearSlotsManager : MonoBehaviour
         OnUpdateGearSlot?.Invoke(gearArgs);
     }
 
+    public void OnSelectLeftHandSlot()
+    {
+        slotType = GearType.Hand;
+        slotIndex = 0;
+        gearArgs.gearType = slotType;
+        gearArgs.so_equippedGear = equippedHandGear[0];
+        OnUpdateGearSlot?.Invoke(gearArgs);
+    }
     public void OnSeletRightHandSlot()
     {
         slotType = GearType.Hand;
@@ -42,30 +50,20 @@ public class GearSlotsManager : MonoBehaviour
         OnUpdateGearSlot?.Invoke(gearArgs);
     }
 
-    public void OnSelectLeftHandSlot()
-    {
-        slotType = GearType.Hand;
-        slotIndex = 0;
-        gearArgs.gearType = slotType;
-        gearArgs.so_equippedGear = equippedHandGear[0];
-        OnUpdateGearSlot?.Invoke(gearArgs);
-    }
-
-    public void OnSelectRightAnkleSlot()
-    {
-        slotType = GearType.Ankle;
-        slotIndex = 1;
-        gearArgs.gearType = slotType;
-        gearArgs.so_equippedGear = equippedAnkleGear[1];
-        OnUpdateGearSlot?.Invoke(gearArgs);
-    }
-
     public void OnSelectLeftAnkleSlot()
     {
         slotType = GearType.Ankle;
         slotIndex = 0;
         gearArgs.gearType = slotType;
         gearArgs.so_equippedGear = equippedAnkleGear[0];
+        OnUpdateGearSlot?.Invoke(gearArgs);
+    }
+    public void OnSelectRightAnkleSlot()
+    {
+        slotType = GearType.Ankle;
+        slotIndex = 1;
+        gearArgs.gearType = slotType;
+        gearArgs.so_equippedGear = equippedAnkleGear[1];
         OnUpdateGearSlot?.Invoke(gearArgs);
     }
 

@@ -12,16 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8711d55f5605ec04eae25bda21f58347, type: 3}
   m_Name: SO_AnkleGear_AncestralFiber
   m_EditorClassIdentifier: 
-  gearName: 
+  gearName: Ancestral Fiber
   gearDescription: 
   gearType: 1
   prefabGear: {fileID: 0}
-  gearDamage: 0
-  gearAtkRate: 0
-  gearElemMult: 0
-  gearCurrMult: 0
-  gearBaseCost: 0
-  lvlCapForTier: 
+  gearDamage: 5
+  gearAtkRate: 1.005
+  gearElemMult: 1.05
+  gearCurrMult: 1
+  gearBaseCost: 2000
+  gearBasePremiumCost: 10
+  lvlCapForTier: 0a000000140000001e00000032000000
   gearTier: 0
   gearLevel: 0
   gearTierMultiplier: 0

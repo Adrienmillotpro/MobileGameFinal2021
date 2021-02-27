@@ -29,9 +29,11 @@ public class SO_Gear : ScriptableObject
     #endregion
 
     [SerializeField] private float gearBaseCost;
+    [SerializeField] private float gearBasePremiumCost;
     [SerializeField] private int[] lvlCapForTier;
     #region Getters
     public int[] LvlCapForTier { get { return lvlCapForTier; } }
+    public float GearBasePremiumCost {  get { return gearBasePremiumCost; } }
     public float GearBaseCost { get { return gearBaseCost; } }
     #endregion
 
