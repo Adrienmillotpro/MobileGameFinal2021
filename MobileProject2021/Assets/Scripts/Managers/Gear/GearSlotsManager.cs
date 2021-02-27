@@ -4,10 +4,10 @@ using UnityEngine;
 using System;
 public class GearSlotsManager : MonoBehaviour
 {
-    private SO_Player activePlayer;
-
+    [SerializeField] private SO_Player activePlayer;
     private SO_Gear[] equippedHandGear = new SO_Gear[2];
     private SO_Gear[] equippedAnkleGear = new SO_Gear[2];
+
     private GearType slotType;
     private int slotIndex;
 
@@ -27,30 +27,41 @@ public class GearSlotsManager : MonoBehaviour
     private void Start()
     {
         slotIndex = 0;
+        slotType = GearType.Hand;
+        gearArgs.gearType = slotType;
+        OnUpdateGearSlot?.Invoke(gearArgs);
     }
 
     public void OnSeletRightHandSlot()
     {
         slotType = GearType.Hand;
         slotIndex = 1;
+        gearArgs.gearType = slotType;
+        OnUpdateGearSlot?.Invoke(gearArgs);
     }
 
     public void OnSelectLeftHandSlot()
     {
         slotType = GearType.Hand;
         slotIndex = 0;
+        gearArgs.gearType = slotType;
+        OnUpdateGearSlot?.Invoke(gearArgs);
     }
 
     public void OnSelectRightAnkleSlot()
     {
         slotType = GearType.Ankle;
         slotIndex = 1;
+        gearArgs.gearType = slotType;
+        OnUpdateGearSlot?.Invoke(gearArgs);
     }
 
     public void OnSelectLeftAnkleSlot()
     {
         slotType = GearType.Ankle;
         slotIndex = 0;
+        gearArgs.gearType = slotType;
+        OnUpdateGearSlot?.Invoke(gearArgs);
     }
 
     private void OnEquipGearUpdatePlayerGear(OnUpdateGearEventArgs equipGearArgs)
@@ -58,9 +69,11 @@ public class GearSlotsManager : MonoBehaviour
         switch (equipGearArgs.gearType)
         {
             case GearType.Hand:
+                equippedHandGear[slotIndex] = equipGearArgs.so_equippedGear;
                 activePlayer.playerHandGears[slotIndex] = equipGearArgs.so_equippedGear;
                 break;
             case GearType.Ankle:
+                equippedAnkleGear[slotIndex] = equipGearArgs.so_equippedGear;
                 activePlayer.playerAnkleGears[slotIndex] = equipGearArgs.so_equippedGear;
                 break;
         }

@@ -13,11 +13,9 @@ public class SO_Player : ScriptableObject
     public float currencyElemental;
     public float currencyPremium;
 
-
     public void EndBattleUpdateCurrency(float premiumCurrency, float elementalCurrency)
     {
         currencyPremium += premiumCurrency;
         currencyElemental += elementalCurrency;
     }
-
 }

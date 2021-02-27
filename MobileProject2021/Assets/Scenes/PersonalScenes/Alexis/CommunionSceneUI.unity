@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   element: 1
-  hero: {fileID: 0}
+  hero: {fileID: 11400000, guid: e3a59f23c11562045b9de8b07ac110c0, type: 2}
   heroUi: {fileID: 254774202}
 --- !u!114 &30
 MonoBehaviour:
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   element: 2
-  hero: {fileID: 0}
+  hero: {fileID: 11400000, guid: 38b2ec7eaebea2d40b61a91d4784712e, type: 2}
   heroUi: {fileID: 90812468}
 --- !u!114 &31
 MonoBehaviour:
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   element: 3
-  hero: {fileID: 0}
+  hero: {fileID: 11400000, guid: 1eb0d450901404648aba435c91eca592, type: 2}
   heroUi: {fileID: 1542362506}
 --- !u!1 &4320090
 GameObject:
@@ -387,6 +387,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4813679}
   m_CullTransparentMesh: 1
+--- !u!1 &7421382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7421383}
+  - component: {fileID: 7421384}
+  m_Layer: 5
+  m_Name: EquipFiber
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7421383
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7421382}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 987427219}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -921.99005, y: -2.7001953}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7421384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7421382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f179844db8be4d34c82839dc8f605e84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gear: {fileID: 11400000, guid: 3c662828140ef3c4f8bea6eb33592929, type: 2}
+  gearUi: {fileID: 1335972978}
 --- !u!1001 &13588896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -936,7 +986,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 62679943}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5921229399118332145}
+        m_TargetAssemblyTypeName: GearSlotsManager, Assembly-CSharp
+        m_MethodName: OnSelectLeftAnkleSlot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &62679943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -988,7 +1050,7 @@ GameObject:
   - component: {fileID: 64101393}
   - component: {fileID: 64101392}
   m_Layer: 5
-  m_Name: shopslot2
+  m_Name: gearSlotSagasaga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1008,7 +1070,7 @@ RectTransform:
   - {fileID: 1260407651}
   - {fileID: 978661603}
   m_Father: {fileID: 987427219}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1058,7 +1120,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 64101393}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1467154992}
+        m_TargetAssemblyTypeName: EquipGear, Assembly-CSharp
+        m_MethodName: Equip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &64101393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3029,7 +3103,7 @@ GameObject:
   - component: {fileID: 396474355}
   - component: {fileID: 396474354}
   m_Layer: 5
-  m_Name: shopslot1
+  m_Name: gearSlotKolokami
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3049,7 +3123,7 @@ RectTransform:
   - {fileID: 1382283582}
   - {fileID: 1396541873}
   m_Father: {fileID: 987427219}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3099,7 +3173,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 396474355}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1959236228}
+        m_TargetAssemblyTypeName: EquipGear, Assembly-CSharp
+        m_MethodName: Equip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &396474355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4422,7 +4508,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 519553379}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5921229399118332145}
+        m_TargetAssemblyTypeName: GearSlotsManager, Assembly-CSharp
+        m_MethodName: OnSelectLeftHandSlot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &519553379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6248,6 +6346,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704439617}
   m_CullTransparentMesh: 1
+--- !u!1 &708464962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 708464963}
+  - component: {fileID: 708464964}
+  m_Layer: 5
+  m_Name: EquipBell
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &708464963
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708464962}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 987427219}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -921.99005, y: -2.7001953}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &708464964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708464962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f179844db8be4d34c82839dc8f605e84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gear: {fileID: 11400000, guid: 1a3e51740073d144a91226705c311c5f, type: 2}
+  gearUi: {fileID: 1809964471}
 --- !u!1 &742772162
 GameObject:
   m_ObjectHideFlags: 0
@@ -7849,11 +7997,17 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1959236227}
   - {fileID: 396474353}
+  - {fileID: 1467154991}
   - {fileID: 64101391}
+  - {fileID: 708464963}
   - {fileID: 1809964472}
+  - {fileID: 7421383}
   - {fileID: 1335972979}
+  - {fileID: 1060304228}
   - {fileID: 1032503125}
+  - {fileID: 1262378977}
   - {fileID: 1795677003}
   m_Father: {fileID: 498961288}
   m_RootOrder: 0
@@ -7987,7 +8141,7 @@ GameObject:
   - component: {fileID: 1032503127}
   - component: {fileID: 1032503126}
   m_Layer: 5
-  m_Name: shopslot5
+  m_Name: gearSlotAncestralGolokami
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8007,7 +8161,7 @@ RectTransform:
   - {fileID: 1607841452}
   - {fileID: 335425810}
   m_Father: {fileID: 987427219}
-  m_RootOrder: 4
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8057,7 +8211,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1032503127}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1060304229}
+        m_TargetAssemblyTypeName: EquipGear, Assembly-CSharp
+        m_MethodName: Equip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1032503127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8096,6 +8262,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1032503124}
   m_CullTransparentMesh: 1
+--- !u!1 &1060304227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1060304228}
+  - component: {fileID: 1060304229}
+  m_Layer: 5
+  m_Name: EquipAncestralGolokami
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1060304228
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060304227}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 987427219}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -921.99005, y: -2.7001953}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1060304229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060304227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f179844db8be4d34c82839dc8f605e84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gear: {fileID: 11400000, guid: 29e3ba99f219718419fe0944e454b317, type: 2}
+  gearUi: {fileID: 1032503124}
 --- !u!114 &1068984926 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2011687768303605092, guid: dc37e464d2ca3eb45b146e608b60f923, type: 3}
@@ -9536,6 +9752,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260407650}
   m_CullTransparentMesh: 1
+--- !u!1 &1262378976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1262378977}
+  - component: {fileID: 1262378978}
+  m_Layer: 5
+  m_Name: EquipAncestralFiber
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1262378977
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262378976}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 987427219}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -921.99005, y: -2.7001953}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1262378978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262378976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f179844db8be4d34c82839dc8f605e84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gear: {fileID: 11400000, guid: 5617357b2298f3a42b8cff851ed9a159, type: 2}
+  gearUi: {fileID: 1795677002}
 --- !u!1 &1267536650
 GameObject:
   m_ObjectHideFlags: 0
@@ -10435,7 +10701,7 @@ GameObject:
   - component: {fileID: 1335972981}
   - component: {fileID: 1335972980}
   m_Layer: 5
-  m_Name: shopslot4
+  m_Name: gearSlotFiber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10455,7 +10721,7 @@ RectTransform:
   - {fileID: 594462616}
   - {fileID: 496060692}
   m_Father: {fileID: 987427219}
-  m_RootOrder: 3
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10505,7 +10771,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1335972981}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7421384}
+        m_TargetAssemblyTypeName: EquipGear, Assembly-CSharp
+        m_MethodName: Equip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1335972981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12453,6 +12731,56 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1467154990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1467154991}
+  - component: {fileID: 1467154992}
+  m_Layer: 5
+  m_Name: EquipSagasaga
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1467154991
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467154990}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 987427219}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -921.99005, y: -2.7001953}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1467154992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467154990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f179844db8be4d34c82839dc8f605e84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gear: {fileID: 11400000, guid: 6b41fdc8e45c4d34588c40f4c5d31543, type: 2}
+  gearUi: {fileID: 64101390}
 --- !u!1 &1478897747
 GameObject:
   m_ObjectHideFlags: 0
@@ -13178,7 +13506,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1593380497}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5921229399118332145}
+        m_TargetAssemblyTypeName: GearSlotsManager, Assembly-CSharp
+        m_MethodName: OnSeletRightHandSlot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1593380497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15540,7 +15880,7 @@ GameObject:
   - component: {fileID: 1795677005}
   - component: {fileID: 1795677004}
   m_Layer: 5
-  m_Name: shopslot6
+  m_Name: gearSlotAncestralFiber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15560,7 +15900,7 @@ RectTransform:
   - {fileID: 318909283}
   - {fileID: 1478897748}
   m_Father: {fileID: 987427219}
-  m_RootOrder: 5
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15610,7 +15950,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1795677005}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1262378978}
+        m_TargetAssemblyTypeName: EquipGear, Assembly-CSharp
+        m_MethodName: Equip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1795677005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15737,7 +16089,7 @@ GameObject:
   - component: {fileID: 1809964474}
   - component: {fileID: 1809964473}
   m_Layer: 5
-  m_Name: shopslot3
+  m_Name: gearBellSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15757,7 +16109,7 @@ RectTransform:
   - {fileID: 1674491918}
   - {fileID: 766599236}
   m_Father: {fileID: 987427219}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15807,7 +16159,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1809964474}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 708464964}
+        m_TargetAssemblyTypeName: EquipGear, Assembly-CSharp
+        m_MethodName: Equip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1809964474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16642,6 +17006,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1959236226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1959236227}
+  - component: {fileID: 1959236228}
+  m_Layer: 5
+  m_Name: EquipGolokami
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1959236227
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959236226}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 987427219}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -921.99005, y: -2.7001953}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1959236228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959236226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f179844db8be4d34c82839dc8f605e84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gear: {fileID: 11400000, guid: 782e849a4a2ef8c44b894e9d523425f9, type: 2}
+  gearUi: {fileID: 396474352}
 --- !u!1 &1960021092
 GameObject:
   m_ObjectHideFlags: 0
@@ -17525,7 +17939,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2047451066}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5921229399118332145}
+        m_TargetAssemblyTypeName: GearSlotsManager, Assembly-CSharp
+        m_MethodName: OnSelectRightAnkleSlot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2047451066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18524,25 +18950,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2011687768303605092, guid: dc37e464d2ca3eb45b146e608b60f923, type: 3}
-      propertyPath: activePlayer
-      value: 
-      objectReference: {fileID: 11400000, guid: 8cab687252f88634683689feb961262a, type: 2}
     - target: {fileID: 2011687768303605093, guid: dc37e464d2ca3eb45b146e608b60f923, type: 3}
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2011687768303605093, guid: dc37e464d2ca3eb45b146e608b60f923, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.69228125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2011687768303605093, guid: dc37e464d2ca3eb45b146e608b60f923, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.55603486
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2011687768303605093, guid: dc37e464d2ca3eb45b146e608b60f923, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.0399344
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2011687768303605093, guid: dc37e464d2ca3eb45b146e608b60f923, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18653,7 +19075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   element: 0
-  hero: {fileID: 0}
+  hero: {fileID: 11400000, guid: af9e90b54d0ff9048b0409d8809509ed, type: 2}
   heroUi: {fileID: 1117081561}
 --- !u!224 &3739968488115991447
 RectTransform:
@@ -18705,15 +19127,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4878257459069944034, guid: 0a58bfaacfa21cc4e83a9b337ed654cf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.3034946
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4878257459069944034, guid: 0a58bfaacfa21cc4e83a9b337ed654cf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3786274
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4878257459069944034, guid: 0a58bfaacfa21cc4e83a9b337ed654cf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.019121
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4878257459069944034, guid: 0a58bfaacfa21cc4e83a9b337ed654cf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18749,6 +19171,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a58bfaacfa21cc4e83a9b337ed654cf, type: 3}
+--- !u!114 &5921229399118332145 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4075992202674165575, guid: 0a58bfaacfa21cc4e83a9b337ed654cf, type: 3}
+  m_PrefabInstance: {fileID: 5921229399118332144}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c9a98c4e37a314391f52d4ed36eac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7097590932883399094
 GameObject:
   m_ObjectHideFlags: 0
