@@ -12,6 +12,9 @@ public class LevelUpGear : MonoBehaviour
     private SO_Gear gear;
     [SerializeField] private Button buttonLevelUp;
 
+    public static event Action<OnUpdateGearEventArgs> OnUpgradeGear;
+    private OnUpdateGearEventArgs upgradeGearArgs = new OnUpdateGearEventArgs();
+
     private void OnEnable()
     {
         GearSlotsManager.OnUpdateGearSlot += OnUpdateGearSlotUpdateCurrentGear;
@@ -37,9 +40,10 @@ public class LevelUpGear : MonoBehaviour
     private void OnUpdateGearSlotUpdateCurrentGear(OnUpdateGearEventArgs updateGearArgs)
     {
         gear = updateGearArgs.so_equippedGear;
+        upgradeGearArgs.gearType = updateGearArgs.gearType;
     }
 
-    public void GearLevelUp()
+    public void GearUpgrade()
     {
         if (gear.isAtTierCap)
         {
@@ -51,6 +55,9 @@ public class LevelUpGear : MonoBehaviour
             activePlayer.currencyElemental -= gear.costToLevelUp;
             LevelUp();
         }
+
+        UpdateGearStats();
+        OnUpgradeGear?.Invoke(upgradeGearArgs);
     }
 
     public void LevelUp()
@@ -63,7 +70,6 @@ public class LevelUpGear : MonoBehaviour
                 gear.isAtTierCap = true;
             }
         }
-        UpdateGearStats();
     }
 
     public void TierUp()
@@ -73,7 +79,6 @@ public class LevelUpGear : MonoBehaviour
             gear.gearTier = gear.gearTier + 1;
             gear.isAtTierCap = false;
         }
-        UpdateGearStats();
     }
 
     private void UpdateGearStats()

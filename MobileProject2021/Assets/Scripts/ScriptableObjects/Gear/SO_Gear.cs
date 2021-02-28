@@ -8,6 +8,10 @@ public class SO_Gear : ScriptableObject
     [Header("General Attributes")]
     [SerializeField] private string gearName;
     [SerializeField] private string gearDescription;
+    #region Getters
+    public string GearName { get { return gearName; } }
+    public string GearDescription { get { return gearDescription; } }
+    #endregion
 
     [SerializeField] private GearType gearType;
     #region Getters

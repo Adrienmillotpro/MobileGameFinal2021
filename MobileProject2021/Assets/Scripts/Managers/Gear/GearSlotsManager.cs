@@ -17,11 +17,13 @@ public class GearSlotsManager : MonoBehaviour
     private void OnEnable()
     {
         EquipGear.OnEquipGear += OnEquipGearUpdatePlayerGear;
+        LevelUpGear.OnUpgradeGear += OnUpgradeGearUpdatePlayerGear;
     }
 
     private void OnDisable()
     {
         EquipGear.OnEquipGear -= OnEquipGearUpdatePlayerGear;
+        LevelUpGear.OnUpgradeGear -= OnUpgradeGearUpdatePlayerGear;
     }
 
     private void Start()
@@ -80,5 +82,12 @@ public class GearSlotsManager : MonoBehaviour
                 activePlayer.playerAnkleGears[slotIndex] = equipGearArgs.so_equippedGear;
                 break;
         }
+
+        OnUpdateGearSlot?.Invoke(gearArgs);
+    }
+
+    private void OnUpgradeGearUpdatePlayerGear(OnUpdateGearEventArgs upgradeGearArgs)
+    {
+        OnUpdateGearSlot?.Invoke(gearArgs);
     }
 }
