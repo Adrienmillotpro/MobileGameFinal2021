@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CommunionSceneTransition : MonoBehaviour
 {
@@ -24,5 +25,19 @@ public class CommunionSceneTransition : MonoBehaviour
                 transitionAnimators[3].enabled = true;
                 break;
         }
+    }
+
+    public void NextSceneTransition()
+    {
+        StartCoroutine(LoadScene());
+        receivedDirection.sceneToLoad = "MAIN";
+        transitionAnimators[4].enabled = true;
+    }
+
+    IEnumerator LoadScene()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("Load");
+
     }
 }

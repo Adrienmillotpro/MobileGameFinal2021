@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TransitionLoadingScene : MonoBehaviour
 {
     [SerializeField] private SO_SwipeDirection transitionInfo;
     [SerializeField] private Sprite[] transitionImages;
     [SerializeField] private SpriteRenderer transitionRenderer;
+    [SerializeField] private Slider loadingBar;
+
+    private AsyncOperation currentLoading;
     private void Start()
     {
         if (transitionInfo.sceneToLoad == null)
@@ -41,12 +45,20 @@ public class TransitionLoadingScene : MonoBehaviour
         StartCoroutine(LoadNextScene());
     }
 
+    private void Update()
+    {
+        if (currentLoading != null)
+        {
+            loadingBar.value = Mathf.Clamp01(currentLoading.progress / 0.9f);
+        }
+    }
+
     private IEnumerator LoadNextScene()
     {
+        yield return new WaitForSeconds(1f);
+        currentLoading = SceneManager.LoadSceneAsync(transitionInfo.sceneToLoad);
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(transitionInfo.sceneToLoad);
-
-        while (!asyncLoad.isDone)
+        while (!currentLoading.isDone)
         {
             yield return null;
         }
