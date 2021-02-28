@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class TransitionLoadingScene : MonoBehaviour
 {
@@ -11,12 +12,10 @@ public class TransitionLoadingScene : MonoBehaviour
     [SerializeField] private SpriteRenderer transitionRenderer;
     [SerializeField] private Slider loadingBar;
 
+    [SerializeField] private TMP_Text loadingText;
+
     private void Start()
     {
-        if (transitionInfo.sceneToLoad != "CommunionSceneUI" | transitionInfo.sceneToLoad != "MAIN")
-        {
-            transitionInfo.sceneToLoad = "CommunionSceneUI";
-        }
 
         if (transitionInfo.sceneToLoad == "MAIN")
         {
@@ -50,10 +49,20 @@ public class TransitionLoadingScene : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         AsyncOperation currentLoading = SceneManager.LoadSceneAsync(transitionInfo.sceneToLoad);
+        currentLoading.allowSceneActivation = false;
 
         while (!currentLoading.isDone)
         {
             loadingBar.value = Mathf.Clamp01(currentLoading.progress / 0.9f);
+
+            if (currentLoading.progress >= 0.9f)
+            {
+                loadingText.text = "Loading completed, Tap to continue!";
+                if (Input.GetMouseButtonDown(0))
+                {
+                    currentLoading.allowSceneActivation = true;
+                }
+            }
             yield return null;
         }
 
