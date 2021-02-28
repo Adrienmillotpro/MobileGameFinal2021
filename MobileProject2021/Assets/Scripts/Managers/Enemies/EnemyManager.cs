@@ -42,9 +42,6 @@ public class EnemyManager : MonoBehaviour
     public static event Action<OnSpawnEventArgs> OnSpawn;
     private OnSpawnEventArgs onSpawnArgs = new OnSpawnEventArgs();
 
-    public static event Action<OnSpawnEventArgs> OnBossFailed;
-    private OnSpawnEventArgs onBossFailedArgs = new OnSpawnEventArgs();
-
     // Progression
     private int roomLevel;
     [SerializeField] private float roomLevelMultiplierMajor;
@@ -191,6 +188,6 @@ public class EnemyManager : MonoBehaviour
 
     public void BossFailed()
     {
-        OnBossFailed?.Invoke(onBossFailedArgs);
+
     }
 }

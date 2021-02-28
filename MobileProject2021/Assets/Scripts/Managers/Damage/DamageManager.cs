@@ -5,9 +5,15 @@ using UnityEngine;
 
 public class DamageManager : MonoBehaviour
 {
+    [SerializeField] private SO_Player activePlayer;
     [SerializeField] private McStats mcStats;
     [SerializeField] private HeroManager heroManager;
     [SerializeField] private EnemyManager enemyManager;
+
+    private float gearAtkMultiplier;
+    private float gearAtkRateMultiplier;
+    private float gearElemMultiplier;
+    private float gearCurrMultiplier;
 
     // Events
     public static event Action<OnDamageEventArgs> OnDealDamage;
@@ -23,6 +29,11 @@ public class DamageManager : MonoBehaviour
     private void OnDisable()
     {
         TapMechanic.OnTap -= OnTapDealDamage;
+    }
+
+    private void Start()
+    {
+        
     }
 
     private void Update()

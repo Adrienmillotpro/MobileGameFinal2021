@@ -14,6 +14,9 @@ public class BossStats : MonoBehaviour
     public event EventHandler<OnKilledEventArgs> OnBossKilled;
     private OnKilledEventArgs onKilledArgs;
 
+    public event Action<OnKilledEventArgs> OnBossFailed;
+    private OnKilledEventArgs onBossFailedArgs = new OnKilledEventArgs();
+
     private void Awake()
     {
         DamageManager.OnDealDamage += OnDealDamageReceiveDamage;
