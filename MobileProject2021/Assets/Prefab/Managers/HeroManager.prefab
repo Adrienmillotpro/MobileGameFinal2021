@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4
   m_IsActive: 1
 --- !u!4 &992162540903112737
 Transform:
@@ -43,8 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 163e09009eefe934b8f3e99d75d13e8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroes:
-  - {fileID: 7000154314162702976, guid: d19043d4703fe4744941376ee7914c1c, type: 3}
-  - {fileID: 7000154314162702976, guid: faf8e333a6f24544cb8f750be11905e8, type: 3}
-  - {fileID: 7000154314162702976, guid: aabf7cd23914cf44586c4a9d0865a2f5, type: 3}
-  - {fileID: 7000154314162702976, guid: 00c56a2d255c7d14bbd9502cb255b8ec, type: 3}
+  activePlayer: {fileID: 11400000, guid: 8cab687252f88634683689feb961262a, type: 2}

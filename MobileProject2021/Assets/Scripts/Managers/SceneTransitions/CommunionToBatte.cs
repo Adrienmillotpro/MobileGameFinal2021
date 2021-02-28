@@ -17,7 +17,7 @@ public class CommunionToBatte : MonoBehaviour
     IEnumerator LoadScene()
     {
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("OpeningLoadingScene");
+        SceneManager.LoadScene("Load");
 
 
     }
