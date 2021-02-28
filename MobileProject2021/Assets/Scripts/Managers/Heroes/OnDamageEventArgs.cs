@@ -24,4 +24,11 @@ public class OnDamageEventArgs : EventArgs
         //Debug.Log(currencyOnDamage);
         return currencyOnDamage;
     }
+
+    public float ElementalCurrencyOnDamage()
+    {
+        float elementalCurrencyOnDamage;
+        elementalCurrencyOnDamage = damage / enemyMaxHealth * 100;
+        return elementalCurrencyOnDamage;
+    }
 }

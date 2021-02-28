@@ -61,7 +61,7 @@ public class PlayerCurrencies : MonoBehaviour
         currencyBase += damageArgs.CurrencyOnDamage(); // Player earns Base Currency
         if (damageArgs.bestElementalReaction == 2)
         {
-            activePlayer.currencyElemental += damageArgs.CurrencyOnDamage();
+            activePlayer.currencyElemental += damageArgs.ElementalCurrencyOnDamage();
         }
         UpdateCurrenciesArgs();
         OnUpdateCurrency?.Invoke(currenciesArgs);
