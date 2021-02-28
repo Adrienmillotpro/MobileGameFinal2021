@@ -54,7 +54,6 @@ public class UpgradeDMG : GeneralUpgrade
         this.upgradeLevel++;
         this.currentUpgradeCost = this.baseUpgradeCost * Mathf.Pow(this.upgradeCostMultiplier, this.upgradeLevel);
         this.currentUpgradeEffect = this.upgradeLevel * this.baseUpgradeEffect * this.upgradeEffectMultiplier;
-        Debug.Log(this.currentUpgradeEffect);
     }
     private void UpdateArgs() // Update arguments passed in event
     {
@@ -64,7 +63,5 @@ public class UpgradeDMG : GeneralUpgrade
         onUpgradeArgs.upgradeLevel = this.upgradeLevel;
         onUpgradeArgs.nextUpgradeEffect = (this.upgradeLevel +1) * this.baseUpgradeEffect * this.upgradeEffectMultiplier;
 
-        Debug.Log("UpgradeEffect " + onUpgradeArgs.upgradeEffect);
-        Debug.Log("NextUpgradeEffect " + onUpgradeArgs.nextUpgradeEffect);
     }
 }
