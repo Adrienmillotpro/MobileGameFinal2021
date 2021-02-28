@@ -13,11 +13,13 @@ public class SceneTransitions : MonoBehaviour
     private void OnEnable()
     {
         SwipeAttackMenu.OnSwap += OnSwapUpdateTransition;
+        EnemyManager.OnFail += OnFailedTransitionToCommunion;
     }
 
     private void OnDisable()
     {
         SwipeAttackMenu.OnSwap -= OnSwapUpdateTransition;
+        EnemyManager.OnFail -= OnFailedTransitionToCommunion;
     }
 
     private void Start()
@@ -51,12 +53,16 @@ public class SceneTransitions : MonoBehaviour
         StartCoroutine(LoadScene());
     }
 
+    private void OnFailedTransitionToCommunion(OnKilledEventArgs failedArgs)
+    {
+        NextSceneTransition();
+    }
+
     IEnumerator LoadScene()
     {
         transitionAnimator[indexAnimator].enabled = true;
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(+1);
         
-
     }
 }
