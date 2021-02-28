@@ -55,4 +55,5 @@ public class SO_Gear : ScriptableObject
     [HideInInspector] public float currentGearElemMult;
     [HideInInspector] public float currentGearCurrMult;
 
+    public bool isEquipped;
 }

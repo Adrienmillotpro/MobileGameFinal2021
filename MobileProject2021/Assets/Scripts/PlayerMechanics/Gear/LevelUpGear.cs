@@ -9,7 +9,7 @@ public class LevelUpGear : MonoBehaviour
 {
     [SerializeField] SO_Player activePlayer;
 
-    private SO_Gear gear;
+    [SerializeField] private SO_Gear gear;
     [SerializeField] private Button buttonLevelUp;
 
     public static event Action<OnUpdateGearEventArgs> OnUpgradeGear;
@@ -27,13 +27,16 @@ public class LevelUpGear : MonoBehaviour
 
     private void Update()
     {
-        if ((gear.isAtTierCap && activePlayer.currencyPremium < gear.costToTierUp) || (!gear.isAtTierCap && activePlayer.currencyElemental < gear.costToLevelUp))
+        if (gear != null)
         {
-            buttonLevelUp.interactable = false;
-        }
-        else
-        {
-            buttonLevelUp.interactable = true;
+            if ((gear.isAtTierCap && activePlayer.currencyPremium < gear.costToTierUp) || (!gear.isAtTierCap && activePlayer.currencyElemental < gear.costToLevelUp))
+            {
+                buttonLevelUp.interactable = false;
+            }
+            else
+            {
+                buttonLevelUp.interactable = false;
+            }
         }
     }
 

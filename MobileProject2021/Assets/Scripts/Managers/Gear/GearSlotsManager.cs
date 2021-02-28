@@ -14,6 +14,19 @@ public class GearSlotsManager : MonoBehaviour
     public static event Action<OnUpdateGearEventArgs> OnUpdateGearSlot;
     private OnUpdateGearEventArgs gearArgs = new OnUpdateGearEventArgs();
 
+    private void Awake()
+    {
+        equippedHandGear[0] = activePlayer.playerHandGears[0];
+        equippedHandGear[1] = activePlayer.playerHandGears[1];
+        equippedAnkleGear[0] = activePlayer.playerAnkleGears[0];
+        equippedAnkleGear[1] = activePlayer.playerAnkleGears[1];
+
+        activePlayer.playerHandGears[0].isEquipped = true;
+        activePlayer.playerHandGears[1].isEquipped = true;
+        activePlayer.playerAnkleGears[0].isEquipped = true;
+        activePlayer.playerAnkleGears[1].isEquipped = true;
+    }
+
     private void OnEnable()
     {
         EquipGear.OnEquipGear += OnEquipGearUpdatePlayerGear;
@@ -74,15 +87,19 @@ public class GearSlotsManager : MonoBehaviour
         switch (equipGearArgs.gearType)
         {
             case GearType.Hand:
+                equippedHandGear[slotIndex].isEquipped = false;
                 equippedHandGear[slotIndex] = equipGearArgs.so_equippedGear;
                 activePlayer.playerHandGears[slotIndex] = equipGearArgs.so_equippedGear;
+                equippedHandGear[slotIndex].isEquipped = true;
                 break;
             case GearType.Ankle:
+                equippedAnkleGear[slotIndex].isEquipped = false;
                 equippedAnkleGear[slotIndex] = equipGearArgs.so_equippedGear;
                 activePlayer.playerAnkleGears[slotIndex] = equipGearArgs.so_equippedGear;
+                equippedAnkleGear[slotIndex].isEquipped = true;
                 break;
         }
-
+        gearArgs.so_equippedGear = equipGearArgs.so_equippedGear;
         OnUpdateGearSlot?.Invoke(gearArgs);
     }
 
