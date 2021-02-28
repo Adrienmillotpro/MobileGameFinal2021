@@ -62,7 +62,7 @@ public class SceneTransitions : MonoBehaviour
     {
         transitionAnimator[indexAnimator].enabled = true;
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(+1);
+        SceneManager.LoadScene("CommunionSceneUI");
         
     }
 }
