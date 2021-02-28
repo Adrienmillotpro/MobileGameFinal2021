@@ -11,11 +11,9 @@ public class TransitionLoadingScene : MonoBehaviour
     [SerializeField] private SpriteRenderer transitionRenderer;
     [SerializeField] private Slider loadingBar;
 
-    private AsyncOperation currentLoading;
-    private bool isLoading;
     private void Start()
     {
-        if (transitionInfo.sceneToLoad == null)
+        if (transitionInfo.sceneToLoad != "CommunionSceneUI" | transitionInfo.sceneToLoad != "MAIN")
         {
             transitionInfo.sceneToLoad = "CommunionSceneUI";
         }
@@ -42,28 +40,22 @@ public class TransitionLoadingScene : MonoBehaviour
                     break;
             }
         }
-        
+
         StartCoroutine(LoadNextScene());
     }
 
-    private void Update()
-    {
-        if (isLoading)
-        {
-            loadingBar.value = Mathf.Clamp01(currentLoading.progress / 0.9f);
-        }
-    }
 
     private IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(1f);
-        currentLoading = SceneManager.LoadSceneAsync(transitionInfo.sceneToLoad);
-        isLoading = true;
+
+        AsyncOperation currentLoading = SceneManager.LoadSceneAsync(transitionInfo.sceneToLoad);
 
         while (!currentLoading.isDone)
         {
+            loadingBar.value = Mathf.Clamp01(currentLoading.progress / 0.9f);
             yield return null;
         }
-        isLoading = false;
+
     }
 }
