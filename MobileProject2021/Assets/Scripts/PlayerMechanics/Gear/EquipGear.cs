@@ -9,6 +9,7 @@ public class EquipGear : MonoBehaviour
     [SerializeField] private SO_Gear gear;
     [SerializeField] private GameObject gearUi;
     [SerializeField] private Button gearEquipButton;
+    public SO_Gear Gear { get { return gear; } }
 
     public static event Action<OnUpdateGearEventArgs> OnEquipGear;
     private OnUpdateGearEventArgs onEquipGearArgs = new OnUpdateGearEventArgs();

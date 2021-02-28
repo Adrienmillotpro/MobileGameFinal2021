@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class EquippedGearSlot : MonoBehaviour
+public class EquippedGearSlotVisuals : MonoBehaviour
 {
     [SerializeField] private SO_Player activePlayer;
     [SerializeField] private GearType slotType;
@@ -23,7 +23,6 @@ public class EquippedGearSlot : MonoBehaviour
     {
         GearSlotsManager.OnUpdateGearSlot -= OnUpdateGearSlotsUpdateSlot;
     }
-
 
     private void OnUpdateGearSlotsUpdateSlot(OnUpdateGearEventArgs slotsArgs)
     {
