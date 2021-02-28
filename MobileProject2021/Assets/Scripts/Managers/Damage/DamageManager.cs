@@ -33,7 +33,18 @@ public class DamageManager : MonoBehaviour
 
     private void Start()
     {
-        
+        for (int i = 0; i< activePlayer.playerHandGears.Length; i++)
+        {
+            gearAtkMultiplier += activePlayer.playerHandGears[i].currentGearDamage + activePlayer.playerAnkleGears[i].currentGearDamage;
+            gearAtkRateMultiplier += activePlayer.playerHandGears[i].currentGearAtkRate + activePlayer.playerAnkleGears[i].currentGearAtkRate;
+            gearElemMultiplier += activePlayer.playerHandGears[i].currentGearElemMult + activePlayer.playerAnkleGears[i].currentGearElemMult;
+            gearCurrMultiplier += activePlayer.playerHandGears[i].currentGearCurrMult + activePlayer.playerAnkleGears[i].currentGearCurrMult;
+        }
+        gearAtkMultiplier /= 4;
+        gearAtkRateMultiplier /= 4;
+        gearElemMultiplier /= 4;
+        gearCurrMultiplier /= 4;
+
     }
 
     private void Update()
@@ -80,7 +91,7 @@ public class DamageManager : MonoBehaviour
         }
 
         onDealDamageArgs.elementalMultiplier = elementalMultiplier;
-        onDealDamageArgs.damage = (heroManager.CurrentStats.heroDamage + mcStats.damage) * elementalMultiplier;
+        onDealDamageArgs.damage = (heroManager.CurrentStats.heroDamage + (mcStats.damage * gearAtkMultiplier)) * (elementalMultiplier * gearElemMultiplier);
         //Debug.Log("DealDamage - damageArgs.damage " + onDealDamageArgs.damage);
 
         onDealDamageArgs.enemyLevel = enemyManager.EnemyLevel;
