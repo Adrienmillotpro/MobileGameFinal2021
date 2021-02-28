@@ -55,6 +55,6 @@ public class BossStats : MonoBehaviour
     private IEnumerator BossTimer(float timer)
     {
         yield return new WaitForSeconds(timer);
-        Die();
+        
     }
 }
