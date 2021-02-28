@@ -42,7 +42,6 @@ public class SelectedGearVisuals : MonoBehaviour
         currentCurrMultText.text = selectedGear.currentGearCurrMult.ToString();
 
         nextDamageText.text = (selectedGear.GearDamage * (selectedGear.gearLevel +1) * selectedGear.gearTierMultiplier).ToString();
-        Debug.Log(selectedGear.gearTierMultiplier);
         nextAtkRateText.text = (selectedGear.GearAtkRate * (selectedGear.gearLevel + 1) * selectedGear.gearTierMultiplier).ToString();
         nextElementMultText.text = (selectedGear.GearElemMult * (selectedGear.gearLevel + 1) * selectedGear.gearTierMultiplier).ToString();
         nextCurrMultText.text = (selectedGear.GearCurrMult * (selectedGear.gearLevel + 1) * selectedGear.gearTierMultiplier).ToString();

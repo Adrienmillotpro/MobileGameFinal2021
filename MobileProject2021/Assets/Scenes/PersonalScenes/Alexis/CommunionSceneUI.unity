@@ -1059,8 +1059,9 @@ GameObject:
   - component: {fileID: 62679944}
   - component: {fileID: 62679943}
   - component: {fileID: 62679942}
+  - component: {fileID: 62679945}
   m_Layer: 5
-  m_Name: Bell1
+  m_Name: LeftAnkleSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1181,6 +1182,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62679940}
   m_CullTransparentMesh: 1
+--- !u!114 &62679945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62679940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c56b51cd1d2ab4381be5949a2aa426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activePlayer: {fileID: 11400000, guid: 8cab687252f88634683689feb961262a, type: 2}
+  slotType: 1
+  slotIndex: 0
+  gearName: {fileID: 895747621}
+  currentDamageText: {fileID: 1319501249}
+  currentAtkRateText: {fileID: 1893124544}
+  currentElemMultText: {fileID: 1236598701}
+  currentCurrMultText: {fileID: 1716228765}
 --- !u!1 &64101390
 GameObject:
   m_ObjectHideFlags: 0
@@ -6336,8 +6357,9 @@ GameObject:
   - component: {fileID: 519553380}
   - component: {fileID: 519553379}
   - component: {fileID: 519553378}
+  - component: {fileID: 519553381}
   m_Layer: 5
-  m_Name: Golokami
+  m_Name: RightHandSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6458,6 +6480,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519553376}
   m_CullTransparentMesh: 1
+--- !u!114 &519553381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519553376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c56b51cd1d2ab4381be5949a2aa426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activePlayer: {fileID: 11400000, guid: 8cab687252f88634683689feb961262a, type: 2}
+  slotType: 0
+  slotIndex: 0
+  gearName: {fileID: 651182485}
+  currentDamageText: {fileID: 2114377919}
+  currentAtkRateText: {fileID: 967011824}
+  currentElemMultText: {fileID: 70986427}
+  currentCurrMultText: {fileID: 294611806}
 --- !u!1 &538933041
 GameObject:
   m_ObjectHideFlags: 0
@@ -19394,8 +19436,9 @@ GameObject:
   - component: {fileID: 1593380498}
   - component: {fileID: 1593380497}
   - component: {fileID: 1593380496}
+  - component: {fileID: 1593380499}
   m_Layer: 5
-  m_Name: Sagasaga
+  m_Name: LeftHandSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19516,6 +19559,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593380494}
   m_CullTransparentMesh: 1
+--- !u!114 &1593380499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593380494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c56b51cd1d2ab4381be5949a2aa426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activePlayer: {fileID: 11400000, guid: 8cab687252f88634683689feb961262a, type: 2}
+  slotType: 0
+  slotIndex: 1
+  gearName: {fileID: 1339677100}
+  currentDamageText: {fileID: 1051196335}
+  currentAtkRateText: {fileID: 1027339790}
+  currentElemMultText: {fileID: 1298361040}
+  currentCurrMultText: {fileID: 514037673}
 --- !u!1 &1601526768
 GameObject:
   m_ObjectHideFlags: 0
@@ -25877,8 +25940,9 @@ GameObject:
   - component: {fileID: 2047451067}
   - component: {fileID: 2047451066}
   - component: {fileID: 2047451065}
+  - component: {fileID: 2047451068}
   m_Layer: 5
-  m_Name: Bell2
+  m_Name: RightAnkleSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25999,6 +26063,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2047451063}
   m_CullTransparentMesh: 1
+--- !u!114 &2047451068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047451063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c56b51cd1d2ab4381be5949a2aa426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activePlayer: {fileID: 11400000, guid: 8cab687252f88634683689feb961262a, type: 2}
+  slotType: 1
+  slotIndex: 1
+  gearName: {fileID: 2051208938}
+  currentDamageText: {fileID: 32720657}
+  currentAtkRateText: {fileID: 2054061535}
+  currentElemMultText: {fileID: 115391687}
+  currentCurrMultText: {fileID: 1508311844}
 --- !u!1 &2048813237
 GameObject:
   m_ObjectHideFlags: 0

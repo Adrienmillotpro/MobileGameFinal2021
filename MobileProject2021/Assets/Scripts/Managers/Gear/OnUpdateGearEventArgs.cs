@@ -8,5 +8,4 @@ public class OnUpdateGearEventArgs : EventArgs
     public SO_Gear so_equippedGear;
     public GearType gearType;
     public int slotIndex;
-
 }
