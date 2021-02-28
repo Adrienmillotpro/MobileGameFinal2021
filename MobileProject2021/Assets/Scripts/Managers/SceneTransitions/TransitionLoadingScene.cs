@@ -61,7 +61,7 @@ public class TransitionLoadingScene : MonoBehaviour
 
             if (currentLoading.progress >= 0.9f)
             {
-                loadingText.text = "Loading completed, Tap to continue!";
+                loadingText.text = "Tap to continue!";
                 if (Input.GetMouseButtonDown(0))
                 {
                     currentLoading.allowSceneActivation = true;
