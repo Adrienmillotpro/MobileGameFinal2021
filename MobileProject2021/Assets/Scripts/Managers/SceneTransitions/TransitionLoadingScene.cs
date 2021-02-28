@@ -12,6 +12,7 @@ public class TransitionLoadingScene : MonoBehaviour
     [SerializeField] private Slider loadingBar;
 
     private AsyncOperation currentLoading;
+    private bool isLoading;
     private void Start()
     {
         if (transitionInfo.sceneToLoad == null)
@@ -47,7 +48,7 @@ public class TransitionLoadingScene : MonoBehaviour
 
     private void Update()
     {
-        if (currentLoading != null)
+        if (isLoading)
         {
             loadingBar.value = Mathf.Clamp01(currentLoading.progress / 0.9f);
         }
@@ -57,10 +58,12 @@ public class TransitionLoadingScene : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         currentLoading = SceneManager.LoadSceneAsync(transitionInfo.sceneToLoad);
+        isLoading = true;
 
         while (!currentLoading.isDone)
         {
             yield return null;
         }
+        isLoading = false;
     }
 }
