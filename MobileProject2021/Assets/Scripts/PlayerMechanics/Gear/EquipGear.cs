@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EquipGear : MonoBehaviour
 {
     [SerializeField] private SO_Gear gear;
     [SerializeField] private GameObject gearUi;
+    [SerializeField] private Button gearEquipButton;
 
     public static event Action<OnUpdateGearEventArgs> OnEquipGear;
     private OnUpdateGearEventArgs onEquipGearArgs = new OnUpdateGearEventArgs();
@@ -36,6 +38,15 @@ public class EquipGear : MonoBehaviour
         else
         {
             this.gearUi.SetActive(false);
+        }
+
+        if (this.gear.isEquipped)
+        {
+            this.gearEquipButton.interactable = false;
+        }
+        else
+        {
+            this.gearEquipButton.interactable = true;
         }
     }
 

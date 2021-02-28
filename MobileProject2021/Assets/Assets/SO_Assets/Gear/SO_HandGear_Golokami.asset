@@ -23,13 +23,14 @@ MonoBehaviour:
   gearBaseCost: 250
   gearBasePremiumCost: 1
   lvlCapForTier: 0a000000140000001e00000032000000
-  gearTier: 0
-  gearLevel: 0
   gearTierMultiplier: 0
-  costToLevelUp: 0
-  costToTierUp: 0
+  gearTier: 0
+  gearLevel: 1
+  costToLevelUp: 250
+  costToTierUp: 1
   isAtTierCap: 0
-  currentGearDamage: 0
-  currentGearAtkRate: 0
-  currentGearElemMult: 0
-  currentGearCurrMult: 0
+  currentGearDamage: 5
+  currentGearAtkRate: 1.1
+  currentGearElemMult: 1.1
+  currentGearCurrMult: 1
+  isEquipped: 0

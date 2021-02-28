@@ -41,19 +41,19 @@ public class SO_Gear : ScriptableObject
     public float GearBaseCost { get { return gearBaseCost; } }
     #endregion
 
-    [HideInInspector] public GearTier gearTier;
-
-    [HideInInspector] public int gearLevel;
     [HideInInspector] public float gearTierMultiplier;
+    public GearTier gearTier;
 
-    [HideInInspector] public float costToLevelUp;
-    [HideInInspector] public float costToTierUp;
-    [HideInInspector] public bool isAtTierCap;
+    public int gearLevel;
 
-    [HideInInspector] public float currentGearDamage;
-    [HideInInspector] public float currentGearAtkRate;
-    [HideInInspector] public float currentGearElemMult;
-    [HideInInspector] public float currentGearCurrMult;
+    public float costToLevelUp;
+    public float costToTierUp;
+    public bool isAtTierCap;
+
+    public float currentGearDamage;
+    public float currentGearAtkRate;
+    public float currentGearElemMult;
+    public float currentGearCurrMult;
 
     public bool isEquipped;
 }
