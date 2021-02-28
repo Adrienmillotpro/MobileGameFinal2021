@@ -16,6 +16,10 @@ public class TransitionLoadingScene : MonoBehaviour
 
     private void Start()
     {
+        if (transitionInfo.sceneToLoad != "MAIN" && transitionInfo.sceneToLoad != "CommunionSceneUI")
+        {
+            transitionInfo.sceneToLoad = "CommunionSceneUI";
+        }
 
         if (transitionInfo.sceneToLoad == "MAIN")
         {
