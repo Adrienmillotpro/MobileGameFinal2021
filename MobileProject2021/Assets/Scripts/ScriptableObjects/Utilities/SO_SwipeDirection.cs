@@ -7,4 +7,5 @@ using UnityEngine;
 public class SO_SwipeDirection : ScriptableObject
 {
     public SwipeType swipeType;
+    public string sceneToLoad;
 }

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneTransitions : MonoBehaviour
 {
     [SerializeField] private Animator[] transitionAnimator;
-    
+    [SerializeField] SO_SwipeDirection transitionInfo;
     
     private int indexAnimator;
 
@@ -60,9 +60,10 @@ public class SceneTransitions : MonoBehaviour
 
     IEnumerator LoadScene()
     {
+        transitionInfo.sceneToLoad = "CommunionSceneUI";
         transitionAnimator[indexAnimator].enabled = true;
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("CommunionSceneUI");
+        SceneManager.LoadScene("OpeningLoadingScene");
         
     }
 }
