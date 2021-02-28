@@ -24,10 +24,10 @@ public class EquipGearVisuals : MonoBehaviour
 
     private void OnUpdateSlotsUpdateEquipSlotVisuals(OnUpdateGearEventArgs updateSlotsArgs)
     {
-        gearName.text = equipSlot.Gear.GearName;
-        currentDamageText.text = equipSlot.Gear.currentGearDamage.ToString();
-        currentAtkRateText.text = equipSlot.Gear.currentGearAtkRate.ToString();
-        currentElemMultText.text = equipSlot.Gear.currentGearElemMult.ToString();
-        currentCurrMultText.text = equipSlot.Gear.currentGearCurrMult.ToString();
+        this.gearName.text = this.equipSlot.Gear.GearName;
+        this.currentDamageText.text = this.equipSlot.Gear.currentGearDamage.ToString();
+        this.currentAtkRateText.text = this.equipSlot.Gear.currentGearAtkRate.ToString();
+        this.currentElemMultText.text = this.equipSlot.Gear.currentGearElemMult.ToString();
+        this.currentCurrMultText.text = this.equipSlot.Gear.currentGearCurrMult.ToString();
     }
 }

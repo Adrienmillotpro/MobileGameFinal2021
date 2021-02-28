@@ -84,7 +84,7 @@ public class GearSlotsManager : MonoBehaviour
 
     private void OnEquipGearUpdatePlayerGear(OnUpdateGearEventArgs equipGearArgs)
     {
-        switch (equipGearArgs.gearType)
+        switch (equipGearArgs.so_equippedGear.GearType)
         {
             case GearType.Hand:
                 equippedHandGear[slotIndex].isEquipped = false;
