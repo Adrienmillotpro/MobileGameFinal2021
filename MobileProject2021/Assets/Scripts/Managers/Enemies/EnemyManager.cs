@@ -42,6 +42,9 @@ public class EnemyManager : MonoBehaviour
     public static event Action<OnSpawnEventArgs> OnSpawn;
     private OnSpawnEventArgs onSpawnArgs = new OnSpawnEventArgs();
 
+    public static event Action<OnKilledEventArgs> OnFail;
+    private OnKilledEventArgs onFailedArgs = new OnKilledEventArgs();
+
     // Progression
     private int roomLevel;
     [SerializeField] private float roomLevelMultiplierMajor;
@@ -96,6 +99,7 @@ public class EnemyManager : MonoBehaviour
         currentBossStats = currentBoss.GetComponent<BossStats>();
         currentBossVisuals = currentBoss.GetComponent<BossVisuals>();
         currentBossStats.OnBossKilled += OnBossKilled;
+        currentBossStats.OnBossFailed += BossFailed;
 
         currentSoBoss = currentWave.PotentialBoss;
         currentBossStats.soBoss = currentSoBoss;
@@ -165,6 +169,7 @@ public class EnemyManager : MonoBehaviour
     private void OnBossKilled(object sender, OnKilledEventArgs bossKilledArgs)
     {
         currentBossStats.OnBossKilled -= OnBossKilled;
+        currentBossStats.OnBossFailed -= BossFailed;
         UpdateRoom();
     }
 
@@ -186,8 +191,8 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
-    public void BossFailed()
+    public void BossFailed(OnKilledEventArgs failedArgs)
     {
-
+        OnFail?.Invoke(failedArgs);
     }
 }

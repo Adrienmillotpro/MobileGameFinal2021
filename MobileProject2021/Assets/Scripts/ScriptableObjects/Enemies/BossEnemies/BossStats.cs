@@ -52,12 +52,13 @@ public class BossStats : MonoBehaviour
     private void Die()
     {
         OnBossKilled?.Invoke(this, onKilledArgs);
+        StopAllCoroutines();
         Destroy(this.gameObject);
     }
 
     private IEnumerator BossTimer(float timer)
     {
         yield return new WaitForSeconds(timer);
-        
+        OnBossFailed?.Invoke(onBossFailedArgs);
     }
 }
