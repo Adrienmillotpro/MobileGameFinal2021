@@ -41,7 +41,7 @@ public class SO_Gear : ScriptableObject
     public float GearBaseCost { get { return gearBaseCost; } }
     #endregion
 
-    [HideInInspector] public float gearTierMultiplier;
+    public float gearTierMultiplier;
     public GearTier gearTier;
 
     public int gearLevel;

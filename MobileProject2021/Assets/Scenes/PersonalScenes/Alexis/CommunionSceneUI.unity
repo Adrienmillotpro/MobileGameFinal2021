@@ -442,6 +442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gear: {fileID: 11400000, guid: 3c662828140ef3c4f8bea6eb33592929, type: 2}
   gearUi: {fileID: 1335972978}
+  gearEquipButton: {fileID: 1335972980}
 --- !u!1001 &13588896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2387,8 +2388,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 704055824}
   m_HandleRect: {fileID: 704055823}
   m_Direction: 0
-  m_Value: -0.00000010841055
-  m_Size: 0.49183136
+  m_Value: -0.00000010841058
+  m_Size: 0.4918314
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8656,6 +8657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gear: {fileID: 11400000, guid: 1a3e51740073d144a91226705c311c5f, type: 2}
   gearUi: {fileID: 1809964471}
+  gearEquipButton: {fileID: 1809964473}
 --- !u!1 &716150592
 GameObject:
   m_ObjectHideFlags: 0
@@ -9594,7 +9596,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0, y: 6.2}
+  m_AnchoredPosition: {x: 0, y: 6.2}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &835671283
@@ -12155,6 +12157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gear: {fileID: 11400000, guid: 29e3ba99f219718419fe0944e454b317, type: 2}
   gearUi: {fileID: 1032503124}
+  gearEquipButton: {fileID: 1032503126}
 --- !u!114 &1068984926 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2011687768303605092, guid: dc37e464d2ca3eb45b146e608b60f923, type: 3}
@@ -14417,6 +14420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gear: {fileID: 11400000, guid: 5617357b2298f3a42b8cff851ed9a159, type: 2}
   gearUi: {fileID: 1795677002}
+  gearEquipButton: {fileID: 1795677004}
 --- !u!1 &1266138921
 GameObject:
   m_ObjectHideFlags: 0
@@ -18516,6 +18520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gear: {fileID: 11400000, guid: 6b41fdc8e45c4d34588c40f4c5d31543, type: 2}
   gearUi: {fileID: 64101390}
+  gearEquipButton: {fileID: 64101392}
 --- !u!1 &1478897747
 GameObject:
   m_ObjectHideFlags: 0
@@ -22268,7 +22273,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.05258749}
   m_AnchorMax: {x: 0.5155606, y: 0.30655003}
-  m_AnchoredPosition: {x: 522.5, y: -19.499878}
+  m_AnchoredPosition: {x: 522.5, y: -19.499756}
   m_SizeDelta: {x: 2059.59, y: -25.099976}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1732363237
@@ -24770,6 +24775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gear: {fileID: 11400000, guid: 782e849a4a2ef8c44b894e9d523425f9, type: 2}
   gearUi: {fileID: 396474352}
+  gearEquipButton: {fileID: 396474354}
 --- !u!1 &1960021092
 GameObject:
   m_ObjectHideFlags: 0
@@ -25762,7 +25768,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0, y: -67}
+  m_AnchoredPosition: {x: 0, y: -67}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2045561922
