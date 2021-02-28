@@ -6768,6 +6768,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1990911258642270292, guid: 8488816f905c79b4286b001e9da476c6, type: 3}
+      propertyPath: musicVolume
+      value: 
+      objectReference: {fileID: 11400000, guid: 89bdd63ab5e356940907520e7a72e016, type: 2}
+    - target: {fileID: 1990911258642270292, guid: 8488816f905c79b4286b001e9da476c6, type: 3}
+      propertyPath: sliderVolume
+      value: 
+      objectReference: {fileID: 1908910896}
     - target: {fileID: 1990911258642270293, guid: 8488816f905c79b4286b001e9da476c6, type: 3}
       propertyPath: m_RootOrder
       value: 23

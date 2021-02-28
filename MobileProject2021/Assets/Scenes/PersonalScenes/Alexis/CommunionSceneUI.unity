@@ -565,6 +565,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: 83cca8a1dcea8de4b8718b0a207e9a29, type: 2}
+  musicVolume: {fileID: 11400000, guid: 89bdd63ab5e356940907520e7a72e016, type: 2}
+  sliderVolume: {fileID: 1708080499}
 --- !u!4 &22065409
 Transform:
   m_ObjectHideFlags: 0
@@ -2363,8 +2365,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 704055824}
   m_HandleRect: {fileID: 704055823}
   m_Direction: 0
-  m_Value: -0.00000010841053
-  m_Size: 0.4918313
+  m_Value: -0.00000010841058
+  m_Size: 0.4918314
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
