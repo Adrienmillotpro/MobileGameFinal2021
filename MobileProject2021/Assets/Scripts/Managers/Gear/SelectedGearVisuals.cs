@@ -23,6 +23,7 @@ public class SelectedGearVisuals : MonoBehaviour
     [SerializeField] private TMP_Text currentCurrMultText;
     [SerializeField] private TMP_Text nextCurrMultText;
 
+    [SerializeField] private TMP_Text currentCost;
     private void OnEnable()
     {
         GearSlotsManager.OnUpdateGearSlot += OnUpdateGearSlotUpdateSelectedGear;
@@ -49,5 +50,15 @@ public class SelectedGearVisuals : MonoBehaviour
         nextAtkRateText.text = (selectedGear.GearAtkRate * (selectedGear.gearLevel + 1) * selectedGear.gearTierMultiplier).ToString();
         nextElementMultText.text = (selectedGear.GearElemMult * (selectedGear.gearLevel + 1) * selectedGear.gearTierMultiplier).ToString();
         nextCurrMultText.text = (selectedGear.GearCurrMult * (selectedGear.gearLevel + 1) * selectedGear.gearTierMultiplier).ToString();
+
+        if (selectedGear.isAtTierCap)
+        {
+            currentCost.text = selectedGear.costToTierUp.ToString("F0");
+        }
+        else
+        {
+            currentCost.text = selectedGear.costToLevelUp.ToString("F0");
+        }
+
     }
 }

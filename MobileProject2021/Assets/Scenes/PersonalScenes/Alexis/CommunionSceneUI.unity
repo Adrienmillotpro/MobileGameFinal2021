@@ -459,10 +459,7 @@ MonoBehaviour:
   equipSlot: {fileID: 7421384}
   gearName: {fileID: 594462617}
   gearIcon: {fileID: 533944433}
-  currentDamageText: {fileID: 0}
-  currentAtkRateText: {fileID: 0}
-  currentElemMultText: {fileID: 0}
-  currentCurrMultText: {fileID: 0}
+  gearLevel: {fileID: 448627450}
 --- !u!1001 &13588896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -867,8 +864,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.8264977, y: 9.204618, z: 1}
   m_Children:
-  - {fileID: 895747620}
   - {fileID: 1804423814}
+  - {fileID: 895747620}
   - {fileID: 1519754889}
   m_Father: {fileID: 645437003}
   m_RootOrder: 2
@@ -989,10 +986,7 @@ MonoBehaviour:
   slotIndex: 0
   gearName: {fileID: 895747621}
   gearIcon: {fileID: 1804423815}
-  currentDamageText: {fileID: 0}
-  currentAtkRateText: {fileID: 0}
-  currentElemMultText: {fileID: 0}
-  currentCurrMultText: {fileID: 0}
+  gearLevel: {fileID: 1503183939}
 --- !u!1 &64101390
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,8 +1017,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1260407651}
   - {fileID: 154986727}
+  - {fileID: 1260407651}
   - {fileID: 1051414251}
   m_Father: {fileID: 987427219}
   m_RootOrder: 3
@@ -1912,7 +1906,7 @@ RectTransform:
   m_LocalScale: {x: 1.4000001, y: 1.4000001, z: 1.3999999}
   m_Children: []
   m_Father: {fileID: 64101391}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1932,7 +1926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2244,7 +2238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &191191296
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2378,8 +2372,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 704055824}
   m_HandleRect: {fileID: 704055823}
   m_Direction: 0
-  m_Value: -0.00000010841053
-  m_Size: 0.4918313
+  m_Value: -0.00000010841058
+  m_Size: 0.4918314
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3104,7 +3098,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1795677003}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3748,7 +3742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3937,8 +3931,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1382283582}
   - {fileID: 527138434}
+  - {fileID: 1382283582}
   - {fileID: 1740999053}
   m_Father: {fileID: 987427219}
   m_RootOrder: 1
@@ -4165,7 +4159,7 @@ RectTransform:
   m_LocalScale: {x: 0.7861479, y: 0.15209757, z: 1.3999999}
   m_Children: []
   m_Father: {fileID: 1593380495}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4185,7 +4179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4988,8 +4982,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.8264977, y: 9.204618, z: 1}
   m_Children:
-  - {fileID: 651182484}
   - {fileID: 1513166328}
+  - {fileID: 651182484}
   - {fileID: 169176964}
   m_Father: {fileID: 645437003}
   m_RootOrder: 0
@@ -5110,10 +5104,7 @@ MonoBehaviour:
   slotIndex: 0
   gearName: {fileID: 651182485}
   gearIcon: {fileID: 1513166329}
-  currentDamageText: {fileID: 0}
-  currentAtkRateText: {fileID: 0}
-  currentElemMultText: {fileID: 0}
-  currentCurrMultText: {fileID: 0}
+  gearLevel: {fileID: 326113592}
 --- !u!1 &527138433
 GameObject:
   m_ObjectHideFlags: 0
@@ -5144,7 +5135,7 @@ RectTransform:
   m_LocalScale: {x: 1.4, y: 1.4, z: 1.3999999}
   m_Children: []
   m_Father: {fileID: 396474353}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5164,7 +5155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5219,7 +5210,7 @@ RectTransform:
   m_LocalScale: {x: 1.4000001, y: 1.4000001, z: 1.3999999}
   m_Children: []
   m_Father: {fileID: 1335972979}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5239,7 +5230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5762,7 +5753,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1335972979}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6267,7 +6258,7 @@ RectTransform:
   m_LocalScale: {x: 0.5615342, y: 0.10864111, z: 1}
   m_Children: []
   m_Father: {fileID: 519553377}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6918,10 +6909,7 @@ MonoBehaviour:
   equipSlot: {fileID: 708464964}
   gearName: {fileID: 1674491919}
   gearIcon: {fileID: 1410322893}
-  currentDamageText: {fileID: 0}
-  currentAtkRateText: {fileID: 0}
-  currentElemMultText: {fileID: 0}
-  currentCurrMultText: {fileID: 0}
+  gearLevel: {fileID: 2139643048}
 --- !u!1 &710356647
 GameObject:
   m_ObjectHideFlags: 0
@@ -8414,7 +8402,7 @@ RectTransform:
   m_LocalScale: {x: 0.5615341, y: 0.1086411, z: 1}
   m_Children: []
   m_Father: {fileID: 62679941}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8755,6 +8743,7 @@ MonoBehaviour:
   nextElementMultText: {fileID: 370975143}
   currentCurrMultText: {fileID: 513824668}
   nextCurrMultText: {fileID: 1667188716}
+  currentCost: {fileID: 393560181}
 --- !u!1 &924443208
 GameObject:
   m_ObjectHideFlags: 0
@@ -8957,7 +8946,7 @@ RectTransform:
   m_LocalScale: {x: 1.4000001, y: 1.4000001, z: 1.3999999}
   m_Children: []
   m_Father: {fileID: 1032503125}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8977,7 +8966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9342,8 +9331,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1607841452}
   - {fileID: 963035186}
+  - {fileID: 1607841452}
   - {fileID: 1050913910}
   m_Father: {fileID: 987427219}
   m_RootOrder: 9
@@ -9624,10 +9613,7 @@ MonoBehaviour:
   equipSlot: {fileID: 1060304229}
   gearName: {fileID: 1607841453}
   gearIcon: {fileID: 963035187}
-  currentDamageText: {fileID: 0}
-  currentAtkRateText: {fileID: 0}
-  currentElemMultText: {fileID: 0}
-  currentCurrMultText: {fileID: 0}
+  gearLevel: {fileID: 1110078897}
 --- !u!114 &1068984926 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2011687768303605092, guid: dc37e464d2ca3eb45b146e608b60f923, type: 3}
@@ -11368,7 +11354,7 @@ RectTransform:
   m_LocalScale: {x: 0.786148, y: 0.15209757, z: 1.3999999}
   m_Children: []
   m_Father: {fileID: 2047451064}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11388,7 +11374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11612,7 +11598,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 64101391}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11783,10 +11769,7 @@ MonoBehaviour:
   equipSlot: {fileID: 1262378978}
   gearName: {fileID: 318909284}
   gearIcon: {fileID: 1485659738}
-  currentDamageText: {fileID: 0}
-  currentAtkRateText: {fileID: 0}
-  currentElemMultText: {fileID: 0}
-  currentCurrMultText: {fileID: 0}
+  gearLevel: {fileID: 290584208}
 --- !u!1 &1266138921
 GameObject:
   m_ObjectHideFlags: 0
@@ -12724,8 +12707,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 594462616}
   - {fileID: 533944432}
+  - {fileID: 594462616}
   - {fileID: 1122585371}
   m_Father: {fileID: 987427219}
   m_RootOrder: 7
@@ -12859,7 +12842,7 @@ RectTransform:
   m_LocalScale: {x: 0.56153417, y: 0.1086411, z: 1}
   m_Children: []
   m_Father: {fileID: 1593380495}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13443,7 +13426,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 396474353}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14317,7 +14300,7 @@ RectTransform:
   m_LocalScale: {x: 1.4000001, y: 1.4000001, z: 1.3999999}
   m_Children: []
   m_Father: {fileID: 1809964472}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14337,7 +14320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -14662,10 +14645,7 @@ MonoBehaviour:
   equipSlot: {fileID: 1467154992}
   gearName: {fileID: 1260407652}
   gearIcon: {fileID: 154986728}
-  currentDamageText: {fileID: 0}
-  currentAtkRateText: {fileID: 0}
-  currentElemMultText: {fileID: 0}
-  currentCurrMultText: {fileID: 0}
+  gearLevel: {fileID: 170360034}
 --- !u!1 &1485659736
 GameObject:
   m_ObjectHideFlags: 0
@@ -14696,7 +14676,7 @@ RectTransform:
   m_LocalScale: {x: 1.4000001, y: 1.4000001, z: 1.3999999}
   m_Children: []
   m_Father: {fileID: 1795677003}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14716,7 +14696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15023,7 +15003,7 @@ RectTransform:
   m_LocalScale: {x: 0.7861479, y: 0.15209757, z: 1.3999999}
   m_Children: []
   m_Father: {fileID: 519553377}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15043,7 +15023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15623,8 +15603,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.8264977, y: 9.204618, z: 1}
   m_Children:
-  - {fileID: 1339677099}
   - {fileID: 427511676}
+  - {fileID: 1339677099}
   - {fileID: 1487390824}
   m_Father: {fileID: 645437003}
   m_RootOrder: 1
@@ -15745,10 +15725,7 @@ MonoBehaviour:
   slotIndex: 1
   gearName: {fileID: 1339677100}
   gearIcon: {fileID: 427511677}
-  currentDamageText: {fileID: 0}
-  currentAtkRateText: {fileID: 0}
-  currentElemMultText: {fileID: 0}
-  currentCurrMultText: {fileID: 0}
+  gearLevel: {fileID: 867008890}
 --- !u!1 &1595553350 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7770478923352384736, guid: 5de509d1f60e6aa4fae6876bc0640e1c, type: 3}
@@ -16011,7 +15988,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1032503125}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16799,7 +16776,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1809964472}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18134,8 +18111,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 318909283}
   - {fileID: 1485659737}
+  - {fileID: 318909283}
   - {fileID: 866219360}
   m_Father: {fileID: 987427219}
   m_RootOrder: 11
@@ -18344,7 +18321,7 @@ RectTransform:
   m_LocalScale: {x: 0.78614795, y: 0.15209757, z: 1.3999999}
   m_Children: []
   m_Father: {fileID: 62679941}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18364,7 +18341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18419,8 +18396,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1674491918}
   - {fileID: 1410322892}
+  - {fileID: 1674491918}
   - {fileID: 1273876637}
   m_Father: {fileID: 987427219}
   m_RootOrder: 5
@@ -19434,10 +19411,7 @@ MonoBehaviour:
   equipSlot: {fileID: 1959236228}
   gearName: {fileID: 1382283583}
   gearIcon: {fileID: 527138435}
-  currentDamageText: {fileID: 0}
-  currentAtkRateText: {fileID: 0}
-  currentElemMultText: {fileID: 0}
-  currentCurrMultText: {fileID: 0}
+  gearLevel: {fileID: 2046755444}
 --- !u!1 &1960021092
 GameObject:
   m_ObjectHideFlags: 0
@@ -20344,8 +20318,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.8264977, y: 9.204618, z: 1}
   m_Children:
-  - {fileID: 2051208937}
   - {fileID: 1194991851}
+  - {fileID: 2051208937}
   - {fileID: 23399556}
   m_Father: {fileID: 645437003}
   m_RootOrder: 3
@@ -20466,10 +20440,7 @@ MonoBehaviour:
   slotIndex: 1
   gearName: {fileID: 2051208938}
   gearIcon: {fileID: 1194991852}
-  currentDamageText: {fileID: 0}
-  currentAtkRateText: {fileID: 0}
-  currentElemMultText: {fileID: 0}
-  currentCurrMultText: {fileID: 0}
+  gearLevel: {fileID: 1172898877}
 --- !u!1 &2051208936
 GameObject:
   m_ObjectHideFlags: 0
@@ -20500,7 +20471,7 @@ RectTransform:
   m_LocalScale: {x: 0.5615341, y: 0.1086411, z: 1}
   m_Children: []
   m_Father: {fileID: 2047451064}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

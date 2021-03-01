@@ -10,10 +10,8 @@ public class EquipGearVisuals : MonoBehaviour
 
     [SerializeField] private TMP_Text gearName;
     [SerializeField] private Image gearIcon;
-    [SerializeField] private TMP_Text currentDamageText;
-    [SerializeField] private TMP_Text currentAtkRateText;
-    [SerializeField] private TMP_Text currentElemMultText;
-    [SerializeField] private TMP_Text currentCurrMultText;
+    [SerializeField] private TMP_Text gearLevel;
+
 
     private void OnEnable()
     {
@@ -28,10 +26,7 @@ public class EquipGearVisuals : MonoBehaviour
     private void OnUpdateSlotsUpdateEquipSlotVisuals(OnUpdateGearEventArgs updateSlotsArgs)
     {
         this.gearName.text = this.equipSlot.Gear.GearName;
-        this.currentDamageText.text = this.equipSlot.Gear.currentGearDamage.ToString();
-        this.currentAtkRateText.text = this.equipSlot.Gear.currentGearAtkRate.ToString();
-        this.currentElemMultText.text = this.equipSlot.Gear.currentGearElemMult.ToString();
-        this.currentCurrMultText.text = this.equipSlot.Gear.currentGearCurrMult.ToString();
+        this.gearLevel.text = this.equipSlot.Gear.gearLevel.ToString("F0");
         this.gearIcon.sprite = this.equipSlot.Gear.GearSprite;
     }
 }
