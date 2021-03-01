@@ -469,6 +469,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2095556869297651716, guid: c3a4904821557cc4cb7415c82682dfa4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2095556869297651719, guid: c3a4904821557cc4cb7415c82682dfa4, type: 3}
       propertyPath: animator
       value: 
@@ -19592,7 +19596,6 @@ MonoBehaviour:
   activePlayer: {fileID: 11400000, guid: 8cab687252f88634683689feb961262a, type: 2}
   textPremium: {fileID: 2276507563701898595}
   textElemental: {fileID: 2276507562639189828}
-  temp: 0
 --- !u!1 &1601526768
 GameObject:
   m_ObjectHideFlags: 0
