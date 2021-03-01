@@ -22,7 +22,7 @@ public class OnDamageEventArgs : EventArgs
         float currencyOnDamage;
         if (damage >= enemyMaxHealth)
         {
-            currencyOnDamage = enemyMaxHealth * enemyLevel * 0.008f;
+            currencyOnDamage = 100 * enemyLevel * 0.008f;
         }
         else
         {
