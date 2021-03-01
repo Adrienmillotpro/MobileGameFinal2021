@@ -56,4 +56,9 @@ public class SO_Gear : ScriptableObject
     public float currentGearCurrMult;
 
     public bool isEquipped;
+
+    private void OnEnable()
+    {
+        hideFlags = HideFlags.DontUnloadUnusedAsset;
+    }
 }
