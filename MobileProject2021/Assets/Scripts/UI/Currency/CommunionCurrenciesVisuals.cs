@@ -9,7 +9,7 @@ public class CommunionCurrenciesVisuals : MonoBehaviour
     [SerializeField] SO_Player activePlayer;
     [SerializeField] private TMP_Text textPrenium;
     [SerializeField] private TMP_Text textElemental;
-    [SerializeField] private float temp;
+    private float temp;
 
     private void Awake()
     {
@@ -41,7 +41,6 @@ public class CommunionCurrenciesVisuals : MonoBehaviour
             temp = activePlayer.currencyPremium / 1000000;
             textPrenium.text = temp.ToString("F1") + "M";
         }
-
         else if (activePlayer.currencyPremium >= 1000)
         {
             temp = activePlayer.currencyPremium / 1000;
@@ -52,6 +51,7 @@ public class CommunionCurrenciesVisuals : MonoBehaviour
             temp = activePlayer.currencyPremium;
             textPrenium.text = temp.ToString("F1");
         }
+        Debug.Log(activePlayer.currencyElemental);
     }
 
     private void UpdateElementalCurrencyUi()
@@ -61,7 +61,6 @@ public class CommunionCurrenciesVisuals : MonoBehaviour
             temp = activePlayer.currencyElemental / 1000000;
             textElemental.text = temp.ToString("F1") + "M";
         }
-
         else if (activePlayer.currencyElemental >= 1000)
         {
             temp = activePlayer.currencyPremium / 1000;
@@ -72,5 +71,6 @@ public class CommunionCurrenciesVisuals : MonoBehaviour
             temp = activePlayer.currencyElemental;
             textElemental.text = temp.ToString("F1");
         }
+        Debug.Log(activePlayer.currencyElemental);
     }
 }

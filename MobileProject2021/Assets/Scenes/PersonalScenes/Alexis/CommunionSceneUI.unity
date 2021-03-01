@@ -19592,7 +19592,6 @@ MonoBehaviour:
   activePlayer: {fileID: 11400000, guid: 8cab687252f88634683689feb961262a, type: 2}
   textPrenium: {fileID: 2276507563701898595}
   textElemental: {fileID: 2276507562639189828}
-  temp: 0
 --- !u!1 &1601526768
 GameObject:
   m_ObjectHideFlags: 0
@@ -27398,6 +27397,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2101459310}
     m_Modifications:
+    - target: {fileID: 1393283026133081895, guid: 5d341be0c4a00104c86e6ff500acb3ef, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1393283026468349569, guid: 5d341be0c4a00104c86e6ff500acb3ef, type: 3}
       propertyPath: m_Name
       value: ContainerMonnaiesCommunion
@@ -27485,6 +27488,18 @@ PrefabInstance:
     - target: {fileID: 1393283026468349570, guid: 5d341be0c4a00104c86e6ff500acb3ef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2496100555700050958, guid: 5d341be0c4a00104c86e6ff500acb3ef, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2496100555889993738, guid: 5d341be0c4a00104c86e6ff500acb3ef, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2496100556792165929, guid: 5d341be0c4a00104c86e6ff500acb3ef, type: 3}
+      propertyPath: m_text
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d341be0c4a00104c86e6ff500acb3ef, type: 3}
