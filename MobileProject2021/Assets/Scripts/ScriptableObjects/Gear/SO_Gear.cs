@@ -18,7 +18,10 @@ public class SO_Gear : ScriptableObject
     public GearType GearType { get { return gearType; } }
     #endregion
 
-    [SerializeField] private GameObject prefabGear;
+    [SerializeField] private Sprite gearSprite;
+    #region Getters
+    public Sprite GearSprite { get { return gearSprite; } }
+    #endregion
 
     [Header("Stats Multipliers")]
     [SerializeField] private float gearDamage;
@@ -56,9 +59,4 @@ public class SO_Gear : ScriptableObject
     public float currentGearCurrMult;
 
     public bool isEquipped;
-
-    private void OnEnable()
-    {
-        hideFlags = HideFlags.DontUnloadUnusedAsset;
-    }
 }

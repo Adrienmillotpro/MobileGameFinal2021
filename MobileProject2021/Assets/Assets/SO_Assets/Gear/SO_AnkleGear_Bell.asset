@@ -12,25 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8711d55f5605ec04eae25bda21f58347, type: 3}
   m_Name: SO_AnkleGear_Bell
   m_EditorClassIdentifier: 
-  gearName: Bell
+  gearName: Virtuous Bells
   gearDescription: 
   gearType: 1
-  prefabGear: {fileID: 0}
-  gearDamage: 2
-  gearAtkRate: 1.02
+  gearSprite: {fileID: 21300000, guid: 89453bb8cb59dd74f98b9674e3098e6d, type: 3}
+  gearDamage: 3
+  gearAtkRate: 1.03
   gearElemMult: 1.2
   gearCurrMult: 1
-  gearBaseCost: 250
-  gearBasePremiumCost: 1
+  gearBaseCost: 350
+  gearBasePremiumCost: 2
   lvlCapForTier: 0a000000140000001e00000032000000
-  gearTierMultiplier: 1
-  gearTier: 0
+  gearTierMultiplier: 2
+  gearTier: 1
   gearLevel: 10
-  costToLevelUp: 250
-  costToTierUp: 1
+  costToLevelUp: 350
+  costToTierUp: 2
   isAtTierCap: 1
-  currentGearDamage: 2
-  currentGearAtkRate: 1.02
+  currentGearDamage: 3
+  currentGearAtkRate: 1.03
   currentGearElemMult: 1.2
   currentGearCurrMult: 1
   isEquipped: 1
