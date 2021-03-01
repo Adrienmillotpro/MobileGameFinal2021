@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+
 public class SelectedGearVisuals : MonoBehaviour
 {
     [SerializeField] private SO_Gear selectedGear;
 
     [SerializeField] private TMP_Text gearName;
+    [SerializeField] private Image gearIcon;
 
     [SerializeField] private TMP_Text currentDamageText;
     [SerializeField] private TMP_Text nextDamageText;
@@ -35,6 +38,7 @@ public class SelectedGearVisuals : MonoBehaviour
         selectedGear = selectedGearSlotArgs.so_equippedGear;
 
         gearName.text = selectedGear.GearName;
+        gearIcon.sprite = selectedGear.GearSprite;
 
         currentDamageText.text = selectedGear.currentGearDamage.ToString();
         currentAtkRateText.text = selectedGear.currentGearAtkRate.ToString();

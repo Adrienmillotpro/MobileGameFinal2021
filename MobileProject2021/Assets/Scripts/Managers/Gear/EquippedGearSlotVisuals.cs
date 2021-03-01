@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+
 public class EquippedGearSlotVisuals : MonoBehaviour
 {
     [SerializeField] private SO_Player activePlayer;
@@ -9,6 +11,7 @@ public class EquippedGearSlotVisuals : MonoBehaviour
     [SerializeField] private int slotIndex;
 
     [SerializeField] private TMP_Text gearName;
+    [SerializeField] private Image gearIcon;
     [SerializeField] private TMP_Text currentDamageText;
     [SerializeField] private TMP_Text currentAtkRateText;
     [SerializeField] private TMP_Text currentElemMultText;
@@ -34,6 +37,7 @@ public class EquippedGearSlotVisuals : MonoBehaviour
                 currentAtkRateText.text = activePlayer.playerHandGears[slotIndex].currentGearAtkRate.ToString();
                 currentElemMultText.text = activePlayer.playerHandGears[slotIndex].currentGearElemMult.ToString();
                 currentCurrMultText.text = activePlayer.playerHandGears[slotIndex].currentGearCurrMult.ToString();
+                gearIcon.sprite = activePlayer.playerHandGears[slotIndex].GearSprite;
                 break;
             case GearType.Ankle:
                 gearName.text = activePlayer.playerAnkleGears[slotIndex].GearName;
@@ -41,6 +45,7 @@ public class EquippedGearSlotVisuals : MonoBehaviour
                 currentAtkRateText.text = activePlayer.playerAnkleGears[slotIndex].currentGearAtkRate.ToString();
                 currentElemMultText.text = activePlayer.playerAnkleGears[slotIndex].currentGearElemMult.ToString();
                 currentCurrMultText.text = activePlayer.playerAnkleGears[slotIndex].currentGearCurrMult.ToString();
+                gearIcon.sprite = activePlayer.playerAnkleGears[slotIndex].GearSprite;
                 break;
         }
     }
