@@ -20,7 +20,15 @@ public class OnDamageEventArgs : EventArgs
     public float CurrencyOnDamage()
     {
         float currencyOnDamage;
-        currencyOnDamage = damage / enemyMaxHealth * 100 * enemyLevel * 0.008f;
+        if (damage! > enemyMaxHealth)
+        {
+            currencyOnDamage = damage / enemyMaxHealth * 100 * enemyLevel * 0.008f;
+        }
+        else
+        {
+            currencyOnDamage = enemyMaxHealth * enemyLevel * 0.008f;
+        }
+
         //Debug.Log(currencyOnDamage);
         return currencyOnDamage;
     }
@@ -28,7 +36,14 @@ public class OnDamageEventArgs : EventArgs
     public float ElementalCurrencyOnDamage()
     {
         float elementalCurrencyOnDamage;
-        elementalCurrencyOnDamage = damage / enemyMaxHealth * 100;
+        if (damage !> enemyMaxHealth)
+        {
+            elementalCurrencyOnDamage = damage / enemyMaxHealth * 100;
+        }
+        else
+        {
+            elementalCurrencyOnDamage = enemyMaxHealth;
+        }
         return elementalCurrencyOnDamage;
     }
 }
