@@ -12,9 +12,12 @@ public class SO_Hero : ScriptableObject
     [Header ("Hero Visuals")]
     [SerializeField] private Sprite heroSprite;
     [SerializeField] private Animator heroAnimator;
+    [SerializeField] private string heroName;
     #region Getters
     public Sprite HeroSprite { get { return heroSprite; } }
     public Animator HeroAnimator { get { return heroAnimator; } }
+    public string HeroName { get { return heroName; } }
+
     #endregion
 
     [Header("Hero Stats")]

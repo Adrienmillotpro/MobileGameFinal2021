@@ -38,6 +38,7 @@ public class HeroesSlots : MonoBehaviour
         slotType = ElementalTypes.Fire;
         slotIndex = 0;
         onUpdateHeroesArgs.slotType = slotType;
+        onUpdateHeroesArgs.equippedHero = equippedHeroes[0];
         OnUpdateHeroesSlots?.Invoke(onUpdateHeroesArgs);
     }
     public void OnSelectAirSlot()
@@ -45,6 +46,7 @@ public class HeroesSlots : MonoBehaviour
         slotType = ElementalTypes.Air;
         slotIndex = 1;
         onUpdateHeroesArgs.slotType = slotType;
+        onUpdateHeroesArgs.equippedHero = equippedHeroes[1];
         OnUpdateHeroesSlots?.Invoke(onUpdateHeroesArgs);
     }
     public void OnSelectThunderSlot()
@@ -52,6 +54,7 @@ public class HeroesSlots : MonoBehaviour
         slotType = ElementalTypes.Thunder;
         slotIndex = 2;
         onUpdateHeroesArgs.slotType = slotType;
+        onUpdateHeroesArgs.equippedHero = equippedHeroes[2];
         OnUpdateHeroesSlots?.Invoke(onUpdateHeroesArgs);
     }
     public void OnSelectWaterSlot()
@@ -59,12 +62,17 @@ public class HeroesSlots : MonoBehaviour
         slotType = ElementalTypes.Water;
         slotIndex = 3;
         onUpdateHeroesArgs.slotType = slotType;
+        onUpdateHeroesArgs.equippedHero = equippedHeroes[3];
+        OnUpdateHeroesSlots?.Invoke(onUpdateHeroesArgs);
     }
 
     private void OnEquipHeroesUpdatePlayerHeroes(OnUpdateHeroesSlotsEventArgs equipArgs)
     {
         equippedHeroes[slotIndex] = equipArgs.equippedHero;
         activePlayer.playerHeroes[slotIndex] = equipArgs.equippedHero;
+        onUpdateHeroesArgs.equippedHero = equipArgs.equippedHero;
+        OnUpdateHeroesSlots?.Invoke(onUpdateHeroesArgs);
     }
+
 
 }
