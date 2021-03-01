@@ -13,6 +13,11 @@ public class SO_Player : ScriptableObject
     public float currencyElemental;
     public float currencyPremium;
 
+    private void OnEnable()
+    {
+        hideFlags = HideFlags.DontUnloadUnusedAsset;
+    }
+
     public void EndBattleUpdateCurrency(float premiumCurrency, float elementalCurrency)
     {
         currencyPremium += premiumCurrency;

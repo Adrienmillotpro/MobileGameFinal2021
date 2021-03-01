@@ -32,8 +32,6 @@ public class PlayerCurrencies : MonoBehaviour
 
     private void OnDisable()
     {
-        activePlayer.EndBattleUpdateCurrency(currencyPremium, currencyElemental);
-
         DamageManager.OnDealDamage -= OnDealDamageEarnCurrency;
         UpgradeDMG.OnUpgradeDMG -= OnUpgradeUpdateCurrency;
         UpgradeAttackRate.OnUpgradeAttackRate -= OnUpgradeUpdateCurrency;
