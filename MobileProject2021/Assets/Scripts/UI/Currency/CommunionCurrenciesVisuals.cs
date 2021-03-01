@@ -32,7 +32,7 @@ public class CommunionCurrenciesVisuals : MonoBehaviour
         UpdateElementalCurrencyUi();
     }
 
-    private void UpdatePreniumCurrencyUi()
+    public void UpdatePreniumCurrencyUi()
     {
         if (activePlayer.currencyPremium >= 1000000f)
         {
@@ -48,7 +48,7 @@ public class CommunionCurrenciesVisuals : MonoBehaviour
         }
     }
 
-    private void UpdateElementalCurrencyUi()
+    public void UpdateElementalCurrencyUi()
     {
         if (activePlayer.currencyElemental >= 1000000f)
         {
